@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="dad4d006-87eb-4d99-8abf-2f8f1bc9aca3"
+  name="TravelManagement" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="3f15d408-4076-4aaf-be6f-73aacb8f491f"
+        name="Giám đốc"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ff563d56-084b-422b-99c1-75ceb578aba3"
+            isDerived="false"
+            sourceEndRoleName="Giám đốc"
+            targetEndRoleName="Quản lý nhân viên"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8dcecbf2-6e9d-41ea-8687-186d1c47dee3"
+              LastKnownName="Quản lý nhân viên"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7311aaff-e977-4ddf-af63-0b080cd5c4c1"
+                  name="Giám đốc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c22d390c-5f45-41be-8a7a-688bd58d5664"
+                  name="Quản lý nhân viên"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="02e96b05-f8a8-4c4e-9ec9-8ae41c188dde"
+            isDerived="false"
+            sourceEndRoleName="Giám đốc"
+            targetEndRoleName="Xét duyệt thông tin "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1d1fecec-921f-4216-a63b-933cb82bf494"
+              LastKnownName="Xét duyệt thông tin "
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4b2ec71-458d-43f8-b878-bd699d1e8591"
+                  name="Giám đốc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1c6b4e0f-43ef-4edc-bdff-543fa8adcb47"
+                  name="Xét duyệt thông tin "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4c00e7ad-0513-4f2f-83e2-93470f03ae94"
+            isDerived="false"
+            sourceEndRoleName="Giám đốc"
+            targetEndRoleName="Xét duyệt tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="37fe9670-e008-4c3b-b976-2272f52a538a"
+              LastKnownName="Xét duyệt tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b9810dac-7fb5-4b55-b528-706aa33686a3"
+                  name="Giám đốc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="221c9fa2-6d81-4dcf-82b5-a0514fc37052"
+                  name="Xét duyệt tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="adfae21b-2171-469e-96c2-d8ef1268ad00"
+            isDerived="false"
+            sourceEndRoleName="Giám đốc"
+            targetEndRoleName="Đăng nhập, đăng xuất"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b39da497-93f7-47c8-8b77-27e047a81b59"
+              LastKnownName="Đăng nhập, đăng xuất"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abd6ca9d-9e35-4f36-82e9-73fdff83874c"
+                  name="Giám đốc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f5f48455-c0b5-46fe-8079-7ca7cf865484"
+                  name="Đăng nhập, đăng xuất"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8c6cdea7-1778-4233-a861-508504751976"
+            isDerived="false"
+            sourceEndRoleName="Giám đốc"
+            targetEndRoleName="thiết lập qui định"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8d1ef66f-86e7-4fff-bb34-564cd15d2cb2"
+              LastKnownName="Thiết lập qui định"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="240d9796-c518-49f0-a03d-f5e32e1ae531"
+                  name="Giám đốc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94646c29-ac10-47ed-ad70-457779f62b76"
+                  name="thiết lập qui định"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b5b2c6a3-23d7-4829-a0ab-79ca76db2663"
+            isDerived="false"
+            sourceEndRoleName="Giám đốc"
+            targetEndRoleName="thống kê sale tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bdcd3b35-c2eb-4ace-829b-88b7559e291b"
+              LastKnownName="thống kê sale tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ceb17cef-aecb-43ce-90ff-ed0e75c8164b"
+                  name="Giám đốc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f10102b-7fac-43a8-a1fd-9b962103faaf"
+                  name="thống kê sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="1c05e5a0-49ca-474d-aab9-9ea288a4b913"
+        name="Nhân viên sale tour"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8d4eb4dd-f9eb-4a1e-95eb-1c4b5a4160e6"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Đăng nhập, đăng xuất"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b39da497-93f7-47c8-8b77-27e047a81b59"
+              LastKnownName="Đăng nhập, đăng xuất"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3206980e-0f37-4ae4-b05d-f7b8062fc024"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9db386af-2a69-4273-a5d5-5d22607706b9"
+                  name="Đăng nhập, đăng xuất"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a973a8b5-d209-4ccf-89a9-d6fb1a372c27"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Xem thông tin đối tác"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aca23229-3b6d-4faa-bae3-0298d24539a1"
+              LastKnownName="Xem thông tin đối tác"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b2d693d-f755-444b-a7ab-117301ec1a8f"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="61497627-a6e6-4371-a6b2-1434237d6826"
+                  name="Xem thông tin đối tác"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4d72f656-b9b2-4db8-a54b-5e6429f18fba"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Lập tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="75322233-939a-42d5-890f-f655bf76b49c"
+              LastKnownName="Lập tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23cc8ddc-ba53-4e74-8d7e-d31d5bbc7656"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="289f0904-6a80-4b54-ab8c-124b78655f4b"
+                  name="Lập tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fa2ae413-3031-4f86-a1e8-cf4486df7901"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Thống kê lịch  sử khách hàng"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d85a4535-3360-4513-a1a0-55aa3afe56cc"
+              LastKnownName="Thống kê lịch  sử khách hàng"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0d33c100-3ff3-4a20-8563-70004adae1a7"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f5e58d4-52f1-4d7f-bed0-18f7c06db631"
+                  name="Thống kê lịch  sử khách hàng"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c0b714ba-9ed6-46c0-9377-9ef166bb09eb"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Quản lý khách hàng"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="48556fcb-8029-4407-b67b-5a0f63de53f7"
+              LastKnownName="Quản lý khách hàng"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3453e11f-0e1b-40fc-9819-5731dee9c420"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="63e72677-9bfa-4997-a592-b3e91ce956d7"
+                  name="Quản lý khách hàng"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e67a54d3-2b94-46a2-9e78-e52751bdbfcb"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Xem tour đã lập"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="53ed6aa4-6af5-43a0-9b40-a108fce1e58d"
+              LastKnownName="Chỉnh sửa tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31b5cc47-71c9-4813-8fac-310a5a53c53e"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f543458-5717-47f8-a353-9e88b004c627"
+                  name="Xem tour đã lập"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d57aa8ba-6e9f-4b2d-ace2-19b9f6e0bff2"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Thêm điểm du lịch"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c323d997-b9c2-4378-9f96-f21df309fecc"
+              LastKnownName="Thêm điểm du lịch"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f0b5e248-a731-4944-b628-1930be30599d"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d45ad07-8953-45f2-9798-253cedc5d59a"
+                  name="Thêm điểm du lịch"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ab25834d-f96f-47bd-b28e-c3a6da015c7b"
+        name="Nhân viên điều hành"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7ecf55a6-fdbf-4e6a-bf6c-b541f2e11988"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên điều hành"
+            targetEndRoleName="Đăng nhập, đăng xuất"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b39da497-93f7-47c8-8b77-27e047a81b59"
+              LastKnownName="Đăng nhập, đăng xuất"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b69278bb-6fb8-4c34-8b99-abe771385eb7"
+                  name="Nhân viên điều hành"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3db5b34-814b-4307-a2b7-3db740e16dc5"
+                  name="Đăng nhập, đăng xuất"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ec0fd755-2904-480c-bc5b-c27758f155eb"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên điều hành"
+            targetEndRoleName="Quản lý đối tác"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5c68d538-d6f2-44ec-b8ce-18217b73c2dc"
+              LastKnownName="Quản lý đối tác"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe5d0245-0251-4a11-84f5-26fae1d905ca"
+                  name="Nhân viên điều hành"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="527ca2c4-1e2a-4891-ad05-4a3e1fc478c5"
+                  name="Quản lý đối tác"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="26c4d1fa-5f1d-4f02-bd14-95f0546e5e58"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên điều hành"
+            targetEndRoleName="Điều hành tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="63d7b31e-418e-414b-aba6-fae2408c6f3f"
+              LastKnownName="Điều hành tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cbfcc6de-4eff-4179-b292-09ca52607102"
+                  name="Nhân viên điều hành"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9ea44b8-095d-4fc9-bb4a-56d279fc82d1"
+                  name="Điều hành tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1d1fecec-921f-4216-a63b-933cb82bf494"
+        name="Xét duyệt thông tin "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bdcd3b35-c2eb-4ace-829b-88b7559e291b"
+        name="thống kê sale tour"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b39da497-93f7-47c8-8b77-27e047a81b59"
+        name="Đăng nhập, đăng xuất"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aca23229-3b6d-4faa-bae3-0298d24539a1"
+        name="Xem thông tin đối tác"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8dcecbf2-6e9d-41ea-8687-186d1c47dee3"
+        name="Quản lý nhân viên"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d85a4535-3360-4513-a1a0-55aa3afe56cc"
+        name="Thống kê lịch  sử khách hàng"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5c68d538-d6f2-44ec-b8ce-18217b73c2dc"
+        name="Quản lý đối tác"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="58c38dd6-a01e-468f-86a7-b67bc6da7e6b">
+            <useCaseMoniker
+              Id="121d6145-c6dc-4cf8-86ef-046a156e2731"
+              LastKnownName="Xem thông tin đối tác"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="75322233-939a-42d5-890f-f655bf76b49c"
+        name="Lập tour"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6bdd0855-85c6-4a6b-9955-bb09552369cb">
+            <useCaseMoniker
+              Id="0ec6dc99-2fd8-4e8d-aac1-4e0edcd1534a"
+              LastKnownName="Xem điểm du lịch"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8d1ef66f-86e7-4fff-bb34-564cd15d2cb2"
+        name="Thiết lập qui định"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="48556fcb-8029-4407-b67b-5a0f63de53f7"
+        name="Quản lý khách hàng"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="37fe9670-e008-4c3b-b976-2272f52a538a"
+        name="Xét duyệt tour"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="63d7b31e-418e-414b-aba6-fae2408c6f3f"
+        name="Điều hành tour"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7ef36648-34d0-4582-8718-771df7bd10e4">
+            <useCaseMoniker
+              Id="121d6145-c6dc-4cf8-86ef-046a156e2731"
+              LastKnownName="Xem thông tin đối tác"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="53ed6aa4-6af5-43a0-9b40-a108fce1e58d"
+        name="Chỉnh sửa tour"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ef8d5933-17ca-41bb-a61c-0bca206ee052">
+            <useCaseMoniker
+              Id="0ec6dc99-2fd8-4e8d-aac1-4e0edcd1534a"
+              LastKnownName="Xem điểm du lịch"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c323d997-b9c2-4378-9f96-f21df309fecc"
+        name="Thêm điểm du lịch"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0ec6dc99-2fd8-4e8d-aac1-4e0edcd1534a"
+        name="Xem điểm du lịch"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="121d6145-c6dc-4cf8-86ef-046a156e2731"
+        name="Xem thông tin đối tác"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
