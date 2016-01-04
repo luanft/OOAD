@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="20c0acb3-25c3-462b-a830-67a0a442f186" name="UseCase_QuanLyKhachHang_Them" linkedPackageId="f6b67451-b7db-4db3-abe5-83febffc42f1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="20c0acb3-25c3-462b-a830-67a0a442f186" name="UseCase_QuanLyKhachHang_Them" linkedPackageId="f6b67451-b7db-4db3-abe5-83febffc42f1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="ae1b944a-c7cb-4bc0-b5f9-5a9b670eedfc" name="UseCase_QuanLyKhachHang_Them" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -8,7 +8,7 @@
           <behaviorExecutionSpecification Id="1d5c38ba-ba34-4c66-b808-1f9d736e53a5" name="BehaviorExecutionSpecification6">
             <elementDefinition Id="4d73675b-72ce-4280-9462-a944adbaf5b8" />
             <coveredLifelines>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="fe878b03-6e58-40f0-a3a2-9ef9e220a2d1" LastKnownName="ExecutionOccurrenceSpecification12" />
@@ -28,7 +28,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="d0eb332d-384c-4137-9cb0-ab670c4f532c" name="MessageOccurrenceSpecification15">
@@ -40,7 +40,7 @@
           <messageOccurrenceSpecification Id="79be4322-6cdc-4e12-83a4-256fe1b8cfab" name="MessageOccurrenceSpecification16">
             <elementDefinition Id="7447b887-9cf6-4520-bc68-abac071ce64b" />
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="fe878b03-6e58-40f0-a3a2-9ef9e220a2d1" name="ExecutionOccurrenceSpecification12">
@@ -51,13 +51,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="afd1e16a-d550-4bb2-98d9-78d96067cb61" name="BehaviorExecutionSpecification2">
             <elementDefinition Id="491821fe-2167-4e7e-a701-5e41417e6f6c" />
             <coveredLifelines>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="ba48fcbb-de77-4d42-bd74-d5736c380794" LastKnownName="ExecutionOccurrenceSpecification4" />
@@ -78,7 +78,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="533ac22a-c6f1-4e26-a4dc-372625760c20" name="MessageOccurrenceSpecification3">
@@ -90,7 +90,7 @@
           <messageOccurrenceSpecification Id="ad446ab6-4264-4be3-be6a-8a880c4ac344" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="698e7560-ff0a-44a6-b2cf-caaab8b7f8e1" />
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="0d94915c-f712-4cf3-bf05-ef707db6f8d8" name="BehaviorExecutionSpecification3">
@@ -122,7 +122,7 @@
           <messageOccurrenceSpecification Id="336cc2f4-6d57-4480-bf29-a97fe31bc1d4" name="MessageOccurrenceSpecification5">
             <elementDefinition Id="59f71775-af1d-4b60-ad09-e962940f871f" />
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="51c161a9-57ac-417e-95e0-5718aa3643f7" name="MessageOccurrenceSpecification6">
@@ -139,7 +139,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="93cb9daa-8635-472f-959d-d1f635e912e0" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="a29bd5dc-4b7f-4dd5-a3ed-3a1ed45c66f2" name="ExecutionOccurrenceSpecification6">
@@ -164,7 +164,7 @@
               <executionOccurrenceSpecificationMoniker Id="a29bd5dc-4b7f-4dd5-a3ed-3a1ed45c66f2" LastKnownName="ExecutionOccurrenceSpecification6" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="93cb9daa-8635-472f-959d-d1f635e912e0" name=": QuanLy KhachHang" isActor="false" lifelineDisplayName=": QuanLy KhachHang">
+          <lifeline Id="93cb9daa-8635-472f-959d-d1f635e912e0" name=": KhachHang" isActor="false" lifelineDisplayName=": KhachHang">
             <elementDefinition Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="ca905e87-63e3-45f5-b002-895ccc08d13c" LastKnownName="ExecutionOccurrenceSpecification11" />

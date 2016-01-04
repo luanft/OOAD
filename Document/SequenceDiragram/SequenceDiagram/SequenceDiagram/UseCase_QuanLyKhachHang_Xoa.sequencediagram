@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="fffc03e3-57f2-4ec9-895c-3a0d83a29334" name="UseCase_QuanLyKhachHang_Xoa" linkedPackageId="486947a9-d1f5-4470-9d83-0341cb850c31" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="b5a3e099-e8c8-4cb6-81e7-c164bfe63ffb">
-      <profileInstance Id="36b2b421-ac15-42a8-9756-d43388e3d77d" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="84cefcab-82ee-40f9-b953-d176cb6d203c">
-      <profileInstance Id="9f6c09c8-bdd1-4cf8-87ee-7bcdb253f785" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="fffc03e3-57f2-4ec9-895c-3a0d83a29334" name="UseCase_QuanLyKhachHang_Xoa" linkedPackageId="486947a9-d1f5-4470-9d83-0341cb850c31" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="32df0309-c152-41f9-9a1a-6556f8d808a5" name="UseCase_QuanLyKhachHang_Xoa" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -61,7 +47,7 @@
           <behaviorExecutionSpecification Id="5e3969f4-9e3f-4a06-b376-5bec1ebdf416" name="BehaviorExecutionSpecification2">
             <elementDefinition Id="9b1f0da2-7e73-4143-98ee-e4980fe7b1fa" />
             <coveredLifelines>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="ebd94439-a8bb-498f-a57f-0418ae7be900" LastKnownName="ExecutionOccurrenceSpecification4" />
@@ -82,7 +68,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="1216edb1-fb4d-4528-9bbe-5f16a5617439" name="MessageOccurrenceSpecification4">
@@ -94,7 +80,7 @@
           <messageOccurrenceSpecification Id="a71faae6-f4cf-4b4b-a157-63e5187e2b56" name="MessageOccurrenceSpecification5">
             <elementDefinition Id="ddad332e-aa98-4343-9829-7e7bdbf269be" />
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="5fcf281e-e94a-45cf-8a02-97a3f6592cb0" name="ExecutionOccurrenceSpecification2">
@@ -135,16 +121,16 @@
               <lifelineMoniker Id="6bd2fced-4887-4172-b26e-e977ed033888" LastKnownName=": NhanVienSaleTour" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="c1d5a415-ed54-4140-9511-43f3dd2157e2" name="MessageOccurrenceSpecification6">
+            <elementDefinition Id="5c65e550-fd69-41d1-8648-1edc33c5b40c" />
+            <covered>
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e562d859-c576-438b-bfb6-0cd6b650f023" name="MessageOccurrenceSpecification7">
             <elementDefinition Id="8aece811-8915-4129-8216-6979e5bca953" />
             <covered>
               <lifelineMoniker Id="6bd2fced-4887-4172-b26e-e977ed033888" LastKnownName=": NhanVienSaleTour" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="c1d5a415-ed54-4140-9511-43f3dd2157e2" name="MessageOccurrenceSpecification6">
-            <elementDefinition Id="5c65e550-fd69-41d1-8648-1edc33c5b40c" />
-            <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="ebd94439-a8bb-498f-a57f-0418ae7be900" name="ExecutionOccurrenceSpecification4">
@@ -155,13 +141,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="ed27a73e-bc22-4167-bf78-d6f51d9722fe" name="BehaviorExecutionSpecification4">
             <elementDefinition Id="e60d8a10-5661-4cc4-8ebb-776f62048560" />
             <coveredLifelines>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="f3b53103-cfb2-4573-b236-da8fe12b7c68" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -182,7 +168,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="6a81b732-0cdd-4d74-988f-85f564367396" name="MessageOccurrenceSpecification8">
@@ -194,7 +180,7 @@
           <messageOccurrenceSpecification Id="f54ce033-35c8-4be3-917f-835755bfd33d" name="MessageOccurrenceSpecification9">
             <elementDefinition Id="20d7f3da-dbcb-474f-acff-dc135d4768b9" />
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="f2baa7f8-efc8-40f2-b97b-697949f8ce6a" name="ExecutionOccurrenceSpecification6">
@@ -237,7 +223,7 @@
           <messageOccurrenceSpecification Id="41802e84-3585-487c-82ea-25dab823c6ad" name="MessageOccurrenceSpecification10">
             <elementDefinition Id="e4d569d3-50e4-4b8c-8163-7b39c0838eac" />
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="59d5b9ad-f5d0-4b89-9f0e-f020f93322d9" name="MessageOccurrenceSpecification11">
@@ -254,7 +240,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="3acb6c86-057b-4389-9f9b-ef59dd6e4061" name="ExecutionOccurrenceSpecification10">
@@ -282,7 +268,7 @@
               <executionOccurrenceSpecificationMoniker Id="3acb6c86-057b-4389-9f9b-ef59dd6e4061" LastKnownName="ExecutionOccurrenceSpecification10" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" name=": QuanLy KhachHang" isActor="false" lifelineDisplayName=": QuanLy KhachHang">
+          <lifeline Id="9b0d3a1b-22dc-420c-af3c-43c6f2d3bf87" name=": KhachHang" isActor="false" lifelineDisplayName=": KhachHang">
             <elementDefinition Id="c8640a70-79ed-4103-9ff0-78d118935462" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="de0c4ea8-ff79-4306-a197-ddc1f4a5d7fb" LastKnownName="ExecutionOccurrenceSpecification3" />
@@ -394,5 +380,19 @@
   </packagedElements>
   <package Id="486947a9-d1f5-4470-9d83-0341cb850c31" name="SequenceDiagram">
     <elementDefinition Id="ea0d8dbc-f831-4018-aa72-80d13090ddc9" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b5a3e099-e8c8-4cb6-81e7-c164bfe63ffb">
+        <profileInstance Id="36b2b421-ac15-42a8-9756-d43388e3d77d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="84cefcab-82ee-40f9-b953-d176cb6d203c">
+        <profileInstance Id="9f6c09c8-bdd1-4cf8-87ee-7bcdb253f785" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>

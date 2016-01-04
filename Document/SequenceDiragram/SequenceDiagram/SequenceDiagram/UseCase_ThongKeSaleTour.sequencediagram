@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="0803c4f6-4759-43a0-8ebb-52e926c79e66" name="UseCase_ThongKeSaleTour" linkedPackageId="114ed658-ebbc-4091-b698-7ecba0169e83" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="c5a7380e-59d3-4f49-8787-ca78fe01767c">
-      <profileInstance Id="61b687e7-6c18-4524-975c-c7a195880baf" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2be0e48a-ad88-4831-b1b1-be9a442b7196">
-      <profileInstance Id="9ac9f6c1-d3bf-478f-90cb-bead4b61957f" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0803c4f6-4759-43a0-8ebb-52e926c79e66" name="UseCase_ThongKeSaleTour" linkedPackageId="114ed658-ebbc-4091-b698-7ecba0169e83" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="958bf459-c812-4381-a768-adccf5125fa3" name="UseCase_ThongKeSaleTour" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -252,5 +238,19 @@
   </packagedElements>
   <package Id="114ed658-ebbc-4091-b698-7ecba0169e83" name="SequenceDiagram">
     <elementDefinition Id="ea0d8dbc-f831-4018-aa72-80d13090ddc9" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c5a7380e-59d3-4f49-8787-ca78fe01767c">
+        <profileInstance Id="61b687e7-6c18-4524-975c-c7a195880baf" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2be0e48a-ad88-4831-b1b1-be9a442b7196">
+        <profileInstance Id="9ac9f6c1-d3bf-478f-90cb-bead4b61957f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>

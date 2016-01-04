@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ea0d8dbc-f831-4018-aa72-80d13090ddc9"
   name="SequenceDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1233,7 +1233,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </coveredLifelines>
             <finish>
@@ -1269,7 +1269,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1289,7 +1289,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1307,7 +1307,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1317,7 +1317,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </coveredLifelines>
             <finish>
@@ -1357,7 +1357,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1377,7 +1377,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1433,7 +1433,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1461,7 +1461,7 @@
             <covered>
               <lifelineMoniker
                 Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1511,9 +1511,9 @@
           </lifeline>
           <lifeline
             Id="bc3f843a-3cf4-42c7-af0a-f51f31b9dcd1"
-            name=": QuanLy KhachHang"
+            name=": KhachHang"
             isActor="false"
-            lifelineDisplayName=": QuanLy KhachHang">
+            lifelineDisplayName=": KhachHang">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="1ef0e7fe-e188-49ec-b500-20c8979933a8"
@@ -2119,7 +2119,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </coveredLifelines>
             <finish>
@@ -2159,7 +2159,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2179,7 +2179,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2252,22 +2252,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
+            Id="5c65e550-fd69-41d1-8648-1edc33c5b40c"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="c8640a70-79ed-4103-9ff0-78d118935462"
+                LastKnownName=": KhachHang"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
             Id="8aece811-8915-4129-8216-6979e5bca953"
             name="MessageOccurrenceSpecification7">
             <covered>
               <lifelineMoniker
                 Id="89bcc605-dfdd-4dd7-b163-a27f23bd8826"
                 LastKnownName=": NhanVienSaleTour"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="5c65e550-fd69-41d1-8648-1edc33c5b40c"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2285,7 +2285,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2295,7 +2295,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </coveredLifelines>
             <finish>
@@ -2335,7 +2335,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2355,7 +2355,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2429,7 +2429,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2457,7 +2457,7 @@
             <covered>
               <lifelineMoniker
                 Id="c8640a70-79ed-4103-9ff0-78d118935462"
-                LastKnownName=": QuanLy KhachHang"
+                LastKnownName=": KhachHang"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2519,9 +2519,9 @@
           </lifeline>
           <lifeline
             Id="c8640a70-79ed-4103-9ff0-78d118935462"
-            name=": QuanLy KhachHang"
+            name=": KhachHang"
             isActor="false"
-            lifelineDisplayName=": QuanLy KhachHang">
+            lifelineDisplayName=": KhachHang">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="7a3e9d43-3753-4cf1-af92-c14b15d770e9"
