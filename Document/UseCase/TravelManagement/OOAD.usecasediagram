@@ -301,6 +301,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="38f1bd11-0dd3-408a-89b9-4cc3d5ab0127" name="Quản lý điểm du lịch" isAbstract="false" isLeaf="false">
         <elementDefinition Id="c323d997-b9c2-4378-9f96-f21df309fecc" />
+        <additions>
+          <include Id="870f28d7-70ea-40bc-a558-8000af689576">
+            <useCaseMoniker Id="b1b8f933-8754-49f1-a4ad-a9c3444754ec" LastKnownName="Xem điểm du lịch" />
+            <elementDefinition Id="d9f33f5e-6f58-47f8-9e4e-69973ae6aa17" />
+          </include>
+        </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -321,12 +327,21 @@
             <useCaseMoniker Id="c675d2c2-bb1a-4f2d-b430-7f5ca80b480d" LastKnownName="Xem chi tiết tour" />
             <elementDefinition Id="a684256d-d416-4569-84f5-b3a7e2fc9f08" />
           </include>
+          <include Id="fed527fa-7873-473e-bfeb-72d5c23d56f2">
+            <useCaseMoniker Id="1eafccb1-2a06-46e9-87cb-83f451555b39" LastKnownName="Submit tour" />
+            <elementDefinition Id="15fc729f-0017-42b9-9439-7a1cd26a6f67" />
+          </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="c675d2c2-bb1a-4f2d-b430-7f5ca80b480d" name="Xem chi tiết tour" isAbstract="false" isLeaf="false">
         <elementDefinition Id="0a047eef-fc4b-4f45-a39f-b14d49379ba9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1eafccb1-2a06-46e9-87cb-83f451555b39" name="Submit tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bb4878af-af90-4618-9759-785600d5fc5b" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

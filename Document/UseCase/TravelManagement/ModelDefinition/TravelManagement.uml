@@ -903,7 +903,17 @@
         Id="c323d997-b9c2-4378-9f96-f21df309fecc"
         name="Quản lý điểm du lịch"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d9f33f5e-6f58-47f8-9e4e-69973ae6aa17">
+            <useCaseMoniker
+              Id="0ec6dc99-2fd8-4e8d-aac1-4e0edcd1534a"
+              LastKnownName="Xem điểm du lịch"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -933,6 +943,13 @@
               LastKnownName="Xem chi tiết tour"
               LastKnownLocation="TravelManagement.uml" />
           </include>
+          <include
+            Id="15fc729f-0017-42b9-9439-7a1cd26a6f67">
+            <useCaseMoniker
+              Id="bb4878af-af90-4618-9759-785600d5fc5b"
+              LastKnownName="Submit tour"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
         </additions>
       </useCase>
     </packageHasNamedElement>
@@ -940,6 +957,13 @@
       <useCase
         Id="0a047eef-fc4b-4f45-a39f-b14d49379ba9"
         name="Xem chi tiết tour"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bb4878af-af90-4618-9759-785600d5fc5b"
+        name="Submit tour"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
