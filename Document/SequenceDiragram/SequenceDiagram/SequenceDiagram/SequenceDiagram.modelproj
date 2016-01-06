@@ -22,6 +22,27 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="UseCase_QuanLyDoiTac_Sua.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyDoiTac_Sua.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyDoiTac_Sua.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyDoiTac_Them.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyDoiTac_Them.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyDoiTac_Them.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyDoiTac_Xoa.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyDoiTac_Xoa.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyDoiTac_Xoa.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCase_QuanLyKhachHang_Sua.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -49,6 +70,13 @@
     <Content Include="UseCase_ThongKeSaleTour.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UseCase_ThongKeSaleTour.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_XemThongTinDoiTac.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_XemThongTinDoiTac.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_XemThongTinDoiTac.sequencediagram</DependentUpon>
     </Content>
     <Content Include="Usecase_XetDuyetTour.sequencediagram">
       <SubType>Content</SubType>
