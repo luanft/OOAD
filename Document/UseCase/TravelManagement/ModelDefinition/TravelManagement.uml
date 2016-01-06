@@ -229,7 +229,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="bdcd3b35-c2eb-4ace-829b-88b7559e291b"
-              LastKnownName="thống kê sale tour"
+              LastKnownName="Thống kê sale tour"
               LastKnownLocation="TravelManagement.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -473,7 +473,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="53ed6aa4-6af5-43a0-9b40-a108fce1e58d"
-              LastKnownName="Chỉnh sửa tour"
+              LastKnownName="Cập nhật tour"
               LastKnownLocation="TravelManagement.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -512,7 +512,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="c323d997-b9c2-4378-9f96-f21df309fecc"
-              LastKnownName="Thêm điểm du lịch"
+              LastKnownName="Quản lý điểm du lịch"
               LastKnownLocation="TravelManagement.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -532,6 +532,45 @@
                 <memberEnd
                   Id="4d45ad07-8953-45f2-9798-253cedc5d59a"
                   name="Thêm điểm du lịch"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5cdd4427-c3dd-4310-a4fb-d77923dbc567"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên sale tour"
+            targetEndRoleName="Xem tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b8d655b9-adfe-4c8d-b671-a2d0f8fa64b5"
+              LastKnownName="Xem tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f4fe4d01-a014-42ab-92bb-e97dd0e2b054"
+                  name="Nhân viên sale tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c514dc9-3fc7-4720-a255-2575a22c940d"
+                  name="Xem tour"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -669,6 +708,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="e47e9dd2-7700-4f09-b832-f03729925431"
+            isDerived="false"
+            sourceEndRoleName="Nhân viên điều hành"
+            targetEndRoleName="Xét duyệt tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="37fe9670-e008-4c3b-b976-2272f52a538a"
+              LastKnownName="Xét duyệt tour"
+              LastKnownLocation="TravelManagement.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="705e7831-71dc-456d-934b-b34ef7b19fce"
+                  name="Nhân viên điều hành"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a945191-ac64-4f3c-b152-0c48fd4cbab4"
+                  name="Xét duyệt tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -682,7 +760,7 @@
     <packageHasNamedElement>
       <useCase
         Id="bdcd3b35-c2eb-4ace-829b-88b7559e291b"
-        name="thống kê sale tour"
+        name="Thống kê sale tour"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -722,7 +800,7 @@
         isLeaf="false">
         <additions>
           <include
-            Id="58c38dd6-a01e-468f-86a7-b67bc6da7e6b">
+            Id="42e2b16f-6846-4137-88a5-4dddd96181f5">
             <useCaseMoniker
               Id="121d6145-c6dc-4cf8-86ef-046a156e2731"
               LastKnownName="Xem thông tin đối tác"
@@ -767,7 +845,24 @@
         Id="37fe9670-e008-4c3b-b976-2272f52a538a"
         name="Xét duyệt tour"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <additions>
+          <include
+            Id="acb1ad95-55fa-42c6-8ad5-e50007c39e74">
+            <useCaseMoniker
+              Id="121d6145-c6dc-4cf8-86ef-046a156e2731"
+              LastKnownName="Xem thông tin đối tác"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+          <include
+            Id="ad1a541e-ba26-48af-a54e-693a1c3198aa">
+            <useCaseMoniker
+              Id="0a047eef-fc4b-4f45-a39f-b14d49379ba9"
+              LastKnownName="Xem chi tiết tour"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -789,7 +884,7 @@
     <packageHasNamedElement>
       <useCase
         Id="53ed6aa4-6af5-43a0-9b40-a108fce1e58d"
-        name="Chỉnh sửa tour"
+        name="Cập nhật tour"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -806,7 +901,7 @@
     <packageHasNamedElement>
       <useCase
         Id="c323d997-b9c2-4378-9f96-f21df309fecc"
-        name="Thêm điểm du lịch"
+        name="Quản lý điểm du lịch"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -821,6 +916,30 @@
       <useCase
         Id="121d6145-c6dc-4cf8-86ef-046a156e2731"
         name="Xem thông tin đối tác"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b8d655b9-adfe-4c8d-b671-a2d0f8fa64b5"
+        name="Xem tour"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="a684256d-d416-4569-84f5-b3a7e2fc9f08">
+            <useCaseMoniker
+              Id="0a047eef-fc4b-4f45-a39f-b14d49379ba9"
+              LastKnownName="Xem chi tiết tour"
+              LastKnownLocation="TravelManagement.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0a047eef-fc4b-4f45-a39f-b14d49379ba9"
+        name="Xem chi tiết tour"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
