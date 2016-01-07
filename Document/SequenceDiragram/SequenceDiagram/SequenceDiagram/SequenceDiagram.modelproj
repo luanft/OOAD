@@ -22,6 +22,34 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="UseCase_CapNhatTour.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_CapNhatTour.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_CapNhatTour.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyDiemDuLich_Sua.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyDiemDuLich_Sua.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyDiemDuLich_Sua.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyDiemDuLich_Them.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyDiemDuLich_Them.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyDiemDuLich_Them.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyDiemDuLich_Xoa.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyDiemDuLich_Xoa.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyDiemDuLich_Xoa.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCase_QuanLyDoiTac_Sua.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -70,6 +98,13 @@
     <Content Include="UseCase_ThongKeSaleTour.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UseCase_ThongKeSaleTour.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_XemDiemDuLich.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_XemDiemDuLich.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_XemDiemDuLich.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UseCase_XemThongTinDoiTac.sequencediagram">
       <SubType>Content</SubType>

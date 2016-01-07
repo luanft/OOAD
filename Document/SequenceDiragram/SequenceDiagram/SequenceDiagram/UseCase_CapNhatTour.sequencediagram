@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="757c7842-d0c4-4ce0-881a-0f29edb3a43a" name="UseCase_CapNhatTour" linkedPackageId="4612d49f-a5a1-46f1-9110-a1237f027b21" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="5c094d02-b3d7-4a91-8f9d-5108f189121f">
+      <profileInstance Id="4a85c288-2c31-47e9-89a9-a27965829b41" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0aa83189-7afc-403d-863c-cae95a38aac8">
+      <profileInstance Id="066b81a5-631d-4a39-94fc-a325abf44721" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="364ac861-0124-44e3-b710-7ea6f6b99486" name="UseCase_CapNhatTour" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="d94bc28f-abe3-4fa9-8c27-20267e57ed0b" />
+        <fragments>
+          <messageOccurrenceSpecification Id="811b2810-f13a-4cd6-88b1-ae9ed31f9db2" name="MessageOccurrenceSpecification1">
+            <elementDefinition Id="d6934843-bf37-4bc2-8d31-7443df0db360" />
+            <covered>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="e6276a37-2d82-4cf2-9217-b2e26e83ce2f" name="BehaviorExecutionSpecification1">
+            <elementDefinition Id="b5633f2e-09d6-4566-ae59-662092f73555" />
+            <coveredLifelines>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="3e8cf2db-7655-45ec-b677-9ab8baa5f6bd" LastKnownName="ExecutionOccurrenceSpecification2" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="86f86108-82da-4e18-ba6b-3a9d43e2ec15" LastKnownName="ExecutionOccurrenceSpecification1" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="5c71a8eb-bbb7-45a0-832e-6fbb4866a708" LastKnownName="MessageOccurrenceSpecification2" />
+              <messageOccurrenceSpecificationMoniker Id="d689c7ae-2bb1-44ba-afe3-70e887e944da" LastKnownName="MessageOccurrenceSpecification3" />
+              <messageOccurrenceSpecificationMoniker Id="2b77c53d-8ca4-43f5-a961-a99074754cb7" LastKnownName="MessageOccurrenceSpecification6" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="86f86108-82da-4e18-ba6b-3a9d43e2ec15" name="ExecutionOccurrenceSpecification1">
+            <elementDefinition Id="5df8adbe-ff13-4844-931b-67e07540861b" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="9a41466e-ebf7-49c7-b570-47dc16bae8c2" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5c71a8eb-bbb7-45a0-832e-6fbb4866a708" name="MessageOccurrenceSpecification2">
+            <elementDefinition Id="13f4fe78-f859-4cbc-bca8-5707a42062b5" />
+            <covered>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="12ec8f35-e43b-4fce-8df9-e8cd7a4a6ddf" name="BehaviorExecutionSpecification2">
+            <elementDefinition Id="e1b64c54-71fb-4538-b065-3c2a5852b087" />
+            <coveredLifelines>
+              <lifelineMoniker Id="d573d697-c119-4d2f-9ef6-84dd30d8338d" LastKnownName=": Tour" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="7e181d6f-5205-4708-9356-bd33a38c92c9" LastKnownName="ExecutionOccurrenceSpecification4" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="44afe048-623d-4d56-ae32-ca9c21f9b588" LastKnownName="ExecutionOccurrenceSpecification3" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="e129b445-d2d8-4fc0-9c91-f4b0de89b58c" LastKnownName="MessageOccurrenceSpecification4" />
+              <messageOccurrenceSpecificationMoniker Id="1d07fa44-f784-4c6a-94b0-d4271e712773" LastKnownName="MessageOccurrenceSpecification5" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="44afe048-623d-4d56-ae32-ca9c21f9b588" name="ExecutionOccurrenceSpecification3">
+            <elementDefinition Id="fc2f8e0c-613a-4340-8147-bd882945b64f" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8389c2e8-ec7e-4ba1-bf5a-7b06a4ffeebb" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="d573d697-c119-4d2f-9ef6-84dd30d8338d" LastKnownName=": Tour" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d689c7ae-2bb1-44ba-afe3-70e887e944da" name="MessageOccurrenceSpecification3">
+            <elementDefinition Id="bae80f20-5161-4cfb-ab92-1691d62e8ad4" />
+            <covered>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e129b445-d2d8-4fc0-9c91-f4b0de89b58c" name="MessageOccurrenceSpecification4">
+            <elementDefinition Id="9734511e-7447-4c84-915b-5258665f1295" />
+            <covered>
+              <lifelineMoniker Id="d573d697-c119-4d2f-9ef6-84dd30d8338d" LastKnownName=": Tour" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1d07fa44-f784-4c6a-94b0-d4271e712773" name="MessageOccurrenceSpecification5">
+            <elementDefinition Id="55096c24-af9a-4219-8c4b-72b45189151e" />
+            <covered>
+              <lifelineMoniker Id="d573d697-c119-4d2f-9ef6-84dd30d8338d" LastKnownName=": Tour" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2b77c53d-8ca4-43f5-a961-a99074754cb7" name="MessageOccurrenceSpecification6">
+            <elementDefinition Id="42402e59-bd41-449b-9adf-07e252f95dd4" />
+            <covered>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="7e181d6f-5205-4708-9356-bd33a38c92c9" name="ExecutionOccurrenceSpecification4">
+            <elementDefinition Id="af9167ad-c9ec-48c5-8869-7af59baac62d" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="cf378405-9bc5-4e9d-88c8-99b28120d72d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="d573d697-c119-4d2f-9ef6-84dd30d8338d" LastKnownName=": Tour" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="3e8cf2db-7655-45ec-b677-9ab8baa5f6bd" name="ExecutionOccurrenceSpecification2">
+            <elementDefinition Id="b899833b-eda4-479e-a565-4b452f1354e4" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="feb18f90-be9f-45e9-a18f-a255e662240d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" LastKnownName=": NhanVienSale" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="1ace94a5-6b52-42f8-9606-bc6f7e392422" name=": NhanVienSale" isActor="false" lifelineDisplayName=": NhanVienSale">
+            <elementDefinition Id="9390e8d8-8934-40bd-bf23-daf467667d71" />
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="811b2810-f13a-4cd6-88b1-ae9ed31f9db2" LastKnownName="MessageOccurrenceSpecification1" />
+              <executionOccurrenceSpecificationMoniker Id="86f86108-82da-4e18-ba6b-3a9d43e2ec15" LastKnownName="ExecutionOccurrenceSpecification1" />
+              <executionOccurrenceSpecificationMoniker Id="3e8cf2db-7655-45ec-b677-9ab8baa5f6bd" LastKnownName="ExecutionOccurrenceSpecification2" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="d573d697-c119-4d2f-9ef6-84dd30d8338d" name=": Tour" isActor="false" lifelineDisplayName=": Tour">
+            <elementDefinition Id="cf2be680-faf7-4cea-9313-95ce46a47df0" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="44afe048-623d-4d56-ae32-ca9c21f9b588" LastKnownName="ExecutionOccurrenceSpecification3" />
+              <executionOccurrenceSpecificationMoniker Id="7e181d6f-5205-4708-9356-bd33a38c92c9" LastKnownName="ExecutionOccurrenceSpecification4" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="dfaca1eb-4dc4-4dd4-bac6-6eaa0ab3ecdd" name="Chọn tour cần cập nhật" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true">
+            <elementDefinition Id="adf5d819-dee5-4328-af4f-58938e654c08" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="811b2810-f13a-4cd6-88b1-ae9ed31f9db2" LastKnownName="MessageOccurrenceSpecification1" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="5c71a8eb-bbb7-45a0-832e-6fbb4866a708" LastKnownName="MessageOccurrenceSpecification2" />
+            </receiveEvent>
+          </message>
+          <message Id="a8f948ba-6c6b-43d4-9918-bfa05602934b" name="Cập nhật tour" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="aa8ef2f7-8ad6-44af-ba59-693d94c4d8c5" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="d689c7ae-2bb1-44ba-afe3-70e887e944da" LastKnownName="MessageOccurrenceSpecification3" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="e129b445-d2d8-4fc0-9c91-f4b0de89b58c" LastKnownName="MessageOccurrenceSpecification4" />
+            </receiveEvent>
+          </message>
+          <message Id="9e110a19-93e2-454c-8491-ecaf3f0f93aa" name="&lt;&lt;Kết quả cập nhật tour&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="269720db-b6db-41f0-a898-60f279c6056b" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1d07fa44-f784-4c6a-94b0-d4271e712773" LastKnownName="MessageOccurrenceSpecification5" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="2b77c53d-8ca4-43f5-a961-a99074754cb7" LastKnownName="MessageOccurrenceSpecification6" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="9a41466e-ebf7-49c7-b570-47dc16bae8c2" name="ExecutionEvent">
+        <elementDefinition Id="7128b6af-7275-4f57-afc0-235dd142e7b3" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="feb18f90-be9f-45e9-a18f-a255e662240d" name="ExecutionEvent">
+        <elementDefinition Id="07d61f6f-8737-4b92-a868-651fec9b2c9c" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8389c2e8-ec7e-4ba1-bf5a-7b06a4ffeebb" name="ExecutionEvent">
+        <elementDefinition Id="98913e7a-c135-4020-a81e-d71e377818b1" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="cf378405-9bc5-4e9d-88c8-99b28120d72d" name="ExecutionEvent">
+        <elementDefinition Id="ab78ce71-afe8-46c5-8ad7-b3f5112f3404" />
+      </executionEvent>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="4612d49f-a5a1-46f1-9110-a1237f027b21" name="SequenceDiagram">
+    <elementDefinition Id="ea0d8dbc-f831-4018-aa72-80d13090ddc9" />
+  </package>
+</SequenceDesignerModel>
