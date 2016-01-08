@@ -106,6 +106,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UseCase_ThongKeSaleTour.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UseCase_XemChiTietTour.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_XemChiTietTour.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_XemChiTietTour.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCase_XemDiemDuLich.sequencediagram">
       <SubType>Content</SubType>
     </Content>
