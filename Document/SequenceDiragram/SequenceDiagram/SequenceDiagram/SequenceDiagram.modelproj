@@ -22,6 +22,20 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="UseCase_DangXuat.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_DangXuat.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_DangXuat.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_DanhNhap.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_DanhNhap.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_DanhNhap.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCase_CapNhatTour.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -98,6 +112,20 @@
     <Content Include="UseCase_QuanLyKhachHang_Xoa.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UseCase_QuanLyKhachHang_Xoa.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyNhanVien_Sua.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyNhanVien_Sua.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyNhanVien_Sua.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_QuanLyNhanVien_Them.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyNhanVien_Them.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyNhanVien_Them.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UseCase_ThongKeSaleTour.sequencediagram">
       <SubType>Content</SubType>
