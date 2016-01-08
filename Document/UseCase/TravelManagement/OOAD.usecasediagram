@@ -337,6 +337,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="c675d2c2-bb1a-4f2d-b430-7f5ca80b480d" name="Xem chi tiết tour" isAbstract="false" isLeaf="false">
         <elementDefinition Id="0a047eef-fc4b-4f45-a39f-b14d49379ba9" />
+        <additions>
+          <include Id="7fc4a1d4-aa09-43b4-baca-520e7fd28f3d">
+            <useCaseMoniker Id="1eafccb1-2a06-46e9-87cb-83f451555b39" LastKnownName="Submit tour" />
+            <elementDefinition Id="795f69eb-65cf-4de2-b673-ff067411893b" />
+          </include>
+        </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
