@@ -3723,7 +3723,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="8e3f4542-7095-43b3-8dc5-1d7e852f6659"
+            Id="9bea4150-10fa-41ac-a29d-25ffeab3c578"
             isDerived="false"
             sourceEndRoleName="Tour"
             targetEndRoleName="DoiTac"
@@ -3736,7 +3736,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="0ba62d1f-ed88-43b7-85b5-ca032de74c18"
+                  Id="4b21eed2-a4a7-4ceb-8b87-65f15e19f699"
                   name="Tour"
                   isLeaf="false"
                   isStatic="false"
@@ -3749,7 +3749,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="bb30009b-e3a5-4d36-8530-8e266eb9797c"
+                  Id="4015638e-dd8f-4c19-86bc-8da490525acb"
                   name="DoiTac"
                   isLeaf="false"
                   isStatic="false"
@@ -3757,63 +3757,7 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false">
-                  <appliedStereotypesInternal>
-                    <stereotypeInstance
-                      Id="3bb2ff01-4571-43c2-a228-d8d7b4e80910"
-                      name="field"
-                      profile="CSharpProfile">
-                      <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances
-                          Id="f3c43849-029a-4602-8202-80136a959aeb">
-                          <propertyInstance
-                            Id="2e3c0b24-4ac0-4b48-a443-55b38d80a369"
-                            name="ClrAttributes" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances
-                          Id="9790e95b-6b72-400d-8745-0594c17f6924">
-                          <propertyInstance
-                            Id="cdffae98-aa9f-4810-acbb-7165ab9dacc2"
-                            name="IsConst"
-                            value="false" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances
-                          Id="5a7ce26d-377d-447a-9491-f9ad055b6603">
-                          <propertyInstance
-                            Id="53536a15-4b1c-49f7-91d0-1371239dbe41"
-                            name="IsNullable"
-                            value="false" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances
-                          Id="b95ffffb-2e02-479d-a53c-709b84a935d9">
-                          <propertyInstance
-                            Id="01109019-7132-4c0e-adb9-4e51faf7dea7"
-                            name="IsVolatile"
-                            value="false" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances
-                          Id="b240aa4c-1811-4fb6-8a08-4600112259b3">
-                          <propertyInstance
-                            Id="8a226327-c5c0-4a54-b6f7-e370539d785f"
-                            name="PackageVisibility"
-                            value="internal" />
-                        </stereotypeInstanceHasPropertyInstances>
-                      </propertyInstances>
-                    </stereotypeInstance>
-                  </appliedStereotypesInternal>
-                  <lowerValueInternal>
-                    <literalString
-                      Id="f46ffeb5-5d79-4834-bb4a-3a35179fad57"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="79f4c0ba-2d1d-478c-9da5-78fddf020da6"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

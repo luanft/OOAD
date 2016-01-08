@@ -9,21 +9,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class NVDieuHanh : NhanVien
+public class NhanVien
 {
-	public IEnumerable<DoiTac> DoiTac;
+	protected string HoTen;
 
-	public bool ThemDoiTac(DoiTac dt)
+	protected int MaNhanVien;
+
+	protected string SoDT;
+
+	protected string DiaChi;
+
+	protected string QueQuan;
+
+	protected string CMND;
+
+	protected string Email;
+
+	protected DateTime NgaySinh;
+
+	protected string GioiTinh;
+
+	protected string MatKhau;
+
+	public ModelingProject2::Tour XemTour(int maTour)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public List<DoiTac> XemDanhSachDoiTac()
+	public bool DangNhap(string maNv, string mk)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public List<DoiTac> XemDanhSachDoiTac(KieuDoiTac kdt)
+	public void DangXuat()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XuLyTour(ModelingProject2::Tour tour)
 	{
 		throw new System.NotImplementedException();
 	}

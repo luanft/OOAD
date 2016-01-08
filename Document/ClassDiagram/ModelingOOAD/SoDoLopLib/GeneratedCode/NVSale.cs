@@ -9,20 +9,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class LichTrinh
+public class NVSale : NhanVien
 {
-	protected string Ngay;
+	public virtual IEnumerable<Tour> Tour
+	{
+		get;
+		set;
+	}
 
-	protected string TenLichTrinh;
+	public IEnumerable<DiemDuLich> DiemDuLich;
 
-	public IEnumerable<ChiTietLichTrinh> LichTrinh;
-
-	public bool ThemChiTietLichTrinh(ChiTietLichTrinh ct)
+	public bool ThemKhachHang(ModelingProject2::KhachHang kh)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public void XoaChiTietLichTrinh(bool malt)
+	public bool ThemTour(ModelingProject2::Tour tour)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool ThemDiemDuLich(ModelingProject2::DiemDuLich ddl)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public ModelingProject2::KhachHang XemThongTinKhachHang(int makh)
 	{
 		throw new System.NotImplementedException();
 	}

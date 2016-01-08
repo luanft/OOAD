@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject2", "ModelingProject2\ModelingProject2.modelproj", "{7E2279D5-D616-4B80-AEFB-B5A929D79D3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelingProject2Lib", "ModelingProject2Lib\ModelingProject2Lib.csproj", "{FCE3E428-B3A5-474C-917C-2214195C32B9}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SoDoLop", "SoDoLop\SoDoLop.modelproj", "{08D3BC6D-96F1-4813-8357-E5A86345237F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoDoLopLib", "SoDoLopLib\SoDoLopLib.csproj", "{6FC61D72-8ED3-4CCD-9DEA-05C319318D4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +25,14 @@ Global
 		{FCE3E428-B3A5-474C-917C-2214195C32B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE3E428-B3A5-474C-917C-2214195C32B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE3E428-B3A5-474C-917C-2214195C32B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D3BC6D-96F1-4813-8357-E5A86345237F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D3BC6D-96F1-4813-8357-E5A86345237F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D3BC6D-96F1-4813-8357-E5A86345237F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D3BC6D-96F1-4813-8357-E5A86345237F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC61D72-8ED3-4CCD-9DEA-05C319318D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC61D72-8ED3-4CCD-9DEA-05C319318D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC61D72-8ED3-4CCD-9DEA-05C319318D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC61D72-8ED3-4CCD-9DEA-05C319318D4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,15 +9,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class PhongBan
+public class NVDieuHanh : NhanVien
 {
-	protected string TenPhongBan;
+	public IEnumerable<DoiTac> DoiTac;
 
-	protected string MaPhongBan;
+	public bool ThemDoiTac(ModelingProject2::DoiTac dt)
+	{
+		throw new System.NotImplementedException();
+	}
 
-	public IEnumerable<NhanVien> NhanVien;
+	public List<DoiTac> XemDanhSachDoiTac()
+	{
+		throw new System.NotImplementedException();
+	}
 
-	public bool ThemNhanVien(NhanVien nv)
+	public List<DoiTac> XemDanhSachDoiTac(KieuDoiTac kdt)
 	{
 		throw new System.NotImplementedException();
 	}

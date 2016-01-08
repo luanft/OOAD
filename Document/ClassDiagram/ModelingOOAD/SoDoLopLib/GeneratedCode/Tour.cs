@@ -9,38 +9,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class NVSale : NhanVien
+public class Tour
 {
-	public virtual IEnumerable<Tour> Tour
+	protected int MaTour;
+
+	protected string TenTour;
+
+	protected string TongGiaTour;
+
+	protected DateTime NgayDi;
+
+	protected string TenKhachHang;
+
+	protected string ThoiGian;
+
+	protected string GhiChu;
+
+	protected string TrangThai;
+
+	protected string UuDai;
+
+	public IEnumerable<LichTrinh> ChiTietTour;
+
+	public virtual KhachHang DanhSachKhachHang
 	{
 		get;
 		set;
 	}
 
-	public virtual IEnumerable<DiemDuLich> DiemDuLich
-	{
-		get;
-		set;
-	}
+	public DoiTac NhaXe;
 
-	public IEnumerable<DiemDuLich> DiemDuLich;
+	public DoiTac HuongDanVien;
 
-	public bool ThemKhachHang(KhachHang kh)
+	public bool ThemLichTrinh(LichTrinh lt)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool ThemTour(Tour tour)
+	public bool SuaLichTrinh(LichTrinh lt)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool ThemDiemDuLich(DiemDuLich ddl)
+	public bool XoaLichTrinh(int malt)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public KhachHang XemThongTinKhachHang(int makh)
+	public bool LuuLaiTour()
 	{
 		throw new System.NotImplementedException();
 	}

@@ -9,14 +9,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class GiamDoc : NhanVien
+public class DiemDuLich
 {
-	public bool ThemNhanVien(NhanVien nv, PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
+	protected string MoTa;
 
-	public bool SuaThongTinNhanVien(NhanVien nv)
+	protected string TenDiemDuLich;
+
+	public IEnumerable<DacTrung> DacTrung;
+
+	public virtual bool ThemDacTrung(ModelingProject2::DacTrung dt)
 	{
 		throw new System.NotImplementedException();
 	}
