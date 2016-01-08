@@ -127,6 +127,20 @@
       <SubType>Content</SubType>
       <DependentUpon>UseCase_QuanLyNhanVien_Them.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UseCase_QuanLyNhanVien_Xoa.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_QuanLyNhanVien_Xoa.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_QuanLyNhanVien_Xoa.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase_SubmitTour.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_SubmitTour.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_SubmitTour.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCase_ThongKeSaleTour.sequencediagram">
       <SubType>Content</SubType>
     </Content>
