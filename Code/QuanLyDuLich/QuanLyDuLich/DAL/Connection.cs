@@ -8,7 +8,13 @@ using System.Threading.Tasks;
 
 namespace QuanLyDuLich.DAL
 {
-
+    class MysqlConnect : Connection
+    {
+        public MysqlConnect()
+        {
+            
+        }
+    }
 
     class Connection
     {        
@@ -43,7 +49,7 @@ namespace QuanLyDuLich.DAL
             return _con;
         }
 
-        private SqlConnection Close()
+        public SqlConnection Close()
         {
             if (_con.State != System.Data.ConnectionState.Closed)
             {

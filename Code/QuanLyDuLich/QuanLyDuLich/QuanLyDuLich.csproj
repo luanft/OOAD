@@ -44,16 +44,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ChiTietLichTrinh.cs" />
+    <Compile Include="BLL\DacTrung.cs" />
+    <Compile Include="BLL\DiemDuLich.cs" />
+    <Compile Include="BLL\DoiTac.cs" />
+    <Compile Include="BLL\GiamDoc.cs" />
+    <Compile Include="BLL\KhachHang.cs" />
+    <Compile Include="BLL\KieuDoiTac.cs" />
+    <Compile Include="BLL\LichTrinh.cs" />
+    <Compile Include="BLL\NhanVien.cs" />
+    <Compile Include="BLL\NVDieuHanh.cs" />
+    <Compile Include="BLL\NVSale.cs" />
+    <Compile Include="BLL\PhongBan.cs" />
+    <Compile Include="BLL\Tour.cs" />
     <Compile Include="DAL\Config.cs" />
     <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DiaDiemDuLich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiaDiemDuLich.Designer.cs">
+      <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyDiemDuLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyDiemDuLich.Designer.cs">
+      <DependentUpon>frmQuanLyDiemDuLich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThongKeSaleTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongKeSaleTour.Designer.cs">
+      <DependentUpon>frmThongKeSaleTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DiaDiemDuLich.resx">
+      <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanLyDiemDuLich.resx">
+      <DependentUpon>frmQuanLyDiemDuLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongKeSaleTour.resx">
+      <DependentUpon>frmThongKeSaleTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
