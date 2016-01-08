@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeneratedCode\ChiTietLichTrinh.cs" />
-    <Compile Include="GeneratedCode\DacTrung.cs" />
     <Compile Include="GeneratedCode\DiemDuLich.cs" />
     <Compile Include="GeneratedCode\DoiTac.cs" />
     <Compile Include="GeneratedCode\GiamDoc.cs" />
