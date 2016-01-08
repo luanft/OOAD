@@ -31,7 +31,7 @@ public class NhanVien
 
 	protected string MatKhau;
 
-	public ModelingProject2::Tour XemTour(int maTour)
+	public Tour XemTour(int maTour)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -42,11 +42,6 @@ public class NhanVien
 	}
 
 	public void DangXuat()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool XuLyTour(ModelingProject2::Tour tour)
 	{
 		throw new System.NotImplementedException();
 	}

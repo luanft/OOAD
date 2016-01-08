@@ -17,7 +17,7 @@ public class LichTrinh
 
 	public IEnumerable<ChiTietLichTrinh> LichTrinh;
 
-	public bool ThemChiTietLichTrinh(ModelingProject2::ChiTietLichTrinh ct)
+	public bool ThemChiTietLichTrinh(ChiTietLichTrinh ct)
 	{
 		throw new System.NotImplementedException();
 	}

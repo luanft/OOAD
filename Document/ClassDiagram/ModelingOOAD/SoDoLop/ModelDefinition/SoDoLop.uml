@@ -1094,94 +1094,6 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
           </operation>
-          <operation
-            Id="c31e2327-71fe-4609-8ffc-139a037a23df"
-            name="XuLyTour"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="6f511675-8706-4c7d-8c61-d886b02ed76b"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9c6eb1ae-8536-48b4-8d94-3a60c3f9104b">
-                    <propertyInstance
-                      Id="b9fa4d57-7712-4f81-b2c2-7649402830a9"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d6de7f95-5787-40b6-b488-d00c72f0cf32">
-                    <propertyInstance
-                      Id="93ae9ef7-1674-4f5b-93be-ec0dff2f564e"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e8e5eba0-0c7c-414b-8ec2-e98c2d13d68b">
-                    <propertyInstance
-                      Id="6eee2c50-0415-43ed-93b6-a88791d66dd0"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e4f546c3-6120-43c3-802a-70dba015ab00">
-                    <propertyInstance
-                      Id="d953aaf4-a981-4dad-a2c5-e0399a90b9da"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e07981bb-1729-45ca-8f1f-df56787b6f8a">
-                    <propertyInstance
-                      Id="f56c8002-5fe8-4fe6-ad96-65281d8e607a"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d5c24264-27ca-41d2-9e31-5a720105483d">
-                    <propertyInstance
-                      Id="189954f2-098f-4d3a-ab05-f81ac83ca748"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="38b642bf-79c3-4654-95a7-5ab2333d75b2"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="59ac767d-e7b1-464c-9908-2534f2cbcd02"
-                  name="tour"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
-                      LastKnownName="Tour"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1960,6 +1872,182 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="7169d98e-9dde-4d40-8776-afe7ba5c02ca"
+            name="CapNhatThongTinDoi"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="59c44e71-d24b-4b2f-86c0-9be1877451bb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3592d5a-5082-4e1b-a79c-22c8ba7fb97f">
+                    <propertyInstance
+                      Id="40ae479d-26fc-4411-8b2f-8bf8fa09f194"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86b50d39-42c5-4ec1-88a7-88c51be25908">
+                    <propertyInstance
+                      Id="7b6a4661-503d-470d-9f5a-937a7f802847"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af40d050-4e8b-4e63-afb1-b6340e537050">
+                    <propertyInstance
+                      Id="08a1799d-3591-45b6-9f6d-8ff415d85319"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0467d806-c349-4a27-9c83-9978fadbef3f">
+                    <propertyInstance
+                      Id="6d23ab48-3c28-4574-b45c-a57fd8db0ce7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61a01078-5c3f-4b22-9988-1419b8115a57">
+                    <propertyInstance
+                      Id="986a2684-a578-45cd-b90c-bf7eb4c9489e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="528b91d7-4383-462c-9913-a43a839b9668">
+                    <propertyInstance
+                      Id="0fe3b01f-26c1-45a4-be4a-1d0376d8ab83"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8cdde1ee-ba91-4e8a-b21c-c0b9046d97b1"
+                  name="dt"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="633e3612-5ebc-4b93-9b37-369acdc6fbf2"
+                      LastKnownName="DoiTac"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="72c14bbd-b98a-467b-b966-15f588c86036"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1eb32bb1-b749-462f-aa51-15af59b42ee7"
+            name="XetDuyetTour"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="53d0b2a0-7efa-41c0-a8bc-2150315e2b10"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ca93621-8d87-4b73-a9f4-1a4d9b855db9">
+                    <propertyInstance
+                      Id="c4a47e28-39b2-4ebd-a4d0-b6c579ac7f04"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="046d375e-dd94-438e-abce-8f5cdb2e85cc">
+                    <propertyInstance
+                      Id="2ddd9a9c-68bb-47b7-b74b-d7607eb24224"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd4c17f6-a795-492b-9c30-007d94a54376">
+                    <propertyInstance
+                      Id="f35a55d7-503e-4d9e-acb6-033e226bb0c4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cc4b044-2c2e-4ad8-8ee3-3451e5f1337f">
+                    <propertyInstance
+                      Id="cad5706b-4549-4263-b62a-19e35d9d2d5a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff015123-2a1b-4b43-90e6-7da069bc0bc2">
+                    <propertyInstance
+                      Id="17da8f5c-9a9c-4c56-975b-9601efd09855"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b22ecce8-9ab4-4d28-99d7-af98db169c56">
+                    <propertyInstance
+                      Id="449c41d6-067b-4633-91db-ce0b005d981b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3db6303d-0c93-4ffc-85d6-38fb2a18cae6"
+                  name="t"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc8135ee-0673-446f-8fec-bb2862d989c5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2525,6 +2613,432 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="40126b2f-abac-4021-81d2-e7e1db357a5d"
+            name="XoaKhachHang"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="92841d4f-0a97-4200-bbe2-269463108a15"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4ba1a6e-9bf7-45ab-8ff4-8f0485d2768f">
+                    <propertyInstance
+                      Id="96bdb0ad-f711-4b51-a992-f66f209bb10b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0041650f-ba5b-4477-9b39-6479c4ed44e3">
+                    <propertyInstance
+                      Id="668cdfd0-02e7-48a6-a7e6-559b67f68853"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ad9b5d3-7601-4035-add5-8ccbb1354a8b">
+                    <propertyInstance
+                      Id="3f031555-e674-4bba-bb33-6f38b978fa60"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98dcd5a5-0190-48d1-95cf-8ce710285931">
+                    <propertyInstance
+                      Id="aa6ace58-d94d-479e-98fa-05036b958ae0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e13b2e55-74cc-40d8-98c5-db3ca3b01535">
+                    <propertyInstance
+                      Id="4fdab1b1-8f74-48bf-8020-8b5597d5cbfe"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25489006-c58d-42d7-ad5b-406716310714">
+                    <propertyInstance
+                      Id="f937313d-0104-48bd-a883-bddc22c6002a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20f19c90-5208-48a8-a859-bfcbf58830cd"
+                  name="kh"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2da03ac5-f345-4be3-b4cb-d7b0d154ba11"
+                      LastKnownName="KhachHang"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da534523-947c-426a-b894-662915ee5938"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0a2acd55-4a15-4f3c-bb22-272bd45c0cfa"
+            name="CapNhatThongTinKhachHang"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="40a42411-2c9f-46fe-895d-74081e563ab5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eed25c1f-076a-4a28-b295-3db5195291fc">
+                    <propertyInstance
+                      Id="f2aab0eb-0cdf-41f4-b764-85747af90141"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4208fe34-4e6d-44ed-be46-48d7467beb3c">
+                    <propertyInstance
+                      Id="83559e99-6948-4ad8-8099-964d07ae1639"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba1bfa28-0113-4f05-92ee-6ef4e73b6be5">
+                    <propertyInstance
+                      Id="2c5fe9c5-7176-478d-8f05-7b08543ad7b9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2cdbee3-13cd-4cf5-be99-a99a02a67b50">
+                    <propertyInstance
+                      Id="b2ddf35f-7b26-4d90-921f-76c73125c191"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="066d798d-8af9-48aa-9484-72cf523c84d2">
+                    <propertyInstance
+                      Id="98d87799-cb46-4adc-b374-066e81d75145"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="716d41ed-403b-4f30-920e-6fe9b1f2945c">
+                    <propertyInstance
+                      Id="db18e43b-d9fd-4aea-8a93-1aa4c6032c08"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5b05bac-8aa8-4041-b930-64de4e2dad0b"
+                  name="kh"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2da03ac5-f345-4be3-b4cb-d7b0d154ba11"
+                      LastKnownName="KhachHang"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d8354fef-5b11-4461-addc-fa857290ad47"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="04758bae-b980-4a6d-8039-8ae9bb74c62c"
+            name="LayDanhSachKhachHang"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4524bfb8-e199-42c5-8b8f-08ef787d4aa8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64993f73-bbc0-4b9b-9ea6-44bf9f2405aa">
+                    <propertyInstance
+                      Id="4ff4c440-0719-452e-8ff4-c212525bd051"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="877352cd-398c-4f5c-8519-76d982eff62a">
+                    <propertyInstance
+                      Id="24edee13-1c2c-4516-a3fd-c9fd9a68b094"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5035dc9b-235b-4344-b75c-f890aa8c819c">
+                    <propertyInstance
+                      Id="efbad6ac-0cb5-4a8a-81cf-be25ed1976f6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="999dd5c0-b501-48d3-9ef1-d6108d030fa0">
+                    <propertyInstance
+                      Id="9bc3bcb8-9046-49ac-9b08-290665456cea"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3e650ce-fdc2-4b1d-9357-a9639f0026a1">
+                    <propertyInstance
+                      Id="c449e275-21a8-45aa-bd33-c74672fdcf57"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95ff2311-2b2f-4ae5-967e-371be95ebb85">
+                    <propertyInstance
+                      Id="1a2161e4-8c36-4ad9-b418-89be0b5db507"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f39e088-9b72-4637-aacd-e445c6a9980e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="eca007cf-ef57-4aa8-8ac4-015d05df0890"
+                      LastKnownName="List&lt;KhachHang&gt;"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="988f11c9-834a-4662-ad7e-7fd6840a40fb"
+            name="XoaTour"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2aac51d6-0d4e-4cdb-830d-2d33c4a76b63"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f876806d-9066-494e-ac41-bb2857cc6732">
+                    <propertyInstance
+                      Id="a5c3f84a-4a3c-492d-8e6b-8317ff7aee49"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1e1843b-a782-4fce-8858-180d536b238a">
+                    <propertyInstance
+                      Id="a91336b3-19ab-4104-83ff-4e73149a9acf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc57dd77-4d79-4f1d-ad17-551e575aefe5">
+                    <propertyInstance
+                      Id="a51c4dee-a4ed-492a-afbc-76e02e4039f6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2304e792-015b-4800-82d6-10bc8da1b00f">
+                    <propertyInstance
+                      Id="fd9c3890-8f56-4fab-bf79-b665a0002541"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ace83b0-7d83-4d27-8608-202298d38540">
+                    <propertyInstance
+                      Id="e2f7ff07-c803-47a7-ba11-30b728a02bf5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17c893b9-95a6-4254-b821-8e549022ade6">
+                    <propertyInstance
+                      Id="f60bdebf-7c72-4284-8c24-a78531a5c221"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ceb5dcc8-171e-43a5-9a50-df4f209b8003"
+                  name="t"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="001c259b-6927-4d4a-b3cd-d7224bf24499"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b6ce2bb4-4732-4f8b-ac58-fdcd65d9dd75"
+            name="SubmitTour"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="da9a8ba1-00b7-4a26-b5d6-a73762c32083"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18cc8dbf-0d03-4e52-9464-6192e16ed18e">
+                    <propertyInstance
+                      Id="fa99e67d-381f-4260-9cff-c33ff83de157"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d50b480d-3ea4-40b6-89f9-652530fc516f">
+                    <propertyInstance
+                      Id="51d4cc47-3635-4388-bcdc-1e360d032234"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8275656-fff9-4ef4-b66a-3bb826de2d81">
+                    <propertyInstance
+                      Id="aa761c19-4d72-4220-9113-1f85d4edf7e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71b95c5d-2aae-4298-ab52-1d3d2c5a0faa">
+                    <propertyInstance
+                      Id="280bf39a-8343-4384-9876-4924286a5c53"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2743c9b2-501e-4102-9c50-25b053f330dc">
+                    <propertyInstance
+                      Id="6f7ff82d-31e4-4957-bc9c-749ab7722efa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fde051e6-5509-4eeb-90ab-296dd81e7d0e">
+                    <propertyInstance
+                      Id="93177573-f0a4-4b9b-b211-9c186877e6af"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cda56b95-e15d-4947-801c-36c910b26b5d"
+                  name="t"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ad2a7e4-0845-4723-b384-d32ddd24f98f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2773,6 +3287,94 @@
                     <classMoniker
                       Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25"
                       LastKnownName="NhanVien"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b7f90ac7-26bd-431f-a989-4adea0627e1b"
+            name="DinhGiaTour"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="67f828e8-5bd7-4b73-92e8-db8f8b2a269a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b5d5dfb-e371-4f26-b26a-545a99f5456d">
+                    <propertyInstance
+                      Id="0d77bf7f-d386-4e8e-a1dd-0f28152e685a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7bd301c5-6898-4b75-aa3e-ad69fe0d3100">
+                    <propertyInstance
+                      Id="7836655a-49ad-4686-9c69-2c2e61bf4866"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="142f7bda-18fc-4b02-9c1a-1c31b1f2bd20">
+                    <propertyInstance
+                      Id="4aad96db-33a8-4ae3-8b22-5ec0670f2f69"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c211518-4c73-4ef0-9362-ba2fed6fa436">
+                    <propertyInstance
+                      Id="b004fbf7-1fcd-474b-b0cd-821f4314f01b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fed9f0b8-3270-4907-9f68-871e26995f1c">
+                    <propertyInstance
+                      Id="6e3ed28c-d17f-4ddc-a723-854637643c06"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5113d16-a2db-4841-865f-8e337a4d9034">
+                    <propertyInstance
+                      Id="ce199c27-96b7-4fd0-88eb-ba3bc5813d93"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da005264-dc47-4fd1-b12c-c50d85d61971"
+                  name="t"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7feb8c8f-0614-4635-a9af-e25c2ed7718f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3482,7 +4084,7 @@
             Id="cadf48f8-d80c-4adb-a5f9-417f468d2434"
             isDerived="false"
             sourceEndRoleName="Tour"
-            targetEndRoleName="DanhSachKhachHang"
+            targetEndRoleName="KhachHang"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -3506,7 +4108,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="f687310f-94d9-4d93-9b5d-e01fc5e194a5"
-                  name="DanhSachKhachHang"
+                  name="KhachHang"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4621,6 +5223,94 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2e282664-ab98-4e83-9bd2-efafed656792"
+            name="ChonKhachHang"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bbf2e5d9-57bd-4685-91d4-a5bd5804d8d4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea2d732d-9b24-4d17-bbfd-2a4841883716">
+                    <propertyInstance
+                      Id="5bd61b5f-0d69-4f79-b2e3-140c4cd4baf6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5052570f-9445-4b93-b85c-c0ec29bc2c24">
+                    <propertyInstance
+                      Id="604e21f1-1d1c-48ca-a1f3-61a479a6e6e5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a37a3c0-09ef-4297-8dd2-09385898c4e3">
+                    <propertyInstance
+                      Id="1f6627d5-219b-4849-b956-ad5bab31227d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6241d621-94ae-409f-8653-23418e93c5dd">
+                    <propertyInstance
+                      Id="93e212a7-e948-47af-87db-7dc89be183af"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e05e1b0c-4188-4458-a299-bdef7c13c1fd">
+                    <propertyInstance
+                      Id="3c3170d3-5720-4a6f-9c7a-de4a01fe46cd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36e42827-42af-4f99-8073-572d2e56bcf6">
+                    <propertyInstance
+                      Id="3c1bf3d8-ea69-4a3a-a289-df1ef34668a0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0752ae3b-2e75-4a7b-9f2b-454aa7d9baad"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ccbc8461-97f3-46c9-bb3e-726890de2e3e"
+                  name="kh"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2da03ac5-f345-4be3-b4cb-d7b0d154ba11"
+                      LastKnownName="KhachHang"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -6378,97 +7068,12 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="37385560-edd0-4a50-856f-c5f06c5007b9"
-            name="ThemDacTrung"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="c31fa20d-0424-49ca-a945-d3f474bf93c8"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1e5b2dbd-b5aa-4ded-9bc7-25e9eeba372b">
-                    <propertyInstance
-                      Id="c936a386-3482-47a0-be42-177bdce78cfc"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5262cc26-735e-4765-a2a3-3247590fbb03">
-                    <propertyInstance
-                      Id="7f4e6970-ca0d-4857-a325-2bbc1103764e"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b4a17030-5c10-4031-b365-272dcbcde612">
-                    <propertyInstance
-                      Id="3d0d80a5-50d6-45f9-ac6b-fcec7176d678"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="76705827-5d1c-4d69-b71b-6b4e3f3a9714">
-                    <propertyInstance
-                      Id="0f759687-84a4-4f60-b8b5-df6e0f6ec8c3"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2712f053-5c59-41e0-8631-110c9f879a3f">
-                    <propertyInstance
-                      Id="1580abe4-33ff-44fa-a99b-a62bb3f1bc7c"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6b178799-4277-494e-b29f-48e105bc3ee5">
-                    <propertyInstance
-                      Id="6b3e50ee-5be1-49f4-8563-e19c9bcd45ac"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="3cdd7499-d20b-473b-a34b-f5331d7c87fa"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="26d5178f-d97c-4cd8-bd83-dd233608538a"
-                  name="dt"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="d32b77b9-81ce-44ae-8962-36a1cb74eee6"
-                      LastKnownName="DacTrung"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eca007cf-ef57-4aa8-8ac4-015d05df0890"
+        name="List&lt;KhachHang&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

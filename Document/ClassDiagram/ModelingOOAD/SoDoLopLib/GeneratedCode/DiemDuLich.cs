@@ -17,10 +17,5 @@ public class DiemDuLich
 
 	public IEnumerable<DacTrung> DacTrung;
 
-	public virtual bool ThemDacTrung(ModelingProject2::DacTrung dt)
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

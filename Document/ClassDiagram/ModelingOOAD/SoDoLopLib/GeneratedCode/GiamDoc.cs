@@ -11,12 +11,17 @@ using System.Text;
 
 public class GiamDoc : NhanVien
 {
-	public bool ThemNhanVien(ModelingProject2::NhanVien nv, ModelingProject2::PhongBan pb)
+	public bool ThemNhanVien(NhanVien nv, PhongBan pb)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool SuaThongTinNhanVien(ModelingProject2::NhanVien nv)
+	public bool SuaThongTinNhanVien(NhanVien nv)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool DinhGiaTour(Tour t)
 	{
 		throw new System.NotImplementedException();
 	}

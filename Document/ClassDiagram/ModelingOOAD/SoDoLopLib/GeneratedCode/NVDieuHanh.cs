@@ -13,7 +13,7 @@ public class NVDieuHanh : NhanVien
 {
 	public IEnumerable<DoiTac> DoiTac;
 
-	public bool ThemDoiTac(ModelingProject2::DoiTac dt)
+	public bool ThemDoiTac(DoiTac dt)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -24,6 +24,16 @@ public class NVDieuHanh : NhanVien
 	}
 
 	public List<DoiTac> XemDanhSachDoiTac(KieuDoiTac kdt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool CapNhatThongTinDoi(DoiTac dt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XetDuyetTour(Tour t)
 	{
 		throw new System.NotImplementedException();
 	}

@@ -17,7 +17,7 @@ public class PhongBan
 
 	public IEnumerable<NhanVien> NhanVien;
 
-	public bool ThemNhanVien(ModelingProject2::NhanVien nv)
+	public bool ThemNhanVien(NhanVien nv)
 	{
 		throw new System.NotImplementedException();
 	}

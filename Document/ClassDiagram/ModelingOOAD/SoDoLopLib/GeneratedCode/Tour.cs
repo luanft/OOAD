@@ -31,11 +31,7 @@ public class Tour
 
 	public IEnumerable<LichTrinh> ChiTietTour;
 
-	public virtual KhachHang DanhSachKhachHang
-	{
-		get;
-		set;
-	}
+	public KhachHang KhachHang;
 
 	public DoiTac NhaXe;
 
@@ -57,6 +53,11 @@ public class Tour
 	}
 
 	public bool LuuLaiTour()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ChonKhachHang(KhachHang kh)
 	{
 		throw new System.NotImplementedException();
 	}
