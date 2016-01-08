@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UseCase_CapNhatTour.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UseCase_LapTour.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_LapTour.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_LapTour.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCase_QuanLyDiemDuLich_Sua.sequencediagram">
       <SubType>Content</SubType>
     </Content>
