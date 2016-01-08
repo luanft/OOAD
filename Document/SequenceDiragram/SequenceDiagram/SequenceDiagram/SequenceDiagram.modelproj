@@ -120,6 +120,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UseCase_XemThongTinDoiTac.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UseCase_XemTours.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase_XemTours.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase_XemTours.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="Usecase_XetDuyetTour.sequencediagram">
       <SubType>Content</SubType>
     </Content>
