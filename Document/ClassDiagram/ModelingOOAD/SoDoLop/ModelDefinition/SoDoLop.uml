@@ -906,7 +906,20 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2c63f8fc-e126-4850-b80a-d830e8dbdb84"
+                  Id="f6a3a73b-0425-4975-ba7b-dd9591e38b65"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3377eee6-cb38-4a39-9c59-1536d4dfe7a3"
                   name="maTour"
                   direction="In"
                   isUnique="false">
@@ -914,19 +927,6 @@
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
                       LastKnownName="Integer"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f6a3a73b-0425-4975-ba7b-dd9591e38b65"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="8a185ffa-b567-4dc2-bdc9-0cdd3b082986"
-                      LastKnownName="ModelingProject2::Tour"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1155,20 +1155,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="958483b5-2b47-4be0-a08f-37b4adb3c012"
-                  name="tour"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="8a185ffa-b567-4dc2-bdc9-0cdd3b082986"
-                      LastKnownName="ModelingProject2::Tour"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="38b642bf-79c3-4654-95a7-5ab2333d75b2"
                   direction="Return"
                   isUnique="false">
@@ -1176,6 +1162,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="59ac767d-e7b1-464c-9908-2534f2cbcd02"
+                  name="tour"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1521,20 +1521,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d87b8306-69fd-4e66-8b82-c1c920ea2122"
-                  name="nv"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="0afa89fa-661f-4765-8d3d-d8382f2c64ff"
-                      LastKnownName="ModelingProject2::NhanVien"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="f975de9d-376f-485a-9556-8d7abaefe680"
                   direction="Return"
                   isUnique="false">
@@ -1542,6 +1528,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0383c9ea-10fc-487b-943a-42fab3c2e80c"
+                  name="nv"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25"
+                      LastKnownName="NhanVien"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1771,20 +1771,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fd90a794-b454-46ba-96e9-a1fc3fd02ede"
-                  name="dt"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="f91ed5c1-8892-4b68-b8ab-49b5709ff586"
-                      LastKnownName="ModelingProject2::DoiTac"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="449a077d-511a-4204-bb5d-7db4d73e1fb0"
                   direction="Return"
                   isUnique="false">
@@ -1792,6 +1778,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5bba8a80-262b-432d-a6dc-37bf6fedebd0"
+                  name="dt"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="633e3612-5ebc-4b93-9b37-369acdc6fbf2"
+                      LastKnownName="DoiTac"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2234,20 +2234,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b597c478-67f8-451b-a1e1-d8f3abfb6dad"
-                  name="kh"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="2432303d-ba62-460e-9c2a-2c5309b9a83a"
-                      LastKnownName="ModelingProject2::KhachHang"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="43e5e9e9-8f48-4a09-aa22-e0413966f2cd"
                   direction="Return"
                   isUnique="false">
@@ -2255,6 +2241,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89b8d769-01e5-45f9-a1c9-cfffb3436a14"
+                  name="kh"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2da03ac5-f345-4be3-b4cb-d7b0d154ba11"
+                      LastKnownName="KhachHang"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2335,14 +2335,14 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ed3f2a6c-84e3-47af-ad86-1abb41e1cc32"
+                  Id="aff000b4-b0f6-4c78-bc22-a7b130a1bb6e"
                   name="tour"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="8a185ffa-b567-4dc2-bdc9-0cdd3b082986"
-                      LastKnownName="ModelingProject2::Tour"
+                    <classMoniker
+                      Id="43b38096-6304-41aa-86ee-88e7a777bcca"
+                      LastKnownName="Tour"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2410,20 +2410,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5d909b33-c38f-4d36-8d0e-7373ad554d73"
-                  name="ddl"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="0b53c84b-b31c-4491-8dd4-34aea36da318"
-                      LastKnownName="ModelingProject2::DiemDuLich"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="4dd89561-1462-40a3-ba1c-507e662907ec"
                   direction="Return"
                   isUnique="false">
@@ -2431,6 +2417,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="81298d91-07ce-4900-94a8-93c4e2e42452"
+                  name="ddl"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2a2822eb-b0da-4ed2-81bc-3535d8f50748"
+                      LastKnownName="DiemDuLich"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2498,7 +2498,20 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e84c4409-bf8a-42f5-b06b-90733e0374bb"
+                  Id="aae1785c-ac48-4542-8141-fc550c4ed1b2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2da03ac5-f345-4be3-b4cb-d7b0d154ba11"
+                      LastKnownName="KhachHang"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="af79b3b2-697b-4b43-9b7b-c815b824b6c3"
                   name="makh"
                   direction="In"
                   isUnique="false">
@@ -2506,19 +2519,6 @@
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
                       LastKnownName="Integer"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="aae1785c-ac48-4542-8141-fc550c4ed1b2"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="2432303d-ba62-460e-9c2a-2c5309b9a83a"
-                      LastKnownName="ModelingProject2::KhachHang"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2663,28 +2663,28 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="571853fb-42cf-4f07-9aa8-71581dcfa8dc"
+                  Id="7f20bec1-0cdf-4001-a131-ef98967208cb"
                   name="nv"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="0afa89fa-661f-4765-8d3d-d8382f2c64ff"
-                      LastKnownName="ModelingProject2::NhanVien"
+                    <classMoniker
+                      Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25"
+                      LastKnownName="NhanVien"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d8679970-12dc-41a3-ae60-cfe1c4ee0a3a"
+                  Id="d8b9d788-f7d4-419b-8973-3ad1aadcb926"
                   name="pb"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="edaa9f64-7399-454c-a8ec-be17df2dcdee"
-                      LastKnownName="ModelingProject2::PhongBan"
+                    <classMoniker
+                      Id="ff44df00-68f6-4f0f-8e92-71d03ed26eed"
+                      LastKnownName="PhongBan"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2752,20 +2752,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="88a1827f-f4d1-48bc-a5f7-bf6dde19401c"
-                  name="nv"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="0afa89fa-661f-4765-8d3d-d8382f2c64ff"
-                      LastKnownName="ModelingProject2::NhanVien"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="7342bdef-182b-4a98-90af-5a1d06c7377c"
                   direction="Return"
                   isUnique="false">
@@ -2773,6 +2759,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83c21c9d-10f3-4522-a395-57a7117635a6"
+                  name="nv"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25"
+                      LastKnownName="NhanVien"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4363,7 +4363,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="11c365f9-3e73-424d-a9a9-fe325436cbc6"
+                  Id="99e58d54-3268-4ff9-8692-dfa69991b561"
                   name="lt"
                   direction="In"
                   isUnique="false">
@@ -5205,20 +5205,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8a19385a-2076-429b-9a33-2782224d5b7a"
-                  name="ct"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="31839d88-caa3-438e-8f71-e8344e17057d"
-                      LastKnownName="ModelingProject2::ChiTietLichTrinh"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="cac4b230-5b11-4981-98cb-faa0c5911bd4"
                   direction="Return"
                   isUnique="false">
@@ -5226,6 +5212,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f602cdd3-ca08-490b-b12f-5e9cd9966695"
+                  name="ct"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ccc3fd15-53e4-4ce2-ae17-b9fb065a9ac7"
+                      LastKnownName="ChiTietLichTrinh"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -6440,20 +6440,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d678f501-7ac5-4fdf-b2c0-33700c265eb4"
-                  name="dt"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="64a76063-b4db-4eb1-a7eb-a394d8306c47"
-                      LastKnownName="ModelingProject2::DacTrung"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="3cdd7499-d20b-473b-a34b-f5331d7c87fa"
                   direction="Return"
                   isUnique="false">
@@ -6461,6 +6447,20 @@
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
                       LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26d5178f-d97c-4cd8-bd83-dd233608538a"
+                  name="dt"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d32b77b9-81ce-44ae-8962-36a1cb74eee6"
+                      LastKnownName="DacTrung"
                       LastKnownLocation="SoDoLop.uml" />
                   </type_NamedElement>
                 </parameter>

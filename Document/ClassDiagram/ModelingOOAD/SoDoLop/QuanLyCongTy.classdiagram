@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="a322a26e-33ca-47fb-8720-f85478f0f884">
-      <profileInstance Id="684c140c-b435-4b72-8c3d-86f2d290afcf" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="0b7e3ea8-9db8-4028-a87e-b5ab9d923cd4">
-      <profileInstance Id="f9d80cb8-fb91-43d8-a4ac-d3ef095457a7" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3652b7a1-30fa-4b17-8a89-7d911d61b9fc">
-      <profileInstance Id="17a35985-5b37-4544-bd07-71df39223aaa" name="CSharpProfile">
-        <elementDefinition Id="f2ef5d89-b74f-44c6-b41d-d24a653a4ea4" />
-      </profileInstance>
-      <elementDefinition Id="2bd9f72e-f68d-415f-9e80-4e79be6221f8" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2245c1db-416b-4ca9-9447-8cb17267388d">
-      <profileInstance Id="7b02b519-a2dc-4d8c-b6e0-14f8668629b3" name="TextTemplateBindings">
-        <elementDefinition Id="200b7f70-668f-41bb-9892-cc8d92ea1bb1" />
-      </profileInstance>
-      <elementDefinition Id="83891d10-a384-45a8-bebd-49b06b231aac" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="f9b0f10d-f5af-4a20-a0df-2da3d00e54ba" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
@@ -112,11 +86,6 @@
     <packageHasNamedElement>
       <referencedType Id="8b3dfe21-9048-48ec-8622-dcf1ec29ad3a" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
         <elementDefinition Id="05180320-a0d1-4bd8-bf52-e1116290a445" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="7c3520f8-4e70-4df9-b6c2-b9c0e929cf08" name="ModelingProject2::Tour" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::Tour">
-        <elementDefinition Id="8a185ffa-b567-4dc2-bdc9-0cdd3b082986" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -135,16 +104,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="26791179-0b3f-4bf9-9f4d-d3e6c5c5325a" name="ModelingProject2::NhanVien" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::NhanVien">
-        <elementDefinition Id="0afa89fa-661f-4765-8d3d-d8382f2c64ff" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="b7a3c6c2-043f-4f18-bcff-de8c20b3bb78" name="ModelingProject2::DoiTac" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::DoiTac">
-        <elementDefinition Id="f91ed5c1-8892-4b68-b8ab-49b5709ff586" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="681b1942-23b3-4fc8-8df6-4b591411dad7" name="List&lt;DoiTac&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;DoiTac&gt;">
         <elementDefinition Id="21ac2251-b844-4425-91cb-7a43a8f71528" />
       </referencedType>
@@ -152,21 +111,6 @@
     <packageHasNamedElement>
       <referencedType Id="a5fb1492-c8ca-4e3c-b6c5-df71cd821948" name="KieuDoiTac" isAbstract="false" isLeaf="false" cachedFullName="KieuDoiTac">
         <elementDefinition Id="c2745576-f797-4186-a5ff-223e906b9493" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="fc695bd9-843d-413a-aa1c-eaf42b6852d8" name="ModelingProject2::KhachHang" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::KhachHang">
-        <elementDefinition Id="2432303d-ba62-460e-9c2a-2c5309b9a83a" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="8c7d95a8-89e0-4e54-83a4-cfbc3e07f3f2" name="ModelingProject2::DiemDuLich" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::DiemDuLich">
-        <elementDefinition Id="0b53c84b-b31c-4491-8dd4-34aea36da318" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="1b983ce1-0dee-4203-8504-4c0ea76a38a3" name="ModelingProject2::PhongBan" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::PhongBan">
-        <elementDefinition Id="edaa9f64-7399-454c-a8ec-be17df2dcdee" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -265,11 +209,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="390f016d-dc77-45dc-8474-ab1395cddfa7" name="ModelingProject2::ChiTietLichTrinh" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::ChiTietLichTrinh">
-        <elementDefinition Id="31839d88-caa3-438e-8f71-e8344e17057d" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="9c371620-7ea7-4f02-87fc-909a3676bb10" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
       </referencedType>
@@ -322,11 +261,6 @@
     <packageHasNamedElement>
       <referencedType Id="7f61143f-4fdb-4603-9c4f-3d79a6f0bfab" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="1fa6a8c7-dd3e-4b2f-a6f4-63c86daa6a89" name="ModelingProject2::DacTrung" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject2::DacTrung">
-        <elementDefinition Id="64a76063-b4db-4eb1-a7eb-a394d8306c47" />
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
@@ -849,18 +783,18 @@
             <elementDefinition Id="87671c58-7680-48fe-bd6b-e6c5dcd9dce9" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="45c1a829-c3af-4d1c-9b29-54902068f114" name="maTour" direction="In" isUnique="false">
-                  <elementDefinition Id="2c63f8fc-e126-4850-b80a-d830e8dbdb84" />
+                <parameter Id="573364d0-d365-4a70-a5f6-3250343d23af" direction="Return" isUnique="false">
+                  <elementDefinition Id="f6a3a73b-0425-4975-ba7b-dd9591e38b65" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="e29f5661-bd07-4e7f-8bdd-d0aa49f0f4e7" LastKnownName="Integer" />
+                    <referencedTypeMoniker Id="ce6259c8-14b3-44ee-b273-b0e45a675d74" LastKnownName="Tour" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="573364d0-d365-4a70-a5f6-3250343d23af" direction="Return" isUnique="false">
-                  <elementDefinition Id="f6a3a73b-0425-4975-ba7b-dd9591e38b65" />
+                <parameter Id="113b09aa-dde7-4c57-8ac0-953a4333d78e" name="maTour" direction="In" isUnique="false">
+                  <elementDefinition Id="3377eee6-cb38-4a39-9c59-1536d4dfe7a3" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="7c3520f8-4e70-4df9-b6c2-b9c0e929cf08" LastKnownName="ModelingProject2::Tour" />
+                    <referencedTypeMoniker Id="e29f5661-bd07-4e7f-8bdd-d0aa49f0f4e7" LastKnownName="Integer" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1031,18 +965,18 @@
             <elementDefinition Id="c31e2327-71fe-4609-8ffc-139a037a23df" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="47f8fc34-fcc5-4da3-a7bc-08c38e60a078" name="tour" direction="In" isUnique="false">
-                  <elementDefinition Id="958483b5-2b47-4be0-a08f-37b4adb3c012" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="7c3520f8-4e70-4df9-b6c2-b9c0e929cf08" LastKnownName="ModelingProject2::Tour" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="24812b63-3b8f-4d63-9f2a-87bbb8f473c6" direction="Return" isUnique="false">
                   <elementDefinition Id="38b642bf-79c3-4654-95a7-5ab2333d75b2" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="24f33da7-7095-4280-880f-287b234bed56" name="tour" direction="In" isUnique="false">
+                  <elementDefinition Id="59ac767d-e7b1-464c-9908-2534f2cbcd02" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ce6259c8-14b3-44ee-b273-b0e45a675d74" LastKnownName="Tour" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1292,18 +1226,18 @@
             <elementDefinition Id="5b89cceb-9120-48c7-97f7-bdb48e9808a9" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="a6d484cb-4718-446d-bb83-f68590701ac9" name="nv" direction="In" isUnique="false">
-                  <elementDefinition Id="d87b8306-69fd-4e66-8b82-c1c920ea2122" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="26791179-0b3f-4bf9-9f4d-d3e6c5c5325a" LastKnownName="ModelingProject2::NhanVien" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="69b45799-d7ff-42c2-afd1-b50319989be1" direction="Return" isUnique="false">
                   <elementDefinition Id="f975de9d-376f-485a-9556-8d7abaefe680" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4ab3b10d-9c6c-4777-9916-0edb425aa81c" name="nv" direction="In" isUnique="false">
+                  <elementDefinition Id="0383c9ea-10fc-487b-943a-42fab3c2e80c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="54e1787c-4a8b-4810-ab3b-999b5a661989" LastKnownName="NhanVien" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1471,18 +1405,18 @@
             <elementDefinition Id="d1cb3b98-c91b-4580-b507-12a0af0d4345" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="b3b1f5c5-1775-4c3a-be48-4d35b220cda2" name="dt" direction="In" isUnique="false">
-                  <elementDefinition Id="fd90a794-b454-46ba-96e9-a1fc3fd02ede" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b7a3c6c2-043f-4f18-bcff-de8c20b3bb78" LastKnownName="ModelingProject2::DoiTac" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="fc05170a-47ac-47c3-88bb-204a46ead0e7" direction="Return" isUnique="false">
                   <elementDefinition Id="449a077d-511a-4204-bb5d-7db4d73e1fb0" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2e8dd0d4-9629-40e6-95ab-f46840563ee9" name="dt" direction="In" isUnique="false">
+                  <elementDefinition Id="5bba8a80-262b-432d-a6dc-37bf6fedebd0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="19d7e388-2991-4194-9958-eb64161c3e07" LastKnownName="DoiTac" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1796,18 +1730,18 @@
             <elementDefinition Id="22ff486b-c717-453b-8a21-9e6273c708d1" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="2f816b29-3971-4209-8043-399ae1dfb053" name="kh" direction="In" isUnique="false">
-                  <elementDefinition Id="b597c478-67f8-451b-a1e1-d8f3abfb6dad" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="fc695bd9-843d-413a-aa1c-eaf42b6852d8" LastKnownName="ModelingProject2::KhachHang" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="64ddd258-eb43-42c3-ae43-add5161a56be" direction="Return" isUnique="false">
                   <elementDefinition Id="43e5e9e9-8f48-4a09-aa22-e0413966f2cd" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9c42e1dd-8d54-443f-9e42-cd3c862b8779" name="kh" direction="In" isUnique="false">
+                  <elementDefinition Id="89b8d769-01e5-45f9-a1c9-cfffb3436a14" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38bba3fe-539e-4850-beb3-08f9998b02e0" LastKnownName="KhachHang" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1868,10 +1802,10 @@
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="90502936-75fb-456b-bb0c-5372dd806eb0" name="tour" direction="In" isUnique="false">
-                  <elementDefinition Id="ed3f2a6c-84e3-47af-ad86-1abb41e1cc32" />
+                <parameter Id="a8f5ce28-b2dd-4a29-ad80-8b51f693c8cc" name="tour" direction="In" isUnique="false">
+                  <elementDefinition Id="aff000b4-b0f6-4c78-bc22-a7b130a1bb6e" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="7c3520f8-4e70-4df9-b6c2-b9c0e929cf08" LastKnownName="ModelingProject2::Tour" />
+                    <referencedTypeMoniker Id="ce6259c8-14b3-44ee-b273-b0e45a675d74" LastKnownName="Tour" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1924,18 +1858,18 @@
             <elementDefinition Id="2f9d1377-341d-4d37-9be7-c5fc4d282325" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="a68c7e0f-7f9e-4da0-91ea-ce15a9a790df" name="ddl" direction="In" isUnique="false">
-                  <elementDefinition Id="5d909b33-c38f-4d36-8d0e-7373ad554d73" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="8c7d95a8-89e0-4e54-83a4-cfbc3e07f3f2" LastKnownName="ModelingProject2::DiemDuLich" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="2591d16d-7acf-48b7-a319-b2cc4a4400f7" direction="Return" isUnique="false">
                   <elementDefinition Id="4dd89561-1462-40a3-ba1c-507e662907ec" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fcc8b43a-9e23-43a9-97fa-d825d020aabf" name="ddl" direction="In" isUnique="false">
+                  <elementDefinition Id="81298d91-07ce-4900-94a8-93c4e2e42452" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ecfedb12-0ae6-409d-ab7a-2ff144753640" LastKnownName="DiemDuLich" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1988,18 +1922,18 @@
             <elementDefinition Id="152d5f45-c090-4222-bd3e-43a5af5413c5" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="b58c6973-3b24-4936-9173-a892a5c70dfe" name="makh" direction="In" isUnique="false">
-                  <elementDefinition Id="e84c4409-bf8a-42f5-b06b-90733e0374bb" />
+                <parameter Id="004c2b72-a147-4148-ae08-4fb9e964a621" direction="Return" isUnique="false">
+                  <elementDefinition Id="aae1785c-ac48-4542-8141-fc550c4ed1b2" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="e29f5661-bd07-4e7f-8bdd-d0aa49f0f4e7" LastKnownName="Integer" />
+                    <referencedTypeMoniker Id="38bba3fe-539e-4850-beb3-08f9998b02e0" LastKnownName="KhachHang" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="004c2b72-a147-4148-ae08-4fb9e964a621" direction="Return" isUnique="false">
-                  <elementDefinition Id="aae1785c-ac48-4542-8141-fc550c4ed1b2" />
+                <parameter Id="4b1665f0-5741-4b60-b8e7-e51e519000b4" name="makh" direction="In" isUnique="false">
+                  <elementDefinition Id="af79b3b2-697b-4b43-9b7b-c815b824b6c3" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="fc695bd9-843d-413a-aa1c-eaf42b6852d8" LastKnownName="ModelingProject2::KhachHang" />
+                    <referencedTypeMoniker Id="e29f5661-bd07-4e7f-8bdd-d0aa49f0f4e7" LastKnownName="Integer" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2110,18 +2044,18 @@
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="4ab5484b-b580-4a69-9e94-8b2de8bb51a0" name="nv" direction="In" isUnique="false">
-                  <elementDefinition Id="571853fb-42cf-4f07-9aa8-71581dcfa8dc" />
+                <parameter Id="c7b72cfe-802a-418c-9fec-45d0bcabe7d1" name="nv" direction="In" isUnique="false">
+                  <elementDefinition Id="7f20bec1-0cdf-4001-a131-ef98967208cb" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="26791179-0b3f-4bf9-9f4d-d3e6c5c5325a" LastKnownName="ModelingProject2::NhanVien" />
+                    <referencedTypeMoniker Id="54e1787c-4a8b-4810-ab3b-999b5a661989" LastKnownName="NhanVien" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="3ac4d252-8b76-4fe1-952c-b5402958f05a" name="pb" direction="In" isUnique="false">
-                  <elementDefinition Id="d8679970-12dc-41a3-ae60-cfe1c4ee0a3a" />
+                <parameter Id="6ad5c331-a2f9-4cdf-9066-03aa3f36257a" name="pb" direction="In" isUnique="false">
+                  <elementDefinition Id="d8b9d788-f7d4-419b-8973-3ad1aadcb926" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="1b983ce1-0dee-4203-8504-4c0ea76a38a3" LastKnownName="ModelingProject2::PhongBan" />
+                    <referencedTypeMoniker Id="5c8dcead-f2f9-4dc0-8a1d-a743dd6106a9" LastKnownName="PhongBan" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2174,18 +2108,18 @@
             <elementDefinition Id="e136e367-9d40-4386-ae68-b543d6f000bc" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="8f51c1f4-862f-4282-a11a-44cc00fb3be4" name="nv" direction="In" isUnique="false">
-                  <elementDefinition Id="88a1827f-f4d1-48bc-a5f7-bf6dde19401c" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="26791179-0b3f-4bf9-9f4d-d3e6c5c5325a" LastKnownName="ModelingProject2::NhanVien" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="a787ef7f-6223-47d4-a9d7-d34e28a4c64f" direction="Return" isUnique="false">
                   <elementDefinition Id="7342bdef-182b-4a98-90af-5a1d06c7377c" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="82070de2-b460-4a24-a329-cb06c2636823" name="nv" direction="In" isUnique="false">
+                  <elementDefinition Id="83c21c9d-10f3-4522-a395-57a7117635a6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="54e1787c-4a8b-4810-ab3b-999b5a661989" LastKnownName="NhanVien" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3291,8 +3225,8 @@
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="14d36905-a732-4f76-9e71-8f8cad1e093e" name="lt" direction="In" isUnique="false">
-                  <elementDefinition Id="11c365f9-3e73-424d-a9a9-fe325436cbc6" />
+                <parameter Id="24427a38-63db-4b19-9684-bc2ea4a091e6" name="lt" direction="In" isUnique="false">
+                  <elementDefinition Id="99e58d54-3268-4ff9-8692-dfa69991b561" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="5cb54b35-a715-496f-969f-5ce8154405f2" LastKnownName="LichTrinh" />
                   </type_NamedElement>
@@ -3728,18 +3662,18 @@
             <elementDefinition Id="8e1f0a84-7d18-49a3-8dd2-69110630b7f8" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="43195dce-85a7-49f1-b5b7-c92dd024e28f" name="ct" direction="In" isUnique="false">
-                  <elementDefinition Id="8a19385a-2076-429b-9a33-2782224d5b7a" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="390f016d-dc77-45dc-8474-ab1395cddfa7" LastKnownName="ModelingProject2::ChiTietLichTrinh" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="4edd2bf7-657d-462c-8995-33ce287dad39" direction="Return" isUnique="false">
                   <elementDefinition Id="cac4b230-5b11-4981-98cb-faa0c5911bd4" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="20c5761b-55eb-4062-b3e2-c419d29c5518" name="ct" direction="In" isUnique="false">
+                  <elementDefinition Id="f602cdd3-ca08-490b-b12f-5e9cd9966695" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a80d85a8-313e-4df2-8832-808777e3ab48" LastKnownName="ChiTietLichTrinh" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4510,18 +4444,18 @@
             <elementDefinition Id="37385560-edd0-4a50-856f-c5f06c5007b9" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="f233d553-d642-4e13-afad-c6630adf6962" name="dt" direction="In" isUnique="false">
-                  <elementDefinition Id="d678f501-7ac5-4fdf-b2c0-33700c265eb4" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="1fa6a8c7-dd3e-4b2f-a6f4-63c86daa6a89" LastKnownName="ModelingProject2::DacTrung" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
                 <parameter Id="7bb19721-047b-455d-abca-154cdd579a99" direction="Return" isUnique="false">
                   <elementDefinition Id="3cdd7499-d20b-473b-a34b-f5331d7c87fa" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c640f8d6-7976-4bf1-aa2e-7dd51554a418" name="dt" direction="In" isUnique="false">
+                  <elementDefinition Id="26d5178f-d97c-4cd8-bd83-dd233608538a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bfb8d70-fa82-4274-90f0-95b01a84b35e" LastKnownName="DacTrung" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4535,8 +4469,74 @@
         <elementDefinition Id="4c3fe0d9-3285-4bfb-a52f-2c24df99a51d" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ce6259c8-14b3-44ee-b273-b0e45a675d74" name="Tour" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::Tour">
+        <elementDefinition Id="43b38096-6304-41aa-86ee-88e7a777bcca" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="54e1787c-4a8b-4810-ab3b-999b5a661989" name="NhanVien" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::NhanVien">
+        <elementDefinition Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5c8dcead-f2f9-4dc0-8a1d-a743dd6106a9" name="PhongBan" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::PhongBan">
+        <elementDefinition Id="ff44df00-68f6-4f0f-8e92-71d03ed26eed" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="19d7e388-2991-4194-9958-eb64161c3e07" name="DoiTac" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::DoiTac">
+        <elementDefinition Id="633e3612-5ebc-4b93-9b37-369acdc6fbf2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a80d85a8-313e-4df2-8832-808777e3ab48" name="ChiTietLichTrinh" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::ChiTietLichTrinh">
+        <elementDefinition Id="ccc3fd15-53e4-4ce2-ae17-b9fb065a9ac7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="38bba3fe-539e-4850-beb3-08f9998b02e0" name="KhachHang" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::KhachHang">
+        <elementDefinition Id="2da03ac5-f345-4be3-b4cb-d7b0d154ba11" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ecfedb12-0ae6-409d-ab7a-2ff144753640" name="DiemDuLich" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::DiemDuLich">
+        <elementDefinition Id="2a2822eb-b0da-4ed2-81bc-3535d8f50748" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6bfb8d70-fa82-4274-90f0-95b01a84b35e" name="DacTrung" isAbstract="false" isLeaf="false" cachedFullName="SoDoLop::DacTrung">
+        <elementDefinition Id="d32b77b9-81ce-44ae-8962-36a1cb74eee6" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="00fc40b5-53ee-403a-9a3b-9cbbe51e38fc" name="SoDoLop">
     <elementDefinition Id="56b3b65c-9535-4205-b095-81b31a827b26" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a322a26e-33ca-47fb-8720-f85478f0f884">
+        <profileInstance Id="684c140c-b435-4b72-8c3d-86f2d290afcf" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0b7e3ea8-9db8-4028-a87e-b5ab9d923cd4">
+        <profileInstance Id="f9d80cb8-fb91-43d8-a4ac-d3ef095457a7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3652b7a1-30fa-4b17-8a89-7d911d61b9fc">
+        <profileInstance Id="17a35985-5b37-4544-bd07-71df39223aaa" name="CSharpProfile">
+          <elementDefinition Id="f2ef5d89-b74f-44c6-b41d-d24a653a4ea4" />
+        </profileInstance>
+        <elementDefinition Id="2bd9f72e-f68d-415f-9e80-4e79be6221f8" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2245c1db-416b-4ca9-9447-8cb17267388d">
+        <profileInstance Id="7b02b519-a2dc-4d8c-b6e0-14f8668629b3" name="TextTemplateBindings">
+          <elementDefinition Id="200b7f70-668f-41bb-9892-cc8d92ea1bb1" />
+        </profileInstance>
+        <elementDefinition Id="83891d10-a384-45a8-bebd-49b06b231aac" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
