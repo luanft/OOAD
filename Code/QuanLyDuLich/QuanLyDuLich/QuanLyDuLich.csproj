@@ -65,11 +65,11 @@
     <Compile Include="DiaDiemDuLich.Designer.cs">
       <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Form1.cs">
+    <Compile Include="GUI\frmCapNhatTour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\frmCapNhatTour.Designer.cs">
+      <DependentUpon>frmCapNhatTour.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -77,11 +77,47 @@
     <Compile Include="GUI\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmGiamDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmGiamDoc.Designer.cs">
+      <DependentUpon>frmGiamDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNhanVienDieuHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNhanVienDieuHanh.Designer.cs">
+      <DependentUpon>frmNhanVienDieuHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNhanVienSaleTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNhanVienSaleTour.Designer.cs">
+      <DependentUpon>frmNhanVienSaleTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmQuanLyDiemDuLich.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmQuanLyDiemDuLich.Designer.cs">
       <DependentUpon>frmQuanLyDiemDuLich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyKhachHang.Designer.cs">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyNhanVien.Designer.cs">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemTour.Designer.cs">
+      <DependentUpon>frmThemTour.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmThongKeSaleTour.cs">
       <SubType>Form</SubType>
