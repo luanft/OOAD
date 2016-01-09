@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9c4cdb47-72cf-44ea-b1fc-95b90ca6b7fb"
+  name="GUI" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="d287c334-ea52-4c9d-bc1d-36b1a2516e4c">
+      <packageMoniker
+        Id="c3989f91-657a-455a-af90-5dda48f6a236"
+        LastKnownName="DataTranferObject"
+        LastKnownLocation="Package2_1318.uml" />
+    </dependency>
+  </suppliersInternal>
+  <importedPackagesInternal>
+    <packageImport
+      Id="e83fe159-cb5f-4cdc-a93a-5ada10f7b4ae"
+      visibility="Public">
+      <packageMoniker
+        Id="f44eec48-66ea-4a89-8ea9-cef3fca46287"
+        LastKnownName="Log"
+        LastKnownLocation="Package_1323.uml" />
+    </packageImport>
+    <packageImport
+      Id="a4de873c-1065-4662-9810-4d77f8396534"
+      visibility="Public">
+      <packageMoniker
+        Id="9b30847e-8619-4232-b366-6bb188629f9e"
+        LastKnownName="BusinessLogicLayer"
+        LastKnownLocation="Package3_1318.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+</package>

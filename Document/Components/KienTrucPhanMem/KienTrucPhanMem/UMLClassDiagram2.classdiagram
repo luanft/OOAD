@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="6da99247-f032-4f12-b22e-d6370734eaaa" name="UMLClassDiagram2" linkedPackageId="41e4d0a8-74d0-4620-a5ce-b09dbc099432" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="2a2a6b1d-bc09-4fe7-925a-577801eb2b2d">
+      <profileInstance Id="1639485f-c34e-45b9-9820-e9c852c77fb4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cede3c40-86b1-4ba8-b510-34dab818cb83">
+      <profileInstance Id="f5b403e8-d1ba-4adb-a7b8-cf22d5cdf9bd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="47e60bb6-2e54-4eb4-8019-5cf26efa1831" name="DataAccessLayer">
+        <elementDefinition Id="40ff2580-6d51-4d04-9fd8-07ab20ef5b40" />
+        <suppliersInternal>
+          <dependency Id="39e5d334-72ac-4607-8bfe-c8e98f93dce6">
+            <packageMoniker Id="484d33f3-baa3-409b-be58-19df43435bdd" LastKnownName="DatabaseServer" />
+            <elementDefinition Id="0bec15d0-ba25-4499-8fcb-81653da0e0fe" />
+          </dependency>
+          <dependency Id="ddf03d4e-411f-4141-8e12-7b11ec86737d">
+            <packageMoniker Id="d70e965d-25ba-4e78-81fa-fdfa0e57da5a" LastKnownName="DataTranferObject" />
+            <elementDefinition Id="64d0bfc9-e8aa-43b0-9adb-e00414c29e91" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="f7c315c6-5fee-416a-af6a-8e806c86e3f4" name="GUI">
+        <elementDefinition Id="9c4cdb47-72cf-44ea-b1fc-95b90ca6b7fb" />
+        <suppliersInternal>
+          <dependency Id="ade44f2c-0fc1-4903-a271-bb760fbf2d11">
+            <packageMoniker Id="d70e965d-25ba-4e78-81fa-fdfa0e57da5a" LastKnownName="DataTranferObject" />
+            <elementDefinition Id="d287c334-ea52-4c9d-bc1d-36b1a2516e4c" />
+          </dependency>
+        </suppliersInternal>
+        <importedPackagesInternal>
+          <packageImport Id="f2619299-6dba-4667-9174-a3f0351472fa" visibility="Public">
+            <packageMoniker Id="b66fc366-cd4c-4d1a-9790-c5278ce72fe0" LastKnownName="Log" />
+            <elementDefinition Id="e83fe159-cb5f-4cdc-a93a-5ada10f7b4ae" />
+          </packageImport>
+          <packageImport Id="055e4b28-f13d-4e7e-a3de-e63330c9881a" visibility="Public">
+            <packageMoniker Id="58235ecd-2f76-4b20-98fa-ae31295fe54e" LastKnownName="BusinessLogicLayer" />
+            <elementDefinition Id="a4de873c-1065-4662-9810-4d77f8396534" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="d70e965d-25ba-4e78-81fa-fdfa0e57da5a" name="DataTranferObject">
+        <elementDefinition Id="c3989f91-657a-455a-af90-5dda48f6a236" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="58235ecd-2f76-4b20-98fa-ae31295fe54e" name="BusinessLogicLayer">
+        <elementDefinition Id="9b30847e-8619-4232-b366-6bb188629f9e" />
+        <suppliersInternal>
+          <dependency Id="489caed9-1683-42d9-a628-2a88f138665d">
+            <packageMoniker Id="d70e965d-25ba-4e78-81fa-fdfa0e57da5a" LastKnownName="DataTranferObject" />
+            <elementDefinition Id="a52fcfb8-ec07-4234-bc2c-1f86c9953eca" />
+          </dependency>
+        </suppliersInternal>
+        <importedPackagesInternal>
+          <packageImport Id="3011f239-61aa-4289-b07c-bde6836ee957" visibility="Public">
+            <packageMoniker Id="47e60bb6-2e54-4eb4-8019-5cf26efa1831" LastKnownName="DataAccessLayer" />
+            <elementDefinition Id="6ad8f92f-ec43-4fa1-ad4b-7214509834a4" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="b66fc366-cd4c-4d1a-9790-c5278ce72fe0" name="Log">
+        <elementDefinition Id="f44eec48-66ea-4a89-8ea9-cef3fca46287" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="484d33f3-baa3-409b-be58-19df43435bdd" name="DatabaseServer">
+        <elementDefinition Id="4789fefa-9438-4022-9d1d-9d04b23ae411" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="41e4d0a8-74d0-4620-a5ce-b09dbc099432" name="KienTrucPhanMem">
+    <elementDefinition Id="966e83d3-cbe6-49ad-beac-d9dbf848eed6" />
+  </package>
+</logicalClassDesignerModel>
