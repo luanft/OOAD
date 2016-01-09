@@ -224,10 +224,10 @@ go
 /* Table: CHITIETLICHTRINH                                      */
 /*==============================================================*/
 CREATE TABLE CHITIETLICHTRINH (
-   MACHITIETLICHTRINH   INT                  NOT NULL,
+   MACHITIETLICHTRINH   INT                  NOT NULL IDENTITY(1,1),
    MALICHTRINH          INT                  NULL,
    MADOITAC             INT                  NULL,
-   NOIDUNG              TEXT                 NULL,
+   NOIDUNG              NVARCHAR(1000)                 NULL,
    THOIGIAN             VARCHAR(5)           NULL,
    CONSTRAINT PK_CHITIETLICHTRINH PRIMARY KEY NONCLUSTERED (MACHITIETLICHTRINH)
 )
@@ -253,10 +253,10 @@ go
 /* Table: DIEMDULICH                                            */
 /*==============================================================*/
 CREATE TABLE DIEMDULICH (
-   MADIEMDULICH         INT                  NOT NULL,
+   MADIEMDULICH         INT                  NOT NULL IDENTITY(1,1),
    MANHANVIEN           INT                  NULL,
-   TENDIEMDULICH        TEXT                 NULL,
-   MOTA                 TEXT                 NULL,
+   TENDIEMDULICH        NVARCHAR(1000)                 NULL,
+   MOTA                 NVARCHAR(1000)                 NULL,
    CONSTRAINT PK_DIEMDULICH PRIMARY KEY NONCLUSTERED (MADIEMDULICH)
 )
 go
@@ -273,13 +273,13 @@ go
 /* Table: DOITAC                                                */
 /*==============================================================*/
 CREATE TABLE DOITAC (
-   MADOITAC             INT                  NOT NULL,
+   MADOITAC             INT                  NOT NULL IDENTITY(1,1),
    MANHANVIEN           INT                  NULL,
-   TENDOITAC            TEXT                 NULL,
-   NGUOILIENHE          TEXT                 NULL,
+   TENDOITAC            NVARCHAR(1000)                 NULL,
+   NGUOILIENHE          NVARCHAR(1000)                 NULL,
    DIENTHOAI            VARCHAR(14)          NULL,
-   DANHGIADOITAC        TEXT                 NULL,
-   DIACHI               TEXT                 NULL,
+   DANHGIADOITAC        NVARCHAR(1000)                 NULL,
+   DIACHI               NVARCHAR(1000)                 NULL,
    EMAIL                VARCHAR(100)         NULL,
    LOAIDOITAC           VARCHAR(20)          NULL,
    CONSTRAINT PK_DOITAC PRIMARY KEY NONCLUSTERED (MADOITAC)
@@ -298,14 +298,14 @@ go
 /* Table: KHACHHANG                                             */
 /*==============================================================*/
 CREATE TABLE KHACHHANG (
-   MAKHACHHANG          INT                  NOT NULL,
-   TENDONVI             TEXT                 NULL,
-   NGUOIDAIDIEN         TEXT                 NULL,
+   MAKHACHHANG          INT                  NOT NULL IDENTITY(1,1),
+   TENDONVI             NVARCHAR(1000)                 NULL,
+   NGUOIDAIDIEN         NVARCHAR(1000)                 NULL,
    GIOITINH             VARCHAR(5)           NULL,
    EMAIL                VARCHAR(100)         NULL,
    DIENTHOAI            VARCHAR(14)          NULL,
    SONGUOI              INT                  NULL,
-   DIACHI               TEXT                 NULL,
+   DIACHI               NVARCHAR(1000)                 NULL,
    LOAIKHACHHANG        VARCHAR(10)          NULL,
    CONSTRAINT PK_KHACHHANG PRIMARY KEY NONCLUSTERED (MAKHACHHANG)
 )
@@ -315,9 +315,9 @@ go
 /* Table: LICHTRINH                                             */
 /*==============================================================*/
 CREATE TABLE LICHTRINH (
-   MALICHTRINH          INT                  NOT NULL,
+   MALICHTRINH          INT                  NOT NULL IDENTITY(1,1),
    MATOUR               INT                  NULL,
-   TENLICHTRINH         TEXT                 NULL,
+   TENLICHTRINH         NVARCHAR(1000)                 NULL,
    NGAY                 INT                  NULL,
    CONSTRAINT PK_LICHTRINH PRIMARY KEY NONCLUSTERED (MALICHTRINH)
 )
@@ -335,16 +335,17 @@ go
 /* Table: NHANVIEN                                              */
 /*==============================================================*/
 CREATE TABLE NHANVIEN (
-   MANHANVIEN           INT                  NOT NULL,
+   MANHANVIEN           INT                  NOT NULL IDENTITY(1,1),
    MAPHONG              VARCHAR(5)           NULL,
-   HOTEN                TEXT                 NULL,
+   HOTEN                NVARCHAR(1000)                 NULL,
    CMND                 VARCHAR(14)          NULL,
-   DIACHI               TEXT                 NULL,
+   DIACHI               NVARCHAR(1000)                 NULL,
    NGAYSINH             DATETIME             NULL,
-   QUEQUAN              TEXT                 NULL,
+   QUEQUAN              NVARCHAR(1000)                 NULL,
    SODT                 VARCHAR(14)          NULL,
    EMAIL                VARCHAR(50)          NULL,
    GIOITINH             VARCHAR(5)           NULL,
+   MATKHAU             VARCHAR(20)           NULL,
    CONSTRAINT PK_NHANVIEN PRIMARY KEY NONCLUSTERED (MANHANVIEN)
 )
 go
@@ -362,7 +363,7 @@ go
 /*==============================================================*/
 CREATE TABLE PHONGBAN (
    MAPHONG              VARCHAR(5)           NOT NULL,
-   TENPHONG             TEXT                 NULL,
+   TENPHONG             NVARCHAR(1000)                 NULL,
    CONSTRAINT PK_PHONGBAN PRIMARY KEY NONCLUSTERED (MAPHONG)
 )
 go
@@ -371,18 +372,18 @@ go
 /* Table: TOUR                                                  */
 /*==============================================================*/
 CREATE TABLE TOUR (
-   MATOUR               INT                  NOT NULL,
+   MATOUR               INT                  NOT NULL IDENTITY(1,1),
    MANHANVIEN           INT                  NULL,
    MAKHACHHANG          INT                  NOT NULL,
    NHAXE                INT                  NULL,
    HUONGDANVIEN         INT                  NULL,
-   TENTOUR              TEXT                 NULL,
-   THOIGIAN             TEXT                 NULL,
+   TENTOUR              NVARCHAR(1000)                 NULL,
+   THOIGIAN             NVARCHAR(1000)                 NULL,
    NGAYDI               DATETIME             NULL,
    TONGGIATOUR          INT                  NULL,
    TRANGTHAI            VARCHAR(10)          NULL,
-   UUDAI                TEXT                 NULL,
-   GHICHU               TEXT                 NULL,
+   UUDAI                NVARCHAR(1000)                 NULL,
+   GHICHU               NVARCHAR(1000)                 NULL,
    CONSTRAINT PK_TOUR PRIMARY KEY NONCLUSTERED (MATOUR)
 )
 go
