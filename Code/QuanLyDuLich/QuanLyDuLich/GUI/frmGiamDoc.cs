@@ -16,5 +16,7 @@ namespace QuanLyDuLich.GUI
         {
             InitializeComponent();
         }
+
+      
     }
 }

@@ -35,6 +35,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NgayBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +105,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(728, 389);
             this.panel1.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(20, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "In thống kê";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -201,15 +210,6 @@
             this.label4.Size = new System.Drawing.Size(160, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "THỐNG KÊ SALE TOUR";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(20, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "In thống kê";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmThongKeSaleTour
             // 
