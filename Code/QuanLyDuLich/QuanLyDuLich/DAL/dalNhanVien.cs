@@ -65,7 +65,7 @@ namespace DataAccessLayer
               "',[EMAIL] = '" +nhanVien.EMAIL+
               "',[GIOITINH] = '" +nhanVien.GIOITINH+
               "',[MATKHAU] = '" + nhanVien.MATKHAU+
-              "WHERE [MANHANVIEN]='"+nhanVien.MANHANVIEN+"'";
+              "' WHERE [MANHANVIEN]='"+nhanVien.MANHANVIEN+"'";
             if (this.Write(sql))
             {
                 this.Close();
