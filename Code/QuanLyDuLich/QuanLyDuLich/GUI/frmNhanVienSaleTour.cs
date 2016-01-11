@@ -16,5 +16,16 @@ namespace QuanLyDuLich.GUI
         {
             InitializeComponent();
         }
+
+        private void frmNhanVienSaleTour_Load(object sender, EventArgs e)
+        {
+            //this.panelDanhSachTour
+            for (int i = 0; i < 10; i++)
+            {
+                XemTour x = new XemTour();
+                x.Size = new Size(370, 249);
+                this.panelDanhSachTour.Controls.Add(x);
+            }
+        }
     }
 }

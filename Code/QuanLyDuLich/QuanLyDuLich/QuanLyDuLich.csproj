@@ -127,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XemTour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemTour.Designer.cs">
+      <DependentUpon>XemTour.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DiaDiemDuLich.resx">
       <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +157,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="XemTour.resx">
+      <DependentUpon>XemTour.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
