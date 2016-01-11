@@ -11,31 +11,123 @@ namespace DataAccessLayer
 	using System.Linq;
 	using System.Text;
     using DataTranferObject;
+    using System.Windows.Forms;
+    using System.Data;
 	public class dalDoiTac : dalObject
 	{
 		public bool ThemDoiTac(dtoDoiTac doiTac)
-		{
-			throw new System.NotImplementedException();
+		{			
+            if(!this.Connect())
+            {
+                return false;
+            }
+            string sql = "INSERT INTO [dbo].[DOITAC]([MANHANVIEN],[TENDOITAC],[NGUOILIENHE],[DIENTHOAI],[DANHGIADOITAC],[DIACHI],[EMAIL],[LOAIDOITAC])VALUES('"+
+                 doiTac.MANHANVIEN + "','" + doiTac.TENDOITAC + "','" + doiTac.NGUOILIENHE + "','" + doiTac.DIENTHOAI + "','" + doiTac.DANHGIADOITAC + "','" + doiTac.DIACHI + "','" + doiTac.EMAIL + "','" + doiTac.LOAIDOITAC + "')";
+            if (this.Write(sql)) 
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }            
 		}
 
 		public bool SuaThongTinDoiTac(dtoDoiTac doiTac)
 		{
-			throw new System.NotImplementedException();
+			if(!this.Connect())
+            {
+                return false;
+            }            
+            string sql = "UPDATE[dbo].[DOITAC]SET[MANHANVIEN]='"+doiTac.MANHANVIEN+
+                "',[TENDOITAC]='"+doiTac.TENDOITAC+"',[NGUOILIENHE]='"+doiTac.NGUOILIENHE+"',[DIENTHOAI]='"+
+                doiTac.DIENTHOAI+"',[DANHGIADOITAC]='"+doiTac.DANHGIADOITAC+"',[DIACHI]='"+doiTac.DIACHI+"',[EMAIL]='"+doiTac.EMAIL+
+                "',[LOAIDOITAC]='"+doiTac.LOAIDOITAC+"' where [MADOITAC]='"+doiTac.MADOITAC+"'";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }
 		}
 
 		public bool XoaDoiTac(int maDoiTac)
 		{
-			throw new System.NotImplementedException();
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "DELETE FROM [dbo].[DOITAC] WHERE [MADOITAC]='" + maDoiTac+"'";      
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }
 		}
 
 		public List<dtoDoiTac> LayDanhSachDoiTac(int maNhanVien)
 		{
-			throw new System.NotImplementedException();
+			if(!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[DOITAC] where [MANHANVIEN]='"+maNhanVien+"'";
+            DataTable dtDoiTac = this.Read(sql);
+            dtoDoiTac dtoDoiTac = new dtoDoiTac();
+            List<dtoDoiTac> lDtoDoiTac = new List<dtoDoiTac>();
+            foreach(DataRow dr in dtDoiTac.Rows)
+            {
+                dtoDoiTac.MADOITAC=Int32.Parse(dr[0].ToString());
+                dtoDoiTac.MANHANVIEN=Int32.Parse(dr[1].ToString());
+                dtoDoiTac.TENDOITAC=dr[2].ToString();
+                dtoDoiTac.NGUOILIENHE=dr[3].ToString();
+                dtoDoiTac.DIENTHOAI=dr[4].ToString();
+                dtoDoiTac.DANHGIADOITAC=dr[5].ToString();
+                dtoDoiTac.DIACHI=dr[6].ToString();
+                dtoDoiTac.EMAIL=dr[7].ToString();
+                dtoDoiTac.LOAIDOITAC = dr[8].ToString();
+                lDtoDoiTac.Add(dtoDoiTac);
+            }
+            return lDtoDoiTac;
 		}
 
 		public List<dtoDoiTac> LayDanhSachDoiTac()
 		{
-			throw new System.NotImplementedException();
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[DOITAC]";
+            DataTable dtDoiTac = this.Read(sql);
+            dtoDoiTac dtoDoiTac = new dtoDoiTac();
+            List<dtoDoiTac> lDtoDoiTac = new List<dtoDoiTac>();
+            foreach (DataRow dr in dtDoiTac.Rows)
+            {
+                dtoDoiTac.MADOITAC = Int32.Parse(dr[0].ToString());
+                dtoDoiTac.MANHANVIEN = Int32.Parse(dr[1].ToString());
+                dtoDoiTac.TENDOITAC = dr[2].ToString();
+                dtoDoiTac.NGUOILIENHE = dr[3].ToString();
+                dtoDoiTac.DIENTHOAI = dr[4].ToString();
+                dtoDoiTac.DANHGIADOITAC = dr[5].ToString();
+                dtoDoiTac.DIACHI = dr[6].ToString();
+                dtoDoiTac.EMAIL = dr[7].ToString();
+                dtoDoiTac.LOAIDOITAC = dr[8].ToString();
+                lDtoDoiTac.Add(dtoDoiTac);
+            }
+            return lDtoDoiTac;
 		}
 
 	}

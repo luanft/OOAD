@@ -11,27 +11,102 @@ namespace DataAccessLayer
 	using System.Linq;
 	using System.Text;
     using DataTranferObject;
+    using System.Windows.Forms;
+    using System.Data;
 	public class dalKhachHang : dalObject
 	{
 		public bool ThemKhachHang(dtoKhachHang khachHang)
 		{
-
-            return true;
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "INSERT INTO [dbo].[KHACHHANG]([TENDONVI],[NGUOIDAIDIEN],[GIOITINH],[EMAIL],[DIENTHOAI],[SONGUOI],[DIACHI],[LOAIKHACHHANG])VALUES('"+
+                khachHang.TENDONVI + "','" + khachHang.NGUOIDAIDIEN + "','" + khachHang.GIOITINH + "','" + khachHang.EMAIL + "','" + khachHang.DIENTHOAI +
+                "','" + khachHang.SONGUOI + "','" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG+"')";            
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }            
 		}
 
 		public bool SuaThongTinKhachHang(dtoKhachHang khachHang)
 		{
-			throw new System.NotImplementedException();
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "UPDATE [dbo].[KHACHHANG]SET[TENDONVI] = '"+khachHang.TENDONVI+
+      "',[NGUOIDAIDIEN] = '"+khachHang.NGUOIDAIDIEN+
+      "',[GIOITINH] = '"+khachHang.GIOITINH+
+      "',[EMAIL] = '"+khachHang.EMAIL+
+      "',[DIENTHOAI] = '"+khachHang.DIENTHOAI+
+      "',[SONGUOI] = '"+khachHang.SONGUOI+
+      "',[DIACHI] = '"+khachHang.DIACHI+
+      "',[LOAIKHACHHANG] = '"+khachHang.LOAIKHACHHANG+
+      "'WHERE [MAKHACHHANG] = '"+khachHang.MAKHACHHANG+"'";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }
 		}
 
 		public bool XoaKhachHang(int maKH)
 		{
-			throw new System.NotImplementedException();
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "DELETE FROM [dbo].[KHACHHANG] WHERE [MAKHACHHANG]='" + maKH + "'";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }
 		}
 
 		public List<dtoKhachHang> LayDanhSachKhachHang(int maNhanVien)
 		{
-			throw new System.NotImplementedException();
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[DOITAC] where [MANHANVIEN]='" + maNhanVien + "'";
+            DataTable dtKhachHang = this.Read(sql);
+            dtoKhachHang dtoKhachHang = new dtoKhachHang();
+            List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
+            foreach (DataRow dr in dtKhachHang.Rows)
+            {
+                dtoKhachHang.MAKHACHHANG = Int32.Parse(dr[0].ToString());
+                dtoKhachHang.TENDONVI = dr[1].ToString();
+                dtoKhachHang.NGUOIDAIDIEN = dr[2].ToString();
+                dtoKhachHang.GIOITINH = dr[3].ToString();
+                dtoKhachHang.EMAIL = dr[4].ToString();
+                dtoKhachHang.DIENTHOAI= dr[5].ToString();
+                dtoKhachHang.SONGUOI = Int32.Parse(dr[6].ToString());
+                dtoKhachHang.DIACHI = dr[7].ToString();
+                dtoKhachHang.LOAIKHACHHANG= dr[8].ToString();
+                ldtoKhachHang.Add(dtoKhachHang);
+            }
+            return ldtoKhachHang;
 		}
 
 	}
