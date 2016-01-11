@@ -73,6 +73,12 @@ namespace DataTranferObject
 			set;
 		}
 
+		public virtual string MATKHAU
+		{
+			get;
+			set;
+		}
+
 	}
 }
 

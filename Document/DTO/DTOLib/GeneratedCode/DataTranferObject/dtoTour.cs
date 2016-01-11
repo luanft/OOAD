@@ -19,7 +19,7 @@ namespace DataTranferObject
 			set;
 		}
 
-		public Interger MANHANVIEN
+		public int MANHANVIEN
 		{
 			get;
 			set;
@@ -80,6 +80,12 @@ namespace DataTranferObject
 		}
 
 		public string GHICHU
+		{
+			get;
+			set;
+		}
+
+		public virtual DateTime NgayLapTour
 		{
 			get;
 			set;

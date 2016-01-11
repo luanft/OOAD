@@ -8,7 +8,7 @@ namespace QuanLyDuLich.DAL
 {
     class Config
     {
-        public static string server = "TRANMINHLUAN\\SQLEXPRESS";
+        public static string server = "CME\\SQLEXPRESS";
         public static string database  = "QUANLYDULICH";
     }
 }

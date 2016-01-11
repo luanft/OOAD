@@ -19,11 +19,11 @@
             <OperationElementListCompartment Id="8396f967-22b9-47b8-8fe2-4d9f43e13ffc" absoluteBounds="6.89, 5.2421324869990347, 1.9700000000000002, 0.20117186754941963" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </classShape>
-        <classShape Id="92a2953a-6d51-4788-acaf-600322f2dfc1" absoluteBounds="2.625, 1, 2.25, 2.9495543148120249" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+        <classShape Id="92a2953a-6d51-4788-acaf-600322f2dfc1" absoluteBounds="2.625, 1, 2.25, 3.10971055984497" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
           <classMoniker Id="8ea07b64-aa13-4f5b-8445-f198380f8d06" LastKnownName="dtoTour" />
           <nestedChildShapes>
-            <AttributeElementListCompartment Id="defe4254-7f1a-4398-a845-a2f96068ab6f" absoluteBounds="2.64, 1.5153356393178306, 2.2199999999999998, 2.1230468079447746" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-            <OperationElementListCompartment Id="adff838e-4e54-4256-885c-4b1ac4653a48" absoluteBounds="2.64, 3.648382447262605, 2.2199999999999998, 0.20117186754941985" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <AttributeElementListCompartment Id="defe4254-7f1a-4398-a845-a2f96068ab6f" absoluteBounds="2.64, 1.5153356393178306, 2.2199999999999998, 2.2832030529777207" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="adff838e-4e54-4256-885c-4b1ac4653a48" absoluteBounds="2.64, 3.8085386922955511, 2.2199999999999998, 0.20117186754941985" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </classShape>
         <classShape Id="9f39e8b5-7a0f-4e88-afdb-ea81f13ca28e" absoluteBounds="5.25, 3.875, 1.5, 1.3479918644825615" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
@@ -33,11 +33,11 @@
             <OperationElementListCompartment Id="5d77e88f-1fbe-4765-b01f-65074ddab3ea" absoluteBounds="5.265, 4.9218199969331424, 1.4700000000000002, 0.20117186754941963" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </classShape>
-        <classShape Id="41a5e0c3-e910-4734-b83b-c728e3c06f50" absoluteBounds="0.625, 1, 1.875, 2.6292418247461322" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+        <classShape Id="41a5e0c3-e910-4734-b83b-c728e3c06f50" absoluteBounds="0.625, 1, 1.875, 2.7893980697790783" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
           <classMoniker Id="3fd33f0d-2714-4733-8bcc-d5f748b661b1" LastKnownName="dtoNhanVien" />
           <nestedChildShapes>
-            <AttributeElementListCompartment Id="373b7b8f-baf4-4d36-a3eb-417d2f623158" absoluteBounds="0.64, 1.5153356393178306, 1.8450000000000002, 1.8027343178788819" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-            <OperationElementListCompartment Id="1cc03737-85d6-4dfe-a70f-21cf5f7bfd14" absoluteBounds="0.64, 3.3280699571967123, 1.8450000000000002, 0.20117186754941985" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <AttributeElementListCompartment Id="373b7b8f-baf4-4d36-a3eb-417d2f623158" absoluteBounds="0.64, 1.5153356393178306, 1.8450000000000002, 1.9628905629118283" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="1cc03737-85d6-4dfe-a70f-21cf5f7bfd14" absoluteBounds="0.64, 3.4882262022296584, 1.8450000000000002, 0.20117186754941985" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </classShape>
         <classShape Id="1451eaf7-cd87-4a22-8498-5a5fc9925466" absoluteBounds="0.625, 3.875, 1.875, 1.6683043545484537" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">

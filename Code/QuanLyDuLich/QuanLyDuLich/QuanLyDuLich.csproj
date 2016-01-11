@@ -59,12 +59,29 @@
     <Compile Include="BLL\Tour.cs" />
     <Compile Include="DAL\Config.cs" />
     <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DAL\dalChiTietLichTrinh.cs" />
+    <Compile Include="DAL\dalDiemDuLich.cs" />
+    <Compile Include="DAL\dalDoiTac.cs" />
+    <Compile Include="DAL\dalKhachHang.cs" />
+    <Compile Include="DAL\dalLichTrinh.cs" />
+    <Compile Include="DAL\dalNhanVien.cs" />
+    <Compile Include="DAL\dalObject.cs" />
+    <Compile Include="DAL\dalPhongBan.cs" />
+    <Compile Include="DAL\dalTour.cs" />
     <Compile Include="DiaDiemDuLich.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DiaDiemDuLich.Designer.cs">
       <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\dtoChiTietLichTrinh.cs" />
+    <Compile Include="DTO\dtoDiemDuLich.cs" />
+    <Compile Include="DTO\dtoDoiTac.cs" />
+    <Compile Include="DTO\dtoKhachHang.cs" />
+    <Compile Include="DTO\dtoLichTrinh.cs" />
+    <Compile Include="DTO\dtoNhanVien.cs" />
+    <Compile Include="DTO\dtoPhongBan.cs" />
+    <Compile Include="DTO\dtoTour.cs" />
     <Compile Include="GUI\frmCapNhatTour.cs">
       <SubType>Form</SubType>
     </Compile>
