@@ -16,7 +16,7 @@ namespace QuanLyDuLich.DAL
         }
     }
 
-    class Connection
+    public class Connection
     {        
         string strConnection;
         SqlConnection _con;        

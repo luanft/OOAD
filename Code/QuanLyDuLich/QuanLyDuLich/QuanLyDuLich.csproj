@@ -82,11 +82,23 @@
     <Compile Include="DTO\dtoNhanVien.cs" />
     <Compile Include="DTO\dtoPhongBan.cs" />
     <Compile Include="DTO\dtoTour.cs" />
+    <Compile Include="GUI\diagThemLichTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\diagThemLichTrinh.Designer.cs">
+      <DependentUpon>diagThemLichTrinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmCapNhatTour.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmCapNhatTour.Designer.cs">
       <DependentUpon>frmCapNhatTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\diagChiTietLichTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\diagChiTietLichTrinh.Designer.cs">
+      <DependentUpon>diagChiTietLichTrinh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,12 @@
     </Compile>
     <EmbeddedResource Include="DiaDiemDuLich.resx">
       <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\diagChiTietLichTrinh.resx">
+      <DependentUpon>diagChiTietLichTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\diagThemLichTrinh.resx">
+      <DependentUpon>diagThemLichTrinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>

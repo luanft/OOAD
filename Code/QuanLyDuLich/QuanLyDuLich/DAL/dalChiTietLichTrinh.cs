@@ -6,10 +6,11 @@
 //------------------------------------------------------------------------------
 namespace DataAccessLayer
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
 	public class dalChiTietLichTrinh : dalObject
 	{
