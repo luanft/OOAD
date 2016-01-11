@@ -28,6 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Đối tác: Nhà hàng rạng đông");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Thời gian: 6h");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Nội dung: Đánh răng rửa mặt, nhậu nhẹt, đi dạo");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Ngày 1: Nha trang đà lạt", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node4");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -98,6 +109,10 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.treelichTrinh = new System.Windows.Forms.TreeView();
+            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -590,9 +605,13 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label31);
+            this.tabPage4.Controls.Add(this.treelichTrinh);
             this.tabPage4.Controls.Add(this.comboBox7);
             this.tabPage4.Controls.Add(this.comboBox6);
+            this.tabPage4.Controls.Add(this.textBox12);
             this.tabPage4.Controls.Add(this.textBox13);
+            this.tabPage4.Controls.Add(this.label30);
             this.tabPage4.Controls.Add(this.label29);
             this.tabPage4.Controls.Add(this.label24);
             this.tabPage4.Controls.Add(this.label23);
@@ -691,15 +710,15 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(634, 146);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(50, 13);
+            this.label24.Size = new System.Drawing.Size(47, 13);
             this.label24.TabIndex = 1;
-            this.label24.Text = "Tên tour:";
+            this.label24.Text = "Ghi chú:";
             // 
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(706, 146);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(443, 20);
+            this.textBox13.Size = new System.Drawing.Size(180, 20);
             this.textBox13.TabIndex = 2;
             // 
             // label25
@@ -791,6 +810,60 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(179, 21);
             this.comboBox7.TabIndex = 3;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(897, 146);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(42, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Ưu đãi:";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(969, 146);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(180, 20);
+            this.textBox12.TabIndex = 2;
+            // 
+            // treelichTrinh
+            // 
+            this.treelichTrinh.Location = new System.Drawing.Point(20, 199);
+            this.treelichTrinh.Name = "treelichTrinh";
+            treeNode1.Name = "Node5";
+            treeNode1.Text = "Đối tác: Nhà hàng rạng đông";
+            treeNode2.Name = "Node6";
+            treeNode2.Text = "Thời gian: 6h";
+            treeNode3.Name = "Node7";
+            treeNode3.Text = "Nội dung: Đánh răng rửa mặt, nhậu nhẹt, đi dạo";
+            treeNode4.Name = "Node0";
+            treeNode4.Text = "Ngày 1: Nha trang đà lạt";
+            treeNode5.Name = "Node1";
+            treeNode5.Text = "Node1";
+            treeNode6.Name = "Node2";
+            treeNode6.Text = "Node2";
+            treeNode7.Name = "Node3";
+            treeNode7.Text = "Node3";
+            treeNode8.Name = "Node4";
+            treeNode8.Text = "Node4";
+            this.treelichTrinh.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
+            this.treelichTrinh.Size = new System.Drawing.Size(691, 296);
+            this.treelichTrinh.TabIndex = 4;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(17, 174);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(53, 13);
+            this.label31.TabIndex = 5;
+            this.label31.Text = "Lịch trình:";
             // 
             // frmNhanVienSaleTour
             // 
@@ -894,5 +967,9 @@
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TreeView treelichTrinh;
+        private System.Windows.Forms.Label label31;
     }
 }
