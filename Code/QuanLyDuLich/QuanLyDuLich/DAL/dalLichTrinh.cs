@@ -6,38 +6,101 @@
 //------------------------------------------------------------------------------
 namespace DataAccessLayer
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
     using DataTranferObject;
-	public class dalLichTrinh : dalObject
-	{
-		public bool ThemLichTrinh(dtoLichTrinh lichTrinh)
-		{
-			throw new System.NotImplementedException();
-		}
+    using System.Data;
+    public class dalLichTrinh : dalObject
+    {
+        public bool ThemLichTrinh(dtoLichTrinh lichTrinh)
+        {
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
+            + "VALUES('" + lichTrinh.MATOUR + "','" + lichTrinh.TENLICHTRINH + "','" + lichTrinh.NGAY + "')";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            this.Close();
+            return false;
+        }
 
-		public bool SuaLichTrinh(dtoLichTrinh lichTrinh)
-		{
-			throw new System.NotImplementedException();
-		}
+        public bool SuaLichTrinh(dtoLichTrinh lichTrinh)
+        {
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "UPDATE [dbo].[LICHTRINH] SET [TENLICHTRINH] = '" + lichTrinh.TENLICHTRINH + "',[MATOUR]='" + lichTrinh.MATOUR + "',[NGAY]='" + lichTrinh.NGAY + "' WHERE [MALICHTRINH] ='" + lichTrinh.MALICHTRINH + "'";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            this.Close();
+            return false;
+        }
 
-		public bool XoaLichTrinh(int malt)
-		{
-			throw new System.NotImplementedException();
-		}
+        public bool XoaLichTrinh(int malt)
+        {
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "DELETE FROM [dbo].[LICHTRINH] WHERE [MALICHTRINH]='" + malt + "'";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            this.Close();
+            return false;
+        }
 
-		public bool ThemDanhSachLichTrinh(List<dtoLichTrinh> dslt)
-		{
-			throw new System.NotImplementedException();
-		}
+        public bool ThemDanhSachLichTrinh(List<dtoLichTrinh> dslt)
+        {
+            if (!this.Connect())
+            {
+                return false;
+            }            
+            for (int i = 0; i < dslt.Count - 1; i++)
+            {
+                string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
+                     + "VALUES('" + dslt[i].MATOUR + "','" + dslt[i].TENLICHTRINH + "','" + dslt[i].NGAY + "')";
+                this.Write(sql);
+            }
+            this.Close();
+            return true;
+        }
 
-		public List<dtoLichTrinh> LayDanhSachLichTrinh(int maTour)
-		{
-			throw new System.NotImplementedException();
-		}
+        public List<dtoLichTrinh> LayDanhSachLichTrinh(int maTour)
+        {
+            if (!this.Connect())
+            {
+                return null;
+            }
+            string sql = "SELECT [MALICHTRINH],[MATOUR],[TENLICHTRINH],[NGAY] FROM [dbo].[LICHTRINH] WHERE MATOUR = '" + maTour + "'";
+            DataTable dtLichTrinh = this.Read(sql);
+            this.Close();
+            dtoLichTrinh dto_LichTrinh = new dtoLichTrinh();
+            List<dtoLichTrinh> lDtoLichTrinh = new List<dtoLichTrinh>();
+            foreach (DataRow dr in dtLichTrinh.Rows)
+            {
+                dto_LichTrinh.MALICHTRINH = Int32.Parse(dr[0].ToString());
+                dto_LichTrinh.MATOUR = Int32.Parse(dr[1].ToString());
+                dto_LichTrinh.TENLICHTRINH = dr[2].ToString();
+                dto_LichTrinh.NGAY = Int32.Parse(dr[3].ToString());                
+                lDtoLichTrinh.Add(dto_LichTrinh);
+            }
+            return lDtoLichTrinh;
+        }
 
-	}
+    }
 }
 

@@ -28,11 +28,8 @@ namespace DataAccessLayer
                 this.Close();
                 return true;
             }
-            else
-            {
-                this.Close();
-                return false;
-            }
+            this.Close();
+            return false;
         }
         public bool XoaPhong(dtoPhongBan phongban)
         {
@@ -40,18 +37,15 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "DELETE FROM [dbo].[PHONGBAN] WHERE [MAPHONG]="+phongban.MAPHONG;
+            string sql = "DELETE FROM [dbo].[PHONGBAN] WHERE [MAPHONG]='"+phongban.MAPHONG+"'";
             bool ok = this.Write(sql);
             if (this.Write(sql))
             {
                 this.Close();
                 return true;
             }
-            else
-            {
-                this.Close();
-                return false;
-            }
+            this.Close();
+            return false;
         }
         public bool SuaThongTinPhong(dtoPhongBan phongban)
         {
@@ -66,11 +60,8 @@ namespace DataAccessLayer
                 this.Close();
                 return true;
             }
-            else
-            {
-                this.Close();
-                return false;
-            }           
+            this.Close();
+            return false;    
         }
         public List<dtoPhongBan> LayDanhSachPhong()
         {
@@ -83,13 +74,14 @@ namespace DataAccessLayer
             {
                 string sql = "SELECT [MAPHONG],[TENPHONG] FROM [dbo].[PHONGBAN]";
                 DataTable dtPhongBan = this.Read(sql);
-                dtoPhongBan dtoPhongBan = new dtoPhongBan();
+                this.Close();
+                dtoPhongBan dto_PhongBan = new dtoPhongBan();
                 List<dtoPhongBan> lDtoPhongBan = new List<dtoPhongBan>();
                 foreach (DataRow dr in dtPhongBan.Rows)
                 {
-                    dtoPhongBan.MAPHONG = Int32.Parse(dr[0].ToString());
-                    dtoPhongBan.TENPHONG = dr[1].ToString();
-                    lDtoPhongBan.Add(dtoPhongBan);
+                    dto_PhongBan.MAPHONG = Int32.Parse(dr[0].ToString());
+                    dto_PhongBan.TENPHONG = dr[1].ToString();
+                    lDtoPhongBan.Add(dto_PhongBan);
                 }
                 return lDtoPhongBan;
             }

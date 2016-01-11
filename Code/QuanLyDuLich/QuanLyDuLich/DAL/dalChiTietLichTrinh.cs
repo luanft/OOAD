@@ -11,7 +11,7 @@ namespace DataAccessLayer
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-
+    using DataTranferObject;
 	public class dalChiTietLichTrinh : dalObject
 	{
 		public bool ThemCTLT(dtoChiTietLichTrinh ctlt)
