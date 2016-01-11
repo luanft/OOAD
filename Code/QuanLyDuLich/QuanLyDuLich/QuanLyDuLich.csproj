@@ -180,6 +180,9 @@
     <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNhanVienDieuHanh.resx">
+      <DependentUpon>frmNhanVienDieuHanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanVienSaleTour.resx">
       <DependentUpon>frmNhanVienSaleTour.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +192,9 @@
     <EmbeddedResource Include="GUI\frmThongKeSaleTour.resx">
       <DependentUpon>frmThongKeSaleTour.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmXemChiTietTour.resx">
+      <DependentUpon>frmXemChiTietTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -197,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="XemTour.resx">
       <DependentUpon>XemTour.cs</DependentUpon>
@@ -217,6 +224,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BLL\readme.xml" />
+    <None Include="cu.jpg" />
     <Content Include="GUI\readme.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
