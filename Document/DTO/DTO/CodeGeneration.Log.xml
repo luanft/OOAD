@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="ProjectPath = ..\DTOLib\DTOLib.csproj" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Medium" Text="DTO's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'DTO::DataTranferObject::dtoNhanVien' -  (Class), 'DTO::DataTranferObject::dtoTour' -  (Class), 'DTO::DataTranferObject::dtoDoiTac' -  (Class), 'DTO::DataTranferObject::dtoKhachHang' -  (Class), 'DTO::DataTranferObject::dtoLichTrinh' -  (Class), 'DTO::DataTranferObject::dtoChiTietLichTrinh' -  (Class), 'DTO::DataTranferObject::dtoPhongBan' -  (Class), 'DTO::DataTranferObject::dtoDiemDuLich' -  (Class) " />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Medium" Text="'DTO::DataTranferObject::dtoNhanVien' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoNhanVien.cs" />
+  <Message Timestamp="2016-01-09T15:16:57" Importance="Medium" Text="'DTO::DataTranferObject::dtoTour' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoTour.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="'DTO::DataTranferObject::dtoDoiTac' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoDoiTac.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="'DTO::DataTranferObject::dtoKhachHang' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoKhachHang.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="'DTO::DataTranferObject::dtoLichTrinh' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoLichTrinh.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="'DTO::DataTranferObject::dtoChiTietLichTrinh' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoChiTietLichTrinh.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="'DTO::DataTranferObject::dtoPhongBan' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoPhongBan.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="'DTO::DataTranferObject::dtoDiemDuLich' -  (Class) : success (file replaced) - c:\users\homesk\documents\visual studio 2013\Projects\DTO\DTOLib\GeneratedCode\DataTranferObject\dtoDiemDuLich.cs" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="ProjectPath = ..\DTOLib\DTOLib.csproj" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Medium" Text="DTO's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'DTO::DataTranferObject::dtoNhanVien' -  (Class), 'DTO::DataTranferObject::dtoTour' -  (Class), 'DTO::DataTranferObject::dtoDoiTac' -  (Class), 'DTO::DataTranferObject::dtoKhachHang' -  (Class), 'DTO::DataTranferObject::dtoLichTrinh' -  (Class), 'DTO::DataTranferObject::dtoChiTietLichTrinh' -  (Class), 'DTO::DataTranferObject::dtoPhongBan' -  (Class), 'DTO::DataTranferObject::dtoDiemDuLich' -  (Class) " />
+  <Message Timestamp="2016-01-09T15:16:58" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoNhanVien' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoTour' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoDoiTac' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoKhachHang' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoLichTrinh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoChiTietLichTrinh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoPhongBan' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject::dtoDiemDuLich' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="The selection included 1 elements which were not bound to a template." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="Diagnostic" Text="'DTO::DataTranferObject' -  (Package): no bound template." />
+  <Message Timestamp="2016-01-09T15:16:59" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
