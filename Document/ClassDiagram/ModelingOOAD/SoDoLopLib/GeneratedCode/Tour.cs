@@ -29,6 +29,12 @@ public class Tour
 
 	protected string UuDai;
 
+	protected virtual DateTime NgayLapTour
+	{
+		get;
+		set;
+	}
+
 	public IEnumerable<LichTrinh> ChiTietTour;
 
 	public KhachHang KhachHang;

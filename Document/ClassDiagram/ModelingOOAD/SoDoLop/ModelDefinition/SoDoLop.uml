@@ -4889,6 +4889,82 @@
                 LastKnownLocation="SoDoLop.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="a17439a7-3542-424e-b5d4-0497fdaeefd2"
+            name="NgayLapTour"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a08f53f8-ccb4-4254-904d-e8b6921197c5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2597a248-85c9-4765-a7e4-91308e129b3e">
+                    <propertyInstance
+                      Id="a8cf6ed9-7541-46bd-b0ec-0100ee96ebaf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fed93892-aa60-46d0-bcc9-008a57845d22">
+                    <propertyInstance
+                      Id="8d07b545-0f85-40e5-a892-392eb0d211e3"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bab27210-ba50-4dc6-948f-83cddb152ef5">
+                    <propertyInstance
+                      Id="d32f12bf-ffa3-44db-a7b8-3b32be12f7d9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="165cf94a-7cb4-4071-a5df-8b62b72b0197">
+                    <propertyInstance
+                      Id="f4e06b05-8845-405d-8fee-ccc2641c317e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8549515-4eff-46ac-b60f-020141e22991">
+                    <propertyInstance
+                      Id="dae7ddaa-de61-422b-a547-7297380646a1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e894a85c-554f-4735-8bcd-4c7a6e2903c5">
+                    <propertyInstance
+                      Id="497c0143-e087-420e-b891-5da443df9240"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="472b73ac-c476-431a-b045-dbe207cfed5c">
+                    <propertyInstance
+                      Id="3e735cd8-27a1-407f-8d75-30e418f5b711"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="05180320-a0d1-4bd8-bf52-e1116290a445"
+                LastKnownName="DateTime"
+                LastKnownLocation="SoDoLop.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
