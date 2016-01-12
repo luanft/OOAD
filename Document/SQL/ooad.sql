@@ -1,242 +1,242 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
-/* Created on:     1/8/2016 3:37:30 PM                          */
+/* Created on:     1/12/2016 8:59:45 AM                         */
 /*==============================================================*/
 
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('CHITIETLICHTRINH') AND O.NAME = 'FK_CHITIETL_FK_LT_CTL_LICHTRIN')
-ALTER TABLE CHITIETLICHTRINH
-   DROP CONSTRAINT FK_CHITIETL_FK_LT_CTL_LICHTRIN
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('CHITIETLICHTRINH') and o.name = 'FK_CHITIETL_FK_LT_CTL_LICHTRIN')
+alter table CHITIETLICHTRINH
+   drop constraint FK_CHITIETL_FK_LT_CTL_LICHTRIN
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('CHITIETLICHTRINH') AND O.NAME = 'FK_CHITIETL_FK_CTLT_D_DOITAC')
-ALTER TABLE CHITIETLICHTRINH
-   DROP CONSTRAINT FK_CHITIETL_FK_CTLT_D_DOITAC
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('CHITIETLICHTRINH') and o.name = 'FK_CHITIETL_FK_CTLT_D_DOITAC')
+alter table CHITIETLICHTRINH
+   drop constraint FK_CHITIETL_FK_CTLT_D_DOITAC
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('DIEMDULICH') AND O.NAME = 'FK_DIEMDULI_FK_NV_DDL_NHANVIEN')
-ALTER TABLE DIEMDULICH
-   DROP CONSTRAINT FK_DIEMDULI_FK_NV_DDL_NHANVIEN
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('DIEMDULICH') and o.name = 'FK_DIEMDULI_FK_NV_DDL_NHANVIEN')
+alter table DIEMDULICH
+   drop constraint FK_DIEMDULI_FK_NV_DDL_NHANVIEN
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('DOITAC') AND O.NAME = 'FK_DOITAC_FK_NV_DT_NHANVIEN')
-ALTER TABLE DOITAC
-   DROP CONSTRAINT FK_DOITAC_FK_NV_DT_NHANVIEN
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('DOITAC') and o.name = 'FK_DOITAC_FK_NV_DT_NHANVIEN')
+alter table DOITAC
+   drop constraint FK_DOITAC_FK_NV_DT_NHANVIEN
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('LICHTRINH') AND O.NAME = 'FK_LICHTRIN_FK_T_LT_TOUR')
-ALTER TABLE LICHTRINH
-   DROP CONSTRAINT FK_LICHTRIN_FK_T_LT_TOUR
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('LICHTRINH') and o.name = 'FK_LICHTRIN_FK_T_LT_TOUR')
+alter table LICHTRINH
+   drop constraint FK_LICHTRIN_FK_T_LT_TOUR
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('NHANVIEN') AND O.NAME = 'FK_NHANVIEN_FK_MP_NV_PHONGBAN')
-ALTER TABLE NHANVIEN
-   DROP CONSTRAINT FK_NHANVIEN_FK_MP_NV_PHONGBAN
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('NHANVIEN') and o.name = 'FK_NHANVIEN_FK_MP_NV_PHONGBAN')
+alter table NHANVIEN
+   drop constraint FK_NHANVIEN_FK_MP_NV_PHONGBAN
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('TOUR') AND O.NAME = 'FK_TOUR_FK_NV_T_NHANVIEN')
-ALTER TABLE TOUR
-   DROP CONSTRAINT FK_TOUR_FK_NV_T_NHANVIEN
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('TOUR') and o.name = 'FK_TOUR_FK_NV_T_NHANVIEN')
+alter table TOUR
+   drop constraint FK_TOUR_FK_NV_T_NHANVIEN
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('TOUR') AND O.NAME = 'FK_TOUR_FK_T_KH_KHACHHAN')
-ALTER TABLE TOUR
-   DROP CONSTRAINT FK_TOUR_FK_T_KH_KHACHHAN
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('TOUR') and o.name = 'FK_TOUR_FK_T_KH_KHACHHAN')
+alter table TOUR
+   drop constraint FK_TOUR_FK_T_KH_KHACHHAN
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('TOUR') AND O.NAME = 'FK_TOUR_HUONGDANV_DOITAC')
-ALTER TABLE TOUR
-   DROP CONSTRAINT FK_TOUR_HUONGDANV_DOITAC
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('TOUR') and o.name = 'FK_TOUR_HUONGDANV_DOITAC')
+alter table TOUR
+   drop constraint FK_TOUR_HUONGDANV_DOITAC
 go
 
-IF EXISTS (SELECT 1
-   FROM SYS.SYSREFERENCES R JOIN SYS.SYSOBJECTS O ON (O.ID = R.CONSTID AND O.TYPE = 'F')
-   WHERE R.FKEYID = OBJECT_ID('TOUR') AND O.NAME = 'FK_TOUR_NHAXE_DOITAC')
-ALTER TABLE TOUR
-   DROP CONSTRAINT FK_TOUR_NHAXE_DOITAC
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('TOUR') and o.name = 'FK_TOUR_NHAXE_DOITAC')
+alter table TOUR
+   drop constraint FK_TOUR_NHAXE_DOITAC
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('CHITIETLICHTRINH')
-            AND   NAME  = 'FK_CTLT_DT_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX CHITIETLICHTRINH.FK_CTLT_DT_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('CHITIETLICHTRINH')
+            and   name  = 'FK_CTLT_DT_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index CHITIETLICHTRINH.FK_CTLT_DT_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('CHITIETLICHTRINH')
-            AND   NAME  = 'FK_LT_CTLT_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX CHITIETLICHTRINH.FK_LT_CTLT_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('CHITIETLICHTRINH')
+            and   name  = 'FK_LT_CTLT_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index CHITIETLICHTRINH.FK_LT_CTLT_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('CHITIETLICHTRINH')
-            AND   TYPE = 'U')
-   DROP TABLE CHITIETLICHTRINH
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('CHITIETLICHTRINH')
+            and   type = 'U')
+   drop table CHITIETLICHTRINH
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('DIEMDULICH')
-            AND   NAME  = 'FK_NV_DDL_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX DIEMDULICH.FK_NV_DDL_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('DIEMDULICH')
+            and   name  = 'FK_NV_DDL_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index DIEMDULICH.FK_NV_DDL_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('DIEMDULICH')
-            AND   TYPE = 'U')
-   DROP TABLE DIEMDULICH
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('DIEMDULICH')
+            and   type = 'U')
+   drop table DIEMDULICH
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('DOITAC')
-            AND   NAME  = 'FK_NV_DT_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX DOITAC.FK_NV_DT_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('DOITAC')
+            and   name  = 'FK_NV_DT_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index DOITAC.FK_NV_DT_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('DOITAC')
-            AND   TYPE = 'U')
-   DROP TABLE DOITAC
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('DOITAC')
+            and   type = 'U')
+   drop table DOITAC
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('KHACHHANG')
-            AND   TYPE = 'U')
-   DROP TABLE KHACHHANG
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('KHACHHANG')
+            and   type = 'U')
+   drop table KHACHHANG
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('LICHTRINH')
-            AND   NAME  = 'FK_T_LT_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX LICHTRINH.FK_T_LT_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('LICHTRINH')
+            and   name  = 'FK_T_LT_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index LICHTRINH.FK_T_LT_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('LICHTRINH')
-            AND   TYPE = 'U')
-   DROP TABLE LICHTRINH
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('LICHTRINH')
+            and   type = 'U')
+   drop table LICHTRINH
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('NHANVIEN')
-            AND   NAME  = 'FK_MP_NV_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX NHANVIEN.FK_MP_NV_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('NHANVIEN')
+            and   name  = 'FK_MP_NV_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index NHANVIEN.FK_MP_NV_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('NHANVIEN')
-            AND   TYPE = 'U')
-   DROP TABLE NHANVIEN
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('NHANVIEN')
+            and   type = 'U')
+   drop table NHANVIEN
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('PHONGBAN')
-            AND   TYPE = 'U')
-   DROP TABLE PHONGBAN
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PHONGBAN')
+            and   type = 'U')
+   drop table PHONGBAN
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('TOUR')
-            AND   NAME  = 'NHAXE_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX TOUR.NHAXE_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('TOUR')
+            and   name  = 'NHAXE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index TOUR.NHAXE_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('TOUR')
-            AND   NAME  = 'HUONGDANVIEN_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX TOUR.HUONGDANVIEN_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('TOUR')
+            and   name  = 'HUONGDANVIEN_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index TOUR.HUONGDANVIEN_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('TOUR')
-            AND   NAME  = 'FK_T_KH_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX TOUR.FK_T_KH_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('TOUR')
+            and   name  = 'FK_T_KH_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index TOUR.FK_T_KH_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSINDEXES
-           WHERE  ID    = OBJECT_ID('TOUR')
-            AND   NAME  = 'FK_NV_T_FK'
-            AND   INDID > 0
-            AND   INDID < 255)
-   DROP INDEX TOUR.FK_NV_T_FK
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('TOUR')
+            and   name  = 'FK_NV_T_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index TOUR.FK_NV_T_FK
 go
 
-IF EXISTS (SELECT 1
-            FROM  SYSOBJECTS
-           WHERE  ID = OBJECT_ID('TOUR')
-            AND   TYPE = 'U')
-   DROP TABLE TOUR
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('TOUR')
+            and   type = 'U')
+   drop table TOUR
 go
 
 /*==============================================================*/
 /* Table: CHITIETLICHTRINH                                      */
 /*==============================================================*/
-CREATE TABLE CHITIETLICHTRINH (
-   MACHITIETLICHTRINH   INT                  NOT NULL IDENTITY(1,1),
-   MALICHTRINH          INT                  NULL,
-   MADOITAC             INT                  NULL,
-   NOIDUNG              NVARCHAR(1000)                 NULL,
-   THOIGIAN             VARCHAR(5)           NULL,
-   CONSTRAINT PK_CHITIETLICHTRINH PRIMARY KEY NONCLUSTERED (MACHITIETLICHTRINH)
+create table CHITIETLICHTRINH (
+   MACHITIETLICHTRINH   int                  not null IDENTITY( 1, 1 ),
+   MADOITAC             int                  null,
+   MALICHTRINH          int                  null,
+   NOIDUNG              text                 null,
+   THOIGIAN             varchar(5)           null,
+   constraint PK_CHITIETLICHTRINH primary key nonclustered (MACHITIETLICHTRINH)
 )
 go
 
 /*==============================================================*/
 /* Index: FK_LT_CTLT_FK                                         */
 /*==============================================================*/
-CREATE INDEX FK_LT_CTLT_FK ON CHITIETLICHTRINH (
+create index FK_LT_CTLT_FK on CHITIETLICHTRINH (
 MALICHTRINH ASC
 )
 go
@@ -244,7 +244,7 @@ go
 /*==============================================================*/
 /* Index: FK_CTLT_DT_FK                                         */
 /*==============================================================*/
-CREATE INDEX FK_CTLT_DT_FK ON CHITIETLICHTRINH (
+create index FK_CTLT_DT_FK on CHITIETLICHTRINH (
 MADOITAC ASC
 )
 go
@@ -252,19 +252,19 @@ go
 /*==============================================================*/
 /* Table: DIEMDULICH                                            */
 /*==============================================================*/
-CREATE TABLE DIEMDULICH (
-   MADIEMDULICH         INT                  NOT NULL IDENTITY(1,1),
-   MANHANVIEN           INT                  NULL,
-   TENDIEMDULICH        NVARCHAR(1000)                 NULL,
-   MOTA                 NVARCHAR(1000)                 NULL,
-   CONSTRAINT PK_DIEMDULICH PRIMARY KEY NONCLUSTERED (MADIEMDULICH)
+create table DIEMDULICH (
+   MADIEMDULICH         int                  not null IDENTITY( 1, 1 ),
+   MANHANVIEN           int                  null,
+   TENDIEMDULICH        text                 null,
+   MOTA                 text                 null,
+   constraint PK_DIEMDULICH primary key nonclustered (MADIEMDULICH)
 )
 go
 
 /*==============================================================*/
 /* Index: FK_NV_DDL_FK                                          */
 /*==============================================================*/
-CREATE INDEX FK_NV_DDL_FK ON DIEMDULICH (
+create index FK_NV_DDL_FK on DIEMDULICH (
 MANHANVIEN ASC
 )
 go
@@ -272,24 +272,24 @@ go
 /*==============================================================*/
 /* Table: DOITAC                                                */
 /*==============================================================*/
-CREATE TABLE DOITAC (
-   MADOITAC             INT                  NOT NULL IDENTITY(1,1),
-   MANHANVIEN           INT                  NULL,
-   TENDOITAC            NVARCHAR(1000)                 NULL,
-   NGUOILIENHE          NVARCHAR(1000)                 NULL,
-   DIENTHOAI            VARCHAR(14)          NULL,
-   DANHGIADOITAC        NVARCHAR(1000)                 NULL,
-   DIACHI               NVARCHAR(1000)                 NULL,
-   EMAIL                VARCHAR(100)         NULL,
-   LOAIDOITAC           VARCHAR(20)          NULL,
-   CONSTRAINT PK_DOITAC PRIMARY KEY NONCLUSTERED (MADOITAC)
+create table DOITAC (
+   MADOITAC             int                  not null IDENTITY( 1, 1 ),
+   MANHANVIEN           int                  null,
+   TENDOITAC            text                 null,
+   NGUOILIENHE          text                 null,
+   DIENTHOAI            varchar(14)          null,
+   DANHGIADOITAC        text                 null,
+   DIACHI               text                 null,
+   EMAIL                varchar(100)         null,
+   LOAIDOITAC           varchar(20)          null,
+   constraint PK_DOITAC primary key nonclustered (MADOITAC)
 )
 go
 
 /*==============================================================*/
 /* Index: FK_NV_DT_FK                                           */
 /*==============================================================*/
-CREATE INDEX FK_NV_DT_FK ON DOITAC (
+create index FK_NV_DT_FK on DOITAC (
 MANHANVIEN ASC
 )
 go
@@ -297,36 +297,36 @@ go
 /*==============================================================*/
 /* Table: KHACHHANG                                             */
 /*==============================================================*/
-CREATE TABLE KHACHHANG (
-   MAKHACHHANG          INT                  NOT NULL IDENTITY(1,1),
-   TENDONVI             NVARCHAR(1000)                 NULL,
-   NGUOIDAIDIEN         NVARCHAR(1000)                 NULL,
-   GIOITINH             VARCHAR(5)           NULL,
-   EMAIL                VARCHAR(100)         NULL,
-   DIENTHOAI            VARCHAR(14)          NULL,
-   SONGUOI              INT                  NULL,
-   DIACHI               NVARCHAR(1000)                 NULL,
-   LOAIKHACHHANG        VARCHAR(10)          NULL,
-   CONSTRAINT PK_KHACHHANG PRIMARY KEY NONCLUSTERED (MAKHACHHANG)
+create table KHACHHANG (
+   MAKHACHHANG          int                  not null IDENTITY( 1, 1 ),
+   TENDONVI             text                 null,
+   NGUOIDAIDIEN         text                 null,
+   GIOITINH             varchar(5)           null,
+   EMAIL                varchar(100)         null,
+   DIENTHOAI            varchar(14)          null,
+   SONGUOI              int                  null,
+   DIACHI               text                 null,
+   LOAIKHACHHANG        varchar(10)          null,
+   constraint PK_KHACHHANG primary key nonclustered (MAKHACHHANG)
 )
 go
 
 /*==============================================================*/
 /* Table: LICHTRINH                                             */
 /*==============================================================*/
-CREATE TABLE LICHTRINH (
-   MALICHTRINH          INT                  NOT NULL IDENTITY(1,1),
-   MATOUR               INT                  NULL,
-   TENLICHTRINH         NVARCHAR(1000)                 NULL,
-   NGAY                 INT                  NULL,
-   CONSTRAINT PK_LICHTRINH PRIMARY KEY NONCLUSTERED (MALICHTRINH)
+create table LICHTRINH (
+   MALICHTRINH          int                  not null IDENTITY( 1, 1 ),
+   MATOUR               int                  null,
+   TENLICHTRINH         text                 null,
+   NGAY                 int                  null,
+   constraint PK_LICHTRINH primary key nonclustered (MALICHTRINH)
 )
 go
 
 /*==============================================================*/
 /* Index: FK_T_LT_FK                                            */
 /*==============================================================*/
-CREATE INDEX FK_T_LT_FK ON LICHTRINH (
+create index FK_T_LT_FK on LICHTRINH (
 MATOUR ASC
 )
 go
@@ -334,26 +334,26 @@ go
 /*==============================================================*/
 /* Table: NHANVIEN                                              */
 /*==============================================================*/
-CREATE TABLE NHANVIEN (
-   MANHANVIEN           INT                  NOT NULL IDENTITY(1,1),
-   MAPHONG              VARCHAR(5)           NULL,
-   HOTEN                NVARCHAR(1000)                 NULL,
-   CMND                 VARCHAR(14)          NULL,
-   DIACHI               NVARCHAR(1000)                 NULL,
-   NGAYSINH             DATETIME             NULL,
-   QUEQUAN              NVARCHAR(1000)                 NULL,
-   SODT                 VARCHAR(14)          NULL,
-   EMAIL                VARCHAR(50)          NULL,
-   GIOITINH             VARCHAR(5)           NULL,
-   MATKHAU             VARCHAR(20)           NULL,
-   CONSTRAINT PK_NHANVIEN PRIMARY KEY NONCLUSTERED (MANHANVIEN)
+create table NHANVIEN (
+   MANHANVIEN           int                  not null IDENTITY( 1, 1 ),
+   MAPHONG              varchar(5)           null,
+   HOTEN                text                 null,
+   CMND                 varchar(14)          null,
+   DIACHI               text                 null,
+   NGAYSINH             datetime             null,
+   QUEQUAN              text                 null,
+   SODT                 varchar(14)          null,
+   EMAIL                varchar(50)          null,
+   GIOITINH             varchar(5)           null,
+   MatKhau              char(25)             null,
+   constraint PK_NHANVIEN primary key nonclustered (MANHANVIEN)
 )
 go
 
 /*==============================================================*/
 /* Index: FK_MP_NV_FK                                           */
 /*==============================================================*/
-CREATE INDEX FK_MP_NV_FK ON NHANVIEN (
+create index FK_MP_NV_FK on NHANVIEN (
 MAPHONG ASC
 )
 go
@@ -361,37 +361,38 @@ go
 /*==============================================================*/
 /* Table: PHONGBAN                                              */
 /*==============================================================*/
-CREATE TABLE PHONGBAN (
-   MAPHONG              VARCHAR(5)           NOT NULL,
-   TENPHONG             NVARCHAR(1000)                 NULL,
-   CONSTRAINT PK_PHONGBAN PRIMARY KEY NONCLUSTERED (MAPHONG)
+create table PHONGBAN (
+   MAPHONG              varchar(5)           not null,
+   TENPHONG             text                 null,
+   constraint PK_PHONGBAN primary key nonclustered (MAPHONG)
 )
 go
 
 /*==============================================================*/
 /* Table: TOUR                                                  */
 /*==============================================================*/
-CREATE TABLE TOUR (
-   MATOUR               INT                  NOT NULL IDENTITY(1,1),
-   MANHANVIEN           INT                  NULL,
-   MAKHACHHANG          INT                  NOT NULL,
-   NHAXE                INT                  NULL,
-   HUONGDANVIEN         INT                  NULL,
-   TENTOUR              NVARCHAR(1000)                 NULL,
-   THOIGIAN             NVARCHAR(1000)                 NULL,
-   NGAYDI               DATETIME             NULL,
-   TONGGIATOUR          INT                  NULL,
-   TRANGTHAI            VARCHAR(10)          NULL,
-   UUDAI                NVARCHAR(1000)                 NULL,
-   GHICHU               NVARCHAR(1000)                 NULL,
-   CONSTRAINT PK_TOUR PRIMARY KEY NONCLUSTERED (MATOUR)
+create table TOUR (
+   MATOUR               int                  not null IDENTITY( 1, 1 ),
+   HUONGDANVIEN         int                  null,
+   MAKHACHHANG          int                  not null,
+   NHAXE                int                  null,
+   MANHANVIEN           int                  null,
+   TENTOUR              text                 null,
+   THOIGIAN             text                 null,
+   NGAYDI               datetime             null,
+   TONGGIATOUR          int                  null,
+   TRANGTHAI            varchar(10)          null,
+   UUDAI                text                 null,
+   GHICHU               text                 null,
+   NgayLapTour          datetime             null,
+   constraint PK_TOUR primary key nonclustered (MATOUR)
 )
 go
 
 /*==============================================================*/
 /* Index: FK_NV_T_FK                                            */
 /*==============================================================*/
-CREATE INDEX FK_NV_T_FK ON TOUR (
+create index FK_NV_T_FK on TOUR (
 MANHANVIEN ASC
 )
 go
@@ -399,7 +400,7 @@ go
 /*==============================================================*/
 /* Index: FK_T_KH_FK                                            */
 /*==============================================================*/
-CREATE INDEX FK_T_KH_FK ON TOUR (
+create index FK_T_KH_FK on TOUR (
 MAKHACHHANG ASC
 )
 go
@@ -407,66 +408,66 @@ go
 /*==============================================================*/
 /* Index: HUONGDANVIEN_FK                                       */
 /*==============================================================*/
-CREATE INDEX HUONGDANVIEN_FK ON TOUR (
-NHAXE ASC
+create index HUONGDANVIEN_FK on TOUR (
+HUONGDANVIEN ASC
 )
 go
 
 /*==============================================================*/
 /* Index: NHAXE_FK                                              */
 /*==============================================================*/
-CREATE INDEX NHAXE_FK ON TOUR (
-HUONGDANVIEN ASC
+create index NHAXE_FK on TOUR (
+NHAXE ASC
 )
 go
 
-ALTER TABLE CHITIETLICHTRINH
-   ADD CONSTRAINT FK_CHITIETL_FK_LT_CTL_LICHTRIN FOREIGN KEY (MALICHTRINH)
-      REFERENCES LICHTRINH (MALICHTRINH)
+alter table CHITIETLICHTRINH
+   add constraint FK_CHITIETL_FK_LT_CTL_LICHTRIN foreign key (MALICHTRINH)
+      references LICHTRINH (MALICHTRINH)
 go
 
-ALTER TABLE CHITIETLICHTRINH
-   ADD CONSTRAINT FK_CHITIETL_FK_CTLT_D_DOITAC FOREIGN KEY (MADOITAC)
-      REFERENCES DOITAC (MADOITAC)
+alter table CHITIETLICHTRINH
+   add constraint FK_CHITIETL_FK_CTLT_D_DOITAC foreign key (MADOITAC)
+      references DOITAC (MADOITAC)
 go
 
-ALTER TABLE DIEMDULICH
-   ADD CONSTRAINT FK_DIEMDULI_FK_NV_DDL_NHANVIEN FOREIGN KEY (MANHANVIEN)
-      REFERENCES NHANVIEN (MANHANVIEN)
+alter table DIEMDULICH
+   add constraint FK_DIEMDULI_FK_NV_DDL_NHANVIEN foreign key (MANHANVIEN)
+      references NHANVIEN (MANHANVIEN)
 go
 
-ALTER TABLE DOITAC
-   ADD CONSTRAINT FK_DOITAC_FK_NV_DT_NHANVIEN FOREIGN KEY (MANHANVIEN)
-      REFERENCES NHANVIEN (MANHANVIEN)
+alter table DOITAC
+   add constraint FK_DOITAC_FK_NV_DT_NHANVIEN foreign key (MANHANVIEN)
+      references NHANVIEN (MANHANVIEN)
 go
 
-ALTER TABLE LICHTRINH
-   ADD CONSTRAINT FK_LICHTRIN_FK_T_LT_TOUR FOREIGN KEY (MATOUR)
-      REFERENCES TOUR (MATOUR)
+alter table LICHTRINH
+   add constraint FK_LICHTRIN_FK_T_LT_TOUR foreign key (MATOUR)
+      references TOUR (MATOUR)
 go
 
-ALTER TABLE NHANVIEN
-   ADD CONSTRAINT FK_NHANVIEN_FK_MP_NV_PHONGBAN FOREIGN KEY (MAPHONG)
-      REFERENCES PHONGBAN (MAPHONG)
+alter table NHANVIEN
+   add constraint FK_NHANVIEN_FK_MP_NV_PHONGBAN foreign key (MAPHONG)
+      references PHONGBAN (MAPHONG)
 go
 
-ALTER TABLE TOUR
-   ADD CONSTRAINT FK_TOUR_FK_NV_T_NHANVIEN FOREIGN KEY (MANHANVIEN)
-      REFERENCES NHANVIEN (MANHANVIEN)
+alter table TOUR
+   add constraint FK_TOUR_FK_NV_T_NHANVIEN foreign key (MANHANVIEN)
+      references NHANVIEN (MANHANVIEN)
 go
 
-ALTER TABLE TOUR
-   ADD CONSTRAINT FK_TOUR_FK_T_KH_KHACHHAN FOREIGN KEY (MAKHACHHANG)
-      REFERENCES KHACHHANG (MAKHACHHANG)
+alter table TOUR
+   add constraint FK_TOUR_FK_T_KH_KHACHHAN foreign key (MAKHACHHANG)
+      references KHACHHANG (MAKHACHHANG)
 go
 
-ALTER TABLE TOUR
-   ADD CONSTRAINT FK_TOUR_HUONGDANV_DOITAC FOREIGN KEY (NHAXE)
-      REFERENCES DOITAC (MADOITAC)
+alter table TOUR
+   add constraint FK_TOUR_HUONGDANV_DOITAC foreign key (HUONGDANVIEN)
+      references DOITAC (MADOITAC)
 go
 
-ALTER TABLE TOUR
-   ADD CONSTRAINT FK_TOUR_NHAXE_DOITAC FOREIGN KEY (HUONGDANVIEN)
-      REFERENCES DOITAC (MADOITAC)
+alter table TOUR
+   add constraint FK_TOUR_NHAXE_DOITAC foreign key (NHAXE)
+      references DOITAC (MADOITAC)
 go
 
