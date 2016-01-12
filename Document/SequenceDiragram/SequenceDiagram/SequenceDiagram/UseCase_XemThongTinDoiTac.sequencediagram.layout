@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="8e23c869-aba0-4bb9-8859-13a87b10ab8f" />
   <nestedChildShapes>
     <lifelineShape Id="d763fa12-96a1-4eb0-b277-d291c32adce4" absoluteBounds="1.03125, 1, 0.15, 2.46875" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="992f3c5f-7773-4b49-b9ad-bb06872545ae" LastKnownName=": NhanVienDieuHanh, GiamDoc" />
+      <lifelineMoniker Id="992f3c5f-7773-4b49-b9ad-bb06872545ae" LastKnownName=": NhanVien" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="f479e366-f257-4082-9c7c-23ba2f8d9fc4" absoluteBounds="0.10624999999999996, 0.6, 2, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="992f3c5f-7773-4b49-b9ad-bb06872545ae" LastKnownName=": NhanVienDieuHanh, GiamDoc" />
+        <umlLifelineHeadShape Id="f479e366-f257-4082-9c7c-23ba2f8d9fc4" absoluteBounds="0.60625, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="992f3c5f-7773-4b49-b9ad-bb06872545ae" LastKnownName=": NhanVien" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="03a2f4db-0e6f-4692-9b1d-4dba6046548a" absoluteBounds="1.03125, 1, 0, 2.5">
-          <lifelineMoniker Id="992f3c5f-7773-4b49-b9ad-bb06872545ae" LastKnownName=": NhanVienDieuHanh, GiamDoc" />
+          <lifelineMoniker Id="992f3c5f-7773-4b49-b9ad-bb06872545ae" LastKnownName=": NhanVien" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="0981d792-b609-4097-9a55-4608e439689d" absoluteBounds="1.03125, 1.55, 0.15, 0.6354166666666663" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="5770a607-f3ed-45c2-a1af-074e30474e46" LastKnownName="BehaviorExecutionSpecification1" />

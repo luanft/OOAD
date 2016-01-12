@@ -155,13 +155,6 @@
       <SubType>Content</SubType>
       <DependentUpon>UseCase_XemChiTietTour.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="UseCase_XemDiemDuLich.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UseCase_XemDiemDuLich.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UseCase_XemDiemDuLich.sequencediagram</DependentUpon>
-    </Content>
     <Content Include="UseCase_XemThongTinDoiTac.sequencediagram">
       <SubType>Content</SubType>
     </Content>
