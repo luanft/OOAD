@@ -4,29 +4,26 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class KhachHang
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected string LoaiKhachHang;
 
-	public class KhachHang
-	{
-		protected string LoaiKhachHang;
+	protected int SoNguoi;
 
-		protected int SoNguoi;
+	protected string NguoiDaiDien;
 
-		protected string NguoiDaiDien;
+	protected string SoDT;
 
-		protected string SoDT;
+	protected string Email;
 
-		protected string Email;
+	protected string TenDonVi;
 
-		protected string TenDonVi;
+	protected string DiaChi;
 
-		protected string DiaChi;
-
-	}
 }
 

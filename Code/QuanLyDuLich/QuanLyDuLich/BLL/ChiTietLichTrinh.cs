@@ -4,21 +4,18 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class ChiTietLichTrinh
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected string ThoiGian;
 
-	public class ChiTietLichTrinh
-	{
-		protected string ThoiGian;
+	protected string NoiDung;
 
-		protected string NoiDung;
+	public DoiTac DoiTac;
 
-		public DoiTac doiTac;
-
-	}
 }
 

@@ -4,55 +4,47 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class NhanVien
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected string HoTen;
 
-	public class NhanVien
+	protected int MaNhanVien;
+
+	protected string SoDT;
+
+	protected string DiaChi;
+
+	protected string QueQuan;
+
+	protected string CMND;
+
+	protected string Email;
+
+	protected DateTime NgaySinh;
+
+	protected string GioiTinh;
+
+	protected string MatKhau;
+
+	public Tour XemTour(int maTour)
 	{
-		protected string HoTen;
-
-		protected int MaNhanVien;
-
-		protected string SoDT;
-
-		protected string DiaChi;
-
-		protected string QueQuan;
-
-		protected string CMND;
-
-		protected string Email;
-
-		protected DateTime NgaySinh;
-
-		protected string GioiTinh;
-
-		protected string MatKhau;
-
-		public Tour XemTour(int maTour)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool DangNhap(string maNv, string mk)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void DangXuat()
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public virtual bool XuLyTour(Tour tour)
-		{
-			throw new System.NotImplementedException();
-		}
-
+		throw new System.NotImplementedException();
 	}
+
+	public bool DangNhap(string maNv, string mk)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public void DangXuat()
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

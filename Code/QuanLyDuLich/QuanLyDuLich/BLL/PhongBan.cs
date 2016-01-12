@@ -4,26 +4,18 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class PhongBan
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected string TenPhongBan;
 
-	public class PhongBan
-	{
-		protected string TenPhongBan;
+	protected string MaPhongBan;
 
-		protected string MaPhongBan;
+	public IEnumerable<NhanVien> NhanVien;
 
-		public IEnumerable<NhanVien> nhanVien;
-
-		public bool ThemNhanVien(NhanVien nv)
-		{
-			throw new System.NotImplementedException();
-		}
-
-	}
 }
 

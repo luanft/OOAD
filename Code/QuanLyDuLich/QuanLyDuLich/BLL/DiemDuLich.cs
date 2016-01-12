@@ -4,26 +4,18 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class DiemDuLich
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected string MoTa;
 
-	public class DiemDuLich
-	{
-		protected string MoTa;
+	protected string TenDiemDuLich;
 
-		protected string TenDiemDuLich;
+	public IEnumerable<DacTrung> DacTrung;
 
-		public IEnumerable<DacTrung> dacTrung;
-
-		public virtual bool ThemDacTrung(DacTrung dt)
-		{
-			throw new System.NotImplementedException();
-		}
-
-	}
 }
 

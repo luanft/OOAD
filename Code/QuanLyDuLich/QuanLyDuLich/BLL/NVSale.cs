@@ -4,49 +4,75 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class NVSale : NhanVien
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-
-	public class NVSale : NhanVien
+	public virtual IEnumerable<Tour> Tour
 	{
-		public virtual IEnumerable<Tour> tour
-		{
-			get;
-			set;
-		}
-
-		public virtual IEnumerable<DiemDuLich> DiemDuLich
-		{
-			get;
-			set;
-		}
-
-		public IEnumerable<DiemDuLich> diemDuLich;
-
-		public bool ThemKhachHang(KhachHang kh)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool ThemTour(Tour tour)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool ThemDiemDuLich(DiemDuLich ddl)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public KhachHang XemThongTinKhachHang(int makh)
-		{
-			throw new System.NotImplementedException();
-		}
-
+		get;
+		set;
 	}
+
+	public IEnumerable<DiemDuLich> DiemDuLich;
+
+	public bool ThemKhachHang(KhachHang kh)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool ThemTour(Tour tour)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool ThemDiemDuLich(DiemDuLich ddl)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public KhachHang XemThongTinKhachHang(int makh)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaKhachHang(KhachHang kh)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool CapNhatThongTinKhachHang(KhachHang kh)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual List<KhachHang> LayDanhSachKhachHang()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaTour(Tour t)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool SubmitTour(Tour t)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool CapNhatThongTinDiemDuLich(DiemDuLich ddl)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaDiemDuLich(DiemDuLich ddl)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

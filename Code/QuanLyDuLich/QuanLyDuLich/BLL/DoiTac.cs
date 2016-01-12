@@ -4,31 +4,28 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class DoiTac
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected string TenDoiTac;
 
-	public class DoiTac
-	{
-		protected string TenDoiTac;
+	protected string NguoiLienHe;
 
-		protected string NguoiLienHe;
+	protected string SoDT;
 
-		protected string SoDT;
+	protected string Email;
 
-		protected string Email;
+	protected int MaDoiTac;
 
-		protected int MaDoiTac;
+	protected string DiaChi;
 
-		protected string DiaChi;
+	protected string DanhGiaDoiTac;
 
-		protected string DanhGiaDoiTac;
+	protected string LoaiDoiTac;
 
-		protected string LoaiDoiTac;
-
-	}
 }
 

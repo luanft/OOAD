@@ -4,25 +4,47 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class GiamDoc : NhanVien
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-
-	public class GiamDoc : NhanVien
+	public bool ThemNhanVien(NhanVien nv, PhongBan pb)
 	{
-		public bool ThemNhanVien(NhanVien nv, PhongBan pb)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool SuaThongTinNhanVien(NhanVien nv)
-		{
-			throw new System.NotImplementedException();
-		}
-
+		throw new System.NotImplementedException();
 	}
+
+	public bool CapNhatThongTinNhanVien(NhanVien nv)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool DinhGiaTour(Tour t)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaNhanVien(NhanVien nv)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ThemPhongBan(PhongBan pb)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaPhongBan(PhongBan pb)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool CapNhatThongTinPhongBan(PhongBan pb)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

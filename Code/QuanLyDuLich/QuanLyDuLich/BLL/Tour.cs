@@ -4,63 +4,79 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace QuanLyDuLich.BLL
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+public class Tour
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	protected int MaTour;
 
-	public class Tour
+	protected string TenTour;
+
+	protected string TongGiaTour;
+
+	protected DateTime NgayDi;
+
+	protected string TenKhachHang;
+
+	protected string ThoiGian;
+
+	protected string GhiChu;
+
+	protected string TrangThai;
+
+	protected string UuDai;
+
+	protected virtual DateTime NgayLapTour
 	{
-		protected int MaTour;
-
-		protected string TenTour;
-
-		protected string TongGiaTour;
-
-		protected DateTime NgayDi;
-
-		protected string TenKhachHang;
-
-		protected string ThoiGian;
-
-		protected string GhiChu;
-
-		protected string TrangThai;
-
-		protected string UuDai;
-
-		public IEnumerable<LichTrinh> chiTietTour;
-
-		public virtual KhachHang danhSachKhachHang
-		{
-			get;
-			set;
-		}
-
-		public IEnumerable<DoiTac> DoiTac;
-
-		public bool ThemLichTrinh(LichTrinh lt)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool SuaLichTrinh(LichTrinh lt)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool XoaLichTrinh(int malt)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public bool LuuLaiTour()
-		{
-			throw new System.NotImplementedException();
-		}
-
+		get;
+		set;
 	}
+
+	public IEnumerable<LichTrinh> ChiTietTour;
+
+	public KhachHang KhachHang;
+
+	public DoiTac NhaXe;
+
+	public DoiTac HuongDanVien;
+
+	public bool ThemLichTrinh(LichTrinh lt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool SuaLichTrinh(LichTrinh lt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool XoaLichTrinh(int malt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool LuuLaiTour()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ChonKhachHang(KhachHang kh)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ChonNhaXe(DoiTac nhaxe)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ChonHuongDanVien(DoiTac huongdanvien)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 
