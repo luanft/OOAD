@@ -1114,72 +1114,6 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="506924ac-e464-4ab4-8023-5ce80e110d1c" name="ThemNhanVien" isLeaf="true" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="8057b884-502b-4fa7-a49c-6bed40cbec4c" name="method" profile="CSharpProfile">
-                <elementDefinition Id="585445a5-c7eb-4191-882a-a386c7c7dca2" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="4ed69533-0f68-4622-ab61-2f5717f5d4c8">
-                    <propertyInstance Id="c28f02fa-42df-43d6-8812-37d0ae631b7e" name="ClrAttributes">
-                      <elementDefinition Id="4ed34c21-12c2-493e-96ff-e70455a885ec" />
-                    </propertyInstance>
-                    <elementDefinition Id="ce424ec7-6261-4bf9-a30d-b2aa176ed85a" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="93c0c362-3f92-4b7a-b315-8a821edb0984">
-                    <propertyInstance Id="fedf7ffa-2d61-41b7-806f-e797edcb3165" name="IsPartial" value="false">
-                      <elementDefinition Id="a1849886-3084-4482-a5b5-50a4d25aca74" />
-                    </propertyInstance>
-                    <elementDefinition Id="3898032d-514e-4a3f-b709-32c894c7d93d" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="e56c1279-c1c4-47c6-8e41-bb20eab0d769">
-                    <propertyInstance Id="c945c71a-2d41-4b86-ac68-5bb40b86c250" name="IsUnsafe" value="false">
-                      <elementDefinition Id="7ac4d8a0-4305-4476-8561-eb9c88c5951d" />
-                    </propertyInstance>
-                    <elementDefinition Id="fccdefc5-2c47-40ad-bd02-58929e653526" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="f3794317-166b-4891-8c5b-44adbdbfaf22">
-                    <propertyInstance Id="03d4b2e9-ecee-4d8a-b99f-bc6909031e99" name="Inheritance" value="none">
-                      <elementDefinition Id="43b382cf-1d7f-41cd-aa57-664dabacf7b3" />
-                    </propertyInstance>
-                    <elementDefinition Id="422dbfaa-1635-4fe0-929b-a4f6d5a10aa5" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="03270e22-4526-44e2-85f3-6140bf418df4">
-                    <propertyInstance Id="70492edf-d5e3-46b2-b663-90d583ce5406" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="d9c685f5-375a-4164-9bc6-d15564be2831" />
-                    </propertyInstance>
-                    <elementDefinition Id="70bd273d-5756-4cd1-960f-322e74ecd075" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="426f5fa8-301f-4b0e-a1a1-7d4433d0847d">
-                    <propertyInstance Id="41817ad1-458c-4851-8292-cae5ea2f5e34" name="params" value="false">
-                      <elementDefinition Id="ef765106-24c9-4ceb-ab98-75a1d6f17251" />
-                    </propertyInstance>
-                    <elementDefinition Id="72c16b8f-f6c5-4fd7-b4dd-20241d7de11a" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="5b89cceb-9120-48c7-97f7-bdb48e9808a9" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="69b45799-d7ff-42c2-afd1-b50319989be1" direction="Return" isUnique="false">
-                  <elementDefinition Id="f975de9d-376f-485a-9556-8d7abaefe680" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="4ab3b10d-9c6c-4777-9916-0edb425aa81c" name="nv" direction="In" isUnique="false">
-                  <elementDefinition Id="0383c9ea-10fc-487b-943a-42fab3c2e80c" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="54e1787c-4a8b-4810-ab3b-999b5a661989" LastKnownName="NhanVien" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -2336,6 +2270,48 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="984d1c5d-9dcb-46a4-8077-687e8b8138ac" name="CapNhatThongTinDiemDuLich" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9f55a34a-e2bf-4644-9013-b767b2bef6a8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1710b3e3-abe5-4463-82db-2af1a38ec3de" name="ddl" direction="In" isUnique="false">
+                  <elementDefinition Id="80096064-108e-4084-abb6-94c5d284d3aa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ecfedb12-0ae6-409d-ab7a-2ff144753640" LastKnownName="DiemDuLich" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1bae485c-e597-40be-afc3-a4205e70faa1" direction="Return" isUnique="false">
+                  <elementDefinition Id="70cb3457-8f03-43b2-b03e-f17e07d9388d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="857001bc-b950-456b-8c11-057ec5486e5d" name="XoaDiemDuLich" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28eee5d5-b91b-4391-b5e2-17b8f9769fae" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c0816f56-78be-449f-98bb-bcf6cf6fe2cc" name="ddl" direction="In" isUnique="false">
+                  <elementDefinition Id="26791c9a-0e28-4a48-82e4-25d8f62ee42f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ecfedb12-0ae6-409d-ab7a-2ff144753640" LastKnownName="DiemDuLich" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="58eac38a-cbe0-478c-bf39-7fbce414c290" direction="Return" isUnique="false">
+                  <elementDefinition Id="0225558b-bb09-43ba-a4f6-3c5fac3c687e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -2458,7 +2434,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="091e864e-0ef9-4065-b9ca-a2043de72251" name="SuaThongTinNhanVien" isLeaf="true" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="091e864e-0ef9-4065-b9ca-a2043de72251" name="CapNhatThongTinNhanVien" isLeaf="true" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="1b62bd96-271a-484b-a0a3-683cb6a742a0" name="method" profile="CSharpProfile">
                 <elementDefinition Id="0ae371e3-1c3f-4d16-8528-89c10bb8a2b3" />
@@ -2513,8 +2489,8 @@
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="82070de2-b460-4a24-a329-cb06c2636823" name="nv" direction="In" isUnique="false">
-                  <elementDefinition Id="83c21c9d-10f3-4522-a395-57a7117635a6" />
+                <parameter Id="4f40cb8c-f8c7-497c-a610-bb0e8faf868b" name="nv" direction="In" isUnique="false">
+                  <elementDefinition Id="8f1a9c72-0be1-4222-b329-c344894fc68c" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="54e1787c-4a8b-4810-ab3b-999b5a661989" LastKnownName="NhanVien" />
                   </type_NamedElement>
@@ -2600,6 +2576,69 @@
               <operationHasOwnedParameters>
                 <parameter Id="c6e2165a-bcfc-4ab1-ab1b-7b8dedf9b6c5" direction="Return" isUnique="false">
                   <elementDefinition Id="15a94bdf-18ee-48f2-8096-43622a8bb4be" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4c0bbc51-b358-4992-bcde-5787efcaffc4" name="ThemPhongBan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e44d23ab-f8f6-4668-9434-6eb47023a776" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4dffd231-3932-40dd-b98d-9c456492e6d0" name="pb" direction="In" isUnique="false">
+                  <elementDefinition Id="8482f7b3-bca9-4901-8c56-4801c3f47376" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5c8dcead-f2f9-4dc0-8a1d-a743dd6106a9" LastKnownName="PhongBan" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f35e95ac-4038-4fd3-b938-5cbe2b184248" direction="Return" isUnique="false">
+                  <elementDefinition Id="334a114e-3a94-48ac-aa2a-4bed830939a4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="92c78218-01b5-4530-b3b5-c2b487c12706" name="XoaPhongBan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="133735e9-e0c0-4afb-b37d-085f1d4322cb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="417f605b-031c-41ca-af9a-d76c79c4a6e6" name="pb" direction="In" isUnique="false">
+                  <elementDefinition Id="d0130131-75b7-43ac-904a-18a33e3c0d38" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5c8dcead-f2f9-4dc0-8a1d-a743dd6106a9" LastKnownName="PhongBan" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ad2c9efa-fa03-461a-86ba-6fe81655b444" direction="Return" isUnique="false">
+                  <elementDefinition Id="ab9b9d23-c74b-49c0-8d2e-5dd341d01956" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5e3b76c9-add7-4bb8-a45e-76d8fc93f110" name="CapNhatThongTinPhongBan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="797d003a-503f-4f9d-a36e-659f7238e168" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f372fba9-52a8-4e6d-9295-bf432d5e55e4" name="pb" direction="In" isUnique="false">
+                  <elementDefinition Id="65c5b0ae-32de-4a89-b923-be4e57fdb266" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5c8dcead-f2f9-4dc0-8a1d-a743dd6106a9" LastKnownName="PhongBan" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="68f5484b-8653-419b-8285-82e4bee33389" direction="Return" isUnique="false">
+                  <elementDefinition Id="30cf1021-d0ea-4195-8ba3-1e0bf06edf9b" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="38b39539-739b-4eb0-82a7-d0cc9e31d89e" LastKnownName="Boolean" />
                   </type_NamedElement>

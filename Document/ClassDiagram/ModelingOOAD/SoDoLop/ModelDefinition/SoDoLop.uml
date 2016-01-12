@@ -1371,96 +1371,6 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="5b89cceb-9120-48c7-97f7-bdb48e9808a9"
-            name="ThemNhanVien"
-            isLeaf="true"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="585445a5-c7eb-4191-882a-a386c7c7dca2"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ce424ec7-6261-4bf9-a30d-b2aa176ed85a">
-                    <propertyInstance
-                      Id="4ed34c21-12c2-493e-96ff-e70455a885ec"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3898032d-514e-4a3f-b709-32c894c7d93d">
-                    <propertyInstance
-                      Id="a1849886-3084-4482-a5b5-50a4d25aca74"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fccdefc5-2c47-40ad-bd02-58929e653526">
-                    <propertyInstance
-                      Id="7ac4d8a0-4305-4476-8561-eb9c88c5951d"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="422dbfaa-1635-4fe0-929b-a4f6d5a10aa5">
-                    <propertyInstance
-                      Id="43b382cf-1d7f-41cd-aa57-664dabacf7b3"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="70bd273d-5756-4cd1-960f-322e74ecd075">
-                    <propertyInstance
-                      Id="d9c685f5-375a-4164-9bc6-d15564be2831"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="72c16b8f-f6c5-4fd7-b4dd-20241d7de11a">
-                    <propertyInstance
-                      Id="ef765106-24c9-4ceb-ab98-75a1d6f17251"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f975de9d-376f-485a-9556-8d7abaefe680"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="0383c9ea-10fc-487b-943a-42fab3c2e80c"
-                  name="nv"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25"
-                      LastKnownName="NhanVien"
-                      LastKnownLocation="SoDoLop.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -3077,6 +2987,82 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="9f55a34a-e2bf-4644-9013-b767b2bef6a8"
+            name="CapNhatThongTinDiemDuLich"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="80096064-108e-4084-abb6-94c5d284d3aa"
+                  name="ddl"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2a2822eb-b0da-4ed2-81bc-3535d8f50748"
+                      LastKnownName="DiemDuLich"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70cb3457-8f03-43b2-b03e-f17e07d9388d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="28eee5d5-b91b-4391-b5e2-17b8f9769fae"
+            name="XoaDiemDuLich"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26791c9a-0e28-4a48-82e4-25d8f62ee42f"
+                  name="ddl"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2a2822eb-b0da-4ed2-81bc-3535d8f50748"
+                      LastKnownName="DiemDuLich"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0225558b-bb09-43ba-a4f6-3c5fac3c687e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -3245,7 +3231,7 @@
           </operation>
           <operation
             Id="e136e367-9d40-4386-ae68-b543d6f000bc"
-            name="SuaThongTinNhanVien"
+            name="CapNhatThongTinNhanVien"
             isLeaf="true"
             isStatic="false"
             isAbstract="false"
@@ -3317,7 +3303,7 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="83c21c9d-10f3-4522-a395-57a7117635a6"
+                  Id="8f1a9c72-0be1-4222-b329-c344894fc68c"
                   name="nv"
                   direction="In"
                   isUnique="false">
@@ -3445,6 +3431,120 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="15a94bdf-18ee-48f2-8096-43622a8bb4be"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e44d23ab-f8f6-4668-9434-6eb47023a776"
+            name="ThemPhongBan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8482f7b3-bca9-4901-8c56-4801c3f47376"
+                  name="pb"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ff44df00-68f6-4f0f-8e92-71d03ed26eed"
+                      LastKnownName="PhongBan"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="334a114e-3a94-48ac-aa2a-4bed830939a4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="133735e9-e0c0-4afb-b37d-085f1d4322cb"
+            name="XoaPhongBan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0130131-75b7-43ac-904a-18a33e3c0d38"
+                  name="pb"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ff44df00-68f6-4f0f-8e92-71d03ed26eed"
+                      LastKnownName="PhongBan"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab9b9d23-c74b-49c0-8d2e-5dd341d01956"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="797d003a-503f-4f9d-a36e-659f7238e168"
+            name="CapNhatThongTinPhongBan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="65c5b0ae-32de-4a89-b923-be4e57fdb266"
+                  name="pb"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ff44df00-68f6-4f0f-8e92-71d03ed26eed"
+                      LastKnownName="PhongBan"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30cf1021-d0ea-4195-8ba3-1e0bf06edf9b"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
