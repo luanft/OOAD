@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c353d140-d7f1-4515-bc7b-1b69d0d26ee8" name="Usecase" linkedPackageId="1cd6b1b5-9a67-4297-8bf9-26574a289b6d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="6297a278-3e1a-4c05-a930-465510c5860a">
+      <profileInstance Id="e587311c-f846-4af8-b3b1-390b73c44da8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="04265692-b7c7-4011-bc8b-22af9d5c60fc">
+      <profileInstance Id="50295428-dc37-4144-b872-e637b0a7fd27" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="efe053ba-84f1-4122-93ba-e380370c68d4" name="Nhân Viên" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a249d4f4-e630-4305-b8b7-9bf2abf36ea8" />
+        <targetEnds>
+          <association Id="cb2c8aff-90bf-4cb3-b928-77c932273db2" isDerived="false" sourceEndRoleName="Nhân Viên" targetEndRoleName="Đăng nhập/ Đăng xuất" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3df79ba4-eb89-40aa-9ead-b731d87cdf49" LastKnownName="Đăng nhập/ Đăng xuất" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd8f0624-95d4-46a0-8083-7b9c56641eb4" name="Nhân Viên" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8b93c544-9614-4156-89fa-207a8da37b1f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8bcf6648-ec1f-4696-88c5-36168f0105c0" name="Đăng nhập/ Đăng xuất" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="43766174-8997-410d-98b6-2350e65c5e13" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cffd3e95-7c2e-4b9e-8ea3-b5760a67d7fe" />
+          </association>
+          <association Id="4710ed39-66a2-47dd-9e9f-ce9d376c78cc" isDerived="false" sourceEndRoleName="Nhân Viên" targetEndRoleName="Xem chi tiết tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a90099c6-a7c1-4e33-a7fd-4444f281c829" LastKnownName="Xem chi tiết tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c44571e4-9e22-4609-816a-28989d4d2a9d" name="Nhân Viên" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d5003365-90db-4d5b-b546-a1709b83c2fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="87867c76-3ea0-4807-bb28-fce71cda0929" name="Xem chi tiết tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2d9c9e21-b94c-41c4-92e6-cb365dab2613" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f0145d98-a83a-48a0-bc2f-e3840d353e6c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3df79ba4-eb89-40aa-9ead-b731d87cdf49" name="Đăng nhập/ Đăng xuất" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8206f834-65da-40b2-91a8-8f36d4865e33" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a90099c6-a7c1-4e33-a7fd-4444f281c829" name="Xem chi tiết tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f6b387ce-ae7b-439a-aec2-b5c7ffebeeaf" />
+        <additions>
+          <include Id="7087b062-f08d-42e5-bd0d-7836b5cea949">
+            <useCaseMoniker Id="cdd6135d-0d0e-491a-b471-88c8bc47bbbe" LastKnownName="Xem thông tin đối tác" />
+            <elementDefinition Id="914cf4fc-1494-4ffd-b3cc-c4f7eaafb213" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cdd6135d-0d0e-491a-b471-88c8bc47bbbe" name="Xem thông tin đối tác" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9b521e0d-6d74-47fa-acd1-75312d3a0e7e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="9b5d6a9c-5d0d-4b21-ad80-e42259ae1d6c" name="Giám đốc" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d49a952c-a290-491f-b6a8-8f931ebf8601" />
+        <generalsInternal>
+          <generalization Id="34d77c3e-ef6d-4007-9573-36ed1d2dfb43" isSubstitutable="false">
+            <actorMoniker Id="efe053ba-84f1-4122-93ba-e380370c68d4" LastKnownName="Nhân Viên" />
+            <elementDefinition Id="36c40812-e9cc-4946-a6bc-4ea379420b6b" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="dddabda6-662d-4102-82fb-93b9a34b3bd5" isDerived="false" sourceEndRoleName="Giám đốc" targetEndRoleName="Định giá tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="80286232-4fa3-4b3e-85ec-3aae6329465e" LastKnownName="Định giá tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ceb6e5eb-403d-47dd-90a3-24a1eba27c13" name="Giám đốc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7a76a029-9fe5-4548-8bb0-6b1e303fe0db" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e21055f5-aa5a-4d37-bf33-b7b26f157da9" name="Định giá tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ec90707f-3caf-4c75-9695-efe3c767453a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1178db44-b35d-46ab-b553-e3c3a99fbb02" />
+          </association>
+          <association Id="0b64ebd7-fc02-4b9d-a610-f8737986688e" isDerived="false" sourceEndRoleName="Giám đốc" targetEndRoleName="Quản lý nhân viên" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9f5846df-ce4f-48b6-be41-c7aab1a4beb3" LastKnownName="Quản lý nhân viên" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0eaca8d4-35b6-49c1-93ec-ece2a32861c7" name="Giám đốc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="14bbd29b-df4e-425c-9776-48aadb09389b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d113641a-013b-44c1-a8be-3c0bc7beabb8" name="Quản lý nhân viên" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed95849e-9e20-42f7-b75f-f00ebc79ef66" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1a9135fb-aab9-4ea6-9ad7-b92237b12c9d" />
+          </association>
+          <association Id="42c90c1e-9fdb-4fc2-9750-c13d51f6fe8a" isDerived="false" sourceEndRoleName="Giám đốc" targetEndRoleName="Thống kê sale tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a23ace4e-41b0-4d27-9688-2350c7781008" LastKnownName="Thống kê sale tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="add0e068-dc18-4965-9cd1-897e95ea6fe2" name="Giám đốc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="113dd342-cd0a-4332-a6f6-48ec1d882fe1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="220cfee3-ec8d-4c0a-9bea-4d7745f8f43c" name="Thống kê sale tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c985965c-621f-47d1-8b10-89b3b909a343" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f6e0f94-4aac-470b-8362-9b5e8a3ccb4c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="80286232-4fa3-4b3e-85ec-3aae6329465e" name="Định giá tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ad66dbcf-5d97-45df-9329-b57bb2c88fe8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9f5846df-ce4f-48b6-be41-c7aab1a4beb3" name="Quản lý nhân viên" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea30a24e-8ed1-42d8-a153-3f271a42ef67" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a23ace4e-41b0-4d27-9688-2350c7781008" name="Thống kê sale tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="42da3a68-fba8-4d94-89b7-595284a99f1d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="180e65c3-dd83-4764-b17e-832f80656493" name="Nhân viên điều hành" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1943a3fc-8dfa-4f51-8db2-0a84d361abdc" />
+        <generalsInternal>
+          <generalization Id="aaf0ca25-360f-4d1a-82b3-b0731898efd8" isSubstitutable="false">
+            <actorMoniker Id="efe053ba-84f1-4122-93ba-e380370c68d4" LastKnownName="Nhân Viên" />
+            <elementDefinition Id="ea1d59b4-c366-45af-b40b-3a1e7f536611" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="d62876d7-932f-496b-84f2-3ce5dcbfeb19" isDerived="false" sourceEndRoleName="Nhân viên điều hành" targetEndRoleName="Quản lý đối tác" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="af3012fd-d43b-4e27-88ab-8ae25e02cb19" LastKnownName="Quản lý đối tác" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f8d36091-05f3-4015-909d-d016ea3b1642" name="Nhân viên điều hành" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="580d8283-d29f-4622-9e66-83eb66bf4fce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04afa6c8-c99c-4aaa-9832-f966ce0b850e" name="Quản lý đối tác" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a654a4e3-a52c-40dd-bb21-18f921939321" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="901682c8-ed3a-4c98-8668-c9e1faa7384f" />
+          </association>
+          <association Id="d314c3b7-bd74-4cb6-a473-906fbc627698" isDerived="false" sourceEndRoleName="Nhân viên điều hành" targetEndRoleName="Xét duyệt tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3a2e046f-0588-4e64-bce7-e744bca50dfa" LastKnownName="Xét duyệt tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b2eba140-72c3-48e7-b94b-505ce78a8b90" name="Nhân viên điều hành" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e761b4bc-be3e-40d9-8224-ade68f23b1f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb37ffc0-c5c8-4233-8053-117a739ac5ab" name="Xét duyệt tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2fbb64ab-f75d-422d-bda9-cc48eb99af18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ba300551-d992-4e98-8f3b-9b398fc3b367" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="af3012fd-d43b-4e27-88ab-8ae25e02cb19" name="Quản lý đối tác" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7a027f6e-c13f-4fce-8246-b2951c7a23e7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3a2e046f-0588-4e64-bce7-e744bca50dfa" name="Xét duyệt tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30570989-66f6-478f-869b-bc13be5e1711" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="0dbb78f1-be5b-44b9-81e0-b91c7310770c" name="Nhân viên sale" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6d606a26-5a6b-402d-98c9-13979cdea9ed" />
+        <generalsInternal>
+          <generalization Id="84144c6d-3723-427b-b33b-2a32ff4ba0cd" isSubstitutable="false">
+            <actorMoniker Id="efe053ba-84f1-4122-93ba-e380370c68d4" LastKnownName="Nhân Viên" />
+            <elementDefinition Id="1e29c83a-3fd7-49fb-8f0d-a32c21ac1d43" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="c3de803e-d4b5-4f56-bb2a-a1ff2ab988db" isDerived="false" sourceEndRoleName="Nhân viên sale" targetEndRoleName="Lập tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc02d22a-ded1-4e84-8e18-78b84d23ea4f" LastKnownName="Lập tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be81ccb7-3cae-4a14-b4cb-6b33cf952cca" name="Nhân viên sale" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="64aaf483-5bfb-4e84-a4da-8a5fe70bbf66" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6149871c-20b4-4dbe-bede-82465003bae6" name="Lập tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6f05f181-6793-45d2-bda5-66d214558a2a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1d903830-deb6-4195-b8ad-6bf63775998c" />
+          </association>
+          <association Id="f6ae4887-eae3-4762-be8f-3ae940007d87" isDerived="false" sourceEndRoleName="Nhân viên sale" targetEndRoleName="Cập nhật tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1c1f695c-9878-4c86-9b63-5c233a978def" LastKnownName="Cập nhật tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e2f552b-ed4c-4d8a-9c83-46af1d5d4981" name="Nhân viên sale" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="64687916-b7f6-4838-8cbb-f697953a94ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a7a5046-4c7d-42b4-8d28-0122493dc798" name="Cập nhật tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d8b9c4b-b71a-4e80-94de-ea1feba48ee5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c0fe7ba6-d474-4dbb-a80e-44f2205f7854" />
+          </association>
+          <association Id="771de1f0-90eb-478b-a8d3-7372490d4647" isDerived="false" sourceEndRoleName="Nhân viên sale" targetEndRoleName="Quản lý điểm du lịch" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c9a5f7e9-89b4-4639-872a-4d9334d1dbad" LastKnownName="Quản lý điểm du lịch" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e7238c5-6c9b-483b-9815-505b6fb97765" name="Nhân viên sale" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="02cc45d7-4a3e-4e1f-8437-4b364af4b9e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04e3cde9-5c85-450c-ab51-ff83c66a04e4" name="Quản lý điểm du lịch" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4839b2ee-0abd-4c90-a57a-f8d0e0d13caf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3fa3e1f-215d-4c57-969c-6983449dc563" />
+          </association>
+          <association Id="14cee443-8006-4818-8439-8862a8583432" isDerived="false" sourceEndRoleName="Nhân viên sale" targetEndRoleName="Quản lý khách hàng" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a10ea482-b301-4bac-a282-a5435cc0981a" LastKnownName="Quản lý khách hàng" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f76cdfc1-7d66-46b1-839e-1e4a1b9a58c7" name="Nhân viên sale" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="da43bb67-3451-4f20-a913-831f05cd3d19" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aecb016d-e5f3-47f0-ab7b-4ffad4d1c342" name="Quản lý khách hàng" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5487044e-a7ee-4b26-9b7a-f59ab050dd1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bae95724-da89-42ff-8922-17e9a96398eb" />
+          </association>
+          <association Id="4033e614-06cc-4d9a-8242-c7bc6e5fffdd" isDerived="false" sourceEndRoleName="Nhân viên sale" targetEndRoleName="Xem danh sách tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0101ba6e-c986-4dc3-8472-6a41bff8fdc5" LastKnownName="Xem danh sách tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9872188-0047-4640-936f-c31187dcf899" name="Nhân viên sale" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2da693be-6ed6-4bf8-b33b-708395aaa09f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63899f76-02ac-4f0c-9a27-e609b3d469bf" name="Xem danh sách tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8cdbd9d7-d262-4263-836b-8ecb4c18bf2c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8a8361a7-0afc-4bc2-ac2c-6166ca05cf94" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bc02d22a-ded1-4e84-8e18-78b84d23ea4f" name="Lập tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1bb04c5f-3606-46a1-b9b2-0ed58a906aea" />
+        <additions>
+          <include Id="5cbda1df-a1cf-4ab3-be7e-13d36d33d459">
+            <useCaseMoniker Id="3916ca93-2122-467b-ad06-1ca0f8578b28" LastKnownName="Xem thông tin đối tác" />
+            <elementDefinition Id="51a8afb5-390d-4ab8-a3fa-bcdc968e0a95" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a10ea482-b301-4bac-a282-a5435cc0981a" name="Quản lý khách hàng" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="01b53f23-aab5-44e2-bd19-d96159b10a50" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c9a5f7e9-89b4-4639-872a-4d9334d1dbad" name="Quản lý điểm du lịch" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f626290-ecee-4271-84dd-4d5a46d8fc6b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1c1f695c-9878-4c86-9b63-5c233a978def" name="Cập nhật tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5362f694-27be-4442-a6c5-0f5b0b7effe1" />
+        <generalsInternal>
+          <generalization Id="43e35b63-5caf-4f5e-9d0f-cc65368ea70f" isSubstitutable="false">
+            <useCaseMoniker Id="bc02d22a-ded1-4e84-8e18-78b84d23ea4f" LastKnownName="Lập tour" />
+            <elementDefinition Id="90a04da5-bca3-4f7a-855f-2eed439c5fe5" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0101ba6e-c986-4dc3-8472-6a41bff8fdc5" name="Xem danh sách tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ab34fd4-ddff-411a-b97f-43dae43f5136" />
+        <additions>
+          <include Id="c9330476-817c-4d47-a3f5-cca8810888c1">
+            <useCaseMoniker Id="b3d984c7-d7b1-4f05-87bc-36db4b4f01dd" LastKnownName="Submit tour" />
+            <elementDefinition Id="15b4b704-714c-4440-9632-d79326a8bfd6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3916ca93-2122-467b-ad06-1ca0f8578b28" name="Xem thông tin đối tác" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c2018fc8-b605-4c43-8454-d4757648b4bf" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b3d984c7-d7b1-4f05-87bc-36db4b4f01dd" name="Submit tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7fe1e43a-af63-4cdf-b7c2-37becb124d4f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="1cd6b1b5-9a67-4297-8bf9-26574a289b6d" name="TravelManagement">
+    <elementDefinition Id="dad4d006-87eb-4d99-8abf-2f8f1bc9aca3" />
+  </package>
+</useCaseModelRoot>
