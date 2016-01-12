@@ -227,7 +227,7 @@ create table CHITIETLICHTRINH (
    MACHITIETLICHTRINH   int                  not null IDENTITY( 1, 1 ),
    MADOITAC             int                  null,
    MALICHTRINH          int                  null,
-   NOIDUNG              text                 null,
+   NOIDUNG              NVARCHAR(1000)                 null,
    THOIGIAN             varchar(5)           null,
    constraint PK_CHITIETLICHTRINH primary key nonclustered (MACHITIETLICHTRINH)
 )
@@ -255,8 +255,8 @@ go
 create table DIEMDULICH (
    MADIEMDULICH         int                  not null IDENTITY( 1, 1 ),
    MANHANVIEN           int                  null,
-   TENDIEMDULICH        text                 null,
-   MOTA                 text                 null,
+   TENDIEMDULICH        NVARCHAR(1000)                 null,
+   MOTA                 NVARCHAR(1000)                 null,
    constraint PK_DIEMDULICH primary key nonclustered (MADIEMDULICH)
 )
 go
@@ -275,11 +275,11 @@ go
 create table DOITAC (
    MADOITAC             int                  not null IDENTITY( 1, 1 ),
    MANHANVIEN           int                  null,
-   TENDOITAC            text                 null,
-   NGUOILIENHE          text                 null,
+   TENDOITAC            NVARCHAR(1000)                 null,
+   NGUOILIENHE          NVARCHAR(1000)                 null,
    DIENTHOAI            varchar(14)          null,
-   DANHGIADOITAC        text                 null,
-   DIACHI               text                 null,
+   DANHGIADOITAC        NVARCHAR(1000)                 null,
+   DIACHI               NVARCHAR(1000)                 null,
    EMAIL                varchar(100)         null,
    LOAIDOITAC           varchar(20)          null,
    constraint PK_DOITAC primary key nonclustered (MADOITAC)
@@ -299,13 +299,13 @@ go
 /*==============================================================*/
 create table KHACHHANG (
    MAKHACHHANG          int                  not null IDENTITY( 1, 1 ),
-   TENDONVI             text                 null,
-   NGUOIDAIDIEN         text                 null,
+   TENDONVI             NVARCHAR(1000)                 null,
+   NGUOIDAIDIEN         NVARCHAR(1000)                 null,
    GIOITINH             varchar(5)           null,
    EMAIL                varchar(100)         null,
    DIENTHOAI            varchar(14)          null,
    SONGUOI              int                  null,
-   DIACHI               text                 null,
+   DIACHI               NVARCHAR(1000)                 null,
    LOAIKHACHHANG        varchar(10)          null,
    constraint PK_KHACHHANG primary key nonclustered (MAKHACHHANG)
 )
@@ -317,7 +317,7 @@ go
 create table LICHTRINH (
    MALICHTRINH          int                  not null IDENTITY( 1, 1 ),
    MATOUR               int                  null,
-   TENLICHTRINH         text                 null,
+   TENLICHTRINH         NVARCHAR(1000)                 null,
    NGAY                 int                  null,
    constraint PK_LICHTRINH primary key nonclustered (MALICHTRINH)
 )
@@ -337,11 +337,11 @@ go
 create table NHANVIEN (
    MANHANVIEN           int                  not null IDENTITY( 1, 1 ),
    MAPHONG              varchar(5)           null,
-   HOTEN                text                 null,
+   HOTEN                NVARCHAR(1000)                 null,
    CMND                 varchar(14)          null,
-   DIACHI               text                 null,
+   DIACHI               NVARCHAR(1000)                 null,
    NGAYSINH             datetime             null,
-   QUEQUAN              text                 null,
+   QUEQUAN              NVARCHAR(1000)                 null,
    SODT                 varchar(14)          null,
    EMAIL                varchar(50)          null,
    GIOITINH             varchar(5)           null,
@@ -363,7 +363,7 @@ go
 /*==============================================================*/
 create table PHONGBAN (
    MAPHONG              varchar(5)           not null,
-   TENPHONG             text                 null,
+   TENPHONG             NVARCHAR(1000)                 null,
    constraint PK_PHONGBAN primary key nonclustered (MAPHONG)
 )
 go
@@ -377,13 +377,13 @@ create table TOUR (
    MAKHACHHANG          int                  not null,
    NHAXE                int                  null,
    MANHANVIEN           int                  null,
-   TENTOUR              text                 null,
-   THOIGIAN             text                 null,
+   TENTOUR              NVARCHAR(1000)                 null,
+   THOIGIAN             NVARCHAR(1000)                 null,
    NGAYDI               datetime             null,
    TONGGIATOUR          int                  null,
    TRANGTHAI            varchar(10)          null,
-   UUDAI                text                 null,
-   GHICHU               text                 null,
+   UUDAI                NVARCHAR(1000)                 null,
+   GHICHU               NVARCHAR(1000)                 null,
    NgayLapTour          datetime             null,
    constraint PK_TOUR primary key nonclustered (MATOUR)
 )
