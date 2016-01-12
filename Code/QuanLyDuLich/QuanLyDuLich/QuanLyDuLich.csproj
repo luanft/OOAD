@@ -88,12 +88,6 @@
     <Compile Include="GUI\diagThemLichTrinh.Designer.cs">
       <DependentUpon>diagThemLichTrinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmCapNhatTour.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmCapNhatTour.Designer.cs">
-      <DependentUpon>frmCapNhatTour.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\diagChiTietLichTrinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,36 +117,6 @@
     </Compile>
     <Compile Include="GUI\frmNhanVienSaleTour.Designer.cs">
       <DependentUpon>frmNhanVienSaleTour.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmQuanLyDiemDuLich.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmQuanLyDiemDuLich.Designer.cs">
-      <DependentUpon>frmQuanLyDiemDuLich.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmQuanLyKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmQuanLyKhachHang.Designer.cs">
-      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmQuanLyNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmQuanLyNhanVien.Designer.cs">
-      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmThemTour.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmThemTour.Designer.cs">
-      <DependentUpon>frmThemTour.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmThongKeSaleTour.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmThongKeSaleTour.Designer.cs">
-      <DependentUpon>frmThongKeSaleTour.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmXemChiTietTour.cs">
       <SubType>Form</SubType>
@@ -185,12 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanVienSaleTour.resx">
       <DependentUpon>frmNhanVienSaleTour.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmQuanLyDiemDuLich.resx">
-      <DependentUpon>frmQuanLyDiemDuLich.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmThongKeSaleTour.resx">
-      <DependentUpon>frmThongKeSaleTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmXemChiTietTour.resx">
       <DependentUpon>frmXemChiTietTour.cs</DependentUpon>
