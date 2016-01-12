@@ -21,14 +21,14 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="a717c6d3-23d4-485e-88df-23f76d58f303" absoluteBounds="4.25000007947286, 1, 0.15, 2.59375" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="29b46d5d-dd88-4d1c-bd40-81b2535d6775" LastKnownName=": QuanLyDoiTac" />
+      <lifelineMoniker Id="29b46d5d-dd88-4d1c-bd40-81b2535d6775" LastKnownName=": DoiTac" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="5db4ac1f-9531-49a2-9718-98750c2a9d6b" absoluteBounds="3.7512862594922392, 0.6, 1.1474276399612426, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="29b46d5d-dd88-4d1c-bd40-81b2535d6775" LastKnownName=": QuanLyDoiTac" />
+        <umlLifelineHeadShape Id="5db4ac1f-9531-49a2-9718-98750c2a9d6b" absoluteBounds="3.8250000794728605, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="29b46d5d-dd88-4d1c-bd40-81b2535d6775" LastKnownName=": DoiTac" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="a171d3cd-cff2-4b00-892d-8ba345940756" absoluteBounds="4.25000007947286, 1, 0, 2.625">
-          <lifelineMoniker Id="29b46d5d-dd88-4d1c-bd40-81b2535d6775" LastKnownName=": QuanLyDoiTac" />
+          <lifelineMoniker Id="29b46d5d-dd88-4d1c-bd40-81b2535d6775" LastKnownName=": DoiTac" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="94f8ec7a-70ec-435a-97fc-4d966e23a04d" absoluteBounds="4.25000007947286, 2.0416666666666665, 0.15, 0.89999999999999947" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="153bf890-4fe1-4419-a04d-957729963fa6" LastKnownName="BehaviorExecutionSpecification2" />

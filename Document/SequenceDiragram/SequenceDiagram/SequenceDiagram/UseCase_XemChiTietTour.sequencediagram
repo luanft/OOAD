@@ -155,7 +155,7 @@
               <messageOccurrenceSpecificationMoniker Id="c014c805-45af-4307-8739-f557029bd728" LastKnownName="MessageOccurrenceSpecification4" />
             </receiveEvent>
           </message>
-          <message Id="442824c2-432a-4957-9900-19e89420e2c8" name="&lt;&lt;Kết quả thực hiện&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+          <message Id="442824c2-432a-4957-9900-19e89420e2c8" name="Thông tin tour" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
             <elementDefinition Id="d9c222a2-8a04-41f4-997f-93eeb21f0150" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="146c90c1-4cba-48bd-8788-ef9d962f3efc" LastKnownName="MessageOccurrenceSpecification5" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="f719005d-631c-4d8d-8421-4dc4d38f9d21" name="UseCase_QuanLyKhachHang_Sua" linkedPackageId="64130992-3be6-4a1e-979e-dbe9c8c0868d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f719005d-631c-4d8d-8421-4dc4d38f9d21" name="UseCase_QuanLyKhachHang_Sua" linkedPackageId="64130992-3be6-4a1e-979e-dbe9c8c0868d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="ba939ca6-0deb-4c4d-a2d6-4d5b2519d139" name="UseCase_QuanLyKhachHang_Sua" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -8,13 +8,13 @@
           <messageOccurrenceSpecification Id="0cd176fd-ae6a-4203-ab1d-2de78326bf01" name="MessageOccurrenceSpecification1">
             <elementDefinition Id="a4ac2416-14d7-4610-a50c-f778f3c45e17" />
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="b6d9f105-c479-428e-915a-452199d1961a" name="BehaviorExecutionSpecification1">
             <elementDefinition Id="66ed0d9d-a658-484b-bf88-9148c895dc98" />
             <coveredLifelines>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="e71f2bec-976a-4f7c-b276-d41810056d6d" LastKnownName="ExecutionOccurrenceSpecification2" />
@@ -35,19 +35,19 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="09f20ae7-f005-404e-a15b-0a6aa74d46c3" name="MessageOccurrenceSpecification2">
             <elementDefinition Id="641b5e6b-09f8-48e2-9303-6f8a3707f258" />
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="5299c93f-630c-42a3-a06e-851285b2308a" name="BehaviorExecutionSpecification2">
             <elementDefinition Id="374164e4-bf19-44f1-8a61-97b72c1262d8" />
             <coveredLifelines>
-              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": KhachHang" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="de0bb322-fdfb-4db3-b7e5-f35fcc2e69d9" LastKnownName="ExecutionOccurrenceSpecification4" />
@@ -68,19 +68,19 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="d0faa388-58e4-4ef7-85e2-213a57f23ec3" name="MessageOccurrenceSpecification3">
             <elementDefinition Id="c3657199-691c-4189-8f97-60cad97fb9a0" />
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="80b6f22e-9ebf-4adb-8eb6-2f2e8c866c8c" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="188ce48e-478d-44ad-8597-e64816a0ea2c" />
             <covered>
-              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="e71f2bec-976a-4f7c-b276-d41810056d6d" name="ExecutionOccurrenceSpecification2">
@@ -91,13 +91,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="098e62b8-5284-45b9-ba2b-7c3788022eeb" name="BehaviorExecutionSpecification3">
             <elementDefinition Id="b7cb79ab-b189-496f-b789-cea8c19ef218" />
             <coveredLifelines>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="17edee3a-a761-4302-be8d-240d301702bc" LastKnownName="ExecutionOccurrenceSpecification6" />
@@ -117,19 +117,19 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="197bb038-19d9-4036-a3cd-9976d700dbf2" name="MessageOccurrenceSpecification5">
             <elementDefinition Id="0708d292-c59d-49ac-9702-6e1f4dc69fac" />
             <covered>
-              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": KhachHang" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="86968efb-72ee-4cce-b07f-53ffae6fb2d4" name="MessageOccurrenceSpecification6">
             <elementDefinition Id="4a76da04-fefb-4948-86ec-1c7b854be668" />
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="de0bb322-fdfb-4db3-b7e5-f35fcc2e69d9" name="ExecutionOccurrenceSpecification4">
@@ -140,7 +140,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": QuanLy KhachHang" />
+              <lifelineMoniker Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" LastKnownName=": KhachHang" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="17edee3a-a761-4302-be8d-240d301702bc" name="ExecutionOccurrenceSpecification6">
@@ -151,12 +151,12 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="09a80506-f7df-4a8e-84d5-3baf3207744c" LastKnownName=": NhanVienSale" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="09a80506-f7df-4a8e-84d5-3baf3207744c" name=": NhanVienSaleTour" isActor="false" lifelineDisplayName=": NhanVienSaleTour">
+          <lifeline Id="09a80506-f7df-4a8e-84d5-3baf3207744c" name=": NhanVienSale" isActor="false" lifelineDisplayName=": NhanVienSale">
             <elementDefinition Id="ac7869f2-c473-40be-9e92-5bc06e618180" />
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="0cd176fd-ae6a-4203-ab1d-2de78326bf01" LastKnownName="MessageOccurrenceSpecification1" />
@@ -166,7 +166,7 @@
               <executionOccurrenceSpecificationMoniker Id="17edee3a-a761-4302-be8d-240d301702bc" LastKnownName="ExecutionOccurrenceSpecification6" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" name=": QuanLy KhachHang" isActor="false" lifelineDisplayName=": QuanLy KhachHang">
+          <lifeline Id="38a57839-c9aa-40c2-98f1-ed5a7e37e0a0" name=": KhachHang" isActor="false" lifelineDisplayName=": KhachHang">
             <elementDefinition Id="a9058f4f-7970-4ef9-92ca-f299178b8171" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="1721bba7-2b40-4e9c-8e53-788ad3d2bbca" LastKnownName="ExecutionOccurrenceSpecification3" />

@@ -34,7 +34,7 @@
           <messageOccurrenceSpecification Id="d0eb332d-384c-4137-9cb0-ab670c4f532c" name="MessageOccurrenceSpecification15">
             <elementDefinition Id="180e87cf-5031-4cdc-9c84-de32e2e5dae8" />
             <covered>
-              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="79be4322-6cdc-4e12-83a4-256fe1b8cfab" name="MessageOccurrenceSpecification16">
@@ -84,7 +84,7 @@
           <messageOccurrenceSpecification Id="533ac22a-c6f1-4e26-a4dc-372625760c20" name="MessageOccurrenceSpecification3">
             <elementDefinition Id="0b227f36-af8a-4d3f-bb7d-344b6de4eded" />
             <covered>
-              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="ad446ab6-4264-4be3-be6a-8a880c4ac344" name="MessageOccurrenceSpecification4">
@@ -96,7 +96,7 @@
           <behaviorExecutionSpecification Id="0d94915c-f712-4cf3-bf05-ef707db6f8d8" name="BehaviorExecutionSpecification3">
             <elementDefinition Id="1153cbc7-0e4b-4695-aee5-0bf6832e0c40" />
             <coveredLifelines>
-              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="a29bd5dc-4b7f-4dd5-a3ed-3a1ed45c66f2" LastKnownName="ExecutionOccurrenceSpecification6" />
@@ -116,7 +116,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="336cc2f4-6d57-4480-bf29-a97fe31bc1d4" name="MessageOccurrenceSpecification5">
@@ -128,7 +128,7 @@
           <messageOccurrenceSpecification Id="51c161a9-57ac-417e-95e0-5718aa3643f7" name="MessageOccurrenceSpecification6">
             <elementDefinition Id="d52b5276-77ef-4094-b822-25eaf82eb839" />
             <covered>
-              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="ba48fcbb-de77-4d42-bd74-d5736c380794" name="ExecutionOccurrenceSpecification4">
@@ -150,12 +150,12 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+              <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" name=": NhanVienSaleTour" isActor="false" lifelineDisplayName=": NhanVienSaleTour">
+          <lifeline Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" name=": NhanVienSale" isActor="false" lifelineDisplayName=": NhanVienSale">
             <elementDefinition Id="6cd886f3-0e3b-45d1-980e-3646ac115d03" />
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="d0eb332d-384c-4137-9cb0-ab670c4f532c" LastKnownName="MessageOccurrenceSpecification15" />

@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="20c0acb3-25c3-462b-a830-67a0a442f186" />
   <nestedChildShapes>
     <lifelineShape Id="2624765f-7d8d-4a4a-9a3b-ad56d5086727" absoluteBounds="1.7916666269302368, 1, 0.15, 3.4437499999999996" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+      <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="40b71ef5-298d-4102-aa01-edd091886cb8" absoluteBounds="1.1740020823478699, 0.6, 1.3853290891647339, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+        <umlLifelineHeadShape Id="40b71ef5-298d-4102-aa01-edd091886cb8" absoluteBounds="1.305810899734497, 0.6, 1.1217114543914795, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="7cb5c8d4-d663-4816-b3eb-1254468f1d53" absoluteBounds="1.7916666269302368, 1, 0, 3.5">
-          <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSaleTour" />
+          <lifelineMoniker Id="19ce5b77-28e2-4e46-be5c-2937c7bc5cba" LastKnownName=": NhanVienSale" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="3bd772b7-6cd0-49e1-ad60-e2a76d90cea9" absoluteBounds="1.7916666269302368, 3.15625, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="0d94915c-f712-4cf3-bf05-ef707db6f8d8" LastKnownName="BehaviorExecutionSpecification3" />
