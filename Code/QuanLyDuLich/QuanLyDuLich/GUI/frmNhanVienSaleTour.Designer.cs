@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Điểm đến: Nhà hàng rạng đông");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Chương trình: Ăn chơi nhậu nhẹt cho đến lúc 7h");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("6h", new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16});
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Điểm đến: Khách sạn hồng bàng");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Chương trình: Thư giãn, mát xoa");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("7h", new System.Windows.Forms.TreeNode[] {
-            treeNode18,
-            treeNode19});
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Điểm đến: Đèo bảo lộc");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Chương trình: Trèo đèo lội núi");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("8h", new System.Windows.Forms.TreeNode[] {
-            treeNode21,
-            treeNode22});
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Ngày 1: Nha trang đà lạt", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode20,
-            treeNode23});
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Node3");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Điểm đến: Nhà hàng rạng đông");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Chương trình: Ăn chơi nhậu nhẹt cho đến lúc 7h");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("6h", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Điểm đến: Khách sạn hồng bàng");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Chương trình: Thư giãn, mát xoa");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("7h", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Điểm đến: Đèo bảo lộc");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Chương trình: Trèo đèo lội núi");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("8h", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Ngày 1: Nha trang đà lạt", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode6,
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node4");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -97,6 +97,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.treelichTrinh = new System.Windows.Forms.TreeView();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -124,7 +125,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -622,45 +622,54 @@
             this.tabPage4.Text = "Lập tour";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1047, 16);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(102, 28);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Lưu lại";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // treelichTrinh
             // 
             this.treelichTrinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treelichTrinh.Location = new System.Drawing.Point(20, 199);
             this.treelichTrinh.Name = "treelichTrinh";
-            treeNode15.Name = "Node0";
-            treeNode15.Text = "Điểm đến: Nhà hàng rạng đông";
-            treeNode16.Name = "Node1";
-            treeNode16.Text = "Chương trình: Ăn chơi nhậu nhẹt cho đến lúc 7h";
-            treeNode17.Name = "Node5";
-            treeNode17.Text = "6h";
-            treeNode18.Name = "Node3";
-            treeNode18.Text = "Điểm đến: Khách sạn hồng bàng";
-            treeNode19.Name = "Node4";
-            treeNode19.Text = "Chương trình: Thư giãn, mát xoa";
-            treeNode20.Name = "Node6";
-            treeNode20.Text = "7h";
-            treeNode21.Name = "Node5";
-            treeNode21.Text = "Điểm đến: Đèo bảo lộc";
-            treeNode22.Name = "Node6";
-            treeNode22.Text = "Chương trình: Trèo đèo lội núi";
-            treeNode23.Name = "Node7";
-            treeNode23.Text = "8h";
-            treeNode24.Name = "Node0";
-            treeNode24.Text = "Ngày 1: Nha trang đà lạt";
-            treeNode25.Name = "Node1";
-            treeNode25.Text = "Node1";
-            treeNode26.Name = "Node2";
-            treeNode26.Text = "Node2";
-            treeNode27.Name = "Node3";
-            treeNode27.Text = "Node3";
-            treeNode28.Name = "Node4";
-            treeNode28.Text = "Node4";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Điểm đến: Nhà hàng rạng đông";
+            treeNode2.Name = "Node1";
+            treeNode2.Text = "Chương trình: Ăn chơi nhậu nhẹt cho đến lúc 7h";
+            treeNode3.Name = "Node5";
+            treeNode3.Text = "6h";
+            treeNode4.Name = "Node3";
+            treeNode4.Text = "Điểm đến: Khách sạn hồng bàng";
+            treeNode5.Name = "Node4";
+            treeNode5.Text = "Chương trình: Thư giãn, mát xoa";
+            treeNode6.Name = "Node6";
+            treeNode6.Text = "7h";
+            treeNode7.Name = "Node5";
+            treeNode7.Text = "Điểm đến: Đèo bảo lộc";
+            treeNode8.Name = "Node6";
+            treeNode8.Text = "Chương trình: Trèo đèo lội núi";
+            treeNode9.Name = "Node7";
+            treeNode9.Text = "8h";
+            treeNode10.Name = "Node0";
+            treeNode10.Text = "Ngày 1: Nha trang đà lạt";
+            treeNode11.Name = "Node1";
+            treeNode11.Text = "Node1";
+            treeNode12.Name = "Node2";
+            treeNode12.Text = "Node2";
+            treeNode13.Name = "Node3";
+            treeNode13.Text = "Node3";
+            treeNode14.Name = "Node4";
+            treeNode14.Text = "Node4";
             this.treelichTrinh.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode24,
-            treeNode25,
-            treeNode26,
-            treeNode27,
-            treeNode28});
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14});
             this.treelichTrinh.Size = new System.Drawing.Size(1141, 285);
             this.treelichTrinh.TabIndex = 4;
             // 
@@ -902,15 +911,6 @@
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Trần Minh Luận";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(1047, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(102, 28);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Lưu lại";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // frmNhanVienSaleTour
             // 

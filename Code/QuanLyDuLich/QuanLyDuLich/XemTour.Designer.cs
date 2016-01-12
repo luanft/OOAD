@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.lbTenTour);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbTrangThai);
@@ -179,7 +179,7 @@
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "XemTour";
-            this.Size = new System.Drawing.Size(370, 249);
+            this.Size = new System.Drawing.Size(368, 247);
             this.Load += new System.EventHandler(this.XemTour_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
