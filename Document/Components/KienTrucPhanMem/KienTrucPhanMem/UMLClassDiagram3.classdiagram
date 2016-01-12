@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b396ae30-0348-4a0e-a808-0289c0cdad83" name="UMLClassDiagram3" linkedPackageId="b2dbbe8d-a560-4c47-b6af-8ee05b3160eb" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e496c00b-d83d-42f3-b76e-e6049cf5f21d">
+      <profileInstance Id="e3779e8f-b497-417d-ad8a-60009fa7c217" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a20a1229-bdf7-46fa-963b-f41a5234ee02">
+      <profileInstance Id="79a87287-c130-42c3-b773-a4285802f18c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4e12950b-9b2c-4847-a61b-68b75c8eb8d6" name="frmLogin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="17a046d3-f2e8-44a8-b38a-97b69d3ee8b9" />
+        <targetEnds>
+          <association Id="0b0f3375-44b3-4abf-ac27-c890d649606c" isDerived="false" sourceEndRoleName="frmLogin" targetEndRoleName="frmNhanVienSale" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a28d4183-0f99-48b7-8438-b3aaa7f11a9b" LastKnownName="frmNhanVienSale" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f11fa28-0ea5-41a0-9993-1230aafdd3cc" name="frmLogin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="528132a8-ff17-4654-94eb-e0a7d4e0a0bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8a35651d-823b-42c3-afe9-26891c6c9237" name="frmNhanVienSale" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cf31720a-7cd9-47ce-9f38-b096c8e83e56" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="501794cf-a4c7-4796-a740-23e81d055571" />
+          </association>
+          <association Id="19fc1541-ce58-4ee5-a789-b10dd91a726a" isDerived="false" sourceEndRoleName="frmLogin" targetEndRoleName="frmNhanVienDieuHanh" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9dbd0582-da2f-4ea1-8a6e-c17aa5ac25b9" LastKnownName="frmNhanVienDieuHanh" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="85527f52-8498-4dcc-a30a-c315e0934873" name="frmLogin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a99797fc-5bab-445b-8e36-09288c7e1f59" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a79a3b2-3950-4f26-90c6-0a09b42d2ba7" name="frmNhanVienDieuHanh" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c7468125-e432-4396-9c3a-b0dbe7b1e222" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="88b42ada-ae1d-4ce6-93d0-c7a93652b96e" />
+          </association>
+          <association Id="bcbe6485-8800-4015-97df-243a4b885e3a" isDerived="false" sourceEndRoleName="frmLogin" targetEndRoleName="frmGiamDoc" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9d7c1f75-0f92-4edf-bf95-fcaf0e8ff6e4" LastKnownName="frmGiamDoc" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="601075d3-23e2-487c-88dd-68ed0e27d2b9" name="frmLogin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f8bf9dcd-0cc8-4c35-9352-c7ee7686bcbd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe593ee9-5054-4cc0-8e3d-8585f42996ae" name="frmGiamDoc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2b3efddb-6e5a-49c4-b4a2-12956dc91d66" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="489c3abe-f6f2-4151-8651-9f39633215d8" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9dbd0582-da2f-4ea1-8a6e-c17aa5ac25b9" name="frmNhanVienDieuHanh" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="939dc2ef-1a5d-46eb-8125-667f6b03fc36" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a28d4183-0f99-48b7-8438-b3aaa7f11a9b" name="frmNhanVienSale" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5c5ad56-26d3-43e0-8454-5fa0145766e9" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9d7c1f75-0f92-4edf-bf95-fcaf0e8ff6e4" name="frmGiamDoc" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6978620-1f54-4d7b-a600-b6a9a7bf6147" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b2dbbe8d-a560-4c47-b6af-8ee05b3160eb" name="KienTrucPhanMem">
+    <elementDefinition Id="966e83d3-cbe6-49ad-beac-d9dbf848eed6" />
+  </package>
+</logicalClassDesignerModel>

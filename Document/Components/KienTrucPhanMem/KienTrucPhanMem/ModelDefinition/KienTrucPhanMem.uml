@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="966e83d3-cbe6-49ad-beac-d9dbf848eed6"
   name="KienTrucPhanMem" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -85,6 +85,216 @@
         Id="4789fefa-9438-4022-9d1d-9d04b23ae411"
         LastKnownName="DatabaseServer"
         LastKnownLocation="Package_1324.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="17a046d3-f2e8-44a8-b38a-97b69d3ee8b9"
+        name="frmLogin"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="501794cf-a4c7-4796-a740-23e81d055571"
+            isDerived="false"
+            sourceEndRoleName="frmLogin"
+            targetEndRoleName="frmNhanVienSale"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f5c5ad56-26d3-43e0-8454-5fa0145766e9"
+              LastKnownName="frmNhanVienSale"
+              LastKnownLocation="KienTrucPhanMem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="528132a8-ff17-4654-94eb-e0a7d4e0a0bc"
+                  name="frmLogin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf31720a-7cd9-47ce-9f38-b096c8e83e56"
+                  name="frmNhanVienSale"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="88b42ada-ae1d-4ce6-93d0-c7a93652b96e"
+            isDerived="false"
+            sourceEndRoleName="frmLogin"
+            targetEndRoleName="frmNhanVienDieuHanh"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="939dc2ef-1a5d-46eb-8125-667f6b03fc36"
+              LastKnownName="frmNhanVienDieuHanh"
+              LastKnownLocation="KienTrucPhanMem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a99797fc-5bab-445b-8e36-09288c7e1f59"
+                  name="frmLogin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7468125-e432-4396-9c3a-b0dbe7b1e222"
+                  name="frmNhanVienDieuHanh"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="489c3abe-f6f2-4151-8651-9f39633215d8"
+            isDerived="false"
+            sourceEndRoleName="frmLogin"
+            targetEndRoleName="frmGiamDoc"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c6978620-1f54-4d7b-a600-b6a9a7bf6147"
+              LastKnownName="frmGiamDoc"
+              LastKnownLocation="KienTrucPhanMem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f8bf9dcd-0cc8-4c35-9352-c7ee7686bcbd"
+                  name="frmLogin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2b3efddb-6e5a-49c4-b4a2-12956dc91d66"
+                  name="frmGiamDoc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="939dc2ef-1a5d-46eb-8125-667f6b03fc36"
+        name="frmNhanVienDieuHanh"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f5c5ad56-26d3-43e0-8454-5fa0145766e9"
+        name="frmNhanVienSale"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c6978620-1f54-4d7b-a600-b6a9a7bf6147"
+        name="frmGiamDoc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="05fabf86-6522-409b-acc1-87a8b90e13fc"
+            isDerived="false"
+            sourceEndRoleName="frmGiamDoc"
+            targetEndRoleName="frmQuanLyNhanVien"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6a2461f2-fe54-459b-97f3-afd8bb4626a2"
+              LastKnownName="frmQuanLyNhanVien"
+              LastKnownLocation="KienTrucPhanMem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8604233e-8860-4ea1-a66a-44653519d778"
+                  name="frmGiamDoc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c11033e8-4ad4-411b-b712-4031fe9bd6ab"
+                  name="frmQuanLyNhanVien"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6a2461f2-fe54-459b-97f3-afd8bb4626a2"
+        name="frmQuanLyNhanVien"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9b9e40d7-1b5c-43c3-a0d0-9e53a7762ba6"
+        name="QuanLyTour"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
