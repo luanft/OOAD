@@ -49,6 +49,7 @@
             this.col_DanhGiaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabXetDuyetTour = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHuyXetDuyet = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.lbSoTour = new System.Windows.Forms.Label();
             this.dgvDuyetTour = new System.Windows.Forms.DataGridView();
@@ -58,7 +59,6 @@
             this.col1_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1_TrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col1_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnHuyXetDuyet = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabQuanLyDoiTac.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -272,6 +272,17 @@
             this.panel2.Size = new System.Drawing.Size(990, 571);
             this.panel2.TabIndex = 3;
             // 
+            // btnHuyXetDuyet
+            // 
+            this.btnHuyXetDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuyXetDuyet.AutoSize = true;
+            this.btnHuyXetDuyet.Location = new System.Drawing.Point(910, 543);
+            this.btnHuyXetDuyet.Name = "btnHuyXetDuyet";
+            this.btnHuyXetDuyet.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyXetDuyet.TabIndex = 2;
+            this.btnHuyXetDuyet.Text = "Hủy";
+            this.btnHuyXetDuyet.UseVisualStyleBackColor = true;
+            // 
             // btnLuu
             // 
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -352,17 +363,6 @@
             this.col1_GhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.col1_GhiChu.HeaderText = "Ghi chú";
             this.col1_GhiChu.Name = "col1_GhiChu";
-            // 
-            // btnHuyXetDuyet
-            // 
-            this.btnHuyXetDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuyXetDuyet.AutoSize = true;
-            this.btnHuyXetDuyet.Location = new System.Drawing.Point(910, 543);
-            this.btnHuyXetDuyet.Name = "btnHuyXetDuyet";
-            this.btnHuyXetDuyet.Size = new System.Drawing.Size(75, 23);
-            this.btnHuyXetDuyet.TabIndex = 2;
-            this.btnHuyXetDuyet.Text = "Hủy";
-            this.btnHuyXetDuyet.UseVisualStyleBackColor = true;
             // 
             // frmNhanVienDieuHanh
             // 

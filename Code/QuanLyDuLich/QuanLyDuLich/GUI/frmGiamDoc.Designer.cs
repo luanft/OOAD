@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabCtrl_ThongKeSaleTour = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,6 +54,10 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -83,6 +87,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label19 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -91,11 +96,16 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lbSoTour = new System.Windows.Forms.Label();
+            this.dgvDuyetTour = new System.Windows.Forms.DataGridView();
+            this.col1_STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col1_TenTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col1_NguoiLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col1_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col1_TrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.col1_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabCtrl_ThongKeSaleTour.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,6 +122,8 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDuyetTour)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCtrl_ThongKeSaleTour
@@ -119,6 +131,7 @@
             this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage1);
             this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage2);
             this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage3);
+            this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage4);
             this.tabCtrl_ThongKeSaleTour.Location = new System.Drawing.Point(3, 6);
             this.tabCtrl_ThongKeSaleTour.Name = "tabCtrl_ThongKeSaleTour";
             this.tabCtrl_ThongKeSaleTour.Padding = new System.Drawing.Point(0, 0);
@@ -182,11 +195,11 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(20, 147);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -404,6 +417,40 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Danh sách nhân viên";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(124, 412);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(72, 13);
+            this.label26.TabIndex = 30;
+            this.label26.Text = "Mã nhân viên";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(294, 409);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(118, 20);
+            this.textBox10.TabIndex = 29;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(236, 412);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 13);
+            this.label25.TabIndex = 28;
+            this.label25.Text = "Mật khẩu";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(46, 412);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 13);
+            this.label24.TabIndex = 27;
+            this.label24.Text = "Mã nhân viên:";
             // 
             // button6
             // 
@@ -683,6 +730,16 @@
             this.label19.TabIndex = 1;
             this.label19.Text = "Danh sách phòng ban";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(198, 129);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(130, 17);
+            this.label22.TabIndex = 31;
+            this.label22.Text = "Số lượng nhân viên";
+            // 
             // button7
             // 
             this.button7.AutoSize = true;
@@ -766,49 +823,95 @@
             this.label20.TabIndex = 1;
             this.label20.Text = "Thông tin chi tiết";
             // 
-            // label24
+            // tabPage4
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(46, 412);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(75, 13);
-            this.label24.TabIndex = 27;
-            this.label24.Text = "Mã nhân viên:";
+            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage4.Controls.Add(this.label27);
+            this.tabPage4.Controls.Add(this.lbSoTour);
+            this.tabPage4.Controls.Add(this.dgvDuyetTour);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(742, 496);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Xét duyệt tour";
             // 
-            // label25
+            // lbSoTour
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(236, 412);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(52, 13);
-            this.label25.TabIndex = 28;
-            this.label25.Text = "Mật khẩu";
+            this.lbSoTour.AutoSize = true;
+            this.lbSoTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoTour.Location = new System.Drawing.Point(323, -43);
+            this.lbSoTour.Name = "lbSoTour";
+            this.lbSoTour.Size = new System.Drawing.Size(316, 20);
+            this.lbSoTour.TabIndex = 2;
+            this.lbSoTour.Text = "CÓ 10 TOUR ĐANG CHỜ XÉT DUYỆT";
             // 
-            // textBox10
+            // dgvDuyetTour
             // 
-            this.textBox10.Location = new System.Drawing.Point(294, 409);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(118, 20);
-            this.textBox10.TabIndex = 29;
+            this.dgvDuyetTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDuyetTour.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col1_STT,
+            this.col1_TenTour,
+            this.col1_NguoiLap,
+            this.col1_NgayLap,
+            this.col1_TrangThai,
+            this.col1_GhiChu});
+            this.dgvDuyetTour.Location = new System.Drawing.Point(0, 116);
+            this.dgvDuyetTour.Name = "dgvDuyetTour";
+            this.dgvDuyetTour.Size = new System.Drawing.Size(742, 380);
+            this.dgvDuyetTour.TabIndex = 3;
             // 
-            // label26
+            // col1_STT
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(124, 412);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(72, 13);
-            this.label26.TabIndex = 30;
-            this.label26.Text = "Mã nhân viên";
+            this.col1_STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col1_STT.HeaderText = "STT";
+            this.col1_STT.Name = "col1_STT";
+            this.col1_STT.ReadOnly = true;
             // 
-            // label22
+            // col1_TenTour
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(198, 129);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 17);
-            this.label22.TabIndex = 31;
-            this.label22.Text = "Số lượng nhân viên";
+            this.col1_TenTour.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col1_TenTour.HeaderText = "Tên tour";
+            this.col1_TenTour.Name = "col1_TenTour";
+            this.col1_TenTour.ReadOnly = true;
+            // 
+            // col1_NguoiLap
+            // 
+            this.col1_NguoiLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col1_NguoiLap.HeaderText = "Người lập tour";
+            this.col1_NguoiLap.Name = "col1_NguoiLap";
+            this.col1_NguoiLap.ReadOnly = true;
+            // 
+            // col1_NgayLap
+            // 
+            this.col1_NgayLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col1_NgayLap.HeaderText = "Ngày lập tour";
+            this.col1_NgayLap.Name = "col1_NgayLap";
+            this.col1_NgayLap.ReadOnly = true;
+            // 
+            // col1_TrangThai
+            // 
+            this.col1_TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col1_TrangThai.HeaderText = "Trạng thái";
+            this.col1_TrangThai.Name = "col1_TrangThai";
+            this.col1_TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col1_TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // col1_GhiChu
+            // 
+            this.col1_GhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col1_GhiChu.HeaderText = "Ghi chú";
+            this.col1_GhiChu.Name = "col1_GhiChu";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(224, 46);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(316, 20);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "CÓ 10 TOUR ĐANG CHỜ XÉT DUYỆT";
             // 
             // frmGiamDoc
             // 
@@ -841,6 +944,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDuyetTour)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -914,5 +1020,15 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label lbSoTour;
+        private System.Windows.Forms.DataGridView dgvDuyetTour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_TenTour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_NguoiLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_NgayLap;
+        private System.Windows.Forms.DataGridViewComboBoxColumn col1_TrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_GhiChu;
+        private System.Windows.Forms.Label label27;
     }
 }

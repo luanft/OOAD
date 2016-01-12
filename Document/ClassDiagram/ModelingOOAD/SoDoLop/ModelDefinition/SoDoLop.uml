@@ -2048,6 +2048,44 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="85853896-5382-4e6b-b7ea-8bca22fa2ab0"
+            name="XoaDoiTac"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f190eed-b3ed-4cb4-9971-16092d054f4f"
+                  name="dt"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="633e3612-5ebc-4b93-9b37-369acdc6fbf2"
+                      LastKnownName="DoiTac"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="96ef97eb-a7fb-4fb5-aba2-60da7521ecf5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -3369,6 +3407,44 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="7feb8c8f-0614-4635-a9af-e25c2ed7718f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c6105f01-0fe6-4226-b8f4-768982678a73"
+            name="XoaNhanVien"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b6315a10-685d-45b5-9ed6-cccf91f39901"
+                  name="nv"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2a0f980a-7e36-48ff-83d5-ed5cb33fab25"
+                      LastKnownName="NhanVien"
+                      LastKnownLocation="SoDoLop.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15a94bdf-18ee-48f2-8096-43622a8bb4be"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
