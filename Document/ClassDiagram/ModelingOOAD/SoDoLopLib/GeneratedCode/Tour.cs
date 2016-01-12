@@ -68,5 +68,15 @@ public class Tour
 		throw new System.NotImplementedException();
 	}
 
+	public virtual bool ChonNhaXe(DoiTac nhaxe)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ChonHuongDanVien(DoiTac huongdanvien)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

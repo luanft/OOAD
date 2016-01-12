@@ -64,5 +64,15 @@ public class NVSale : NhanVien
 		throw new System.NotImplementedException();
 	}
 
+	public virtual bool CapNhatThongTinDiemDuLich(DiemDuLich ddl)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaDiemDuLich(DiemDuLich ddl)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

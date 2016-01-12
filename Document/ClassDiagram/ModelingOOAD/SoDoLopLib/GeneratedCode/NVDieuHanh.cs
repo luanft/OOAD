@@ -28,12 +28,27 @@ public class NVDieuHanh : NhanVien
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool CapNhatThongTinDoi(DoiTac dt)
+	public virtual bool CapNhatThongTinDoiTac(DoiTac dt)
 	{
 		throw new System.NotImplementedException();
 	}
 
 	public virtual bool XetDuyetTour(Tour t)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaDoiTac(DoiTac dt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ThemDoiTac(List<DoiTac> ldt)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool CapNhatThongTinDoiTac(List<DoiTac> ldt)
 	{
 		throw new System.NotImplementedException();
 	}

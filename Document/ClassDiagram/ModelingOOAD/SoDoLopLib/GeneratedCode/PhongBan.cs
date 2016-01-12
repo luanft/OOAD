@@ -17,10 +17,5 @@ public class PhongBan
 
 	public IEnumerable<NhanVien> NhanVien;
 
-	public bool ThemNhanVien(NhanVien nv)
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

@@ -16,12 +16,32 @@ public class GiamDoc : NhanVien
 		throw new System.NotImplementedException();
 	}
 
-	public bool SuaThongTinNhanVien(NhanVien nv)
+	public bool CapNhatThongTinNhanVien(NhanVien nv)
 	{
 		throw new System.NotImplementedException();
 	}
 
 	public virtual bool DinhGiaTour(Tour t)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaNhanVien(NhanVien nv)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool ThemPhongBan(PhongBan pb)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool XoaPhongBan(PhongBan pb)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool CapNhatThongTinPhongBan(PhongBan pb)
 	{
 		throw new System.NotImplementedException();
 	}
