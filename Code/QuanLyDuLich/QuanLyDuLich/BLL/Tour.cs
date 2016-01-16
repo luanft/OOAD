@@ -38,7 +38,7 @@ namespace BLL
 			set;
 		}
 
-		public List<LichTrinh> LichTrinh;
+		public List<LichTrinh> lichTrinh;
 
 		public KhachHang KhachHang;
 
