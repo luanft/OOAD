@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,17 @@ namespace QuanLyDuLich.GUI
 {
     class LichTrinhNode : TreeNode
     {
-        public LichTrinhNode(string name)
+        public LichTrinh lichTrinh;
+
+        public LichTrinh LichTrinh
+        {
+            get { return lichTrinh; }
+            set { lichTrinh = value; }
+        }
+        public LichTrinhNode(string name, LichTrinh data)
             : base(name)
-        { }
+        {
+            lichTrinh = data;
+        }
     }
 }

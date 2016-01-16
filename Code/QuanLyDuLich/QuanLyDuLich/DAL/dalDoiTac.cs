@@ -85,10 +85,11 @@ namespace DataAccessLayer
             }
             string sql = "select * from [dbo].[DOITAC] where [MANHANVIEN]='"+maNhanVien+"'";
             DataTable dtDoiTac = this.Read(sql);
-            dtoDoiTac dtoDoiTac = new dtoDoiTac();
+            
             List<dtoDoiTac> lDtoDoiTac = new List<dtoDoiTac>();
             foreach(DataRow dr in dtDoiTac.Rows)
             {
+                dtoDoiTac dtoDoiTac = new dtoDoiTac();
                 dtoDoiTac.MADOITAC=Int32.Parse(dr[0].ToString());
                 dtoDoiTac.MANHANVIEN=Int32.Parse(dr[1].ToString());
                 dtoDoiTac.TENDOITAC=dr[2].ToString();
