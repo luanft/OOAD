@@ -75,10 +75,11 @@ namespace DataAccessLayer
                 string sql = "SELECT [MAPHONG],[TENPHONG] FROM [dbo].[PHONGBAN]";
                 DataTable dtPhongBan = this.Read(sql);
                 this.Close();
-                dtoPhongBan dto_PhongBan = new dtoPhongBan();
+                
                 List<dtoPhongBan> lDtoPhongBan = new List<dtoPhongBan>();
                 foreach (DataRow dr in dtPhongBan.Rows)
                 {
+                    dtoPhongBan dto_PhongBan = new dtoPhongBan();
                     dto_PhongBan.MAPHONG = Int32.Parse(dr[0].ToString());
                     dto_PhongBan.TENPHONG = dr[1].ToString();
                     lDtoPhongBan.Add(dto_PhongBan);

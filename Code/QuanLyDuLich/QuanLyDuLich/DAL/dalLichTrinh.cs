@@ -88,10 +88,11 @@ namespace DataAccessLayer
             string sql = "SELECT [MALICHTRINH],[MATOUR],[TENLICHTRINH],[NGAY] FROM [dbo].[LICHTRINH] WHERE MATOUR = '" + maTour + "'";
             DataTable dtLichTrinh = this.Read(sql);
             this.Close();
-            dtoLichTrinh dto_LichTrinh = new dtoLichTrinh();
+            
             List<dtoLichTrinh> lDtoLichTrinh = new List<dtoLichTrinh>();
             foreach (DataRow dr in dtLichTrinh.Rows)
             {
+                dtoLichTrinh dto_LichTrinh = new dtoLichTrinh();
                 dto_LichTrinh.MALICHTRINH = Int32.Parse(dr[0].ToString());
                 dto_LichTrinh.MATOUR = Int32.Parse(dr[1].ToString());
                 dto_LichTrinh.TENLICHTRINH = dr[2].ToString();

@@ -94,10 +94,11 @@ namespace DataAccessLayer
             }
             string sql = "select * from [dbo].[CHITIETLICHTRINH]";
             DataTable dtChiTietLichTrinh = this.Read(sql);
-            dtoChiTietLichTrinh dtochitietlichtrinh= new dtoChiTietLichTrinh();
+            
             List<dtoChiTietLichTrinh> lDtoChiTietLichTrinh= new List<dtoChiTietLichTrinh>();
             foreach (DataRow dr in dtChiTietLichTrinh.Rows)
             {
+                dtoChiTietLichTrinh dtochitietlichtrinh = new dtoChiTietLichTrinh();
                 dtochitietlichtrinh.MACHITIETLICHTRINH=Int32.Parse(dr[0].ToString());
                 dtochitietlichtrinh.MALICHTRINH=Int32.Parse(dr[1].ToString());
                 dtochitietlichtrinh.MADOITAC=Int32.Parse(dr[2].ToString());

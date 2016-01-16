@@ -56,10 +56,11 @@ namespace DataAccessLayer
             string sql = "SELECT [MADIEMDULICH],[MANHANVIEN],[TENDIEMDULICH],[MOTA] FROM [dbo].[DIEMDULICH] WHERE [MANHANVIEN]='"+maNV+"'";
             DataTable dtDiemDuLich = this.Read(sql);
             this.Close();
-            dtoDiemDuLich dto_DiemDuLich = new dtoDiemDuLich();
+            
             List<dtoDiemDuLich> lDtoDiemDuLich = new List<dtoDiemDuLich>();
             foreach (DataRow dr in dtDiemDuLich.Rows)
             {
+                dtoDiemDuLich dto_DiemDuLich = new dtoDiemDuLich();
                 dto_DiemDuLich.MADIEMDULICH = Int32.Parse(dr[0].ToString());
                 dto_DiemDuLich.MANHANVIEN = Int32.Parse(dr[1].ToString());
                 dto_DiemDuLich.TENDIEMDULICH = dr[2].ToString();
