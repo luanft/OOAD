@@ -130,6 +130,34 @@ namespace DataAccessLayer
             return lDtoDoiTac;
 		}
 
+        public List<dtoDoiTac> LayDanhSachDoiTac(string loai)
+        {
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[DOITAC] where LOAIDOITAC='"+loai+"'";
+            DataTable dtDoiTac = this.Read(sql);
+            
+            List<dtoDoiTac> lDtoDoiTac = new List<dtoDoiTac>();
+            foreach (DataRow dr in dtDoiTac.Rows)
+            {
+                dtoDoiTac dtoDoiTac = new dtoDoiTac();
+                dtoDoiTac.MADOITAC = Int32.Parse(dr[0].ToString());
+                dtoDoiTac.MANHANVIEN = Int32.Parse(dr[1].ToString());
+                dtoDoiTac.TENDOITAC = dr[2].ToString();
+                dtoDoiTac.NGUOILIENHE = dr[3].ToString();
+                dtoDoiTac.DIENTHOAI = dr[4].ToString();
+                dtoDoiTac.DANHGIADOITAC = dr[5].ToString();
+                dtoDoiTac.DIACHI = dr[6].ToString();
+                dtoDoiTac.EMAIL = dr[7].ToString();
+                dtoDoiTac.LOAIDOITAC = dr[8].ToString();
+                lDtoDoiTac.Add(dtoDoiTac);
+            }
+            return lDtoDoiTac;
+        }
+
 	}
 }
 

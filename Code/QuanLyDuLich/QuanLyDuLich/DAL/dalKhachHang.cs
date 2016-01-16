@@ -6,24 +6,24 @@
 //------------------------------------------------------------------------------
 namespace DataAccessLayer
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
     using DataTranferObject;
     using System.Windows.Forms;
     using System.Data;
-	public class dalKhachHang : dalObject
-	{
-		public bool ThemKhachHang(dtoKhachHang khachHang)
-		{
+    public class dalKhachHang : dalObject
+    {
+        public bool ThemKhachHang(dtoKhachHang khachHang)
+        {
             if (!this.Connect())
             {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[KHACHHANG]([TENDONVI],[NGUOIDAIDIEN],[GIOITINH],[EMAIL],[DIENTHOAI],[SONGUOI],[DIACHI],[LOAIKHACHHANG])VALUES('"+
+            string sql = "INSERT INTO [dbo].[KHACHHANG]([TENDONVI],[NGUOIDAIDIEN],[GIOITINH],[EMAIL],[DIENTHOAI],[SONGUOI],[DIACHI],[LOAIKHACHHANG])VALUES('" +
                 khachHang.TENDONVI + "','" + khachHang.NGUOIDAIDIEN + "','" + khachHang.GIOITINH + "','" + khachHang.EMAIL + "','" + khachHang.DIENTHOAI +
-                "','" + khachHang.SONGUOI + "','" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG+"')";            
+                "','" + khachHang.SONGUOI + "','" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG + "')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -33,24 +33,24 @@ namespace DataAccessLayer
             {
                 this.Close();
                 return false;
-            }            
-		}
+            }
+        }
 
-		public bool SuaThongTinKhachHang(dtoKhachHang khachHang)
-		{
+        public bool SuaThongTinKhachHang(dtoKhachHang khachHang)
+        {
             if (!this.Connect())
             {
                 return false;
             }
-            string sql = "UPDATE [dbo].[KHACHHANG]SET[TENDONVI] = '"+khachHang.TENDONVI+
-      "',[NGUOIDAIDIEN] = '"+khachHang.NGUOIDAIDIEN+
-      "',[GIOITINH] = '"+khachHang.GIOITINH+
-      "',[EMAIL] = '"+khachHang.EMAIL+
-      "',[DIENTHOAI] = '"+khachHang.DIENTHOAI+
-      "',[SONGUOI] = '"+khachHang.SONGUOI+
-      "',[DIACHI] = '"+khachHang.DIACHI+
-      "',[LOAIKHACHHANG] = '"+khachHang.LOAIKHACHHANG+
-      "'WHERE [MAKHACHHANG] = '"+khachHang.MAKHACHHANG+"'";
+            string sql = "UPDATE [dbo].[KHACHHANG]SET[TENDONVI] = '" + khachHang.TENDONVI +
+      "',[NGUOIDAIDIEN] = '" + khachHang.NGUOIDAIDIEN +
+      "',[GIOITINH] = '" + khachHang.GIOITINH +
+      "',[EMAIL] = '" + khachHang.EMAIL +
+      "',[DIENTHOAI] = '" + khachHang.DIENTHOAI +
+      "',[SONGUOI] = '" + khachHang.SONGUOI +
+      "',[DIACHI] = '" + khachHang.DIACHI +
+      "',[LOAIKHACHHANG] = '" + khachHang.LOAIKHACHHANG +
+      "'WHERE [MAKHACHHANG] = '" + khachHang.MAKHACHHANG + "'";
             if (this.Write(sql))
             {
                 this.Close();
@@ -61,10 +61,10 @@ namespace DataAccessLayer
                 this.Close();
                 return false;
             }
-		}
+        }
 
-		public bool XoaKhachHang(int maKH)
-		{
+        public bool XoaKhachHang(int maKH)
+        {
             if (!this.Connect())
             {
                 return false;
@@ -80,35 +80,38 @@ namespace DataAccessLayer
                 this.Close();
                 return false;
             }
-		}
+        }
 
-		public List<dtoKhachHang> LayDanhSachKhachHang(int maNhanVien)
-		{
-            if (!this.Connect())
-            {
-                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
-                return null;
-            }
-            string sql = "select * from [dbo].[DOITAC] where [MANHANVIEN]='" + maNhanVien + "'";
-            DataTable dtKhachHang = this.Read(sql);
-            dtoKhachHang dtoKhachHang = new dtoKhachHang();
+        public List<dtoKhachHang> LayDanhSachKhachHang(int maNhanVien)
+        {
             List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
-            foreach (DataRow dr in dtKhachHang.Rows)
+            if (this.Connect())
             {
-                dtoKhachHang.MAKHACHHANG = Int32.Parse(dr[0].ToString());
-                dtoKhachHang.TENDONVI = dr[1].ToString();
-                dtoKhachHang.NGUOIDAIDIEN = dr[2].ToString();
-                dtoKhachHang.GIOITINH = dr[3].ToString();
-                dtoKhachHang.EMAIL = dr[4].ToString();
-                dtoKhachHang.DIENTHOAI= dr[5].ToString();
-                dtoKhachHang.SONGUOI = Int32.Parse(dr[6].ToString());
-                dtoKhachHang.DIACHI = dr[7].ToString();
-                dtoKhachHang.LOAIKHACHHANG= dr[8].ToString();
-                ldtoKhachHang.Add(dtoKhachHang);
+                string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG in (select MAKHACHHANG from [dbo].[TOUR] t where t.MANHANVIEN='" + maNhanVien + "')";
+                DataTable dtKhachHang = this.Read(sql);
+
+
+                foreach (DataRow dr in dtKhachHang.Rows)
+                {
+                    dtoKhachHang dtoKhachHang = new dtoKhachHang();
+                    dtoKhachHang.MAKHACHHANG = Int32.Parse(dr[0].ToString());
+                    dtoKhachHang.TENDONVI = dr[1].ToString();
+                    dtoKhachHang.NGUOIDAIDIEN = dr[2].ToString();
+                    dtoKhachHang.GIOITINH = dr[3].ToString();
+                    dtoKhachHang.EMAIL = dr[4].ToString();
+                    dtoKhachHang.DIENTHOAI = dr[5].ToString();
+                    dtoKhachHang.SONGUOI = Int32.Parse(dr[6].ToString());
+                    dtoKhachHang.DIACHI = dr[7].ToString();
+                    dtoKhachHang.LOAIKHACHHANG = dr[8].ToString();
+                    ldtoKhachHang.Add(dtoKhachHang);
+                }
+                this.Close();
+
             }
             return ldtoKhachHang;
-		}
 
-	}
+        }
+
+    }
 }
 

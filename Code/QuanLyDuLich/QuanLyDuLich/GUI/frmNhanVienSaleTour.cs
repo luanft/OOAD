@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLayer;
+using DataTranferObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyDuLich.GUI
-{    
+{
     public partial class frmNhanVienSaleTour : Form
     {
         public frmNhanVienSaleTour()
@@ -32,7 +34,7 @@ namespace QuanLyDuLich.GUI
 
             }
 
-            
+
 
             #region LAP_TOUR
 
@@ -42,8 +44,43 @@ namespace QuanLyDuLich.GUI
             this.treelichTrinh.ContextMenu.MenuItems.Add(themRoot);
             this.treelichTrinh.ContextMenu.MenuItems.Add(xoaRoots);
             xoaRoots.Click += xoaRoots_Click;
-            themRoot.Click += themRoot_Click; 
+            themRoot.Click += themRoot_Click;
             #endregion
+
+
+            this.txtNgayLap.Text = DateTime.Now.ToShortDateString();
+
+            dalKhachHang dalKH = new dalKhachHang();
+            List<dtoKhachHang> danhSachKhachHang = dalKH.LayDanhSachKhachHang(1);
+
+            foreach (dtoKhachHang k in danhSachKhachHang)
+            {
+                cbNguoiDaiDien.Items.Add(k);
+            }
+            cbNguoiDaiDien.DisplayMember = "NGUOIDAIDIEN";
+            cbNguoiDaiDien.SelectedIndexChanged += cbNguoiDaiDien_SelectedIndexChanged;
+
+
+            dalDoiTac doiTac = new dalDoiTac();
+            List<dtoDoiTac> huongDanVien = doiTac.LayDanhSachDoiTac("HDV");
+            List<dtoDoiTac> nhaXe = doiTac.LayDanhSachDoiTac("NHAXE");
+            foreach (dtoDoiTac h in huongDanVien)
+            {
+                cbHuongDanVien.Items.Add(h);
+            }
+            foreach (dtoDoiTac nx in nhaXe)
+            {
+                cbNhaXe.Items.Add(nx);
+            }
+            cbHuongDanVien.DisplayMember = "NGUOILIENHE";
+            cbNhaXe.DisplayMember = "TENDOITAC";
+        }
+
+        void cbNguoiDaiDien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dtoKhachHang kh = (dtoKhachHang)cbNguoiDaiDien.SelectedItem;
+            String maKhachHang = kh.MAKHACHHANG + "";
+            this.txtMaKhachHang.Text = maKhachHang;
         }
 
         void themRoot_Click(object sender, EventArgs e)
@@ -51,9 +88,9 @@ namespace QuanLyDuLich.GUI
             this.diagThemLt.KhoiTaoForm();
             this.diagThemLt.ShowDialog();
             if (this.diagThemLt.DaThem())
-            { 
-                
-                
+            {
+
+
                 int ngay = treelichTrinh.Nodes.Count + 1;
                 TreeNode node = new TreeNode("Ngày " + ngay + ": " + diagThemLt.LayTenLichTrinh());
                 node.ContextMenu = new ContextMenu();
@@ -68,7 +105,7 @@ namespace QuanLyDuLich.GUI
         }
 
         void xoa_Click(object sender, EventArgs e)
-        {            
+        {
             treelichTrinh.Nodes.Remove(treelichTrinh.SelectedNode);
         }
 
@@ -78,7 +115,7 @@ namespace QuanLyDuLich.GUI
             {
                 diagCTLT.KhoiTaoForm();
                 diagCTLT.ShowDialog();
-                if(diagCTLT.DaThem)
+                if (diagCTLT.DaThem)
                 {
                     TreeNode node = new TreeNode(this.diagCTLT.ThoiGian);
                     TreeNode doiTac = new TreeNode("Điểm đến: " + this.diagCTLT.DoiTac);
@@ -91,28 +128,33 @@ namespace QuanLyDuLich.GUI
                     node.ContextMenu.MenuItems.Add(xoaItem);
                     treelichTrinh.SelectedNode.Nodes.Add(node);
                 }
-                
-            }            
+
+            }
         }
 
         void xoaItem_Click(object sender, EventArgs e)
         {
             treelichTrinh.Nodes.Remove(treelichTrinh.SelectedNode);
         }
-      
+
         void xoaRoots_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có chắc không?", "Xác nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(rs == System.Windows.Forms.DialogResult.Yes)
+            if (rs == System.Windows.Forms.DialogResult.Yes)
             {
                 this.treelichTrinh.Nodes.Clear();
             }
-            
+
         }
 
-       
 
-        
+
+
+
+
+
+
+
 
     }
 }
