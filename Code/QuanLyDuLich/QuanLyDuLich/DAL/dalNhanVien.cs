@@ -26,10 +26,10 @@ namespace DataAccessLayer
             {
                 this.Close();
                 return true;
-            }           
+            }
             this.Close();
             return false;
-          
+
         }
 
         public bool XoaNhanVien(int maNhanVien)
@@ -38,7 +38,7 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "DELETE FROM [dbo].[NHANVIEN] WHERE [MANHANVIEN]='" + maNhanVien+"'";
+            string sql = "DELETE FROM [dbo].[NHANVIEN] WHERE [MANHANVIEN]='" + maNhanVien + "'";
             if (this.Write(sql))
             {
                 this.Close();
@@ -55,24 +55,24 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "UPDATE [dbo].[NHANVIEN]" +
-              "SET [MAPHONG] = '" +nhanVien.MAPHONG+
-              "' ,[HOTEN] = '" +nhanVien.HOTEN+
-              "',[CMND] = '" +nhanVien.CMND+
-              "',[DIACHI] = '" +nhanVien.DIACHI+
-              "',[NGAYSINH] = '" +nhanVien.NGAYSINH+
-              "',[QUEQUAN] = '" +nhanVien.QUEQUAN+
-              "',[SODT] = '" +nhanVien.SODT+
-              "',[EMAIL] = '" +nhanVien.EMAIL+
-              "',[GIOITINH] = '" +nhanVien.GIOITINH+
-              "',[MATKHAU] = '" + nhanVien.MATKHAU+
-              "' WHERE [MANHANVIEN]='"+nhanVien.MANHANVIEN+"'";
+              "SET [MAPHONG] = '" + nhanVien.MAPHONG +
+              "' ,[HOTEN] = '" + nhanVien.HOTEN +
+              "',[CMND] = '" + nhanVien.CMND +
+              "',[DIACHI] = '" + nhanVien.DIACHI +
+              "',[NGAYSINH] = '" + nhanVien.NGAYSINH +
+              "',[QUEQUAN] = '" + nhanVien.QUEQUAN +
+              "',[SODT] = '" + nhanVien.SODT +
+              "',[EMAIL] = '" + nhanVien.EMAIL +
+              "',[GIOITINH] = '" + nhanVien.GIOITINH +
+              "',[MATKHAU] = '" + nhanVien.MATKHAU +
+              "' WHERE [MANHANVIEN]='" + nhanVien.MANHANVIEN + "'";
             if (this.Write(sql))
             {
                 this.Close();
                 return true;
-            } 
-                this.Close();
-                return false;            
+            }
+            this.Close();
+            return false;
         }
 
         public bool DangNhap(int maNV, string matKhau)
@@ -81,10 +81,10 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "SELECT * FROM NHANVIEN WHERE MANHANVIEN = '"+ maNV + "'and MATKHAU='"+matKhau+"'";
+            string sql = "SELECT * FROM NHANVIEN WHERE MANHANVIEN = '" + maNV + "'and MATKHAU='" + matKhau + "'";
             DataTable dtDangNhap = this.Read(sql);
             this.Close();
-            if (dtDangNhap.Rows.Count>0)
+            if (dtDangNhap.Rows.Count > 0)
             {
                 return true;
             }
@@ -101,7 +101,7 @@ namespace DataAccessLayer
             dtoNhanVien nhanVien = new dtoNhanVien();
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
-            nhanVien.MANHANVIEN= Int32.Parse(dtNhanVien.Rows[0][0].ToString());
+            nhanVien.MANHANVIEN = Int32.Parse(dtNhanVien.Rows[0][0].ToString());
             nhanVien.MAPHONG = Int32.Parse(dtNhanVien.Rows[0][1].ToString());
             nhanVien.HOTEN = dtNhanVien.Rows[0][2].ToString();
             nhanVien.CMND = dtNhanVien.Rows[0][3].ToString();
@@ -116,17 +116,18 @@ namespace DataAccessLayer
 
         public List<dtoNhanVien> LayDanhSachNhanVien(int maPhongBan)
         {
-            if(!this.Connect())
+            if (!this.Connect())
             {
                 return null;
             }
             string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN] WHERE MAPHONGBAN = '" + maPhongBan + "'";
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
-            dtoNhanVien dto_NhanVien = new dtoNhanVien();
+           
             List<dtoNhanVien> lDtoNhanVien = new List<dtoNhanVien>();
-            foreach(DataRow dr in dtNhanVien.Rows)
+            foreach (DataRow dr in dtNhanVien.Rows)
             {
+                dtoNhanVien dto_NhanVien = new dtoNhanVien();
                 dto_NhanVien.MANHANVIEN = Int32.Parse(dr[0].ToString());
                 dto_NhanVien.MAPHONG = Int32.Parse(dr[1].ToString());
                 dto_NhanVien.HOTEN = dr[2].ToString();
@@ -151,10 +152,11 @@ namespace DataAccessLayer
             string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN]";
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
-            dtoNhanVien dto_NhanVien = new dtoNhanVien();
+            
             List<dtoNhanVien> lDtoNhanVien = new List<dtoNhanVien>();
             foreach (DataRow dr in dtNhanVien.Rows)
             {
+                dtoNhanVien dto_NhanVien = new dtoNhanVien();
                 dto_NhanVien.MANHANVIEN = Int32.Parse(dr[0].ToString());
                 dto_NhanVien.MAPHONG = Int32.Parse(dr[1].ToString());
                 dto_NhanVien.HOTEN = dr[2].ToString();

@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
+    using DataAccessLayer;
     using DataTranferObject;
     using System;
     using System.Collections.Generic;
@@ -15,10 +16,14 @@ namespace BLL
 	public class GiamDoc : NhanVien
 	{
 		public IEnumerable<NhanVien> NhanVien;
-
+      
 		public NhanVien ChonNhanVien(int manv)
 		{
-			throw new System.NotImplementedException();
+            dalNhanVien dalnv = new dalNhanVien();
+            dtoNhanVien dtonv = dalnv.LayThongTinNhanVien(manv);
+            NhanVien nhanvien = new NhanVien();
+            nhanvien.SetNhanVien(dtonv);
+            return nhanvien;
 		}
 
 		public bool CapNhatThongTinNhanVien(NhanVien nv, dtoNhanVien data)

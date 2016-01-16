@@ -6,6 +6,8 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
+    using DataAccessLayer;
+    using DataTranferObject;
     using QuanLyDuLich.BLL;
     using System;
     using System.Collections.Generic;
@@ -82,6 +84,7 @@ namespace BLL
             get { return MatKhau; }
             set { MatKhau = value; }
         }
+        protected dalNhanVien dalnv = new dalNhanVien();
 		public bool DangNhap(string maNv, string mk)
 		{
 			throw new System.NotImplementedException();
@@ -93,23 +96,59 @@ namespace BLL
 		}
 
 		public LoaiNhanVien LayLoaiNV()
-		{
-			throw new System.NotImplementedException();
+		{            
+            switch(this.MaPhong)
+            {
+                case 1:
+                    return LoaiNhanVien.GiamDoc;                    
+                case 2:
+                    return LoaiNhanVien.NhanVienDieuHanh;
+                default:
+                    return LoaiNhanVien.NhanVienSale;
+            }                            
 		}
-
+        public dtoNhanVien GetDTONhanVien()
+        {
+            dtoNhanVien dtonv = new dtoNhanVien();
+            dtonv.CMND = this.CMND;
+            dtonv.DIACHI = this.DiaChi;
+            dtonv.EMAIL = this.Email;
+            dtonv.GIOITINH = this.GioiTinh;
+            dtonv.HOTEN = this.HoTen;
+            dtonv.MANHANVIEN = this.MaNhanVien;
+            dtonv.MAPHONG = this.MaPhong;
+            dtonv.MATKHAU = this.MatKhau;
+            dtonv.NGAYSINH = this.NgaySinh;
+            dtonv.QUEQUAN = this.QueQuan;
+            dtonv.SODT = this.SoDT;
+            return dtonv;
+        }
+        public void SetNhanVien(dtoNhanVien dtonv)
+        {
+            this.CMND = dtonv.CMND;
+            this.DiaChi = dtonv.DIACHI ;
+            this.Email = dtonv.EMAIL ;
+            this.GioiTinh = dtonv.GIOITINH;
+            this.MaNhanVien = dtonv.MANHANVIEN;
+            this.MaPhong = dtonv.MAPHONG;
+            this.MatKhau = dtonv.MATKHAU;
+            this.NgaySinh = dtonv.NGAYSINH;
+            this.QueQuan = dtonv.QUEQUAN;
+            this.SoDT = dtonv.SODT;
+        }
 		public bool CapNhat()
-		{
-			throw new System.NotImplementedException();
+		{         
+            return dalnv.SuaThongTinNhanVien(this.GetDTONhanVien());
 		}
 
 		public bool Luu()
 		{
-			throw new System.NotImplementedException();
+            return dalnv.ThemNhanVien(this.GetDTONhanVien());			
 		}
 
 		public bool Xoa()
 		{
-			throw new System.NotImplementedException();
+            return dalnv.XoaNhanVien(this.MaNhanVien);
 		}
 
 		public Tour ChonTourCanXem(int matour)
