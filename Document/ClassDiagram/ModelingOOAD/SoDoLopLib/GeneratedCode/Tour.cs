@@ -29,7 +29,7 @@ public class Tour
 
 	protected string UuDai;
 
-	protected virtual DateTime NgayLapTour
+	protected DateTime NgayLapTour
 	{
 		get;
 		set;
@@ -43,37 +43,17 @@ public class Tour
 
 	public DoiTac HuongDanVien;
 
-	public bool ThemLichTrinh(LichTrinh lt)
+	public bool CapNhat()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool SuaLichTrinh(LichTrinh lt)
+	public bool Luu()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool XoaLichTrinh(int malt)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public bool LuuLaiTour()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool ChonKhachHang(KhachHang kh)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool ChonNhaXe(DoiTac nhaxe)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool ChonHuongDanVien(DoiTac huongdanvien)
+	public dtoTour LayThongTinTour()
 	{
 		throw new System.NotImplementedException();
 	}

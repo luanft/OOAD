@@ -11,11 +11,32 @@ using System.Text;
 
 public class DiemDuLich
 {
-	protected string MoTa;
+	protected string MoTa
+	{
+		get;
+		set;
+	}
 
-	protected string TenDiemDuLich;
+	protected string TenDiemDuLich
+	{
+		get;
+		set;
+	}
 
-	public IEnumerable<DacTrung> DacTrung;
+	public bool CapNhat()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Luu()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Xoa()
+	{
+		throw new System.NotImplementedException();
+	}
 
 }
 

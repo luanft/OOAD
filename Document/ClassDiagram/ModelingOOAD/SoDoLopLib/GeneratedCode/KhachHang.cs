@@ -25,5 +25,20 @@ public class KhachHang
 
 	protected string DiaChi;
 
+	public bool CapNhat()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Luu()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Xoa()
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

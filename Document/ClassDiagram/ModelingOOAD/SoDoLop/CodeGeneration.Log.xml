@@ -6,58 +6,60 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="High" Text="Code generation or text transformation started." />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="Name = ClassTemplate" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="ProjectPath = ..\SoDoLopLib\SoDoLopLib.csproj" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Medium" Text="SoDoLop's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'SoDoLop::NhanVien' -  (Class), 'SoDoLop::PhongBan' -  (Class), 'SoDoLop::GiamDoc' -  (Class), 'SoDoLop::NVDieuHanh' -  (Class), 'SoDoLop::NVSale' -  (Class), 'SoDoLop::DiemDuLich' -  (Class), 'SoDoLop::DoiTac' -  (Class), 'SoDoLop::Tour' -  (Class), 'SoDoLop::ChiTietLichTrinh' -  (Class), 'SoDoLop::LichTrinh' -  (Class), 'SoDoLop::KhachHang' -  (Class) " />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Medium" Text="'SoDoLop::NhanVien' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\NhanVien.cs" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Medium" Text="'SoDoLop::PhongBan' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\PhongBan.cs" />
-  <Message Timestamp="2016-01-12T10:42:06" Importance="Medium" Text="'SoDoLop::GiamDoc' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\GiamDoc.cs" />
-  <Message Timestamp="2016-01-12T10:42:07" Importance="Medium" Text="'SoDoLop::NVDieuHanh' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\NVDieuHanh.cs" />
-  <Message Timestamp="2016-01-12T10:42:07" Importance="Medium" Text="'SoDoLop::NVSale' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\NVSale.cs" />
-  <Message Timestamp="2016-01-12T10:42:07" Importance="Medium" Text="'SoDoLop::DiemDuLich' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\DiemDuLich.cs" />
-  <Message Timestamp="2016-01-12T10:42:07" Importance="Medium" Text="'SoDoLop::DoiTac' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\DoiTac.cs" />
-  <Message Timestamp="2016-01-12T10:42:07" Importance="Medium" Text="'SoDoLop::Tour' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\Tour.cs" />
-  <Message Timestamp="2016-01-12T10:42:07" Importance="Medium" Text="'SoDoLop::ChiTietLichTrinh' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\ChiTietLichTrinh.cs" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Medium" Text="'SoDoLop::LichTrinh' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\LichTrinh.cs" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Medium" Text="'SoDoLop::KhachHang' -  (Class) : success (file created) - C:\Users\pumpa\Desktop\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\KhachHang.cs" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="Name = StructTemplate" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="ProjectPath = ..\SoDoLopLib\SoDoLopLib.csproj" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Medium" Text="SoDoLop's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'SoDoLop::NhanVien' -  (Class), 'SoDoLop::PhongBan' -  (Class), 'SoDoLop::GiamDoc' -  (Class), 'SoDoLop::NVDieuHanh' -  (Class), 'SoDoLop::NVSale' -  (Class), 'SoDoLop::DiemDuLich' -  (Class), 'SoDoLop::DoiTac' -  (Class), 'SoDoLop::Tour' -  (Class), 'SoDoLop::ChiTietLichTrinh' -  (Class), 'SoDoLop::LichTrinh' -  (Class), 'SoDoLop::KhachHang' -  (Class) " />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::NhanVien' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::PhongBan' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::GiamDoc' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::NVDieuHanh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::NVSale' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::DiemDuLich' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::DoiTac' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::Tour' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::ChiTietLichTrinh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:08" Importance="Diagnostic" Text="'SoDoLop::LichTrinh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::KhachHang' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="The selection included 13 elements which were not bound to a template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'1ea6fb2a-7359-46ac-a3c4-7d29249f670f' -  (Generalization): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'ebf49b79-6650-4635-bd88-9f92571fa125' -  (Generalization): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::Co' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'09d0b6bd-f842-4cad-ab81-164e8543e7ac' -  (Generalization): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::Lien he' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="Diagnostic" Text="'SoDoLop::' -  (Association): no bound template." />
-  <Message Timestamp="2016-01-12T10:42:09" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="ProjectPath = ..\SoDoLopLib\SoDoLopLib.csproj" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-01-16T11:12:38" Importance="Medium" Text="SoDoLop's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'SoDoLop::BLL::NhanVien' -  (Class), 'SoDoLop::BLL::PhongBan' -  (Class), 'SoDoLop::BLL::DiemDuLich' -  (Class), 'SoDoLop::BLL::NVDieuHanh' -  (Class), 'SoDoLop::BLL::NVSale' -  (Class), 'SoDoLop::BLL::KhachHang' -  (Class), 'SoDoLop::BLL::GiamDoc' -  (Class), 'SoDoLop::BLL::ChiTietLichTrinh' -  (Class), 'SoDoLop::BLL::DoiTac' -  (Class), 'SoDoLop::BLL::Tour' -  (Class), 'SoDoLop::BLL::LichTrinh' -  (Class) " />
+  <Message Timestamp="2016-01-16T11:12:39" Importance="Medium" Text="'SoDoLop::BLL::NhanVien' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\NhanVien.cs" />
+  <Message Timestamp="2016-01-16T11:12:39" Importance="Medium" Text="'SoDoLop::BLL::PhongBan' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\PhongBan.cs" />
+  <Message Timestamp="2016-01-16T11:12:39" Importance="Medium" Text="'SoDoLop::BLL::DiemDuLich' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\DiemDuLich.cs" />
+  <Message Timestamp="2016-01-16T11:12:40" Importance="Medium" Text="'SoDoLop::BLL::NVDieuHanh' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\NVDieuHanh.cs" />
+  <Message Timestamp="2016-01-16T11:12:40" Importance="Medium" Text="'SoDoLop::BLL::NVSale' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\NVSale.cs" />
+  <Message Timestamp="2016-01-16T11:12:40" Importance="Medium" Text="'SoDoLop::BLL::KhachHang' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\KhachHang.cs" />
+  <Message Timestamp="2016-01-16T11:12:40" Importance="Medium" Text="'SoDoLop::BLL::GiamDoc' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\GiamDoc.cs" />
+  <Message Timestamp="2016-01-16T11:12:40" Importance="Medium" Text="'SoDoLop::BLL::ChiTietLichTrinh' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\ChiTietLichTrinh.cs" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Medium" Text="'SoDoLop::BLL::DoiTac' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\DoiTac.cs" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Medium" Text="'SoDoLop::BLL::Tour' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\Tour.cs" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Medium" Text="'SoDoLop::BLL::LichTrinh' -  (Class) : success (file created) - E:\PROJECT\OOAD.git\trunk\Document\ClassDiagram\ModelingOOAD\SoDoLopLib\GeneratedCode\BLL\LichTrinh.cs" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="ProjectPath = ..\SoDoLopLib\SoDoLopLib.csproj" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Medium" Text="SoDoLop's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'SoDoLop::BLL::NhanVien' -  (Class), 'SoDoLop::BLL::PhongBan' -  (Class), 'SoDoLop::BLL::DiemDuLich' -  (Class), 'SoDoLop::BLL::NVDieuHanh' -  (Class), 'SoDoLop::BLL::NVSale' -  (Class), 'SoDoLop::BLL::KhachHang' -  (Class), 'SoDoLop::BLL::GiamDoc' -  (Class), 'SoDoLop::BLL::ChiTietLichTrinh' -  (Class), 'SoDoLop::BLL::DoiTac' -  (Class), 'SoDoLop::BLL::Tour' -  (Class), 'SoDoLop::BLL::LichTrinh' -  (Class) " />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::NhanVien' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::PhongBan' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::DiemDuLich' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::NVDieuHanh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::NVSale' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::KhachHang' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::GiamDoc' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:41" Importance="Diagnostic" Text="'SoDoLop::BLL::ChiTietLichTrinh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::DoiTac' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::Tour' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::LichTrinh' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="The selection included 15 elements which were not bound to a template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL' -  (Package): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::Co' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'1ea6fb2a-7359-46ac-a3c4-7d29249f670f' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'ebf49b79-6650-4635-bd88-9f92571fa125' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'09d0b6bd-f842-4cad-ab81-164e8543e7ac' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::Lien he' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="Diagnostic" Text="'SoDoLop::BLL::' -  (Association): no bound template." />
+  <Message Timestamp="2016-01-16T11:12:42" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
 </Log>

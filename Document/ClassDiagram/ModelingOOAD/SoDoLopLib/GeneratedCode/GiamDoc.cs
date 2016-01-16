@@ -11,37 +11,29 @@ using System.Text;
 
 public class GiamDoc : NhanVien
 {
-	public bool ThemNhanVien(NhanVien nv, PhongBan pb)
+	public IEnumerable<NhanVien> NhanVien;
+
+	public NhanVien ChonNhanVien(int manv)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool CapNhatThongTinNhanVien(NhanVien nv)
+	public bool CapNhatThongTinNhanVien(NhanVien nv, dtoNhanVien data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool DinhGiaTour(Tour t)
+	public bool ThemNhanVien(dtoNhanVien data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool XoaNhanVien(NhanVien nv)
+	public Tour ChonTourCanDuyet(int matour)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool ThemPhongBan(PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool XoaPhongBan(PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool CapNhatThongTinPhongBan(PhongBan pb)
+	public void NhapGiaTour(Tour tour)
 	{
 		throw new System.NotImplementedException();
 	}

@@ -13,42 +13,27 @@ public class NVDieuHanh : NhanVien
 {
 	public IEnumerable<DoiTac> DoiTac;
 
-	public bool ThemDoiTac(DoiTac dt)
+	public bool CapNhat(DoiTac doiTac, object data dtoDoiTac)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public List<DoiTac> XemDanhSachDoiTac()
+	public DoiTac ChonDoiTac(int ma)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public List<DoiTac> XemDanhSachDoiTac(KieuDoiTac kdt)
+	public bool ThemDoiTac(dtoDoiTac data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool CapNhatThongTinDoiTac(DoiTac dt)
+	public Tour ChonTourCanDuyet(int matour)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool XetDuyetTour(Tour t)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool XoaDoiTac(DoiTac dt)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool ThemDoiTac(List<DoiTac> ldt)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool CapNhatThongTinDoiTac(List<DoiTac> ldt)
+	public bool DuyetTour(Tour tour)
 	{
 		throw new System.NotImplementedException();
 	}

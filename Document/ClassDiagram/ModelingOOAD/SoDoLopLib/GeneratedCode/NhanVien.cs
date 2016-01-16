@@ -31,17 +31,42 @@ public class NhanVien
 
 	protected string MatKhau;
 
-	public Tour XemTour(int maTour)
-	{
-		throw new System.NotImplementedException();
-	}
-
 	public bool DangNhap(string maNv, string mk)
 	{
 		throw new System.NotImplementedException();
 	}
 
 	public void DangXuat()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public LoaiNhanVien LayLoaiNV()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool CapNhat()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Luu()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Xoa()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public Tour ChonTourCanXem(int matour)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public DoiTac ChonDoiTacCanXem(int madoitac)
 	{
 		throw new System.NotImplementedException();
 	}

@@ -11,65 +11,58 @@ using System.Text;
 
 public class NVSale : NhanVien
 {
-	public virtual IEnumerable<Tour> Tour
-	{
-		get;
-		set;
-	}
+	public IEnumerable<Tour> Tour;
 
 	public IEnumerable<DiemDuLich> DiemDuLich;
 
-	public bool ThemKhachHang(KhachHang kh)
+	public IEnumerable<DiemDuLich> DiemDuLich;
+
+	public bool CapNhatTour(Tour tour, dtoTour data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool ThemTour(Tour tour)
+	public Tour ChonTour(int maTour)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public bool ThemDiemDuLich(DiemDuLich ddl)
+	public bool LapTour(dtoTour data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public KhachHang XemThongTinKhachHang(int makh)
+	public DiemDuLich ChonDiemDL(int ma)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool XoaKhachHang(KhachHang kh)
+	public bool CapNhatDiemDuLich(DiemDuLich ddl, object data dtoDiemDuLich)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool CapNhatThongTinKhachHang(KhachHang kh)
+	public bool ThemDiemDuLich(dtoDiemDuLich data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual List<KhachHang> LayDanhSachKhachHang()
+	public bool CapNhatKhachHang(KhachHang kh, dtoKhachHang data)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool XoaTour(Tour t)
+	public KhachHang ChonKhachHang(int kh)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool SubmitTour(Tour t)
+	public bool SubmitTour(Tour tour)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool CapNhatThongTinDiemDuLich(DiemDuLich ddl)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool XoaDiemDuLich(DiemDuLich ddl)
+	public List<Tour> ChonThoiGianXemTour(int thoiGian)
 	{
 		throw new System.NotImplementedException();
 	}

@@ -27,5 +27,25 @@ public class DoiTac
 
 	protected string LoaiDoiTac;
 
+	public bool CapNhat()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Luu()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public bool Xoa()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public dtoDoiTac LayThongTinDoiTac()
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

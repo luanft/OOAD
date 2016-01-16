@@ -17,15 +17,5 @@ public class LichTrinh
 
 	public IEnumerable<ChiTietLichTrinh> LichTrinh;
 
-	public bool ThemChiTietLichTrinh(ChiTietLichTrinh ct)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public void XoaChiTietLichTrinh(bool malt)
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 
