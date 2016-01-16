@@ -61,8 +61,14 @@ namespace BLL
 			throw new System.NotImplementedException();
 		}
 
-        public void ThemLichTrinh()
-        { 
+        public void ThemLichTrinh(LichTrinh l)
+        {
+            this.lichTrinh.Add(l);
+        }
+
+        public void XoaLichTrinh(LichTrinh l)
+        {
+            this.lichTrinh.Remove(l);
         }
 
 	}

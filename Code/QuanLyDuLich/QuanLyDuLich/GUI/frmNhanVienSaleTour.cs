@@ -89,8 +89,6 @@ namespace QuanLyDuLich.GUI
             this.diagThemLt.ShowDialog();
             if (this.diagThemLt.DaThem())
             {
-
-
                 int ngay = treelichTrinh.Nodes.Count + 1;
                 TreeNode node = new TreeNode("Ngày " + ngay + ": " + diagThemLt.LayTenLichTrinh());
                 node.ContextMenu = new ContextMenu();
