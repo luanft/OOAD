@@ -38,7 +38,7 @@ namespace BLL
 			set;
 		}
 
-		public IEnumerable<LichTrinh> ChiTietTour;
+		public List<LichTrinh> LichTrinh;
 
 		public KhachHang KhachHang;
 
@@ -60,6 +60,10 @@ namespace BLL
 		{
 			throw new System.NotImplementedException();
 		}
+
+        public void ThemLichTrinh()
+        { 
+        }
 
 	}
 }
