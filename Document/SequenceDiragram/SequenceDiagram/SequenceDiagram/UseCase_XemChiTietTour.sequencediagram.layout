@@ -17,14 +17,14 @@
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
-    <lifelineShape Id="20b29d01-b70e-48c3-8c32-012a8c58e21b" absoluteBounds="5.6770834922790527, 1, 0.15, 1.8604166666666666" visible="true" visualStyleMode="Modified">
+    <lifelineShape Id="20b29d01-b70e-48c3-8c32-012a8c58e21b" absoluteBounds="5.6770834922790527, 1, 0.15, 2.3604166666666666" visible="true" visualStyleMode="Modified">
       <lifelineMoniker Id="1b626d82-b49d-46e0-8ccf-b94fa53ba65e" LastKnownName=": Tour" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="8e5496ff-302f-40df-8f67-97213be163b1" absoluteBounds="5.2520834922790529, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
           <lifelineMoniker Id="1b626d82-b49d-46e0-8ccf-b94fa53ba65e" LastKnownName=": Tour" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
-        <lifelineHoverShape Id="18baabc1-09c0-4f05-a3d8-6b296e31fbb7" absoluteBounds="5.6770834922790527, 1, 0, 1.875">
+        <lifelineHoverShape Id="18baabc1-09c0-4f05-a3d8-6b296e31fbb7" absoluteBounds="5.6770834922790527, 1, 0, 2.375">
           <lifelineMoniker Id="1b626d82-b49d-46e0-8ccf-b94fa53ba65e" LastKnownName=": Tour" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="f084d637-9140-4875-84be-1d10219d32ec" absoluteBounds="5.6770834922790527, 2.0104166666666665, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">

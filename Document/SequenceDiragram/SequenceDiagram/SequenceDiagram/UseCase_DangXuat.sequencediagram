@@ -404,7 +404,7 @@
               <messageOccurrenceSpecificationMoniker Id="a5f12371-71c6-40fb-a9e8-af43d5718be0" LastKnownName="MessageOccurrenceSpecification18" />
             </receiveEvent>
           </message>
-          <message Id="1301e0d1-ec59-4088-888f-6b1faa419377" name="Đống form hiện tai" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true">
+          <message Id="1301e0d1-ec59-4088-888f-6b1faa419377" name="Đóng form hiện tai" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true">
             <elementDefinition Id="65b0fbe6-8768-4e77-bfaa-c6bfa0db01df" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="299b08df-c3e5-46a2-ad29-9f03d3cca610" LastKnownName="MessageOccurrenceSpecification21" />
