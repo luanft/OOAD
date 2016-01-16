@@ -4,28 +4,21 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class LichTrinh
+namespace BLL
 {
-	protected string Ngay;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Text;
 
-	protected string TenLichTrinh;
-
-	public IEnumerable<ChiTietLichTrinh> LichTrinh;
-
-	public bool ThemChiTietLichTrinh(ChiTietLichTrinh ct)
+	public class LichTrinh
 	{
-		throw new System.NotImplementedException();
-	}
+		protected string ngay;
 
-	public void XoaChiTietLichTrinh(bool malt)
-	{
-		throw new System.NotImplementedException();
-	}
+		protected string tenLichTrinh;
 
+		public IEnumerable<ChiTietLichTrinh> lichTrinh;
+
+	}
 }
 

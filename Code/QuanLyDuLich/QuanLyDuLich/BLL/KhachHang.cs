@@ -4,26 +4,44 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class KhachHang
+namespace BLL
 {
-	protected string LoaiKhachHang;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Text;
 
-	protected int SoNguoi;
+	public class KhachHang
+	{
+		protected string LoaiKhachHang;
 
-	protected string NguoiDaiDien;
+		protected int SoNguoi;
 
-	protected string SoDT;
+		protected string NguoiDaiDien;
 
-	protected string Email;
+		protected string SoDT;
 
-	protected string TenDonVi;
+		protected string Email;
 
-	protected string DiaChi;
+		protected string TenDonVi;
 
+		protected string DiaChi;
+
+		public bool CapNhat()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Luu()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Xoa()
+		{
+			throw new System.NotImplementedException();
+		}
+
+	}
 }
 

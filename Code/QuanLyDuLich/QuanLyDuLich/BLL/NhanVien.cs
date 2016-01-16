@@ -4,47 +4,76 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class NhanVien
+namespace BLL
 {
-	protected string HoTen;
+    using QuanLyDuLich.BLL;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	protected int MaNhanVien;
-
-	protected string SoDT;
-
-	protected string DiaChi;
-
-	protected string QueQuan;
-
-	protected string CMND;
-
-	protected string Email;
-
-	protected DateTime NgaySinh;
-
-	protected string GioiTinh;
-
-	protected string MatKhau;
-
-	public Tour XemTour(int maTour)
+	public class NhanVien
 	{
-		throw new System.NotImplementedException();
-	}
+		protected string HoTen;
 
-	public bool DangNhap(string maNv, string mk)
-	{
-		throw new System.NotImplementedException();
-	}
+		protected int MaNhanVien;
 
-	public void DangXuat()
-	{
-		throw new System.NotImplementedException();
-	}
+		protected string SoDT;
 
+		protected string DiaChi;
+
+		protected string QueQuan;
+
+		protected string CMND;
+
+		protected string Email;
+
+		protected DateTime NgaySinh;
+
+		protected string GioiTinh;
+
+		protected string MatKhau;
+
+		public bool DangNhap(string maNv, string mk)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void DangXuat()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public LoaiNhanVien LayLoaiNV()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool CapNhat()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Luu()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Xoa()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public Tour ChonTourCanXem(int matour)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public DoiTac ChonDoiTacCanXem(int madoitac)
+		{
+			throw new System.NotImplementedException();
+		}
+
+	}
 }
 

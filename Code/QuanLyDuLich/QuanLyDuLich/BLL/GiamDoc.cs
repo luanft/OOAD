@@ -4,47 +4,43 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class GiamDoc : NhanVien
+namespace BLL
 {
-	public bool ThemNhanVien(NhanVien nv, PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public bool CapNhatThongTinNhanVien(NhanVien nv)
+	public class GiamDoc : NhanVien
 	{
-		throw new System.NotImplementedException();
-	}
+		public IEnumerable<NhanVien> NhanVien;
 
-	public virtual bool DinhGiaTour(Tour t)
-	{
-		throw new System.NotImplementedException();
-	}
+		public NhanVien ChonNhanVien(int manv)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool XoaNhanVien(NhanVien nv)
-	{
-		throw new System.NotImplementedException();
-	}
+		public bool CapNhatThongTinNhanVien(NhanVien nv, dtoNhanVien data)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool ThemPhongBan(PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
+		public bool ThemNhanVien(dtoNhanVien data)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool XoaPhongBan(PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
+		public Tour ChonTourCanDuyet(int matour)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool CapNhatThongTinPhongBan(PhongBan pb)
-	{
-		throw new System.NotImplementedException();
-	}
+		public void NhapGiaTour(Tour tour)
+		{
+			throw new System.NotImplementedException();
+		}
 
+	}
 }
 

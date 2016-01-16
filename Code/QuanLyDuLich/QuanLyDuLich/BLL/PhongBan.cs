@@ -4,18 +4,21 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class PhongBan
+namespace BLL
 {
-	protected string TenPhongBan;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Text;
 
-	protected string MaPhongBan;
+	public class PhongBan
+	{
+		protected string TenPhongBan;
 
-	public IEnumerable<NhanVien> NhanVien;
+		protected string MaPhongBan;
 
+		public IEnumerable<NhanVien> NhanVien;
+
+	}
 }
 

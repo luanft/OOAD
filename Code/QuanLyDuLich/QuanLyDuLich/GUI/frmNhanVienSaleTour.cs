@@ -32,15 +32,18 @@ namespace QuanLyDuLich.GUI
 
             }
 
-            this.treelichTrinh.ContextMenu = new ContextMenu();
             
+
+            #region LAP_TOUR
+
+            this.treelichTrinh.ContextMenu = new ContextMenu();
             MenuItem themRoot = new MenuItem("Thêm lịch trình");
             MenuItem xoaRoots = new MenuItem("Xóa tất cả");
             this.treelichTrinh.ContextMenu.MenuItems.Add(themRoot);
             this.treelichTrinh.ContextMenu.MenuItems.Add(xoaRoots);
-
             xoaRoots.Click += xoaRoots_Click;
-            themRoot.Click += themRoot_Click;
+            themRoot.Click += themRoot_Click; 
+            #endregion
         }
 
         void themRoot_Click(object sender, EventArgs e)
@@ -106,5 +109,10 @@ namespace QuanLyDuLich.GUI
             }
             
         }
+
+       
+
+        
+
     }
 }

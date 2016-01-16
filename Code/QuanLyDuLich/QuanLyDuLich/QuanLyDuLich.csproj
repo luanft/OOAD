@@ -45,13 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ChiTietLichTrinh.cs" />
-    <Compile Include="BLL\DacTrung.cs" />
     <Compile Include="BLL\DiemDuLich.cs" />
     <Compile Include="BLL\DoiTac.cs" />
     <Compile Include="BLL\GiamDoc.cs" />
     <Compile Include="BLL\KhachHang.cs" />
-    <Compile Include="BLL\KieuDoiTac.cs" />
     <Compile Include="BLL\LichTrinh.cs" />
+    <Compile Include="BLL\LoaiNhanVien.cs" />
     <Compile Include="BLL\NhanVien.cs" />
     <Compile Include="BLL\NVDieuHanh.cs" />
     <Compile Include="BLL\NVSale.cs" />
@@ -184,7 +183,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="BLL\readme.xml" />
     <None Include="cu.jpg" />
     <Content Include="GUI\readme.xml" />
   </ItemGroup>

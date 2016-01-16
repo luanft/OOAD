@@ -4,18 +4,34 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class DiemDuLich
+namespace BLL
 {
-	protected string MoTa;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Text;
 
-	protected string TenDiemDuLich;
+	public class DiemDuLich
+	{
+		protected string MoTa;
 
-	public IEnumerable<DacTrung> DacTrung;
+		protected string TenDiemDuLich;
 
+		public bool CapNhat()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Luu()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Xoa()
+		{
+			throw new System.NotImplementedException();
+		}
+
+	}
 }
 

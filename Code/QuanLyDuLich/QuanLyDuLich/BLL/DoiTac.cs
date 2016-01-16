@@ -4,28 +4,52 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class DoiTac
+namespace BLL
 {
-	protected string TenDoiTac;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	protected string NguoiLienHe;
+	public class DoiTac
+	{
+		protected string TenDoiTac;
 
-	protected string SoDT;
+		protected string NguoiLienHe;
 
-	protected string Email;
+		protected string SoDT;
 
-	protected int MaDoiTac;
+		protected string Email;
 
-	protected string DiaChi;
+		protected int MaDoiTac;
 
-	protected string DanhGiaDoiTac;
+		protected string DiaChi;
 
-	protected string LoaiDoiTac;
+		protected string DanhGiaDoiTac;
 
+		protected string LoaiDoiTac;
+
+		public bool CapNhat()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Luu()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public bool Xoa()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public dtoDoiTac LayThongTinDoiTac()
+		{
+			throw new System.NotImplementedException();
+		}
+
+	}
 }
 

@@ -4,54 +4,43 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public class NVDieuHanh : NhanVien
+namespace BLL
 {
-	public IEnumerable<DoiTac> DoiTac;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public bool ThemDoiTac(DoiTac dt)
+	public class NVDieuHanh : NhanVien
 	{
-		throw new System.NotImplementedException();
-	}
+		public IEnumerable<DoiTac> DoiTac;
 
-	public List<DoiTac> XemDanhSachDoiTac()
-	{
-		throw new System.NotImplementedException();
-	}
+        public bool CapNhat(DoiTac doiTac, dtoDoiTac data)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public List<DoiTac> XemDanhSachDoiTac(KieuDoiTac kdt)
-	{
-		throw new System.NotImplementedException();
-	}
+		public DoiTac ChonDoiTac(int ma)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool CapNhatThongTinDoiTac(DoiTac dt)
-	{
-		throw new System.NotImplementedException();
-	}
+		public bool ThemDoiTac(dtoDoiTac data)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool XetDuyetTour(Tour t)
-	{
-		throw new System.NotImplementedException();
-	}
+		public Tour ChonTourCanDuyet(int matour)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool XoaDoiTac(DoiTac dt)
-	{
-		throw new System.NotImplementedException();
-	}
+		public bool DuyetTour(Tour tour)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public virtual bool ThemDoiTac(List<DoiTac> ldt)
-	{
-		throw new System.NotImplementedException();
 	}
-
-	public virtual bool CapNhatThongTinDoiTac(List<DoiTac> ldt)
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 
