@@ -14,26 +14,74 @@ namespace BLL
 
 	public class NhanVien
 	{
+        protected int MaPhong;
+        public int pMaPhong
+        {
+            get { return MaPhong; }
+            set { MaPhong = value; }
+        }
 		protected string HoTen;
-
+        public string pHoTen
+        {
+            get { return HoTen; }
+            set { HoTen = value; }
+        }
 		protected int MaNhanVien;
-
+        public int pMaNhanVien
+        {
+            get { return MaNhanVien; }
+            set { MaNhanVien = value; }
+        }
 		protected string SoDT;
-
+        public string pSoDT
+        {
+            get { return SoDT; }
+            set { SoDT = value; }
+        }
 		protected string DiaChi;
-
+        public string pDiaChi
+        {
+            get { return DiaChi; }
+            set { DiaChi = value; }
+        }
 		protected string QueQuan;
-
+        public string pQueQuan
+        {
+            get { return QueQuan; }
+            set { QueQuan = value; }
+        }
 		protected string CMND;
-
+        public string pCMND
+        {
+            get { return CMND; }
+            set { CMND = value; }
+        }
 		protected string Email;
+        public string pEmail
+        {
+            get { return Email; }
+            set { Email = value; }
+        }
+        protected DateTime NgaySinh;
 
-		protected DateTime NgaySinh;
+        public DateTime pNgaySinh
+        {
+            get { return NgaySinh; }
+            set { NgaySinh = value; }
+        }
 
 		protected string GioiTinh;
-
+        public string pGioiTinh
+        {
+            get { return GioiTinh; }
+            set { GioiTinh = value; }
+        }
 		protected string MatKhau;
-
+        public string pMatKhau
+        {
+            get { return MatKhau; }
+            set { MatKhau = value; }
+        }
 		public bool DangNhap(string maNv, string mk)
 		{
 			throw new System.NotImplementedException();
