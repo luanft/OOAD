@@ -257,6 +257,7 @@ create table DIEMDULICH (
    MANHANVIEN           int                  null,
    TENDIEMDULICH        NVARCHAR(1000)                 null,
    MOTA                 NVARCHAR(1000)                 null,
+   TRANGTHAI			bit
    constraint PK_DIEMDULICH primary key nonclustered (MADIEMDULICH)
 )
 go
@@ -282,6 +283,7 @@ create table DOITAC (
    DIACHI               NVARCHAR(1000)                 null,
    EMAIL                varchar(100)         null,
    LOAIDOITAC           varchar(20)          null,
+   TRANGTHAI			bit
    constraint PK_DOITAC primary key nonclustered (MADOITAC)
 )
 go
@@ -308,6 +310,7 @@ create table KHACHHANG (
    SONGUOI              int                  null,
    DIACHI               NVARCHAR(1000)                 null,
    LOAIKHACHHANG        varchar(10)          null,
+   TRANGTHAI			bit
    constraint PK_KHACHHANG primary key nonclustered (MAKHACHHANG)
 )
 go
@@ -346,7 +349,8 @@ create table NHANVIEN (
    SODT                 varchar(14)          null,
    EMAIL                varchar(50)          null,
    GIOITINH             varchar(5)           null,
-   MatKhau              char(25)             null,
+   MATKHAU              char(25)             null,
+   TRANGTHAI			bit
    constraint PK_NHANVIEN primary key nonclustered (MANHANVIEN)
 )
 go
@@ -382,10 +386,10 @@ create table TOUR (
    THOIGIAN             NVARCHAR(1000)                 null,
    NGAYDI               datetime             null,
    TONGGIATOUR          int                  null,
-   TRANGTHAI            varchar(10)          null,
+   TRANGTHAI            varchar(25)          null,
    UUDAI                NVARCHAR(1000)                 null,
    GHICHU               NVARCHAR(1000)                 null,
-   NgayLapTour          datetime             null,
+   NGAYLAPTOUR          datetime             null,
    constraint PK_TOUR primary key nonclustered (MATOUR)
 )
 go
