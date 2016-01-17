@@ -13,12 +13,52 @@ namespace BLL
 
 	public class ChiTietLichTrinh
 	{
-		protected string ThoiGian;
+        private int maLichTrinh;
 
-		protected string NoiDung;
+        public int MaLichTrinh
+        {
+            get { return maLichTrinh; }
+            set { maLichTrinh = value; }
+        }
 
-		public DoiTac DoiTac;
 
+        private string thoiGian;
+
+        public string ThoiGian
+        {
+            get { return thoiGian; }
+            set { thoiGian = value; }
+        }
+
+        private string noiDung;
+
+        public string NoiDung
+        {
+            get { return noiDung; }
+            set { noiDung = value; }
+        }
+
+        private DoiTac doiTac;
+
+        public DoiTac DoiTac
+        {
+            get { return doiTac; }
+            set { doiTac = value; }
+        }
+
+
+        public void Luu()
+        {
+            DataAccessLayer.dalChiTietLichTrinh dal = new DataAccessLayer.dalChiTietLichTrinh();
+            DataTranferObject.dtoChiTietLichTrinh dto = new DataTranferObject.dtoChiTietLichTrinh();
+
+            dto.MADOITAC = doiTac.MaDoiTac;
+            dto.NOIDUNG = noiDung;
+            dto.THOIGIAN = thoiGian;
+            dto.MALICHTRINH = maLichTrinh;
+
+            dal.ThemCTLT(dto);
+        }
 	}
 }
 

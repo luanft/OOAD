@@ -14,37 +14,126 @@ namespace BLL
 
 	public class Tour
 	{
-		protected int MaTour;
 
-		protected string TenTour;
+        private int maNhanVien;
 
-		protected string TongGiaTour;
+        public int MaNhanVien
+        {
+            get { return maNhanVien; }
+            set { maNhanVien = value; }
+        }
 
-		protected DateTime NgayDi;
+        private int maTour;
 
-		protected string TenKhachHang;
+        public int MaTour
+        {
+            get { return maTour; }
+            set { maTour = value; }
+        }
 
-		protected string ThoiGian;
+        private string tenTour;
 
-		protected string GhiChu;
+        public string TenTour
+        {
+            get { return tenTour; }
+            set { tenTour = value; }
+        }
 
-		protected string TrangThai;
+        private string tongGiaTour;
 
-		protected string UuDai;
+        public string TongGiaTour
+        {
+            get { return tongGiaTour; }
+            set { tongGiaTour = value; }
+        }
 
-		protected DateTime NgayLapTour
-		{
-			get;
-			set;
-		}
+        private DateTime ngayDi;
 
-		public List<LichTrinh> lichTrinh;
+        public DateTime NgayDi
+        {
+            get { return ngayDi; }
+            set { ngayDi = value; }
+        }
 
-		public KhachHang KhachHang;
+        private string tenKhachHang;
 
-		public DoiTac NhaXe;
+        public string TenKhachHang
+        {
+            get { return tenKhachHang; }
+            set { tenKhachHang = value; }
+        }
 
-		public DoiTac HuongDanVien;
+        private string thoiGian;
+
+        public string ThoiGian
+        {
+            get { return thoiGian; }
+            set { thoiGian = value; }
+        }
+
+        private string ghiChu;
+
+        public string GhiChu
+        {
+            get { return ghiChu; }
+            set { ghiChu = value; }
+        }
+
+        private string trangThai;
+
+        public string TrangThai
+        {
+            get { return trangThai; }
+            set { trangThai = value; }
+        }
+
+        private string uuDai;
+
+        public string UuDai
+        {
+            get { return uuDai; }
+            set { uuDai = value; }
+        }
+
+        private DateTime ngayLapTour;
+
+        public DateTime NgayLapTour
+        {
+            get { return ngayLapTour; }
+            set { ngayLapTour = value; }
+        }
+
+        private List<LichTrinh> lichTrinh = new List<LichTrinh>();
+
+        public List<LichTrinh> LichTrinh
+        {
+            get { return lichTrinh; }
+            set { lichTrinh = value; }
+        }
+
+        private KhachHang khachHang = new KhachHang();
+
+        public KhachHang KhachHang
+        {
+            get { return khachHang; }
+            set { khachHang = value; }
+        }
+
+        private DoiTac nhaXe = new DoiTac();
+
+        public DoiTac NhaXe
+        {
+            get { return nhaXe; }
+            set { nhaXe = value; }
+        }
+
+        private DoiTac huongDanVien = new DoiTac();
+
+        public DoiTac HuongDanVien
+        {
+            get { return huongDanVien; }
+            set { huongDanVien = value; }
+        }
 
 		public bool CapNhat()
 		{
@@ -53,7 +142,39 @@ namespace BLL
 
 		public bool Luu()
 		{
-			throw new System.NotImplementedException();
+            DataAccessLayer.dalTour dal = new DataAccessLayer.dalTour();
+
+
+            dtoTour dto = new dtoTour();
+            dto.MAKHACHHANG = khachHang.pMaKhachHang;
+            dto.MANHANVIEN = maNhanVien;
+            dto.NGAYDI = ngayDi;
+            dto.NgayLapTour = this.ngayLapTour ;
+            dto.TENTOUR = tenTour;
+            dto.TRANGTHAI = trangThai;
+            dto.UUDAI = uuDai;
+            dto.GHICHU = ghiChu;
+            dto.HUONGDANVIEN = huongDanVien.MaDoiTac;
+            dto.NHAXE = nhaXe.MaDoiTac;
+            dto.TONGGIATOUR = 0;
+            dto.THOIGIAN = thoiGian;
+            bool rs = dal.ThemTour(dto);
+            if (rs)
+            {
+                int ma = dal.LayTourMoiLap(dto.MANHANVIEN);
+                foreach(LichTrinh i in LichTrinh)
+                {
+                    i.MaTour = ma;
+                    int lt = i.Luu();
+                    foreach (ChiTietLichTrinh c in i.pChiTietLichTrinh)
+                    {
+                        c.MaLichTrinh = lt;
+                        c.Luu();                        
+                    }
+                }
+            }
+            return rs;
+            
 		}
 
 		public dtoTour LayThongTinTour()
@@ -61,15 +182,7 @@ namespace BLL
 			throw new System.NotImplementedException();
 		}
 
-        public void ThemLichTrinh(LichTrinh l)
-        {
-            this.lichTrinh.Add(l);
-        }
-
-        public void XoaLichTrinh(LichTrinh l)
-        {
-            this.lichTrinh.Remove(l);
-        }
+        
 
 	}
 }

@@ -14,21 +14,69 @@ namespace BLL
 
 	public class DoiTac
 	{
-		protected string TenDoiTac;
+        private string tenDoiTac;
 
-		protected string NguoiLienHe;
+        public string TenDoiTac
+        {
+            get { return tenDoiTac; }
+            set { tenDoiTac = value; }
+        }
 
-		protected string SoDT;
+        private string nguoiLienHe;
 
-		protected string Email;
+        public string NguoiLienHe
+        {
+            get { return nguoiLienHe; }
+            set { nguoiLienHe = value; }
+        }
 
-		protected int MaDoiTac;
+        private string soDT;
 
-		protected string DiaChi;
+        public string SoDT
+        {
+            get { return soDT; }
+            set { soDT = value; }
+        }
 
-		protected string DanhGiaDoiTac;
+        private string email;
 
-		protected string LoaiDoiTac;
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        private int maDoiTac;
+
+        public int MaDoiTac
+        {
+            get { return maDoiTac; }
+            set { maDoiTac = value; }
+        }
+
+        private string diaChi;
+
+        public string DiaChi
+        {
+            get { return diaChi; }
+            set { diaChi = value; }
+        }
+
+        private string danhGiaDoiTac;
+
+        public string DanhGiaDoiTac
+        {
+            get { return danhGiaDoiTac; }
+            set { danhGiaDoiTac = value; }
+        }
+
+        private string loaiDoiTac;
+
+        public string LoaiDoiTac
+        {
+            get { return loaiDoiTac; }
+            set { loaiDoiTac = value; }
+        }
 
 		public bool CapNhat()
 		{

@@ -6,18 +6,67 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using DataAccessLayer;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
 	public class LichTrinh
 	{
-		protected string ngay;
+        int maTour = 0;
 
-		protected string tenLichTrinh;
+        public int MaTour
+        {
+            get { return maTour; }
+            set { maTour = value; }
+        }
 
-		public IEnumerable<ChiTietLichTrinh> lichTrinh;
+        private string ngay;
+
+        public string Ngay
+        {
+            get { return ngay; }
+            set { ngay = value; }
+        }
+
+        private string tenLichTrinh;
+
+        public string TenLichTrinh
+        {
+            get { return tenLichTrinh; }
+            set { tenLichTrinh = value; }
+        }
+
+        private List<ChiTietLichTrinh> chiTietLichTrinh = new List<ChiTietLichTrinh>();
+
+        public List<ChiTietLichTrinh> pChiTietLichTrinh
+        {
+            get { return chiTietLichTrinh; }
+            set { chiTietLichTrinh = value; }
+        }
+
+        public void ThemChiTietLichTrinh(ChiTietLichTrinh ct)
+        {
+            pChiTietLichTrinh.Add(ct);
+        }
+
+        public void XoaChiTietLichTrinh(ChiTietLichTrinh ct)
+        {
+            pChiTietLichTrinh.Remove(ct);
+        }
+
+        public int Luu()
+        {
+            dalLichTrinh dal = new dalLichTrinh();
+            dtoLichTrinh dto = new dtoLichTrinh();
+
+            dto.MATOUR = MaTour;
+            dto.NGAY = int.Parse(Ngay);
+            dto.TENLICHTRINH = TenLichTrinh;            
+            return dal.ThemLichTrinh(dto);
+        }
 
 	}
 }
