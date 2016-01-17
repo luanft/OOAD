@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLayer;
+using DataTranferObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,9 @@ namespace QuanLyDuLich.GUI
 {
     public partial class diagChiTietLichTrinh : Form
     {
-        private string doiTac;
+        private dtoDoiTac doiTac;
 
-        public string DoiTac
+        public dtoDoiTac DoiTac
         {
             get { return doiTac; }
             set { doiTac = value; }
@@ -48,10 +50,10 @@ namespace QuanLyDuLich.GUI
         public void KhoiTaoForm()
         {
 
-            this.doiTac = this.thoiGian = this.hoatDong = "";
+            this.doiTac = null;
+            this.thoiGian = this.hoatDong = "";
             this.daThem = false;
             this.cbThoiGian.SelectedIndex = 0;
-            this.cbDoiTac.SelectedIndex = 0;
             this.txtHoatDong.Text = "";
         }
 
@@ -62,11 +64,38 @@ namespace QuanLyDuLich.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.doiTac = cbDoiTac.Text;
+            if (cbDoiTac.SelectedItem == null)
+            {
+
+                this.doiTac = null;
+            }
+            else
+            {
+                this.doiTac = (dtoDoiTac)cbDoiTac.SelectedItem;
+            }
             this.hoatDong = this.txtHoatDong.Text;
             this.thoiGian = this.cbThoiGian.Text;
             this.daThem = true;
             this.Close();
+        }
+        dalDoiTac dalDT = new dalDoiTac();
+        private void diagChiTietLichTrinh_Load(object sender, EventArgs e)
+        {
+            cbDoiTac.Items.Clear();
+            List<dtoDoiTac> dt = dalDT.LayDanhSachDoiTac();
+            foreach (dtoDoiTac d in dt)
+            {
+                cbDoiTac.Items.Add(d);
+            }
+            cbDoiTac.DisplayMember = "TENDOITAC";
+        }
+
+        private void cbDoiTac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dtoDoiTac d = (dtoDoiTac)this.cbDoiTac.SelectedItem;
+            txtMa.Text = d.MADOITAC.ToString();
+            txtDiaChi.Text = d.DIACHI;
+            txtDanhGia.Text = d.DANHGIADOITAC;
         }
     }
 }

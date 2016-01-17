@@ -8,19 +8,19 @@ using System.Windows.Forms;
 
 namespace QuanLyDuLich.GUI
 {
-    class LichTrinhNode : TreeNode
+    class ChiTietNode : TreeNode
     {
-        private LichTrinh lichTrinh;
+        private ChiTietLichTrinh chiTiet;
 
-        public LichTrinh LichTrinh
+        public ChiTietLichTrinh ChiTiet
         {
-            get { return lichTrinh; }
-            set { lichTrinh = value; }
+            get { return chiTiet; }
+            set { chiTiet = value; }
         }
-        public LichTrinhNode(string name, LichTrinh data)
+        public ChiTietNode(string name, ChiTietLichTrinh data)
             : base(name)
         {
-            lichTrinh = data;
+            chiTiet = data;
         }
     }
 }
