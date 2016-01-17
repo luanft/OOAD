@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -70,7 +70,7 @@
             this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
+            this.bt_CapNhatDDL = new System.Windows.Forms.Button();
             this.bt_ThemDiemDL = new System.Windows.Forms.Button();
             this.cb_TinhThanh = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -216,6 +216,7 @@
             this.bt_HuyKH.TabIndex = 3;
             this.bt_HuyKH.Text = "Hủy";
             this.bt_HuyKH.UseVisualStyleBackColor = true;
+            this.bt_HuyKH.Click += new System.EventHandler(this.bt_HuyKH_Click);
             // 
             // bt_LuuKH
             // 
@@ -225,6 +226,7 @@
             this.bt_LuuKH.TabIndex = 3;
             this.bt_LuuKH.Text = "Lưu";
             this.bt_LuuKH.UseVisualStyleBackColor = true;
+            this.bt_LuuKH.Click += new System.EventHandler(this.bt_LuuKH_Click);
             // 
             // bt_XoaKH
             // 
@@ -234,6 +236,7 @@
             this.bt_XoaKH.TabIndex = 3;
             this.bt_XoaKH.Text = "Xóa";
             this.bt_XoaKH.UseVisualStyleBackColor = true;
+            this.bt_XoaKH.Click += new System.EventHandler(this.bt_XoaKH_Click);
             // 
             // bt_CapNhatKhachHang
             // 
@@ -243,6 +246,7 @@
             this.bt_CapNhatKhachHang.TabIndex = 3;
             this.bt_CapNhatKhachHang.Text = "Cập nhật";
             this.bt_CapNhatKhachHang.UseVisualStyleBackColor = true;
+            this.bt_CapNhatKhachHang.Click += new System.EventHandler(this.bt_CapNhatKhachHang_Click);
             // 
             // bt_ThemKH
             // 
@@ -252,6 +256,7 @@
             this.bt_ThemKH.TabIndex = 3;
             this.bt_ThemKH.Text = "Thêm";
             this.bt_ThemKH.UseVisualStyleBackColor = true;
+            this.bt_ThemKH.Click += new System.EventHandler(this.bt_ThemKH_Click);
             // 
             // groupBox1
             // 
@@ -504,10 +509,10 @@
             // 
             // Chon
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Chon.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Chon.DefaultCellStyle = dataGridViewCellStyle1;
             this.Chon.HeaderText = "Chọn";
             this.Chon.Name = "Chon";
             this.Chon.Width = 50;
@@ -526,7 +531,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.bt_CapNhatDDL);
             this.tabPage3.Controls.Add(this.bt_ThemDiemDL);
             this.tabPage3.Controls.Add(this.cb_TinhThanh);
             this.tabPage3.Controls.Add(this.label18);
@@ -544,14 +549,15 @@
             this.tabPage3.Text = "Quản lý điểm du lịch";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // bt_CapNhatDDL
             // 
-            this.button6.Location = new System.Drawing.Point(979, 450);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Cập nhật";
-            this.button6.UseVisualStyleBackColor = true;
+            this.bt_CapNhatDDL.Location = new System.Drawing.Point(979, 450);
+            this.bt_CapNhatDDL.Name = "bt_CapNhatDDL";
+            this.bt_CapNhatDDL.Size = new System.Drawing.Size(86, 23);
+            this.bt_CapNhatDDL.TabIndex = 9;
+            this.bt_CapNhatDDL.Text = "Cập nhật";
+            this.bt_CapNhatDDL.UseVisualStyleBackColor = true;
+            this.bt_CapNhatDDL.Click += new System.EventHandler(this.bt_CapNhatDDL_Click);
             // 
             // bt_ThemDiemDL
             // 
@@ -561,6 +567,7 @@
             this.bt_ThemDiemDL.TabIndex = 9;
             this.bt_ThemDiemDL.Text = "Thêm điểm du lịch";
             this.bt_ThemDiemDL.UseVisualStyleBackColor = true;
+            this.bt_ThemDiemDL.Click += new System.EventHandler(this.bt_ThemDiemDL_Click);
             // 
             // cb_TinhThanh
             // 
@@ -1076,7 +1083,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cb_TinhThanh;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button bt_CapNhatDDL;
         private System.Windows.Forms.Button bt_ThemDiemDL;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label19;

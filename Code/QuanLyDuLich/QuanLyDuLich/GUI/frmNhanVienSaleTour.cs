@@ -148,6 +148,44 @@ namespace QuanLyDuLich.GUI
         {
             e.Handled = !((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8);
         }
+
+        private void bt_ThemKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_CapNhatKhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_XoaKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_LuuKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_HuyKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_ThemDiemDL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_CapNhatDDL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        
         
 
 
