@@ -14,21 +14,23 @@ namespace DataAccessLayer
     using System.Data;
     public class dalLichTrinh : dalObject
     {
-        public bool ThemLichTrinh(dtoLichTrinh lichTrinh)
+        public int ThemLichTrinh(dtoLichTrinh lichTrinh)
         {
-            if (!this.Connect())
+            int maLichTrinh = -1;
+            if (this.Connect())
             {
-                return false;
-            }
-            string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
-            + "VALUES('" + lichTrinh.MATOUR + "','" + lichTrinh.TENLICHTRINH + "','" + lichTrinh.NGAY + "')";
-            if (this.Write(sql))
-            {
-                this.Close();
-                return true;
+
+                string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
+                + "VALUES('" + lichTrinh.MATOUR + "','" + lichTrinh.TENLICHTRINH + "','" + lichTrinh.NGAY + "')";
+                if (this.Write(sql))
+                {
+                    DataTable dt = this.Read("select MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = " + lichTrinh.MATOUR);
+                    maLichTrinh = int.Parse(dt.Rows[0]["MALICHTRINH"].ToString());
+                }
+
             }
             this.Close();
-            return false;
+            return maLichTrinh;
         }
 
         public bool SuaLichTrinh(dtoLichTrinh lichTrinh)
@@ -68,7 +70,7 @@ namespace DataAccessLayer
             if (!this.Connect())
             {
                 return false;
-            }            
+            }
             for (int i = 0; i < dslt.Count - 1; i++)
             {
                 string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
@@ -88,7 +90,7 @@ namespace DataAccessLayer
             string sql = "SELECT [MALICHTRINH],[MATOUR],[TENLICHTRINH],[NGAY] FROM [dbo].[LICHTRINH] WHERE MATOUR = '" + maTour + "'";
             DataTable dtLichTrinh = this.Read(sql);
             this.Close();
-            
+
             List<dtoLichTrinh> lDtoLichTrinh = new List<dtoLichTrinh>();
             foreach (DataRow dr in dtLichTrinh.Rows)
             {
@@ -96,7 +98,7 @@ namespace DataAccessLayer
                 dto_LichTrinh.MALICHTRINH = Int32.Parse(dr[0].ToString());
                 dto_LichTrinh.MATOUR = Int32.Parse(dr[1].ToString());
                 dto_LichTrinh.TENLICHTRINH = dr[2].ToString();
-                dto_LichTrinh.NGAY = Int32.Parse(dr[3].ToString());                
+                dto_LichTrinh.NGAY = Int32.Parse(dr[3].ToString());
                 lDtoLichTrinh.Add(dto_LichTrinh);
             }
             return lDtoLichTrinh;
