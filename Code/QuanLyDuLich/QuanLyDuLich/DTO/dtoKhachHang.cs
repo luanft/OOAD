@@ -18,6 +18,12 @@ namespace DataTranferObject
 			get;
 			set;
 		}
+        public int MANHANVIEN
+        {
+            get;
+            set;
+        }
+
 		public string TENDONVI
 		{
 			get;
