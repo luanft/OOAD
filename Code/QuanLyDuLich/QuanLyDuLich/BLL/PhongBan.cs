@@ -6,17 +6,32 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+	using DataAccessLayer;
+using DataTranferObject;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 	public class PhongBan
 	{
+        dalPhongBan dalpb = new dalPhongBan();
 		protected string TenPhongBan;
-
+        public string pTenPhongBan
+        {
+            get { return TenPhongBan; }
+            set { TenPhongBan = value; }
+        }
 		protected string MaPhongBan;
-
+        public string pMaPhongBan
+        {
+            get { return MaPhongBan; }
+            set { MaPhongBan = value; }
+        }
+        public List<dtoPhongBan> LayDanhSachPhongBan()
+        {
+            return dalpb.LayDanhSachPhong();
+        }
 		public IEnumerable<NhanVien> NhanVien;
 
 	}

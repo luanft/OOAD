@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DataTranferObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,273 @@ namespace QuanLyDuLich.GUI
             InitializeComponent();
         }
 
-      
+        private void frmGiamDoc_Load(object sender, EventArgs e)
+        {
+            dataGridView_DanhSachNhanVien.AutoGenerateColumns = false;
+            LockControlValues(tabPage_QuanLyNhanVien);
+
+            PhongBan phongban = new PhongBan();
+            List<dtoPhongBan> lDTO_phongban = phongban.LayDanhSachPhongBan();
+            List<dtoPhongBan> lDTO_phongban2 = phongban.LayDanhSachPhongBan();
+            comboBox1_PhongBan.DataSource = lDTO_phongban;
+            comboBox1_PhongBan.DisplayMember = "TenPhong";
+            comboBox1_PhongBan.ValueMember = "MaPhong";
+            comboBox1_PhongBan.SelectedIndex = 0;
+
+            comboBox2_PhongBan.DataSource = lDTO_phongban2;
+            comboBox2_PhongBan.DisplayMember = "TenPhong";
+            comboBox2_PhongBan.ValueMember = "MaPhong";
+            comboBox2_PhongBan.SelectedIndex = 0;
+
+            NhanVien nhanvien = new NhanVien();
+            dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(1);
+        }
+
+        public void LockControlValues(System.Windows.Forms.Control Container)
+        {
+            try
+            {
+                button_ThemNhanVien.Enabled = true;
+                button_XoaNhanVien.Enabled = true;
+                button_Sua.Enabled = true;
+                button_Huy.Enabled = false;
+                button_Luu.Enabled = false;
+                foreach (Control ctrl in Container.Controls)
+                {
+                    if (ctrl.GetType() == typeof(TextBox))
+                        ((TextBox)ctrl).ReadOnly = true;
+                    //if (ctrl.GetType() == typeof(ComboBox))
+                    //    ((ComboBox)ctrl).Enabled = false;
+                    if (ctrl.GetType() == typeof(CheckBox))
+                        ((CheckBox)ctrl).Enabled = false;
+                    if (ctrl.GetType() == typeof(RadioButton))
+                        ((RadioButton)ctrl).Enabled = false;
+                    if (ctrl.GetType() == typeof(DateTimePicker))
+                        ((DateTimePicker)ctrl).Enabled = false;
+
+                    if (ctrl.Controls.Count > 0)
+                        LockControlValues(ctrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void UnLockControlValues(System.Windows.Forms.Control Container)
+        {
+            try
+            {
+                comboBox2_PhongBan.Enabled = true;
+                button_Huy.Enabled = true;
+                button_Luu.Enabled = true;
+                foreach (Control ctrl in Container.Controls)
+                {
+                    if (ctrl.GetType() == typeof(TextBox))
+                        ((TextBox)ctrl).ReadOnly = false;
+                    //if (ctrl.GetType() == typeof(ComboBox))
+                    //    ((ComboBox)ctrl).Enabled = false;
+                    if (ctrl.GetType() == typeof(CheckBox))
+                        ((CheckBox)ctrl).Enabled = true;
+                    if (ctrl.GetType() == typeof(RadioButton))
+                        ((RadioButton)ctrl).Enabled = true;
+                    if (ctrl.GetType() == typeof(DateTimePicker))
+                        ((DateTimePicker)ctrl).Enabled = true;
+
+                    if (ctrl.Controls.Count > 0)
+                        UnLockControlValues(ctrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void ClearForm(System.Windows.Forms.Control Container)
+        {
+            try
+            {
+                foreach (Control ctrl in Container.Controls)
+                {
+                    if (ctrl.GetType() == typeof(TextBox))
+                        ((TextBox)ctrl).Text = "";
+
+                    if (ctrl.GetType() == typeof(DateTimePicker))
+                        ((DateTimePicker)ctrl).Value = DateTime.Now;
+
+                    if (ctrl.Controls.Count > 0)
+                        ClearForm(ctrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        private void dataGridView_DanhSachNhanVien_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_DanhSachNhanVien.SelectedCells.Count > 0)
+            {
+                int selectedRowIndex = dataGridView_DanhSachNhanVien.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView_DanhSachNhanVien.Rows[selectedRowIndex];
+                NhanVien nhanvien = new NhanVien();
+                dtoNhanVien dto_nhanvien = nhanvien.LayThongTinNhanVien(Int32.Parse(selectedRow.Cells["MaNhanVien"].Value.ToString()));
+                textBox_HoTen.Text = dto_nhanvien.HOTEN;
+                if (dto_nhanvien.GIOITINH == "Nam")
+                {
+                    radioButton_Nam.Checked = true;
+                }
+                else
+                {
+                    radioButton_Nu.Checked = true;
+                }
+                dateTimePicker_NgaySinh.Value = dto_nhanvien.NGAYSINH;
+                textBox_CMND.Text = dto_nhanvien.CMND;
+                textBox_DiaChi.Text = dto_nhanvien.DIACHI;
+                textBox_Email.Text = dto_nhanvien.EMAIL;
+                textBox_SoDienThoai.Text = dto_nhanvien.SODT;
+                textBox_QueQuan.Text = dto_nhanvien.QUEQUAN;
+                textBox_MatKhau.Text = dto_nhanvien.MATKHAU;
+                switch (dto_nhanvien.MAPHONG)
+                {
+                    case 1:
+                        comboBox2_PhongBan.SelectedIndex = 0;
+                        break;
+                    case 2:
+                        comboBox2_PhongBan.SelectedIndex = 1;
+                        break;
+                    case 3:
+                        comboBox2_PhongBan.SelectedIndex = 2;
+                        break;
+                }
+                label_MaNhanVien.Text = dto_nhanvien.MANHANVIEN.ToString();
+            }
+        }
+
+        private void comboBox1_PhongBan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int select = comboBox1_PhongBan.SelectedIndex + 1;
+            LockControlValues(tabPage_QuanLyNhanVien);
+            NhanVien nhanvien = new NhanVien();
+            dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(select);
+        }
+
+        private void button_Sua_Click(object sender, EventArgs e)
+        {
+            UnLockControlValues(tabPage_QuanLyNhanVien);
+            button_Sua.Enabled = false;
+            button_ThemNhanVien.Enabled = false;
+            button_XoaNhanVien.Enabled = false;
+        }
+
+        private void button_Huy_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Những thông tin vừa được thêm vào sẽ không được lưu lại,bạn có muốn hủy không?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LockControlValues(tabPage_QuanLyNhanVien);
+                dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);               
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void button_ThemNhanVien_Click(object sender, EventArgs e)
+        {
+            button_ThemNhanVien.Enabled = false;
+            ClearForm(tabPage_QuanLyNhanVien);
+            UnLockControlValues(tabPage_QuanLyNhanVien);
+            button_Sua.Enabled = false;
+            button_XoaNhanVien.Enabled = false;
+            NhanVien nhanvien = new NhanVien();
+            List<dtoNhanVien> lDTO_nhanvien = nhanvien.LayDanhSachNhanVien();
+            int MaxMaNV = 0;
+            foreach (dtoNhanVien dtonv in lDTO_nhanvien)
+            {
+                if (dtonv.MANHANVIEN > MaxMaNV)
+                {
+                    MaxMaNV = dtonv.MANHANVIEN;
+                }
+            }
+            label_MaNhanVien.Text = (MaxMaNV + 1).ToString();
+        }
+
+        private void button_Luu_Click(object sender, EventArgs e)
+        {
+            NhanVien nhanvien = new NhanVien();
+            nhanvien.pMaNhanVien = Int32.Parse(label_MaNhanVien.Text);
+            nhanvien.pHoTen = textBox_HoTen.Text;
+            if (radioButton_Nam.Checked)
+            {
+                nhanvien.pGioiTinh = "Nam";
+            }
+            else
+            {
+                nhanvien.pGioiTinh = "Nu";
+            }
+            nhanvien.pMatKhau = textBox_MatKhau.Text;
+            nhanvien.pQueQuan = textBox_QueQuan.Text;
+            nhanvien.pSoDT = textBox_SoDienThoai.Text;
+            nhanvien.pNgaySinh = dateTimePicker_NgaySinh.Value;
+            nhanvien.pCMND = textBox_CMND.Text;
+            nhanvien.pDiaChi = textBox_DiaChi.Text;
+            nhanvien.pEmail = textBox_Email.Text;
+            switch (comboBox2_PhongBan.SelectedIndex)
+            {
+                case 0:
+                    nhanvien.pMaPhong = 1;
+                    break;
+                case 1:
+                    nhanvien.pMaPhong = 2;
+                    break;
+                case 2:
+                    nhanvien.pMaPhong = 3;
+                    break;
+            }
+
+            if (textBox_CMND.Text == "" || textBox_DiaChi.Text == "" || textBox_Email.Text == "" || textBox_HoTen.Text == ""
+                 || textBox_MatKhau.Text == "" || textBox_QueQuan.Text == "" || textBox_SoDienThoai.Text == "")
+            {
+                MessageBox.Show("Thông tin nhân viên không được trống!");
+            }
+            else
+            {
+                if (nhanvien.CoTonTai(nhanvien.pMaNhanVien))
+                {
+                    nhanvien.CapNhat();
+                    MessageBox.Show("Thông tin nhân viên đã được cập nhật");
+                }
+                else
+                {
+                    nhanvien.Luu();
+                    MessageBox.Show("Đã thêm nhân viên");
+                }
+                comboBox1_PhongBan_SelectedIndexChanged(sender, e);
+                dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);
+                LockControlValues(tabPage_QuanLyNhanVien);
+            }
+        }
+
+        private void button_XoaNhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVien nhanvien = new NhanVien();
+            nhanvien.pMaNhanVien = Int32.Parse(label_MaNhanVien.Text);
+            DialogResult dialogResult = MessageBox.Show("Chọn Yes để xác nhận xóa nhân viên này", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                nhanvien.Xoa();
+                LockControlValues(tabPage_QuanLyNhanVien);
+                comboBox1_PhongBan_SelectedIndexChanged(sender, e);
+                dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
     }
 }

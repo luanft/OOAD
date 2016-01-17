@@ -151,6 +151,30 @@ namespace BLL
             return dalnv.XoaNhanVien(this.MaNhanVien);
 		}
 
+        public bool CoTonTai(int manv)
+        {
+            dtoNhanVien dto_nhanvien = new dtoNhanVien();
+            dto_nhanvien = LayThongTinNhanVien(manv);
+            if (dto_nhanvien!=null)
+            {
+                return true;
+            }
+            return false;
+        }
+        public List<dtoNhanVien> LayDanhSachNhanVien()
+        {
+            return dalnv.LayDanhSachNhanVien();
+        }
+        public List<dtoNhanVien> LayDanhSachNhanVien(int maPhongBan)
+        {
+            return dalnv.LayDanhSachNhanVien(maPhongBan);            
+        }
+
+        public dtoNhanVien LayThongTinNhanVien(int manv)
+        {
+            return dalnv.LayThongTinNhanVien(manv);
+        }
+
 		public Tour ChonTourCanXem(int matour)
 		{
 			throw new System.NotImplementedException();

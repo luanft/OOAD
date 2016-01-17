@@ -15,7 +15,7 @@ namespace BLL
 
 	public class GiamDoc : NhanVien
 	{
-		public IEnumerable<NhanVien> NhanVien;
+		//public IEnumerable<NhanVien> NhanVien;
       
 		public NhanVien ChonNhanVien(int manv)
 		{
@@ -28,12 +28,15 @@ namespace BLL
 
 		public bool CapNhatThongTinNhanVien(NhanVien nv, dtoNhanVien data)
 		{
-			throw new System.NotImplementedException();
+			nv.SetNhanVien(data);
+            return nv.CapNhat();
 		}
 
 		public bool ThemNhanVien(dtoNhanVien data)
 		{
-			throw new System.NotImplementedException();
+			NhanVien nhanvien = new NhanVien();
+            SetNhanVien(data);
+            return nhanvien.Luu();
 		}
 
 		public Tour ChonTourCanDuyet(int matour)

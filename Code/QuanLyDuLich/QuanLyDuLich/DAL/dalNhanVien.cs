@@ -97,10 +97,14 @@ namespace DataAccessLayer
             {
                 return null;
             }
-            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN] WHERE MANHANVIEN = '" + maNhanVien + "'";
+            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU] FROM [dbo].[NHANVIEN] WHERE MANHANVIEN = '" + maNhanVien + "'";
             dtoNhanVien nhanVien = new dtoNhanVien();
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
+            if (dtNhanVien.Rows.Count == 0)
+            {
+                return null;
+            }
             nhanVien.MANHANVIEN = Int32.Parse(dtNhanVien.Rows[0][0].ToString());
             nhanVien.MAPHONG = Int32.Parse(dtNhanVien.Rows[0][1].ToString());
             nhanVien.HOTEN = dtNhanVien.Rows[0][2].ToString();
@@ -111,6 +115,7 @@ namespace DataAccessLayer
             nhanVien.SODT = dtNhanVien.Rows[0][7].ToString();
             nhanVien.EMAIL = dtNhanVien.Rows[0][8].ToString();
             nhanVien.GIOITINH = dtNhanVien.Rows[0][9].ToString();
+            nhanVien.MATKHAU = dtNhanVien.Rows[0][10].ToString();
             return nhanVien;
         }
 
@@ -120,7 +125,7 @@ namespace DataAccessLayer
             {
                 return null;
             }
-            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN] WHERE MAPHONGBAN = '" + maPhongBan + "'";
+            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN] WHERE MAPHONG = '" + maPhongBan + "'";
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
            
