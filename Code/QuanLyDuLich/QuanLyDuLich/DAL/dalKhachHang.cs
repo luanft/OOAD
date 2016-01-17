@@ -87,7 +87,7 @@ namespace DataAccessLayer
             List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
             if (this.Connect())
             {
-                string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG in (select MAKHACHHANG from [dbo].[TOUR] t where t.MANHANVIEN='" + maNhanVien + "')";
+                string sql = "select * from [dbo].[KHACHHANG] where MANHANVIEN=" + maNhanVien;
                 DataTable dtKhachHang = this.Read(sql);
 
 
@@ -95,14 +95,15 @@ namespace DataAccessLayer
                 {
                     dtoKhachHang dtoKhachHang = new dtoKhachHang();
                     dtoKhachHang.MAKHACHHANG = Int32.Parse(dr[0].ToString());
-                    dtoKhachHang.TENDONVI = dr[1].ToString();
-                    dtoKhachHang.NGUOIDAIDIEN = dr[2].ToString();
-                    dtoKhachHang.GIOITINH = dr[3].ToString();
-                    dtoKhachHang.EMAIL = dr[4].ToString();
-                    dtoKhachHang.DIENTHOAI = dr[5].ToString();
-                    dtoKhachHang.SONGUOI = Int32.Parse(dr[6].ToString());
-                    dtoKhachHang.DIACHI = dr[7].ToString();
-                    dtoKhachHang.LOAIKHACHHANG = dr[8].ToString();
+                    dtoKhachHang.MANHANVIEN = Int32.Parse(dr[1].ToString());
+                    dtoKhachHang.TENDONVI = dr[2].ToString();
+                    dtoKhachHang.NGUOIDAIDIEN = dr[3].ToString();
+                    dtoKhachHang.GIOITINH = dr[4].ToString();
+                    dtoKhachHang.EMAIL = dr[5].ToString();
+                    dtoKhachHang.DIENTHOAI = dr[6].ToString();
+                    dtoKhachHang.SONGUOI = Int32.Parse(dr[7].ToString());
+                    dtoKhachHang.DIACHI = dr[8].ToString();
+                    dtoKhachHang.LOAIKHACHHANG = dr[9].ToString();
                     ldtoKhachHang.Add(dtoKhachHang);
                 }
                 this.Close();
