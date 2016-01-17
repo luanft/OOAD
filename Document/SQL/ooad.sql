@@ -299,6 +299,7 @@ go
 /*==============================================================*/
 create table KHACHHANG (
    MAKHACHHANG          int                  not null IDENTITY( 1, 1 ),
+   MANHANVIEN			int					 not null,
    TENDONVI             NVARCHAR(1000)                 null,
    NGUOIDAIDIEN         NVARCHAR(1000)                 null,
    GIOITINH             varchar(5)           null,
@@ -469,5 +470,10 @@ go
 alter table TOUR
    add constraint FK_TOUR_NHAXE_DOITAC foreign key (NHAXE)
       references DOITAC (MADOITAC)
+go
+
+alter table KHACHHANG
+   add constraint FK_LICHTRIN_FK_T_LT_KH foreign key (MANHANVIEN)
+      references NHANVIEN (NHANVIEN)
 go
 
