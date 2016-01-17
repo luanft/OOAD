@@ -85,7 +85,7 @@
             this.panelLapTour = new System.Windows.Forms.Panel();
             this.dtNgayDi = new System.Windows.Forms.DateTimePicker();
             this.cbNguoiDaiDien = new System.Windows.Forms.ComboBox();
-            this.treelichTrinh = new System.Windows.Forms.TreeView();
+            this.lichTrinhTour = new System.Windows.Forms.TreeView();
             this.cbNhaXe = new System.Windows.Forms.ComboBox();
             this.cbHuongDanVien = new System.Windows.Forms.ComboBox();
             this.txtUuDai = new System.Windows.Forms.TextBox();
@@ -729,7 +729,7 @@
             // 
             this.panelLapTour.Controls.Add(this.dtNgayDi);
             this.panelLapTour.Controls.Add(this.cbNguoiDaiDien);
-            this.panelLapTour.Controls.Add(this.treelichTrinh);
+            this.panelLapTour.Controls.Add(this.lichTrinhTour);
             this.panelLapTour.Controls.Add(this.cbNhaXe);
             this.panelLapTour.Controls.Add(this.cbHuongDanVien);
             this.panelLapTour.Controls.Add(this.txtUuDai);
@@ -776,11 +776,11 @@
             // 
             // treelichTrinh
             // 
-            this.treelichTrinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treelichTrinh.Location = new System.Drawing.Point(18, 142);
-            this.treelichTrinh.Name = "treelichTrinh";
-            this.treelichTrinh.Size = new System.Drawing.Size(1141, 285);
-            this.treelichTrinh.TabIndex = 26;
+            this.lichTrinhTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lichTrinhTour.Location = new System.Drawing.Point(18, 142);
+            this.lichTrinhTour.Name = "treelichTrinh";
+            this.lichTrinhTour.Size = new System.Drawing.Size(1141, 285);
+            this.lichTrinhTour.TabIndex = 26;
             // 
             // cbNhaXe
             // 
@@ -1117,7 +1117,7 @@
         private System.Windows.Forms.Panel panelLapTour;
         private System.Windows.Forms.DateTimePicker dtNgayDi;
         private System.Windows.Forms.ComboBox cbNguoiDaiDien;
-        private System.Windows.Forms.TreeView treelichTrinh;
+        private System.Windows.Forms.TreeView lichTrinhTour;
         private System.Windows.Forms.ComboBox cbNhaXe;
         private System.Windows.Forms.ComboBox cbHuongDanVien;
         private System.Windows.Forms.TextBox txtUuDai;

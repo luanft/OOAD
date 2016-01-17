@@ -13,7 +13,7 @@ namespace QuanLyDuLich.GUI
 {
     partial class frmNhanVienSaleTour : Form
     {
-
+        int nguoiLapTour = 1;
         private Tour tour;
         void cbNguoiDaiDien_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -28,8 +28,14 @@ namespace QuanLyDuLich.GUI
             this.diagThemLt.ShowDialog();
             if (this.diagThemLt.DaThem())
             {
-                int ngay = treelichTrinh.Nodes.Count + 1;
-                TreeNode node = new TreeNode("Ngày " + ngay + ": " + diagThemLt.LayTenLichTrinh());
+                int ngay = lichTrinhTour.Nodes.Count + 1;
+
+                LichTrinh lichTrinh = new LichTrinh();
+                lichTrinh.Ngay = ngay.ToString() ;
+                lichTrinh.TenLichTrinh = diagThemLt.LayTenLichTrinh();
+                tour.LichTrinh.Add(lichTrinh);
+
+                TreeNode node = new LichTrinhNode("Ngày " + lichTrinh.Ngay + ": " + lichTrinh.TenLichTrinh, lichTrinh);
                 node.ContextMenu = new ContextMenu();
                 MenuItem them = new MenuItem("Thêm chi tiết lịch trình");
                 MenuItem xoa = new MenuItem("Xóa");
@@ -37,18 +43,18 @@ namespace QuanLyDuLich.GUI
                 node.ContextMenu.MenuItems.Add(xoa);
                 them.Click += themChiTiet;
                 xoa.Click += xoaLichTrinh;
-                this.treelichTrinh.Nodes.Add(node);
+                this.lichTrinhTour.Nodes.Add(node);
             }
         }
 
         void xoaLichTrinh(object sender, EventArgs e)
         {
-            treelichTrinh.Nodes.Remove(treelichTrinh.SelectedNode);
+            lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
         }
 
         void themChiTiet(object sender, EventArgs e)
         {
-            if (treelichTrinh.SelectedNode.Level == 0)
+            if (lichTrinhTour.SelectedNode.Level == 0)
             {
                 diagCTLT.KhoiTaoForm();
                 diagCTLT.ShowDialog();
@@ -63,7 +69,7 @@ namespace QuanLyDuLich.GUI
                     MenuItem xoaItem = new MenuItem("Xóa");
                     xoaItem.Click += xoaChiTiet;
                     node.ContextMenu.MenuItems.Add(xoaItem);
-                    treelichTrinh.SelectedNode.Nodes.Add(node);
+                    lichTrinhTour.SelectedNode.Nodes.Add(node);
                 }
 
             }
@@ -71,7 +77,7 @@ namespace QuanLyDuLich.GUI
 
         void xoaChiTiet(object sender, EventArgs e)
         {
-            treelichTrinh.Nodes.Remove(treelichTrinh.SelectedNode);
+            lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
         }
 
         void xoaTatCa(object sender, EventArgs e)
@@ -79,7 +85,7 @@ namespace QuanLyDuLich.GUI
             DialogResult rs = MessageBox.Show("Bạn có chắc không?", "Xác nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == System.Windows.Forms.DialogResult.Yes)
             {
-                this.treelichTrinh.Nodes.Clear();
+                this.lichTrinhTour.Nodes.Clear();
             }
 
         }
@@ -96,11 +102,11 @@ namespace QuanLyDuLich.GUI
             }
             #region LAP_TOUR
 
-            this.treelichTrinh.ContextMenu = new ContextMenu();
+            this.lichTrinhTour.ContextMenu = new ContextMenu();
             MenuItem themRoot = new MenuItem("Thêm lịch trình");
             MenuItem xoaRoots = new MenuItem("Xóa tất cả");
-            this.treelichTrinh.ContextMenu.MenuItems.Add(themRoot);
-            this.treelichTrinh.ContextMenu.MenuItems.Add(xoaRoots);
+            this.lichTrinhTour.ContextMenu.MenuItems.Add(themRoot);
+            this.lichTrinhTour.ContextMenu.MenuItems.Add(xoaRoots);
             xoaRoots.Click += xoaTatCa;
             themRoot.Click += themLichTrinh;
             #endregion
@@ -147,6 +153,7 @@ namespace QuanLyDuLich.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
@@ -181,11 +188,7 @@ namespace QuanLyDuLich.GUI
                 return;
             }
 
-
-            tour.NhaXe = new DoiTac();
-            tour.HuongDanVien = new DoiTac();
-            tour.KhachHang = new KhachHang();
-
+            
             tour.NhaXe.MaDoiTac = ((DoiTac)cbNhaXe.SelectedItem).MaDoiTac;
             tour.HuongDanVien.MaDoiTac = ((DoiTac)cbHuongDanVien.SelectedItem).MaDoiTac;
             tour.TenTour = tour.TenTour;
@@ -194,6 +197,12 @@ namespace QuanLyDuLich.GUI
 
             tour.NgayDi = dtNgayDi.Value;
             tour.ThoiGian = txtThoiGianDi.Text;
+            tour.TongGiaTour =  "0";
+            tour.TrangThai = "MOI_LAP";
+            tour.UuDai = txtUuDai.Text;
+            tour.MaNhanVien = nguoiLapTour;
+
+            tour.Luu();
 
 
         }
