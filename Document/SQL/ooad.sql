@@ -474,6 +474,6 @@ go
 
 alter table KHACHHANG
    add constraint FK_LICHTRIN_FK_T_LT_KH foreign key (MANHANVIEN)
-      references NHANVIEN (NHANVIEN)
+      references NHANVIEN (MANHANVIEN)
 go
 
