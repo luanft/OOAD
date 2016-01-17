@@ -18,55 +18,59 @@ namespace DataTranferObject
 			get;
 			set;
 		}
-
 		public string TENDONVI
 		{
 			get;
 			set;
 		}
-
 		public string NGUOIDAIDIEN
 		{
 			get;
 			set;
 		}
-
 		public string GIOITINH
 		{
 			get;
 			set;
 		}
-
 		public string EMAIL
 		{
 			get;
 			set;
 		}
-
 		public string DIENTHOAI
 		{
 			get;
 			set;
 		}
-
 		public int SONGUOI
 		{
 			get;
 			set;
 		}
-
 		public string DIACHI
 		{
 			get;
 			set;
 		}
-
 		public string LOAIKHACHHANG
 		{
 			get;
 			set;
 		}
-
+        public dtoKhachHang(int _maKhachHang, string _tenDonVi, string _nguoiDaiDien, string _gioiTinh,string _email, string _dienThoai,int _soNguoi,string _diaChi,string _loaiKhachHang)
+        {
+            MAKHACHHANG = _maKhachHang;
+            TENDONVI = _tenDonVi;
+            NGUOIDAIDIEN = _nguoiDaiDien;
+            GIOITINH = _gioiTinh;
+            EMAIL = _email;
+            DIENTHOAI = _dienThoai;
+            SONGUOI = _soNguoi;
+            DIACHI = _diaChi;
+            LOAIKHACHHANG = _loaiKhachHang;
+        }
+        public dtoKhachHang() { }        
 	}
 }
 

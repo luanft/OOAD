@@ -6,30 +6,81 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using DataAccessLayer;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
 	public class DiemDuLich
 	{
-		protected string MoTa;
+        private int MaDiemDuLich;
+        public int pMaDiemDuLich
+        {
+            get { return MaDiemDuLich; }
+            set { MaDiemDuLich = value; }
+        }
+        private int MaNhanVien;
+        public int pMaNhanVien
+        {
+            get { return MaNhanVien; }
+            set { MaNhanVien = value; }
+        }
+        private string TenDiemDuLich;
+        public string pTenDiemDuLich
+        {
+            get { return TenDiemDuLich; }
+            set { TenDiemDuLich = value; }
+        }
+        private string MoTa;
+        public string pMoTa
+        {
+            get { return MoTa; }
+            set { MoTa = value; }
+        }
+        public DiemDuLich(int _maDiemDuLich, int _maNhanVien, string _tenDiemDuLich, string _moTa)
+        {
+            MaDiemDuLich = _maDiemDuLich;
+            MaNhanVien = _maNhanVien;
+            TenDiemDuLich = _tenDiemDuLich;
+            MoTa = _moTa;
+        }
 
-		protected string TenDiemDuLich;
-
+        public DiemDuLich() 
+        {
+        }
+        public void setDiemDuLich(dtoDiemDuLich _diemDuLich)
+        {
+            MaNhanVien = _diemDuLich.MANHANVIEN;
+            MaDiemDuLich = _diemDuLich.MADIEMDULICH;
+            TenDiemDuLich = _diemDuLich.TENDIEMDULICH;
+            MoTa = _diemDuLich.MOTA;
+        }
+        public dtoDiemDuLich getdtoDiemDuLich()
+        {
+            dtoDiemDuLich _diemDuLich = new dtoDiemDuLich(MaDiemDuLich, MaNhanVien, TenDiemDuLich, MoTa);
+            return _diemDuLich;
+        }
 		public bool CapNhat()
 		{
-			throw new System.NotImplementedException();
+            dalDiemDuLich _dalDiemDuLich = new dalDiemDuLich();
+            _dalDiemDuLich.SuaThongTinDiemDuLich(getdtoDiemDuLich());
+            return true;
 		}
 
 		public bool Luu()
 		{
-			throw new System.NotImplementedException();
+            dalDiemDuLich _dalDiemDuLich = new dalDiemDuLich();
+            _dalDiemDuLich.ThemDiemDuLich(getdtoDiemDuLich());
+            return true;
 		}
 
 		public bool Xoa()
 		{
-			throw new System.NotImplementedException();
+            dalDiemDuLich _dalDiemDuLich = new dalDiemDuLich();
+            _dalDiemDuLich.XoaDiemDuLich(MaDiemDuLich);
+            return true;
 		}
 
 	}

@@ -6,40 +6,137 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using DataAccessLayer;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
 	public class KhachHang
 	{
-		protected string LoaiKhachHang;
+        private int MaKhachHang;
 
-		protected int SoNguoi;
+        public int pMaKhachHang
+        {
+            get { return MaKhachHang; }
+            set { MaKhachHang = value; }
+        }        
+        private string LoaiKhachHang;
 
-		protected string NguoiDaiDien;
+        public string pLoaiKhachHang
+        {
+            get { return LoaiKhachHang; }
+            set { LoaiKhachHang = value; }
+        }
 
-		protected string SoDT;
+        private int SoNguoi;
 
-		protected string Email;
+        public int pSoNguoi
+        {
+            get { return SoNguoi; }
+            set { SoNguoi = value; }
+        }
 
-		protected string TenDonVi;
+        private string NguoiDaiDien;
 
-		protected string DiaChi;
+        public string pNguoiDaiDien
+        {
+            get { return NguoiDaiDien; }
+            set { NguoiDaiDien = value; }
+        }
 
+        private string SoDT;
+
+        public string pSoDT
+        {
+            get { return SoDT; }
+            set { SoDT = value; }
+        }
+
+        private string Email;
+
+        public string pEmail
+        {
+            get { return Email; }
+            set { Email = value; }
+        }
+
+        private string TenDonVi;
+
+        public string pTenDonVi
+        {
+            get { return TenDonVi; }
+            set { TenDonVi = value; }
+        }
+
+
+        private string DiaChi;
+
+        public string pDiaChi
+        {
+            get { return DiaChi; }
+            set { DiaChi = value; }
+        }
+        private string GioiTinh;
+
+        public string pGioiTinh
+        {
+            get { return GioiTinh; }
+            set { GioiTinh = value; }
+        }
+        public KhachHang(int _maKhachHang, string _tenDonVi, string _nguoiDaiDien, string _gioiTinh, 
+            string _email, string _soDT, int _soNguoi, string _diaChi, string _loaiKhachHang)
+        {
+            MaKhachHang = _maKhachHang;
+            LoaiKhachHang = _loaiKhachHang;
+            SoNguoi = _soNguoi;
+            NguoiDaiDien = _nguoiDaiDien;
+            SoDT = _soDT;
+            Email = _email;
+            GioiTinh = _gioiTinh;
+            TenDonVi = _tenDonVi;
+            DiaChi = _diaChi;
+        }
+        public KhachHang()
+        {             
+        }
+        public void setKhachHang(dtoKhachHang _khachHang)
+        {
+            MaKhachHang = _khachHang.MAKHACHHANG;
+            TenDonVi = _khachHang.TENDONVI;
+            NguoiDaiDien = _khachHang.NGUOIDAIDIEN;
+            GioiTinh = _khachHang.GIOITINH;
+            Email = _khachHang.EMAIL;
+            SoDT = _khachHang.DIENTHOAI;
+            SoNguoi = _khachHang.SONGUOI;
+            DiaChi = _khachHang.DIACHI;
+            LoaiKhachHang = _khachHang.LOAIKHACHHANG;
+        }
+        dtoKhachHang getdtoKhachHang() 
+        {
+            dtoKhachHang _khachHang = new dtoKhachHang(MaKhachHang, TenDonVi, NguoiDaiDien, GioiTinh, Email, SoDT, SoNguoi, DiaChi, LoaiKhachHang);
+            return _khachHang;
+        }
 		public bool CapNhat()
 		{
-			throw new System.NotImplementedException();
+            dalKhachHang _dalKhachHang = new dalKhachHang();
+            _dalKhachHang.SuaThongTinKhachHang(getdtoKhachHang());
+            return true;
 		}
 
 		public bool Luu()
 		{
-			throw new System.NotImplementedException();
+            dalKhachHang _dalKhachHang = new dalKhachHang();
+            _dalKhachHang.ThemKhachHang(getdtoKhachHang());
+            return true;
 		}
 
 		public bool Xoa()
 		{
-			throw new System.NotImplementedException();
+            dalKhachHang _dalKhachHang = new dalKhachHang();
+            _dalKhachHang.XoaKhachHang(MaKhachHang);
+            return true;
 		}
 
 	}

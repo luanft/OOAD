@@ -144,6 +144,11 @@ namespace QuanLyDuLich.GUI
             }
 
         }
+        private void tb_SoDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8);
+        }
+        
 
 
 
