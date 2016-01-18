@@ -118,6 +118,12 @@
     <Compile Include="GUI\frmNhanVienSaleTour.Designer.cs">
       <DependentUpon>frmNhanVienSaleTour.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThemDoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemDoiTac.Designer.cs">
+      <DependentUpon>frmThemDoiTac.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmXemChiTietTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanVienSaleTour.resx">
       <DependentUpon>frmNhanVienSaleTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemDoiTac.resx">
+      <DependentUpon>frmThemDoiTac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmXemChiTietTour.resx">
       <DependentUpon>frmXemChiTietTour.cs</DependentUpon>

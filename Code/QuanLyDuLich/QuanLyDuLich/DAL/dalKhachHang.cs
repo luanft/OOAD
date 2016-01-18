@@ -82,6 +82,33 @@ namespace DataAccessLayer
             }
         }
 
+        public dtoKhachHang LayKhachHang(int maKH)
+        {
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG = " + maKH + ")";
+            DataTable dtKhachHang = this.Read(sql);
+
+            dtoKhachHang dto = new dtoKhachHang();
+            foreach (DataRow dr in dtKhachHang.Rows)
+            {
+                dto.MAKHACHHANG = Int32.Parse(dr[0].ToString());
+                dto.TENDONVI = dr[1].ToString();
+                dto.NGUOIDAIDIEN = dr[2].ToString();
+                dto.GIOITINH = dr[3].ToString();
+                dto.EMAIL = dr[4].ToString();
+                dto.DIENTHOAI = dr[5].ToString();
+                dto.SONGUOI = Int32.Parse(dr[6].ToString());
+                dto.DIACHI = dr[7].ToString();
+                dto.LOAIKHACHHANG = dr[8].ToString();
+            }
+            this.Close();
+            return dto;
+        }
+
         public List<dtoKhachHang> LayDanhSachKhachHang(int maNhanVien)
         {
             List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();

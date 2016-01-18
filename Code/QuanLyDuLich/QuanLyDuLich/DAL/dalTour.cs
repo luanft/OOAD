@@ -12,6 +12,7 @@ namespace DataAccessLayer
     using System.Text;
     using DataTranferObject;
     using System.Data;
+    using System.Windows.Forms;
     public class dalTour : dalObject
     {
         public bool ThemTour(dtoTour tour)
@@ -47,6 +48,38 @@ namespace DataAccessLayer
                 this.Close();
             }
             return ma;
+        }
+
+        public List<dtoTour> LayDanhSachTourCanDuyet()
+        {
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[TOUR] where [TRANGTHAI] = 'CHO_DIEU_HANH_DUYET'";
+            DataTable dtDoiTac = this.Read(sql);
+
+            List<dtoTour> listTour = new List<dtoTour>();
+            foreach (DataRow dr in dtDoiTac.Rows)
+            {
+                dtoTour dto = new dtoTour();
+                dto.MATOUR = int.Parse(dr["MATOUR"].ToString());
+                dto.HUONGDANVIEN = int.Parse(dr["HUONGDANVIEN"].ToString());
+                dto.MAKHACHHANG = int.Parse(dr["MAKHACHHANG"].ToString());
+                dto.NHAXE = int.Parse(dr["NHAXE"].ToString());
+                dto.MANHANVIEN = int.Parse(dr["MANHANVIEN"].ToString());
+                dto.TENTOUR = dr["TENTOUR"].ToString();
+                dto.THOIGIAN = dr["THOIGIAN"].ToString();
+                dto.NGAYDI = DateTime.Parse(dr["NGAYDI"].ToString());
+                dto.TRANGTHAI = dr["TRANGTHAI"].ToString();
+                dto.UUDAI = dr["UUDAI"].ToString();
+                dto.GHICHU = dr["GHICHU"].ToString();
+                dto.TONGGIATOUR = int.Parse(dr["TONGGIATOUR"].ToString());
+                dto.NGAYLAPTOUR = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                listTour.Add(dto);
+            }
+            return listTour;
         }
         public bool XoaTour(int maTour)
         {

@@ -101,6 +101,18 @@ namespace BLL
         public KhachHang()
         {             
         }
+
+        public KhachHang(dtoKhachHang dto)
+        {
+            this.DiaChi = dto.DIACHI;
+            this.Email = dto.EMAIL;
+            this.LoaiKhachHang = dto.LOAIKHACHHANG;
+            this.NguoiDaiDien = dto.NGUOIDAIDIEN;
+            this.SoDT = dto.DIENTHOAI;
+            this.SoNguoi = dto.SONGUOI;
+            this.TenDonVi = dto.TENDONVI;
+        }
+
         public void setKhachHang(dtoKhachHang _khachHang)
         {
             MaKhachHang = _khachHang.MAKHACHHANG;

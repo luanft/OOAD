@@ -27,17 +27,18 @@ namespace BLL
 
         public string Ngay
         {
-            get { return ngay; }
+            get{return ngay;}
             set { ngay = value; }
         }
 
         private string tenLichTrinh;
 
-        public string TenLichTrinh
+        protected string TenLichTrinh
         {
             get { return tenLichTrinh; }
             set { tenLichTrinh = value; }
         }
+
 
         private List<ChiTietLichTrinh> chiTietLichTrinh = new List<ChiTietLichTrinh>();
 
@@ -68,6 +69,17 @@ namespace BLL
             return dal.ThemLichTrinh(dto);
         }
 
+        public LichTrinh(dtoLichTrinh dto)
+        {
+            this.ngay = dto.NGAY.ToString();
+            this.tenLichTrinh = dto.TENLICHTRINH;            
+            dalChiTietLichTrinh dal_ChiTietLichTrinh = new dalChiTietLichTrinh();
+            List<dtoChiTietLichTrinh> ldtoCTLT = dal_ChiTietLichTrinh.LayDanhSachCTLT(dto.MALICHTRINH);
+            foreach (dtoChiTietLichTrinh dtoCTLT in ldtoCTLT)
+            {
+                chiTietLichTrinh.Add(new ChiTietLichTrinh(dtoCTLT));
+            }
+        }
 	}
 }
 

@@ -85,7 +85,7 @@ namespace DataTranferObject
 			set;
 		}
 
-		public DateTime NgayLapTour
+		public DateTime NGAYLAPTOUR
 		{
 			get;
 			set;

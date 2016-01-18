@@ -6,10 +6,12 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using DataAccessLayer;
+    using DataTranferObject;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
 	public class ChiTietLichTrinh
 	{
@@ -44,6 +46,17 @@ namespace BLL
         {
             get { return doiTac; }
             set { doiTac = value; }
+        }
+
+
+        public ChiTietLichTrinh() { }
+
+        public ChiTietLichTrinh(dtoChiTietLichTrinh dto)
+        {
+            this.ThoiGian = dto.THOIGIAN;
+            this.NoiDung = dto.NOIDUNG;
+            dalDoiTac dal_DoiTac = new dalDoiTac();
+            this.DoiTac = new DoiTac(dal_DoiTac.LayDoiTac(dto.MADOITAC));
         }
 
 

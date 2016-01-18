@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
+    using DataAccessLayer;
     using DataTranferObject;
     using System;
     using System.Collections.Generic;
@@ -83,21 +84,95 @@ namespace BLL
 			throw new System.NotImplementedException();
 		}
 
-		public bool Luu()
-		{
-			throw new System.NotImplementedException();
-		}
+        public int pMaDoiTac
+        {
+            get { return MaDoiTac; }
+            set { MaDoiTac = value; }
+        }
 
-		public bool Xoa()
-		{
-			throw new System.NotImplementedException();
-		}
+        private string DiaChi;
 
-		public dtoDoiTac LayThongTinDoiTac()
-		{
-			throw new System.NotImplementedException();
-		}
+        public string pDiaChi
+        {
+            get { return DiaChi; }
+            set { DiaChi = value; }
+        }
 
-	}
+        private string DanhGiaDoiTac;
+
+        public string pDanhGiaDoiTac
+        {
+            get { return DanhGiaDoiTac; }
+            set { DanhGiaDoiTac = value; }
+        }
+
+        private string LoaiDoiTac;
+
+        public string pLoaiDoiTac
+        {
+            get { return LoaiDoiTac; }
+            set { LoaiDoiTac = value; }
+        }
+
+        private int MaNhanVien;
+
+        public int pMaNhanVien
+        {
+            get { return MaNhanVien; }
+            set { MaNhanVien = value; }
+        }
+
+        private dalDoiTac dal_DoiTac;
+
+        public DoiTac()
+        {
+            dal_DoiTac = new dalDoiTac();
+        }
+
+        public DoiTac(dtoDoiTac dto)
+        {
+            dal_DoiTac = new dalDoiTac();
+            MaDoiTac = dto.MADOITAC;
+            LoaiDoiTac = dto.LOAIDOITAC;
+            Email = dto.EMAIL;
+            DiaChi = dto.DIACHI;
+            DanhGiaDoiTac = dto.DANHGIADOITAC;
+            NguoiLienHe = dto.NGUOILIENHE;
+            SoDT = dto.DIENTHOAI;
+            TenDoiTac = dto.TENDOITAC;
+            MaNhanVien = dto.MANHANVIEN;
+        }
+
+        public bool CapNhat()
+        {
+            return dal_DoiTac.SuaThongTinDoiTac(LayThongTinDoiTac());
+        }
+
+        public bool Luu()
+        {
+            return dal_DoiTac.ThemDoiTac(LayThongTinDoiTac());
+        }
+
+        public bool Xoa()
+        {
+            return dal_DoiTac.XoaDoiTac(MaDoiTac);
+        }
+
+        public dtoDoiTac LayThongTinDoiTac()
+        {
+            dtoDoiTac dt = new dtoDoiTac();
+            dt.MANHANVIEN = MaNhanVien;
+            dt.MADOITAC = MaDoiTac;
+            dt.LOAIDOITAC = LoaiDoiTac;
+            dt.NGUOILIENHE = NguoiLienHe;
+            dt.EMAIL = Email;
+            dt.DIENTHOAI = SoDT;
+            dt.DIACHI = DiaChi;
+            dt.TENDOITAC = TenDoiTac;
+            dt.DANHGIADOITAC = DanhGiaDoiTac;
+            return dt;
+        }
+
+    }
 }
 

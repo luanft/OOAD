@@ -6,11 +6,12 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
-    using DataTranferObject;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
+    using DataAccessLayer;
+using DataTranferObject;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 	public class Tour
 	{
@@ -135,6 +136,35 @@ namespace BLL
             set { huongDanVien = value; }
         }
 
+        public Tour() { }
+
+        public Tour(dtoTour dto)
+        {
+            this.MaTour = dto.MATOUR;
+            this.NgayDi = dto.NGAYDI;
+            this.NgayLapTour = dto.NGAYLAPTOUR;
+            this.TenTour = dto.TENTOUR;
+            this.ThoiGian = dto.THOIGIAN;
+            this.TongGiaTour = dto.TONGGIATOUR.ToString();
+            this.TrangThai = dto.TRANGTHAI;
+            this.UuDai = dto.UUDAI;
+            this.GhiChu = dto.GHICHU;            
+
+            dalDoiTac dal_DoiTac = new dalDoiTac();
+            this.NhaXe = new DoiTac(dal_DoiTac.LayDoiTac(dto.NHAXE));
+            this.HuongDanVien = new DoiTac(dal_DoiTac.LayDoiTac(dto.HUONGDANVIEN));
+
+            dalKhachHang dal_KhachHang = new dalKhachHang();
+            this.KhachHang = new KhachHang(dal_KhachHang.LayKhachHang(dto.MAKHACHHANG));
+
+            dalLichTrinh dal_LichTrinh = new dalLichTrinh();
+            List<dtoLichTrinh> ldtoLT = dal_LichTrinh.LayDanhSachLichTrinh(dto.MATOUR);
+            foreach (dtoLichTrinh lt in ldtoLT)
+            {
+                this.lichTrinh.Add(new LichTrinh(lt));
+            }
+        }
+
 		public bool CapNhat()
 		{
 			throw new System.NotImplementedException();
@@ -149,7 +179,7 @@ namespace BLL
             dto.MAKHACHHANG = khachHang.pMaKhachHang;
             dto.MANHANVIEN = maNhanVien;
             dto.NGAYDI = ngayDi;
-            dto.NgayLapTour = this.ngayLapTour ;
+            dto.NGAYLAPTOUR = this.ngayLapTour ;
             dto.TENTOUR = tenTour;
             dto.TRANGTHAI = trangThai;
             dto.UUDAI = uuDai;
