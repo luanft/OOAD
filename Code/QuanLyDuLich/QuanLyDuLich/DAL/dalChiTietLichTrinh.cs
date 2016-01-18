@@ -23,7 +23,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[CHITIETLICHTRINH]([MALICHTRINH],[MADOITAC],[NOIDUNG],[THOIGIAN])VALUES('"+
-                ctlt.MALICHTRINH + "','" + ctlt.MADOITAC + "','" + ctlt.NOIDUNG + "','"+ctlt.THOIGIAN+"')";
+                ctlt.MALICHTRINH + "','" + ctlt.MADOITAC + "',N'" + ctlt.NOIDUNG + "','"+ctlt.THOIGIAN+"')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -43,7 +43,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "UPDATE[dbo].[CHITIETLICHTRINH]SET[MALICHTRINH]='" + ctlt.MALICHTRINH +
-                "',[MADOITAC]='" + ctlt.MADOITAC + "',[NOIDUNG]='" + ctlt.NOIDUNG + "',[THOIGIAN]='" +
+                "',[MADOITAC]='" + ctlt.MADOITAC + "',[NOIDUNG]=N'" + ctlt.NOIDUNG + "',[THOIGIAN]='" +
                 ctlt.THOIGIAN + "' where [[MACHITIETLICHTRINH]]='"+ctlt.MACHITIETLICHTRINH+"'";
             if (this.Write(sql))
             {

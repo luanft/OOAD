@@ -21,8 +21,8 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[TOUR]([MANHANVIEN],[MAKHACHHANG],[NHAXE],[HUONGDANVIEN],[TENTOUR],[THOIGIAN],[NGAYDI],[TONGGIATOUR],[TRANGTHAI],[UUDAI],[GHICHU],[NgayLapTour])VALUES('" +
-                tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "','" + tour.TENTOUR + "','" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
-                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "','" + tour.UUDAI + "','" + tour.GHICHU + "','" + tour.NgayLapTour.ToShortDateString() + "')";
+                tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "','" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
+                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NgayLapTour.ToShortDateString() + "')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -78,7 +78,7 @@ namespace DataAccessLayer
             string sql = "UPDATE [dbo].[TOUR]" +
               "SET [TRANGTHAI] = '" + trangThai +
               "' ,[TONGGIATOUR] = '" + giaTour +
-              "',[GHICHU] = '" + ghiChu +
+              "',[GHICHU] = N'" + ghiChu +
               "'WHERE [MATOUR]='" + maTour + "'";
             if (this.Write(sql))
             {
@@ -125,13 +125,13 @@ namespace DataAccessLayer
               " ',[MAKHACHHANG] = '" + tour.MAKHACHHANG +
               "',[NHAXE] = '" + tour.NHAXE +
               "',[HUONGDANVIEN] = '" + tour.HUONGDANVIEN +
-              "',[TENTOUR] = '" + tour.TENTOUR +
+              "',[TENTOUR] = N'" + tour.TENTOUR +
               "',[THOIGIAN] = '" + tour.THOIGIAN +
               "',[NGAYDI] = '" + tour.NGAYDI +
               "',[TONGGIATOUR] = '" + tour.TONGGIATOUR +
               "',[TRANGTHAI] = '" + tour.TRANGTHAI +
-              "',[UUDAI] = '" + tour.UUDAI +
-              "',[GHICHU] = '" + tour.GHICHU +
+              "',[UUDAI] = N'" + tour.UUDAI +
+              "',[GHICHU] = N'" + tour.GHICHU +
               "'WHERE [MATOUR]='" + tour.MATOUR + "'";
             if (this.Write(sql))
             {

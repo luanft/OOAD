@@ -21,7 +21,7 @@ namespace DataAccessLayer
             {
 
                 string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
-                + "VALUES('" + lichTrinh.MATOUR + "','" + lichTrinh.TENLICHTRINH + "','" + lichTrinh.NGAY + "')";
+                + "VALUES('" + lichTrinh.MATOUR + "',N'" + lichTrinh.TENLICHTRINH + "','" + lichTrinh.NGAY + "')";
                 if (this.Write(sql))
                 {
                     DataTable dt = this.Read("select MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = " + lichTrinh.MATOUR);
@@ -39,7 +39,7 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "UPDATE [dbo].[LICHTRINH] SET [TENLICHTRINH] = '" + lichTrinh.TENLICHTRINH + "',[MATOUR]='" + lichTrinh.MATOUR + "',[NGAY]='" + lichTrinh.NGAY + "' WHERE [MALICHTRINH] ='" + lichTrinh.MALICHTRINH + "'";
+            string sql = "UPDATE [dbo].[LICHTRINH] SET [TENLICHTRINH] = N'" + lichTrinh.TENLICHTRINH + "',[MATOUR]='" + lichTrinh.MATOUR + "',[NGAY]='" + lichTrinh.NGAY + "' WHERE [MALICHTRINH] ='" + lichTrinh.MALICHTRINH + "'";
             if (this.Write(sql))
             {
                 this.Close();
@@ -74,7 +74,7 @@ namespace DataAccessLayer
             for (int i = 0; i < dslt.Count - 1; i++)
             {
                 string sql = "INSERT INTO [dbo].[LICHTRINH] ([MATOUR],[TENLICHTRINH],[NGAY])"
-                     + "VALUES('" + dslt[i].MATOUR + "','" + dslt[i].TENLICHTRINH + "','" + dslt[i].NGAY + "')";
+                     + "VALUES('" + dslt[i].MATOUR + "',N'" + dslt[i].TENLICHTRINH + "','" + dslt[i].NGAY + "')";
                 this.Write(sql);
             }
             this.Close();
