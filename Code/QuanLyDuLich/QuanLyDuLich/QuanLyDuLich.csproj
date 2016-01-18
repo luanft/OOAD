@@ -81,6 +81,7 @@
     <Compile Include="DTO\dtoNhanVien.cs" />
     <Compile Include="DTO\dtoPhongBan.cs" />
     <Compile Include="DTO\dtoTour.cs" />
+    <Compile Include="GUI\ChiTietNode.cs" />
     <Compile Include="GUI\diagThemLichTrinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +123,10 @@
     </Compile>
     <Compile Include="GUI\frmXemChiTietTour.Designer.cs">
       <DependentUpon>frmXemChiTietTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LichTrinhNode.cs" />
+    <Compile Include="GUI\QuanLyTour.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

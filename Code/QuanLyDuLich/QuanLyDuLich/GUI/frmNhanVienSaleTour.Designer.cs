@@ -756,7 +756,7 @@
             // 
             // dtNgayDi
             // 
-            this.dtNgayDi.CustomFormat = "dd/mm/yyyy";
+            this.dtNgayDi.CustomFormat = "dd-mm-yyyy";
             this.dtNgayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgayDi.Location = new System.Drawing.Point(984, 11);
@@ -774,11 +774,11 @@
             this.cbNguoiDaiDien.Size = new System.Drawing.Size(180, 28);
             this.cbNguoiDaiDien.TabIndex = 24;
             // 
-            // treelichTrinh
+            // lichTrinhTour
             // 
             this.lichTrinhTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lichTrinhTour.Location = new System.Drawing.Point(18, 142);
-            this.lichTrinhTour.Name = "treelichTrinh";
+            this.lichTrinhTour.Name = "lichTrinhTour";
             this.lichTrinhTour.Size = new System.Drawing.Size(1141, 285);
             this.lichTrinhTour.TabIndex = 26;
             // 

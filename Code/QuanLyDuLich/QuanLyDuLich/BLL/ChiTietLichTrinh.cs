@@ -38,7 +38,7 @@ namespace BLL
             set { noiDung = value; }
         }
 
-        private DoiTac doiTac;
+        private DoiTac doiTac = new DoiTac();
 
         public DoiTac DoiTac
         {

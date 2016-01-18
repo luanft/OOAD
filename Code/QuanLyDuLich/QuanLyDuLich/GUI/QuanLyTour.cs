@@ -49,20 +49,39 @@ namespace QuanLyDuLich.GUI
 
         void xoaLichTrinh(object sender, EventArgs e)
         {
+            LichTrinhNode node = (LichTrinhNode)lichTrinhTour.SelectedNode;
+            if (node == null) return;
+            tour.LichTrinh.Remove(node.LichTrinh);
             lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
         }
 
         void themChiTiet(object sender, EventArgs e)
         {
+            
+            if (lichTrinhTour.SelectedNode == null) return;          
             if (lichTrinhTour.SelectedNode.Level == 0)
             {
+                LichTrinhNode lichTrinhNode = (LichTrinhNode) lichTrinhTour.SelectedNode; 
                 diagCTLT.KhoiTaoForm();
                 diagCTLT.ShowDialog();
                 if (diagCTLT.DaThem)
                 {
-                    TreeNode node = new TreeNode(this.diagCTLT.ThoiGian);
-                    TreeNode doiTac = new TreeNode("Điểm đến: " + this.diagCTLT.DoiTac);
-                    TreeNode hoatDong = new TreeNode("Hoạt động: " + this.diagCTLT.HoatDong);
+                    ChiTietLichTrinh chiTiet = new ChiTietLichTrinh();
+                    dtoDoiTac dto = this.diagCTLT.DoiTac;
+                    if (dto != null)
+                    {
+                        chiTiet.DoiTac.MaDoiTac = dto.MADOITAC;
+                        chiTiet.DoiTac.TenDoiTac = dto.TENDOITAC;
+                    }
+                    chiTiet.NoiDung = this.diagCTLT.HoatDong;
+                    chiTiet.ThoiGian = this.diagCTLT.ThoiGian;
+                    
+                    TreeNode node = new ChiTietNode(this.diagCTLT.ThoiGian,chiTiet);
+                    TreeNode doiTac = new TreeNode("Điểm đến: " + chiTiet.DoiTac.TenDoiTac);
+                    TreeNode hoatDong = new TreeNode("Hoạt động: " + chiTiet.NoiDung);
+
+                    lichTrinhNode.LichTrinh.pChiTietLichTrinh.Add(chiTiet);
+
                     node.Nodes.Add(doiTac);
                     node.Nodes.Add(hoatDong);
                     node.ContextMenu = new System.Windows.Forms.ContextMenu();
@@ -77,7 +96,18 @@ namespace QuanLyDuLich.GUI
 
         void xoaChiTiet(object sender, EventArgs e)
         {
-            lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
+            if (lichTrinhTour.SelectedNode != null)
+            {
+                if (lichTrinhTour.SelectedNode.Level == 1)
+                {
+                     ChiTietNode ctNode = (ChiTietNode)lichTrinhTour.SelectedNode;
+                     LichTrinhNode ltNode = (LichTrinhNode) ctNode.Parent;
+                     ltNode.LichTrinh.pChiTietLichTrinh.Remove(ctNode.ChiTiet);
+                     lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
+                }
+                    
+            }
+            
         }
 
         void xoaTatCa(object sender, EventArgs e)
@@ -86,6 +116,7 @@ namespace QuanLyDuLich.GUI
             if (rs == System.Windows.Forms.DialogResult.Yes)
             {
                 this.lichTrinhTour.Nodes.Clear();
+                tour.LichTrinh.Clear();
             }
 
         }
@@ -153,11 +184,7 @@ namespace QuanLyDuLich.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            
-            btnThem.Enabled = true;
-            btnLuu.Enabled = false;
-            btnHuy.Enabled = false;
-            panelLapTour.Enabled = false;
+                        
 
             if (cbHuongDanVien.SelectedItem == null)
             {
@@ -187,6 +214,11 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Bạn chưa nhập thời gian đi!");
                 return;
             }
+            if (lichTrinhTour.Nodes.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa soạn lịch trình tour!");
+                return;
+            }
 
             
             tour.NhaXe.MaDoiTac = ((DoiTac)cbNhaXe.SelectedItem).MaDoiTac;
@@ -202,8 +234,25 @@ namespace QuanLyDuLich.GUI
             tour.UuDai = txtUuDai.Text;
             tour.MaNhanVien = nguoiLapTour;
 
-            tour.Luu();
+            if (tour.Luu())
+            {
 
+                MessageBox.Show("Đã lưu tour!");
+                btnThem.Enabled = true;
+                btnLuu.Enabled = false;
+                btnHuy.Enabled = false;
+                panelLapTour.Enabled = false;
+                txtTenTour.Text = "";
+                txtUuDai.Text = "";
+                txtThoiGianDi.Text = "";
+                txtGhiChu.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Đã có lỗi xảy ra với cơ sở dữ liệu!");
+            }
+
+            
 
         }
 
@@ -213,6 +262,10 @@ namespace QuanLyDuLich.GUI
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
             panelLapTour.Enabled = false;
+            txtTenTour.Text = "";
+            txtUuDai.Text = "";
+            txtThoiGianDi.Text = "";
+            txtGhiChu.Text = "";
         }
 
     }
