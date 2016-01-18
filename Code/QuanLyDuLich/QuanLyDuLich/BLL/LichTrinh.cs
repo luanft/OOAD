@@ -33,7 +33,7 @@ namespace BLL
 
         private string tenLichTrinh;
 
-        protected string TenLichTrinh
+        public string TenLichTrinh
         {
             get { return tenLichTrinh; }
             set { tenLichTrinh = value; }
@@ -68,6 +68,8 @@ namespace BLL
             dto.TENLICHTRINH = TenLichTrinh;            
             return dal.ThemLichTrinh(dto);
         }
+
+        public LichTrinh() { }
 
         public LichTrinh(dtoLichTrinh dto)
         {

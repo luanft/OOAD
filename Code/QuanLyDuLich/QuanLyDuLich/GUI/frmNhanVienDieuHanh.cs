@@ -55,7 +55,7 @@ namespace QuanLyDuLich.GUI
             List<string> dsLoaiDoiTac = new List<string>();
             foreach (DoiTac dt in dsDoiTac)
             {
-                dsLoaiDoiTac.Add(dt.pLoaiDoiTac);
+                dsLoaiDoiTac.Add(dt.LoaiDoiTac);
             }
             //binding list DoiTac's name to combobox
             BindingSource bsTenDoiTac = new BindingSource();

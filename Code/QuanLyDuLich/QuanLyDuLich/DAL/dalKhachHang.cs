@@ -89,7 +89,7 @@ namespace DataAccessLayer
                 MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
                 return null;
             }
-            string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG = " + maKH + ")";
+            string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG = " + maKH ;
             DataTable dtKhachHang = this.Read(sql);
 
             dtoKhachHang dto = new dtoKhachHang();
