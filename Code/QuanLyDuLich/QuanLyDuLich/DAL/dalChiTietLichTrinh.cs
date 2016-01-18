@@ -22,8 +22,11 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[CHITIETLICHTRINH]([MALICHTRINH],[MADOITAC],[NOIDUNG],[THOIGIAN])VALUES('"+
-                ctlt.MALICHTRINH + "','" + ctlt.MADOITAC + "',N'" + ctlt.NOIDUNG + "','"+ctlt.THOIGIAN+"')";
+            string doitac = ctlt.MADOITAC == -1 ? "" : "[MADOITAC],";
+            string doitac_data = ctlt.MADOITAC == -1 ? "" : ctlt.MADOITAC + ",";
+
+            string sql = "INSERT INTO [dbo].[CHITIETLICHTRINH]([MALICHTRINH]," + doitac + "[NOIDUNG],[THOIGIAN])VALUES('" +
+                ctlt.MALICHTRINH + "'," + doitac_data + "N'" + ctlt.NOIDUNG + "','" + ctlt.THOIGIAN + "')";
             if (this.Write(sql))
             {
                 this.Close();

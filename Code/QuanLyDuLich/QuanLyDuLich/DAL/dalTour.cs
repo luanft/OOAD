@@ -22,7 +22,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[TOUR]([MANHANVIEN],[MAKHACHHANG],[NHAXE],[HUONGDANVIEN],[TENTOUR],[THOIGIAN],[NGAYDI],[TONGGIATOUR],[TRANGTHAI],[UUDAI],[GHICHU],[NgayLapTour])VALUES('" +
-                tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "','" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
+                tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "',N'" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
                 tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NgayLapTour.ToShortDateString() + "')";
             if (this.Write(sql))
             {
@@ -159,7 +159,7 @@ namespace DataAccessLayer
               "',[NHAXE] = '" + tour.NHAXE +
               "',[HUONGDANVIEN] = '" + tour.HUONGDANVIEN +
               "',[TENTOUR] = N'" + tour.TENTOUR +
-              "',[THOIGIAN] = '" + tour.THOIGIAN +
+              "',[THOIGIAN] = N'" + tour.THOIGIAN +
               "',[NGAYDI] = '" + tour.NGAYDI +
               "',[TONGGIATOUR] = '" + tour.TONGGIATOUR +
               "',[TRANGTHAI] = '" + tour.TRANGTHAI +
