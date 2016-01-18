@@ -19,21 +19,27 @@ namespace QuanLyDuLich.GUI
         NVDieuHanh nvDieuHanh;
         List<DoiTac> dsDoiTacCapNhat;
         string loaiFormCon;
-        dalTour dal_Tour;
+        Tour tourDaChon;
 
-        public string ploaiFormCon
+        public Tour TourDaChon
+        {
+            get { return tourDaChon; }
+            set { tourDaChon = value; }
+        }
+
+        public string LoaiFormCon
         {
             get { return loaiFormCon; }
             set { loaiFormCon = value; }
         }
 
-        public List<DoiTac> pdsDoiTacCapNhat
+        public List<DoiTac> DsDoiTacCapNhat
         {
             get { return dsDoiTacCapNhat; }
             set { dsDoiTacCapNhat = value; }
         }
 
-        public NVDieuHanh pnvDieuHanh
+        public NVDieuHanh NvDieuHanh
         {
             get { return nvDieuHanh; }
             set { nvDieuHanh = value; }
@@ -47,7 +53,7 @@ namespace QuanLyDuLich.GUI
 
             nvDieuHanh = new NVDieuHanh();
             dsDoiTac = nvDieuHanh.pDanhSachDoiTac;
-            dal_Tour = new dalTour();
+            
         }
 
         private void frmNhanVienDieuHanh_Load(object sender, EventArgs e)
@@ -68,7 +74,7 @@ namespace QuanLyDuLich.GUI
             dgvDoiTac.DataSource = bsDanhSachDoiTac;
 
             //binding list tour to datagridview
-            dgvDuyetTour.DataSource = dal_Tour.LayDanhSachTourCanDuyet();
+            dgvDuyetTour.DataSource = nvDieuHanh.pDanhSachTourCanDuyet;
 
         }
 
@@ -117,6 +123,13 @@ namespace QuanLyDuLich.GUI
             {
                 nvDieuHanh.ChonTourCanDuyet(int.Parse(row.Cells["col_MaTour"].Value.ToString())).CapNhat();
             }            
+        }
+
+        private void dgvDuyetTour_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tourDaChon = nvDieuHanh.ChonTourCanDuyet(int.Parse(dgvDuyetTour.Rows[e.RowIndex].Cells["col_MaTour"].Value.ToString()));
+            frmXemChiTietTour xemChiTietTour = new frmXemChiTietTour(tourDaChon);
+            xemChiTietTour.Show();
         }
 
     }

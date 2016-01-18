@@ -85,7 +85,12 @@ namespace BLL
 
         public Tour ChonTourCanDuyet(int matour)
         {
-            throw new System.NotImplementedException();
+            foreach (Tour tour in DanhSachTourCanDuyet)
+            {
+                if (tour.MaTour.Equals(matour))
+                    return tour;
+            }
+            return null;
         }
 
         public bool DuyetTour(Tour tour)

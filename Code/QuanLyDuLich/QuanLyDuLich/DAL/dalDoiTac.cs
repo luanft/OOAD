@@ -22,7 +22,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[DOITAC]([MANHANVIEN],[TENDOITAC],[NGUOILIENHE],[DIENTHOAI],[DANHGIADOITAC],[DIACHI],[EMAIL],[LOAIDOITAC],[TRANGTHAI])VALUES('"+
-                 doiTac.MANHANVIEN + "','" + doiTac.TENDOITAC + "','" + doiTac.NGUOILIENHE + "','" + doiTac.DIENTHOAI + "','" + doiTac.DANHGIADOITAC + "','" + doiTac.DIACHI + "','" + doiTac.EMAIL + "','" + doiTac.LOAIDOITAC + "','1')";
+                 doiTac.MANHANVIEN + "',N'" + doiTac.TENDOITAC + "',N'" + doiTac.NGUOILIENHE + "',N'" + doiTac.DIENTHOAI + "',N'" + doiTac.DANHGIADOITAC + "',N'" + doiTac.DIACHI + "',N'" + doiTac.EMAIL + "',N '" + doiTac.LOAIDOITAC + "','1')";
             if (this.Write(sql)) 
             {
                 this.Close();
@@ -42,9 +42,9 @@ namespace DataAccessLayer
                 return false;
             }            
             string sql = "UPDATE[dbo].[DOITAC]SET[MANHANVIEN]='"+doiTac.MANHANVIEN+
-                "',[TENDOITAC]='"+doiTac.TENDOITAC+"',[NGUOILIENHE]='"+doiTac.NGUOILIENHE+"',[DIENTHOAI]='"+
-                doiTac.DIENTHOAI+"',[DANHGIADOITAC]='"+doiTac.DANHGIADOITAC+"',[DIACHI]='"+doiTac.DIACHI+"',[EMAIL]='"+doiTac.EMAIL+
-                "',[LOAIDOITAC]='"+doiTac.LOAIDOITAC+"' where [MADOITAC]='"+doiTac.MADOITAC+"'";
+                "',[TENDOITAC]=N'"+doiTac.TENDOITAC+"',[NGUOILIENHE]=N'"+doiTac.NGUOILIENHE+"',[DIENTHOAI]='"+
+                doiTac.DIENTHOAI+"',[DANHGIADOITAC]=N'"+doiTac.DANHGIADOITAC+"',[DIACHI]=N'"+doiTac.DIACHI+"',[EMAIL]=N'"+doiTac.EMAIL+
+                "',[LOAIDOITAC]=N'"+doiTac.LOAIDOITAC+"' where [MADOITAC]='"+doiTac.MADOITAC+"'";
             if (this.Write(sql))
             {
                 this.Close();

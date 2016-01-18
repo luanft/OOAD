@@ -304,6 +304,7 @@
             this.dgvDuyetTour.Name = "dgvDuyetTour";
             this.dgvDuyetTour.Size = new System.Drawing.Size(1346, 517);
             this.dgvDuyetTour.TabIndex = 1;
+            this.dgvDuyetTour.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDuyetTour_CellDoubleClick);
             // 
             // col_MaTour
             // 

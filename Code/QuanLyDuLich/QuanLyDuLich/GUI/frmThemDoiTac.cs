@@ -27,13 +27,13 @@ namespace QuanLyDuLich.GUI
         {
             InitializeComponent();
             this.frmNhanVienDieuHanh = frmNhanVienDieuHanh;
-            if (this.frmNhanVienDieuHanh.ploaiFormCon.Equals("update"))
+            if (this.frmNhanVienDieuHanh.LoaiFormCon.Equals("update"))
             {
                 btnThemDoiTac.Enabled = false;
                 btnCapNhat.Enabled = true;
                 dgvDoiTac.AllowUserToAddRows = false;
                 dgvDoiTac.AutoGenerateColumns = false;
-                dgvDoiTac.DataSource = this.frmNhanVienDieuHanh.pdsDoiTacCapNhat;
+                dgvDoiTac.DataSource = this.frmNhanVienDieuHanh.DsDoiTacCapNhat;
                 this.Text = "Cập nhật thông tin đối tác";
             }
             else
@@ -45,7 +45,7 @@ namespace QuanLyDuLich.GUI
             }
             status = false;
 
-            nvDieuHanh = frmNhanVienDieuHanh.pnvDieuHanh;
+            nvDieuHanh = frmNhanVienDieuHanh.NvDieuHanh;
         }
 
         private void btnThemDoiTac_Click(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace QuanLyDuLich.GUI
                 dt.EMAIL = row.Cells["col_Email"].Value.ToString();
                 dt.DANHGIADOITAC = row.Cells["col_DanhGiaDoiTac"].Value.ToString();
                 dt.MANHANVIEN = 1;
-                if (nvDieuHanh.CapNhat(this.frmNhanVienDieuHanh.pdsDoiTacCapNhat[i++], dt))
+                if (nvDieuHanh.CapNhat(this.frmNhanVienDieuHanh.DsDoiTacCapNhat[i++], dt))
                 {
                     status = true;
                 }

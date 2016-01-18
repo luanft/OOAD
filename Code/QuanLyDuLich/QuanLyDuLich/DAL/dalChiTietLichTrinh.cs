@@ -122,7 +122,7 @@ namespace DataAccessLayer
                 MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
                 return null;
             }
-            string sql = "select * from [dbo].[CHITIETLICHTRINH]";
+            string sql = "select * from [dbo].[CHITIETLICHTRINH] where [MALICHTRINH] = " + maLichTrinh;
             DataTable dtChiTietLichTrinh = this.Read(sql);
             
             List<dtoChiTietLichTrinh> lDtoChiTietLichTrinh= new List<dtoChiTietLichTrinh>();
@@ -138,6 +138,7 @@ namespace DataAccessLayer
                 dtochitietlichtrinh.THOIGIAN=dr[4].ToString();
                 lDtoChiTietLichTrinh.Add(dtochitietlichtrinh);
             }
+            this.Close();
             return lDtoChiTietLichTrinh;
             
 		}

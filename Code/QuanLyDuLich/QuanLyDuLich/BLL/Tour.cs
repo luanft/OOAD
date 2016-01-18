@@ -148,7 +148,8 @@ using System.Text;
             this.TongGiaTour = dto.TONGGIATOUR.ToString();
             this.TrangThai = dto.TRANGTHAI;
             this.UuDai = dto.UUDAI;
-            this.GhiChu = dto.GHICHU;            
+            this.GhiChu = dto.GHICHU;
+            this.MaNhanVien = dto.MANHANVIEN;
 
             dalDoiTac dal_DoiTac = new dalDoiTac();
             this.NhaXe = new DoiTac(dal_DoiTac.LayDoiTac(dto.NHAXE));
