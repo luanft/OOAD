@@ -13,6 +13,10 @@ namespace DataTranferObject
 
 	public class dtoChiTietLichTrinh
 	{
+        public dtoChiTietLichTrinh()
+        {
+            MADOITAC = -1;
+        }
 		public int MACHITIETLICHTRINH
 		{
 			get;
