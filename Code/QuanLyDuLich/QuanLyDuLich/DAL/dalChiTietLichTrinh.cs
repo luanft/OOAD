@@ -89,25 +89,33 @@ namespace DataAccessLayer
             return true;
 		}
 
-        public List<ChiTietLichTrinh> LayDanhSachCTLT(int maLichTrinh)
+        public List<ChiTietLichTrinh> LayDanhSachChiTiet(int maLichTrinh)
         {
             List<ChiTietLichTrinh> lDtoChiTietLichTrinh = new List<ChiTietLichTrinh>();
             if (this.Connect())
             {
-                string sql = "select * from [dbo].[CHITIETLICHTRINH]";
+                string sql = "select * from [dbo].[CHITIETLICHTRINH] where MALICHTRINH = " + maLichTrinh;
                 DataTable dtChiTietLichTrinh = this.Read(sql);
                 foreach (DataRow dr in dtChiTietLichTrinh.Rows)
                 {
-                    ChiTietLichTrinh dtochitietlichtrinh = new ChiTietLichTrinh();
-                    //dtochitietlichtrinh = Int32.Parse(dr[0].ToString());
-                    string xxx = dr[1].ToString();
-                    if (dr[1].ToString() != "")
-                    dtochitietlichtrinh.MaChiTietLichTrinh = Int32.Parse(dr[0].ToString());
-                    dtochitietlichtrinh.MaLichTrinh = Int32.Parse(dr[1].ToString());                    
-                    dtochitietlichtrinh.NoiDung = dr[3].ToString();
-                    dtochitietlichtrinh.ThoiGian = dr[4].ToString();
-
-                    lDtoChiTietLichTrinh.Add(dtochitietlichtrinh);
+                    ChiTietLichTrinh chitietlichtrinh = new ChiTietLichTrinh();
+                    
+                    chitietlichtrinh.MaChiTietLichTrinh = Int32.Parse(dr["MACHITIETLICHTRINH"].ToString());
+                    try
+                    {
+                        int dt = Int32.Parse(dr["MADOITAC"].ToString());
+                        chitietlichtrinh.DoiTac = new DoiTac();
+                        chitietlichtrinh.DoiTac.MaDoiTac = dt;
+                        
+                    }
+                    catch(Exception e)
+                    {
+                        chitietlichtrinh.DoiTac = null;
+                    }
+                    chitietlichtrinh.MaLichTrinh = Int32.Parse(dr["MALICHTRINH"].ToString());
+                    chitietlichtrinh.ThoiGian = dr["NOIDUNG"].ToString();
+                    chitietlichtrinh.ThoiGian = dr["THOIGIAN"].ToString();
+                    lDtoChiTietLichTrinh.Add(chitietlichtrinh);
                 }
                 Close();
             }                                             
