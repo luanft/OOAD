@@ -22,7 +22,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[DOITAC]([MANHANVIEN],[TENDOITAC],[NGUOILIENHE],[DIENTHOAI],[DANHGIADOITAC],[DIACHI],[EMAIL],[LOAIDOITAC],[TRANGTHAI])VALUES('"+
-                 doiTac.MANHANVIEN + "',N'" + doiTac.TENDOITAC + "',N'" + doiTac.NGUOILIENHE + "',N'" + doiTac.DIENTHOAI + "',N'" + doiTac.DANHGIADOITAC + "',N'" + doiTac.DIACHI + "',N'" + doiTac.EMAIL + "',N '" + doiTac.LOAIDOITAC + "','1')";
+                 doiTac.MANHANVIEN + "',N'" + doiTac.TENDOITAC + "',N'" + doiTac.NGUOILIENHE + "',N'" + doiTac.DIENTHOAI + "',N'" + doiTac.DANHGIADOITAC + "',N'" + doiTac.DIACHI + "',N'" + doiTac.EMAIL + "',N'" + doiTac.LOAIDOITAC + "','1')";
             if (this.Write(sql)) 
             {
                 this.Close();

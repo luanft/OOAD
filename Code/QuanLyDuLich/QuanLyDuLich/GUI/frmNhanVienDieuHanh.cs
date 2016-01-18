@@ -75,7 +75,8 @@ namespace QuanLyDuLich.GUI
 
             //binding list tour to datagridview
             dgvDuyetTour.DataSource = nvDieuHanh.pDanhSachTourCanDuyet;
-
+            lbSoTour.Text = "CÓ " + nvDieuHanh.pDanhSachTourCanDuyet.Count + " TOUR CẦN DUYỆT";
+            lbSoTour.Location = new Point((this.Size.Width - lbSoTour.Size.Width)/2, lbSoTour.Location.Y);
         }
 
         private void btnThemDoiTac_Click(object sender, EventArgs e)
@@ -121,7 +122,11 @@ namespace QuanLyDuLich.GUI
         {
             foreach (DataGridViewRow row in dgvDuyetTour.Rows)
             {
-                nvDieuHanh.ChonTourCanDuyet(int.Parse(row.Cells["col_MaTour"].Value.ToString())).CapNhat();
+                if (nvDieuHanh.ChonTourCanDuyet(int.Parse(row.Cells["col_MaTour"].Value.ToString())).CapNhat())
+                {
+                    MessageBox.Show("Cập nhật tour thành công!", "Thông báo");
+                }else
+                    MessageBox.Show("Cập nhật tour lỗi!", "Thông báo");
             }            
         }
 

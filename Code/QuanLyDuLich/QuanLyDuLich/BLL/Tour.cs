@@ -168,7 +168,9 @@ using System.Text;
 
 		public bool CapNhat()
 		{
-			throw new System.NotImplementedException();
+            dalTour dal_Tour = new dalTour();
+            
+            return dal_Tour.CapNhatTour(this.maTour, this.trangThai, this.ghiChu);
 		}
 
 		public bool Luu()

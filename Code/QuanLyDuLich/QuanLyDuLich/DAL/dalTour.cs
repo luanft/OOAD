@@ -192,7 +192,7 @@ namespace DataAccessLayer
             }
         }
 
-        public bool CapNhatTour(int maTour, bool trangThai, string ghiChu)
+        public bool CapNhatTour(int maTour, string trangThai, string ghiChu)
         {
             if (!this.Connect())
             {
@@ -200,7 +200,7 @@ namespace DataAccessLayer
             }
             string sql = "UPDATE [dbo].[TOUR]" +
               "SET [TRANGTHAI] = '" + trangThai +
-              "',[GHICHU] = '" + ghiChu +
+              "',[GHICHU] = N'" + ghiChu +
               "'WHERE [MATOUR]='" + maTour + "'";
             if (this.Write(sql))
             {
