@@ -78,20 +78,13 @@ namespace BLL
             get { return loaiDoiTac; }
             set { loaiDoiTac = value; }
         }
-
-        public int pMaDoiTac
-        {
-            get { return MaDoiTac; }
-            set { MaDoiTac = value; }
-        }
-
        
-        private int MaNhanVien;
+        private int maNhanVien;
 
-        public int pMaNhanVien
+        public int MaNhanVien
         {
-            get { return MaNhanVien; }
-            set { MaNhanVien = value; }
+            get { return maNhanVien; }
+            set { maNhanVien = value; }
         }
 
         private dalDoiTac dal_DoiTac;

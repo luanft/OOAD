@@ -39,14 +39,6 @@
             this.combLoaiDoiTac = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDoiTac = new System.Windows.Forms.DataGridView();
-            this.col_MaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_LoaiDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NguoiLienHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_DanhGiaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabXetDuyetTour = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuyXetDuyet = new System.Windows.Forms.Button();
@@ -58,6 +50,14 @@
             this.col1_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1_TrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col1_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_LoaiDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NguoiLienHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_DanhGiaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabQuanLyDoiTac.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -224,77 +224,6 @@
             this.dgvDoiTac.Size = new System.Drawing.Size(1346, 516);
             this.dgvDoiTac.TabIndex = 0;
             // 
-            // col_MaDoiTac
-            // 
-            this.col_MaDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.col_MaDoiTac.DataPropertyName = "pMaDoiTac";
-            this.col_MaDoiTac.HeaderText = "Mã đối tác";
-            this.col_MaDoiTac.MaxInputLength = 9;
-            this.col_MaDoiTac.Name = "col_MaDoiTac";
-            this.col_MaDoiTac.ReadOnly = true;
-            // 
-            // col_LoaiDoiTac
-            // 
-            this.col_LoaiDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.col_LoaiDoiTac.DataPropertyName = "pLoaiDoiTac";
-            this.col_LoaiDoiTac.HeaderText = "Loại đối tác";
-            this.col_LoaiDoiTac.MaxInputLength = 12;
-            this.col_LoaiDoiTac.Name = "col_LoaiDoiTac";
-            this.col_LoaiDoiTac.ReadOnly = true;
-            this.col_LoaiDoiTac.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_LoaiDoiTac.Width = 106;
-            // 
-            // col_TenDoiTac
-            // 
-            this.col_TenDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_TenDoiTac.DataPropertyName = "pTenDoiTac";
-            this.col_TenDoiTac.HeaderText = "Tên đối tác";
-            this.col_TenDoiTac.Name = "col_TenDoiTac";
-            this.col_TenDoiTac.ReadOnly = true;
-            this.col_TenDoiTac.Width = 102;
-            // 
-            // col_NguoiLienHe
-            // 
-            this.col_NguoiLienHe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_NguoiLienHe.DataPropertyName = "pNguoiLienHe";
-            this.col_NguoiLienHe.HeaderText = "Người liên hệ";
-            this.col_NguoiLienHe.Name = "col_NguoiLienHe";
-            this.col_NguoiLienHe.ReadOnly = true;
-            this.col_NguoiLienHe.Width = 115;
-            // 
-            // col_DiaChi
-            // 
-            this.col_DiaChi.DataPropertyName = "pDiaChi";
-            this.col_DiaChi.HeaderText = "Địa chỉ";
-            this.col_DiaChi.Name = "col_DiaChi";
-            this.col_DiaChi.ReadOnly = true;
-            // 
-            // col_SDT
-            // 
-            this.col_SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.col_SDT.DataPropertyName = "pSoDT";
-            this.col_SDT.HeaderText = "Số điện thoại";
-            this.col_SDT.Name = "col_SDT";
-            this.col_SDT.ReadOnly = true;
-            this.col_SDT.Width = 113;
-            // 
-            // col_Email
-            // 
-            this.col_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.col_Email.DataPropertyName = "pEmail";
-            this.col_Email.HeaderText = "Email";
-            this.col_Email.Name = "col_Email";
-            this.col_Email.ReadOnly = true;
-            this.col_Email.Width = 67;
-            // 
-            // col_DanhGiaDoiTac
-            // 
-            this.col_DanhGiaDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_DanhGiaDoiTac.DataPropertyName = "pDanhGiaDoiTac";
-            this.col_DanhGiaDoiTac.HeaderText = "Đánh giá đối tác";
-            this.col_DanhGiaDoiTac.Name = "col_DanhGiaDoiTac";
-            this.col_DanhGiaDoiTac.ReadOnly = true;
-            // 
             // tabXetDuyetTour
             // 
             this.tabXetDuyetTour.Controls.Add(this.panel2);
@@ -423,6 +352,77 @@
             this.col1_GhiChu.HeaderText = "Ghi chú";
             this.col1_GhiChu.Name = "col1_GhiChu";
             // 
+            // col_MaDoiTac
+            // 
+            this.col_MaDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.col_MaDoiTac.DataPropertyName = "MaDoiTac";
+            this.col_MaDoiTac.HeaderText = "Mã đối tác";
+            this.col_MaDoiTac.MaxInputLength = 9;
+            this.col_MaDoiTac.Name = "col_MaDoiTac";
+            this.col_MaDoiTac.ReadOnly = true;
+            // 
+            // col_LoaiDoiTac
+            // 
+            this.col_LoaiDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.col_LoaiDoiTac.DataPropertyName = "LoaiDoiTac";
+            this.col_LoaiDoiTac.HeaderText = "Loại đối tác";
+            this.col_LoaiDoiTac.MaxInputLength = 12;
+            this.col_LoaiDoiTac.Name = "col_LoaiDoiTac";
+            this.col_LoaiDoiTac.ReadOnly = true;
+            this.col_LoaiDoiTac.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_LoaiDoiTac.Width = 106;
+            // 
+            // col_TenDoiTac
+            // 
+            this.col_TenDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_TenDoiTac.DataPropertyName = "TenDoiTac";
+            this.col_TenDoiTac.HeaderText = "Tên đối tác";
+            this.col_TenDoiTac.Name = "col_TenDoiTac";
+            this.col_TenDoiTac.ReadOnly = true;
+            this.col_TenDoiTac.Width = 102;
+            // 
+            // col_NguoiLienHe
+            // 
+            this.col_NguoiLienHe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_NguoiLienHe.DataPropertyName = "NguoiLienHe";
+            this.col_NguoiLienHe.HeaderText = "Người liên hệ";
+            this.col_NguoiLienHe.Name = "col_NguoiLienHe";
+            this.col_NguoiLienHe.ReadOnly = true;
+            this.col_NguoiLienHe.Width = 115;
+            // 
+            // col_DiaChi
+            // 
+            this.col_DiaChi.DataPropertyName = "DiaChi";
+            this.col_DiaChi.HeaderText = "Địa chỉ";
+            this.col_DiaChi.Name = "col_DiaChi";
+            this.col_DiaChi.ReadOnly = true;
+            // 
+            // col_SDT
+            // 
+            this.col_SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.col_SDT.DataPropertyName = "SoDT";
+            this.col_SDT.HeaderText = "Số điện thoại";
+            this.col_SDT.Name = "col_SDT";
+            this.col_SDT.ReadOnly = true;
+            this.col_SDT.Width = 113;
+            // 
+            // col_Email
+            // 
+            this.col_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.col_Email.DataPropertyName = "Email";
+            this.col_Email.HeaderText = "Email";
+            this.col_Email.Name = "col_Email";
+            this.col_Email.ReadOnly = true;
+            this.col_Email.Width = 67;
+            // 
+            // col_DanhGiaDoiTac
+            // 
+            this.col_DanhGiaDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_DanhGiaDoiTac.DataPropertyName = "DanhGiaDoiTac";
+            this.col_DanhGiaDoiTac.HeaderText = "Đánh giá đối tác";
+            this.col_DanhGiaDoiTac.Name = "col_DanhGiaDoiTac";
+            this.col_DanhGiaDoiTac.ReadOnly = true;
+            // 
             // frmNhanVienDieuHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -466,6 +466,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuyXetDuyet;
+        private System.Windows.Forms.DataGridView dgvDoiTac;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaTour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_TenTour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_NgayLap;
+        private System.Windows.Forms.DataGridViewComboBoxColumn col1_TrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1_GhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaDoiTac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_LoaiDoiTac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenDoiTac;
@@ -474,12 +481,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DanhGiaDoiTac;
-        private System.Windows.Forms.DataGridView dgvDoiTac;
-        private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaTour;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1_TenTour;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1_NgayLap;
-        private System.Windows.Forms.DataGridViewComboBoxColumn col1_TrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1_GhiChu;
     }
 }

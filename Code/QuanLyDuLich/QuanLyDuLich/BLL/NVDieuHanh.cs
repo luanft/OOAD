@@ -70,7 +70,7 @@ namespace BLL
         {
             foreach (DoiTac dt in DanhSachDoiTac)
             {
-                if (dt.pMaDoiTac.Equals(ma))
+                if (dt.MaDoiTac.Equals(ma))
                     return dt;
             }
             return null;

@@ -103,8 +103,10 @@ namespace DataAccessLayer
             {
                 dtoChiTietLichTrinh dtochitietlichtrinh = new dtoChiTietLichTrinh();
                 dtochitietlichtrinh.MACHITIETLICHTRINH=Int32.Parse(dr[0].ToString());
-                dtochitietlichtrinh.MALICHTRINH=Int32.Parse(dr[1].ToString());
-                dtochitietlichtrinh.MADOITAC=Int32.Parse(dr[2].ToString());
+                string xxx = dr[1].ToString();
+                if (dr[1].ToString() != "")
+                dtochitietlichtrinh.MADOITAC = Int32.Parse(dr[1].ToString());
+                dtochitietlichtrinh.MALICHTRINH=Int32.Parse(dr[2].ToString());
                 dtochitietlichtrinh.NOIDUNG=dr[3].ToString();
                 dtochitietlichtrinh.THOIGIAN=dr[4].ToString();
                 lDtoChiTietLichTrinh.Add(dtochitietlichtrinh);
