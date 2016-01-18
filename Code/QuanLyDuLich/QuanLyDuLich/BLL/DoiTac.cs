@@ -79,41 +79,13 @@ namespace BLL
             set { loaiDoiTac = value; }
         }
 
-		public bool CapNhat()
-		{
-			throw new System.NotImplementedException();
-		}
-
         public int pMaDoiTac
         {
             get { return MaDoiTac; }
             set { MaDoiTac = value; }
         }
 
-        private string DiaChi;
-
-        public string pDiaChi
-        {
-            get { return DiaChi; }
-            set { DiaChi = value; }
-        }
-
-        private string DanhGiaDoiTac;
-
-        public string pDanhGiaDoiTac
-        {
-            get { return DanhGiaDoiTac; }
-            set { DanhGiaDoiTac = value; }
-        }
-
-        private string LoaiDoiTac;
-
-        public string pLoaiDoiTac
-        {
-            get { return LoaiDoiTac; }
-            set { LoaiDoiTac = value; }
-        }
-
+       
         private int MaNhanVien;
 
         public int pMaNhanVien
