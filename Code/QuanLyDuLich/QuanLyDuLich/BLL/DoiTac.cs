@@ -47,7 +47,7 @@ namespace BLL
             set { email = value; }
         }
 
-        private int maDoiTac;
+        private int maDoiTac = -1;
 
         public int MaDoiTac
         {
