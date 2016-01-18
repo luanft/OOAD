@@ -12,8 +12,31 @@ namespace DataAccessLayer
     using System.Text;
     using DataTranferObject;
     using System.Data;
+using BLL;
     public class dalLichTrinh : dalObject
     {
+        public List<LichTrinh > LoadLichTrinh(int maTour)
+        {
+            List<LichTrinh> lt = new List<LichTrinh>();
+            dalChiTietLichTrinh dal = new dalChiTietLichTrinh();
+            if(Connect())
+            {
+                string sql = "select * from LICHTRINH where MALICHTRINH = "+maTour;
+                DataTable lts = Read(sql);
+                foreach (DataRow dr in lts.Rows)
+                {
+                    LichTrinh l = new LichTrinh();
+                    lt.Add(l);
+                    l.MaTour = maTour;
+                    l.Ngay = dr["NGAY"].ToString();
+                    l.MaLichTrinh = int.Parse(dr["MALICHTRINH"].ToString());
+                    
+                }
+                Close();
+            }
+
+            return lt;
+        }
         public int ThemLichTrinh(dtoLichTrinh lichTrinh)
         {
             int maLichTrinh = -1;

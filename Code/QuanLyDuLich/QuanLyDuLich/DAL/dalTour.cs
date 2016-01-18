@@ -13,6 +13,7 @@ namespace DataAccessLayer
     using DataTranferObject;
     using System.Data;
     using System.Windows.Forms;
+    using BLL;
     public class dalTour : dalObject
     {
         public bool ThemTour(dtoTour tour)
@@ -82,6 +83,35 @@ namespace DataAccessLayer
             return listTour;
         }
 
+        public Tour LoadTour(int maTour)
+        {
+            Tour t = new Tour();
+            if(this.Connect())
+            {
+                string sql = "select * from [dbo].[TOUR] where [MATOUR] = " + maTour;
+                DataTable data = this.Read(sql);
+                DataRow dr = data.Rows[0];
+                t.MaTour = int.Parse(dr["MATOUR"].ToString());
+                t.HuongDanVien = new DoiTac();
+                t.HuongDanVien.MaDoiTac = int.Parse(dr["HUONGDANVIEN"].ToString());
+                t.KhachHang = new KhachHang();
+                t.KhachHang.pMaKhachHang = int.Parse(dr["MAKHACHHANG"].ToString());
+                t.NhaXe = new DoiTac();
+                t.NhaXe.MaDoiTac = int.Parse(dr["NHAXE"].ToString());
+                t.MaNhanVien = int.Parse(dr["MANHANVIEN"].ToString());
+
+                t.TenTour = dr["TENTOUR"].ToString();
+                t.ThoiGian = dr["THOIGIAN"].ToString();
+                t.NgayDi = DateTime.Parse(dr["NGAYDI"].ToString());
+                t.TrangThai = dr["TRANGTHAI"].ToString();
+                t.UuDai = dr["UUDAI"].ToString();
+                t.GhiChu = dr["GHICHU"].ToString();
+                t.TongGiaTour = dr["TONGGIATOUR"].ToString();
+                t.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                this.Close();
+            }
+            return t;
+        }
 
         public List<dtoTour> LayDanhSachTour(int maNhanVien)
         {

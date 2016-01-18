@@ -16,7 +16,13 @@ namespace BLL
 	public class LichTrinh
 	{
         int maTour = 0;
+        int maLichTrinh = 0;
 
+        public int MaLichTrinh
+        {
+            get { return maLichTrinh; }
+            set { maLichTrinh = value; }
+        }
         public int MaTour
         {
             get { return maTour; }

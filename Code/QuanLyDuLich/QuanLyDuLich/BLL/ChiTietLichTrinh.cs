@@ -16,7 +16,13 @@ namespace BLL
 	public class ChiTietLichTrinh
 	{
         private int maLichTrinh;
+        private int maChiTietLichTrinh;
 
+        public int MaChiTietLichTrinh
+        {
+            get { return maChiTietLichTrinh; }
+            set { maChiTietLichTrinh = value; }
+        }
         public int MaLichTrinh
         {
             get { return maLichTrinh; }

@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------
 namespace DataAccessLayer
 {
+    using BLL;
     using DataTranferObject;
     using System;
     using System.Collections.Generic;
@@ -87,6 +88,32 @@ namespace DataAccessLayer
             }
             return true;
 		}
+
+        public List<ChiTietLichTrinh> LayDanhSachCTLT(int maLichTrinh)
+        {
+            List<ChiTietLichTrinh> lDtoChiTietLichTrinh = new List<ChiTietLichTrinh>();
+            if (this.Connect())
+            {
+                string sql = "select * from [dbo].[CHITIETLICHTRINH]";
+                DataTable dtChiTietLichTrinh = this.Read(sql);
+                foreach (DataRow dr in dtChiTietLichTrinh.Rows)
+                {
+                    ChiTietLichTrinh dtochitietlichtrinh = new ChiTietLichTrinh();
+                    //dtochitietlichtrinh = Int32.Parse(dr[0].ToString());
+                    string xxx = dr[1].ToString();
+                    if (dr[1].ToString() != "")
+                    dtochitietlichtrinh.MaChiTietLichTrinh = Int32.Parse(dr[0].ToString());
+                    dtochitietlichtrinh.MaLichTrinh = Int32.Parse(dr[1].ToString());                    
+                    dtochitietlichtrinh.NoiDung = dr[3].ToString();
+                    dtochitietlichtrinh.ThoiGian = dr[4].ToString();
+
+                    lDtoChiTietLichTrinh.Add(dtochitietlichtrinh);
+                }
+                Close();
+            }                                             
+            return lDtoChiTietLichTrinh;
+
+        }
 
 		public List<dtoChiTietLichTrinh> LayDanhSachCTLT(int maLichTrinh)
 		{

@@ -184,7 +184,16 @@ namespace QuanLyDuLich.GUI
 
         private void ChinhSuaTour(int maTour)
         {
+            tabControl.SelectedTab = tabLapTour;
+
+            dalTour dal = new dalTour();
             
+            //them tour
+            tour = dal.LoadTour(maTour);
+            btnThem.Enabled = false;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+            panelLapTour.Enabled = true;
         }
 
 
