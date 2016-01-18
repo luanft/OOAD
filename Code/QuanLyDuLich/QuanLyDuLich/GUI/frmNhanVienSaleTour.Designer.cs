@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabQuanLyTour = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.tabQuanLyTour.SuspendLayout();
             this.tabQuanLyKhachHang.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -120,17 +120,17 @@
             this.panelLapTour.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.tabQuanLyTour);
-            this.tabControl1.Controls.Add(this.tabQuanLyKhachHang);
-            this.tabControl1.Controls.Add(this.tabQuanLyDiemDuLich);
-            this.tabControl1.Controls.Add(this.tabLapTour);
-            this.tabControl1.Location = new System.Drawing.Point(3, 48);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1193, 527);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.tabQuanLyTour);
+            this.tabControl.Controls.Add(this.tabQuanLyKhachHang);
+            this.tabControl.Controls.Add(this.tabQuanLyDiemDuLich);
+            this.tabControl.Controls.Add(this.tabLapTour);
+            this.tabControl.Location = new System.Drawing.Point(3, 48);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1193, 527);
+            this.tabControl.TabIndex = 0;
             // 
             // tabQuanLyTour
             // 
@@ -1019,12 +1019,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Name = "frmNhanVienSaleTour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên sale tour";
             this.Load += new System.EventHandler(this.frmNhanVienSaleTour_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabQuanLyTour.ResumeLayout(false);
             this.tabQuanLyTour.PerformLayout();
             this.tabQuanLyKhachHang.ResumeLayout(false);
@@ -1045,7 +1045,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabQuanLyTour;
         private System.Windows.Forms.TabPage tabQuanLyKhachHang;
         private System.Windows.Forms.TabPage tabQuanLyDiemDuLich;

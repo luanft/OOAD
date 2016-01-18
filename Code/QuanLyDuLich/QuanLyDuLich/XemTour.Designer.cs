@@ -154,6 +154,7 @@
             this.llChinhSua.TabIndex = 4;
             this.llChinhSua.TabStop = true;
             this.llChinhSua.Text = "Chỉnh sửa";
+            this.llChinhSua.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llChinhSua_LinkClicked);
             // 
             // llDanhDauBan
             // 
@@ -214,7 +215,7 @@
         private System.Windows.Forms.Label lbThoiGianDi;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.LinkLabel llSubmit;
-        private System.Windows.Forms.LinkLabel llChinhSua;
+        public System.Windows.Forms.LinkLabel llChinhSua;
         private System.Windows.Forms.LinkLabel llDanhDauBan;
         private System.Windows.Forms.LinkLabel llXoa;
     }

@@ -134,6 +134,7 @@ namespace QuanLyDuLich.GUI
                 x.Size = new Size(370, 249);
                 this.panelDanhSachTour.Controls.Add(x);
                 x.init(i);
+                x.OnEditing+=ChinhSuaTour;
                 
             }
 
@@ -179,6 +180,11 @@ namespace QuanLyDuLich.GUI
             }
             cbHuongDanVien.DisplayMember = "NGUOILIENHE";
             cbNhaXe.DisplayMember = "TENDOITAC";
+        }
+
+        private void ChinhSuaTour(int maTour)
+        {
+            
         }
 
 

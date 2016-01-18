@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using DataTranferObject;
 using BLL;
 using DataAccessLayer;
+using QuanLyDuLich.GUI;
 
 namespace QuanLyDuLich
 {
+    public delegate void ChinhSSuaTour(int maTour); 
     public partial class XemTour : UserControl
     {
+        public event ChinhSSuaTour OnEditing;
         private dtoTour tour;
         private NVSale sale = new NVSale();
         public XemTour()
@@ -57,7 +60,8 @@ namespace QuanLyDuLich
 
         private void lbTenTour_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Hiển thị tour chi tiết ở đây");
+            frmXemChiTietTour frm = new frmXemChiTietTour();
+            frm.ShowDialog();
         }
 
         private void btnDanhDauDaBan_Click(object sender, EventArgs e)
@@ -70,6 +74,14 @@ namespace QuanLyDuLich
                 llDanhDauBan.Enabled = false;
             }
         }
+
+        private void llChinhSua_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(OnEditing != null)
+                this.OnEditing(tour.MATOUR);
+        }
+
+        
 
         
     }
