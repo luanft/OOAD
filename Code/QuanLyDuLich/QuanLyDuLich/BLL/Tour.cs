@@ -142,7 +142,7 @@ using System.Text;
         {
             this.MaTour = dto.MATOUR;
             this.NgayDi = dto.NGAYDI;
-            this.NgayLapTour = dto.NgayLapTour;
+            this.NgayLapTour = dto.NGAYLAPTOUR;
             this.TenTour = dto.TENTOUR;
             this.ThoiGian = dto.THOIGIAN;
             this.TongGiaTour = dto.TONGGIATOUR.ToString();
@@ -179,7 +179,7 @@ using System.Text;
             dto.MAKHACHHANG = khachHang.pMaKhachHang;
             dto.MANHANVIEN = maNhanVien;
             dto.NGAYDI = ngayDi;
-            dto.NgayLapTour = this.ngayLapTour ;
+            dto.NGAYLAPTOUR = this.ngayLapTour ;
             dto.TENTOUR = tenTour;
             dto.TRANGTHAI = trangThai;
             dto.UUDAI = uuDai;

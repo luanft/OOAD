@@ -76,7 +76,7 @@ namespace DataAccessLayer
                 dto.UUDAI = dr["UUDAI"].ToString();
                 dto.GHICHU = dr["GHICHU"].ToString();
                 dto.TONGGIATOUR = int.Parse(dr["TONGGIATOUR"].ToString());
-                dto.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                dto.NGAYLAPTOUR = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
                 listTour.Add(dto);
             }
             return listTour;
@@ -109,7 +109,7 @@ namespace DataAccessLayer
                     dto.UUDAI = dr["UUDAI"].ToString();
                     dto.GHICHU = dr["GHICHU"].ToString();
                     dto.TONGGIATOUR = int.Parse(dr["TONGGIATOUR"].ToString());
-                    dto.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                    dto.NGAYLAPTOUR = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
                     listTour.Add(dto);
                 }
             }

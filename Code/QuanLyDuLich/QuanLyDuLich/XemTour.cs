@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataTranferObject;
 
 namespace QuanLyDuLich
 {
@@ -17,6 +18,11 @@ namespace QuanLyDuLich
             InitializeComponent();
         }
 
+        public void init(dtoTour tour)
+        {
+            this.lbNgayDi.Text = tour.NGAYDI.ToShortDateString();
+            this.lbNgayLap.Text = tour.NGAYLAPTOUR.ToShortDateString();
+        }
         private void XemTour_Load(object sender, EventArgs e)
         {
             lbTenTour.MaximumSize = this.Size;
