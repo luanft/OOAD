@@ -86,6 +86,7 @@ namespace DataAccessLayer
         public Tour LoadTour(int maTour)
         {
             Tour t = new Tour();
+            dalLichTrinh dalLt = new dalLichTrinh();
             if(this.Connect())
             {
                 string sql = "select * from [dbo].[TOUR] where [MATOUR] = " + maTour;
@@ -99,7 +100,6 @@ namespace DataAccessLayer
                 t.NhaXe = new DoiTac();
                 t.NhaXe.MaDoiTac = int.Parse(dr["NHAXE"].ToString());
                 t.MaNhanVien = int.Parse(dr["MANHANVIEN"].ToString());
-
                 t.TenTour = dr["TENTOUR"].ToString();
                 t.ThoiGian = dr["THOIGIAN"].ToString();
                 t.NgayDi = DateTime.Parse(dr["NGAYDI"].ToString());
@@ -108,6 +108,7 @@ namespace DataAccessLayer
                 t.GhiChu = dr["GHICHU"].ToString();
                 t.TongGiaTour = dr["TONGGIATOUR"].ToString();
                 t.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                t.LichTrinh = dalLt.LoadLichTrinh(t.MaTour);
                 this.Close();
             }
             return t;

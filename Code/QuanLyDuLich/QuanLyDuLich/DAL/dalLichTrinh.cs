@@ -21,7 +21,7 @@ using BLL;
             dalChiTietLichTrinh dal = new dalChiTietLichTrinh();
             if(Connect())
             {
-                string sql = "select * from LICHTRINH where MALICHTRINH = "+maTour;
+                string sql = "select * from LICHTRINH where MATOUR = " + maTour;
                 DataTable lts = Read(sql);
                 foreach (DataRow dr in lts.Rows)
                 {
@@ -30,7 +30,7 @@ using BLL;
                     l.MaTour = maTour;
                     l.Ngay = dr["NGAY"].ToString();
                     l.MaLichTrinh = int.Parse(dr["MALICHTRINH"].ToString());
-                    
+                    l.pChiTietLichTrinh = dal.LayDanhSachChiTiet(l.MaLichTrinh);
                 }
                 Close();
             }
