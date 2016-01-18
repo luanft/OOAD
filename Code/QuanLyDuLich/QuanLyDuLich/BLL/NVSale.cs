@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------
 namespace BLL
 {
+    using DataAccessLayer;
     using DataTranferObject;
     using System;
     using System.Collections.Generic;
@@ -61,7 +62,8 @@ namespace BLL
 
 		public bool SubmitTour(Tour tour)
 		{
-			throw new System.NotImplementedException();
+            throw new NotImplementedException();
+            
 		}
 
 		public List<Tour> ChonThoiGianXemTour(int thoiGian)

@@ -13,7 +13,7 @@ namespace QuanLyDuLich.GUI
 {
     partial class frmNhanVienSaleTour : Form
     {
-        int nguoiLapTour = 1;
+        int nguoiLapTour = 1;        
         private Tour tour;
         void cbNguoiDaiDien_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -133,7 +133,7 @@ namespace QuanLyDuLich.GUI
                 XemTour x = new XemTour();
                 x.Size = new Size(370, 249);
                 this.panelDanhSachTour.Controls.Add(x);
-                
+                x.init(i);
                 
             }
 

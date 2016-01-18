@@ -86,7 +86,7 @@ namespace DataAccessLayer
         public List<dtoTour> LayDanhSachTour(int maNhanVien)
         {
             List<dtoTour> listTour = new List<dtoTour>();
-            if (!this.Connect())
+            if (this.Connect())
             {
 
 
@@ -112,6 +112,7 @@ namespace DataAccessLayer
                     dto.NGAYLAPTOUR = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
                     listTour.Add(dto);
                 }
+                this.Close();
             }
             return listTour;
         }
@@ -137,7 +138,7 @@ namespace DataAccessLayer
 
 
 
-        public bool CapNhatTour(int maTour, bool trangThai, string giaTour, string ghiChu)
+        public bool CapNhatTour(int maTour, string trangThai, string giaTour, string ghiChu)
         {
             if (!this.Connect())
             {

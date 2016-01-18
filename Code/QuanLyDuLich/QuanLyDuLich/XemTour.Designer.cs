@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDanhDauDaBan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSubmitTour = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.sdsds = new System.Windows.Forms.Label();
             this.sdsd = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,16 +37,11 @@
             this.lbNgayDi = new System.Windows.Forms.Label();
             this.lbThoiGianDi = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
+            this.llSubmit = new System.Windows.Forms.LinkLabel();
+            this.llChinhSua = new System.Windows.Forms.LinkLabel();
+            this.llDanhDauBan = new System.Windows.Forms.LinkLabel();
+            this.llXoa = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
-            // 
-            // btnDanhDauDaBan
-            // 
-            this.btnDanhDauDaBan.Location = new System.Drawing.Point(146, 203);
-            this.btnDanhDauDaBan.Name = "btnDanhDauDaBan";
-            this.btnDanhDauDaBan.Size = new System.Drawing.Size(126, 27);
-            this.btnDanhDauDaBan.TabIndex = 1;
-            this.btnDanhDauDaBan.Text = "Đánh dấu đã bán";
-            this.btnDanhDauDaBan.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -60,24 +52,6 @@
             this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Trạng thái:";
-            // 
-            // btnSubmitTour
-            // 
-            this.btnSubmitTour.Location = new System.Drawing.Point(53, 203);
-            this.btnSubmitTour.Name = "btnSubmitTour";
-            this.btnSubmitTour.Size = new System.Drawing.Size(87, 27);
-            this.btnSubmitTour.TabIndex = 1;
-            this.btnSubmitTour.Text = "Submit tour";
-            this.btnSubmitTour.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(278, 203);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(87, 27);
-            this.btnHuy.TabIndex = 1;
-            this.btnHuy.Text = "Hủy tour";
-            this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // sdsds
             // 
@@ -119,6 +93,7 @@
             this.lbTenTour.TabIndex = 3;
             this.lbTenTour.TabStop = true;
             this.lbTenTour.Text = "Tên tour";
+            this.lbTenTour.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbTenTour_LinkClicked);
             // 
             // lbNgayLap
             // 
@@ -160,11 +135,55 @@
             this.lbTrangThai.TabIndex = 2;
             this.lbTrangThai.Text = "Ngày Đi:";
             // 
+            // llSubmit
+            // 
+            this.llSubmit.AutoSize = true;
+            this.llSubmit.Location = new System.Drawing.Point(86, 219);
+            this.llSubmit.Name = "llSubmit";
+            this.llSubmit.Size = new System.Drawing.Size(64, 15);
+            this.llSubmit.TabIndex = 4;
+            this.llSubmit.TabStop = true;
+            this.llSubmit.Text = "Submit tour";
+            // 
+            // llChinhSua
+            // 
+            this.llChinhSua.AutoSize = true;
+            this.llChinhSua.Location = new System.Drawing.Point(156, 219);
+            this.llChinhSua.Name = "llChinhSua";
+            this.llChinhSua.Size = new System.Drawing.Size(56, 15);
+            this.llChinhSua.TabIndex = 4;
+            this.llChinhSua.TabStop = true;
+            this.llChinhSua.Text = "Chỉnh sửa";
+            // 
+            // llDanhDauBan
+            // 
+            this.llDanhDauBan.AutoSize = true;
+            this.llDanhDauBan.Location = new System.Drawing.Point(218, 219);
+            this.llDanhDauBan.Name = "llDanhDauBan";
+            this.llDanhDauBan.Size = new System.Drawing.Size(87, 15);
+            this.llDanhDauBan.TabIndex = 4;
+            this.llDanhDauBan.TabStop = true;
+            this.llDanhDauBan.Text = "Đánh dấu đã bán";
+            // 
+            // llXoa
+            // 
+            this.llXoa.AutoSize = true;
+            this.llXoa.Location = new System.Drawing.Point(311, 219);
+            this.llXoa.Name = "llXoa";
+            this.llXoa.Size = new System.Drawing.Size(27, 15);
+            this.llXoa.TabIndex = 4;
+            this.llXoa.TabStop = true;
+            this.llXoa.Text = "Xóa";
+            // 
             // XemTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.llXoa);
+            this.Controls.Add(this.llDanhDauBan);
+            this.Controls.Add(this.llChinhSua);
+            this.Controls.Add(this.llSubmit);
             this.Controls.Add(this.lbTenTour);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbTrangThai);
@@ -173,9 +192,6 @@
             this.Controls.Add(this.sdsd);
             this.Controls.Add(this.lbNgayLap);
             this.Controls.Add(this.sdsds);
-            this.Controls.Add(this.btnSubmitTour);
-            this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnDanhDauDaBan);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "XemTour";
@@ -188,10 +204,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDanhDauDaBan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSubmitTour;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label sdsds;
         private System.Windows.Forms.Label sdsd;
         private System.Windows.Forms.Label label5;
@@ -200,5 +213,9 @@
         private System.Windows.Forms.Label lbNgayDi;
         private System.Windows.Forms.Label lbThoiGianDi;
         private System.Windows.Forms.Label lbTrangThai;
+        private System.Windows.Forms.LinkLabel llSubmit;
+        private System.Windows.Forms.LinkLabel llChinhSua;
+        private System.Windows.Forms.LinkLabel llDanhDauBan;
+        private System.Windows.Forms.LinkLabel llXoa;
     }
 }

@@ -210,10 +210,7 @@ using System.Text;
 		public dtoTour LayThongTinTour()
 		{
 			throw new System.NotImplementedException();
-		}
-
-        
-
+		}               
 	}
 }
 
