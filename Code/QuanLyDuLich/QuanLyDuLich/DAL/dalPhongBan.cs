@@ -12,8 +12,7 @@ namespace DataAccessLayer
 	using System.Text;
     using DataTranferObject;
     using System.Windows.Forms;
-    using System.Data;
-    using DataTranferObject;
+    using System.Data;    
 	public class dalPhongBan : dalObject
 	{
         public bool ThemPhong(dtoPhongBan phongban)

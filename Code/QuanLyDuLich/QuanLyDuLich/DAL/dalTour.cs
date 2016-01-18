@@ -76,11 +76,46 @@ namespace DataAccessLayer
                 dto.UUDAI = dr["UUDAI"].ToString();
                 dto.GHICHU = dr["GHICHU"].ToString();
                 dto.TONGGIATOUR = int.Parse(dr["TONGGIATOUR"].ToString());
-                dto.NGAYLAPTOUR = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                dto.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
                 listTour.Add(dto);
             }
             return listTour;
         }
+
+
+        public List<dtoTour> LayDanhSachTour(int maNhanVien)
+        {
+            List<dtoTour> listTour = new List<dtoTour>();
+            if (!this.Connect())
+            {
+
+
+                string sql = "select * from [dbo].[TOUR] where [MANHANVIEN] =" + maNhanVien + " order by MATOUR desc";
+                DataTable dtDoiTac = this.Read(sql);
+
+                
+                foreach (DataRow dr in dtDoiTac.Rows)
+                {
+                    dtoTour dto = new dtoTour();
+                    dto.MATOUR = int.Parse(dr["MATOUR"].ToString());
+                    dto.HUONGDANVIEN = int.Parse(dr["HUONGDANVIEN"].ToString());
+                    dto.MAKHACHHANG = int.Parse(dr["MAKHACHHANG"].ToString());
+                    dto.NHAXE = int.Parse(dr["NHAXE"].ToString());
+                    dto.MANHANVIEN = int.Parse(dr["MANHANVIEN"].ToString());
+                    dto.TENTOUR = dr["TENTOUR"].ToString();
+                    dto.THOIGIAN = dr["THOIGIAN"].ToString();
+                    dto.NGAYDI = DateTime.Parse(dr["NGAYDI"].ToString());
+                    dto.TRANGTHAI = dr["TRANGTHAI"].ToString();
+                    dto.UUDAI = dr["UUDAI"].ToString();
+                    dto.GHICHU = dr["GHICHU"].ToString();
+                    dto.TONGGIATOUR = int.Parse(dr["TONGGIATOUR"].ToString());
+                    dto.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                    listTour.Add(dto);
+                }
+            }
+            return listTour;
+        }
+
         public bool XoaTour(int maTour)
         {
             if (!this.Connect())
@@ -183,6 +218,7 @@ namespace DataAccessLayer
             throw new System.NotImplementedException();
         }
 
+        
     }
 }
 

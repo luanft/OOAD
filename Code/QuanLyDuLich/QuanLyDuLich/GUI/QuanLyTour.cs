@@ -31,7 +31,7 @@ namespace QuanLyDuLich.GUI
                 int ngay = lichTrinhTour.Nodes.Count + 1;
 
                 LichTrinh lichTrinh = new LichTrinh();
-                lichTrinh.Ngay = ngay.ToString() ;
+                lichTrinh.Ngay = ngay.ToString();
                 lichTrinh.TenLichTrinh = diagThemLt.LayTenLichTrinh();
                 tour.LichTrinh.Add(lichTrinh);
 
@@ -57,11 +57,11 @@ namespace QuanLyDuLich.GUI
 
         void themChiTiet(object sender, EventArgs e)
         {
-            
-            if (lichTrinhTour.SelectedNode == null) return;          
+
+            if (lichTrinhTour.SelectedNode == null) return;
             if (lichTrinhTour.SelectedNode.Level == 0)
             {
-                LichTrinhNode lichTrinhNode = (LichTrinhNode) lichTrinhTour.SelectedNode; 
+                LichTrinhNode lichTrinhNode = (LichTrinhNode)lichTrinhTour.SelectedNode;
                 diagCTLT.KhoiTaoForm();
                 diagCTLT.ShowDialog();
                 if (diagCTLT.DaThem)
@@ -75,8 +75,8 @@ namespace QuanLyDuLich.GUI
                     }
                     chiTiet.NoiDung = this.diagCTLT.HoatDong;
                     chiTiet.ThoiGian = this.diagCTLT.ThoiGian;
-                    
-                    TreeNode node = new ChiTietNode(this.diagCTLT.ThoiGian,chiTiet);
+
+                    TreeNode node = new ChiTietNode(this.diagCTLT.ThoiGian, chiTiet);
                     TreeNode doiTac = new TreeNode("Điểm đến: " + chiTiet.DoiTac.TenDoiTac);
                     TreeNode hoatDong = new TreeNode("Hoạt động: " + chiTiet.NoiDung);
 
@@ -100,14 +100,14 @@ namespace QuanLyDuLich.GUI
             {
                 if (lichTrinhTour.SelectedNode.Level == 1)
                 {
-                     ChiTietNode ctNode = (ChiTietNode)lichTrinhTour.SelectedNode;
-                     LichTrinhNode ltNode = (LichTrinhNode) ctNode.Parent;
-                     ltNode.LichTrinh.pChiTietLichTrinh.Remove(ctNode.ChiTiet);
-                     lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
+                    ChiTietNode ctNode = (ChiTietNode)lichTrinhTour.SelectedNode;
+                    LichTrinhNode ltNode = (LichTrinhNode)ctNode.Parent;
+                    ltNode.LichTrinh.pChiTietLichTrinh.Remove(ctNode.ChiTiet);
+                    lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
                 }
-                    
+
             }
-            
+
         }
 
         void xoaTatCa(object sender, EventArgs e)
@@ -125,12 +125,22 @@ namespace QuanLyDuLich.GUI
         {
 
             //this.panelDanhSachTour
-            for (int i = 0; i < 10; i++)
+
+            dalTour _dalTour = new dalTour();
+            List<dtoTour> ltour = _dalTour.LayDanhSachTour(1);
+            foreach (dtoTour i in ltour)
             {
                 XemTour x = new XemTour();
                 x.Size = new Size(370, 249);
                 this.panelDanhSachTour.Controls.Add(x);
+                
+                
             }
+
+            
+
+
+
             #region LAP_TOUR
 
             this.lichTrinhTour.ContextMenu = new ContextMenu();
@@ -184,7 +194,7 @@ namespace QuanLyDuLich.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-                        
+
 
             if (cbHuongDanVien.SelectedItem == null)
             {
@@ -220,7 +230,7 @@ namespace QuanLyDuLich.GUI
                 return;
             }
 
-            
+
             tour.NhaXe.MaDoiTac = ((dtoDoiTac)cbNhaXe.SelectedItem).MADOITAC;
             tour.HuongDanVien.MaDoiTac = ((dtoDoiTac)cbHuongDanVien.SelectedItem).MADOITAC;
             tour.TenTour = txtTenTour.Text;
@@ -229,7 +239,7 @@ namespace QuanLyDuLich.GUI
 
             tour.NgayDi = dtNgayDi.Value;
             tour.ThoiGian = txtThoiGianDi.Text;
-            tour.TongGiaTour =  "0";
+            tour.TongGiaTour = "0";
             tour.TrangThai = "MOI_LAP";
             tour.UuDai = txtUuDai.Text;
             tour.MaNhanVien = nguoiLapTour;
@@ -255,7 +265,7 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Đã có lỗi xảy ra với cơ sở dữ liệu!");
             }
 
-            
+
 
         }
 

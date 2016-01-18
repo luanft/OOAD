@@ -24,7 +24,7 @@ namespace DataAccessLayer
                 + "VALUES('" + lichTrinh.MATOUR + "',N'" + lichTrinh.TENLICHTRINH + "','" + lichTrinh.NGAY + "')";
                 if (this.Write(sql))
                 {
-                    DataTable dt = this.Read("select MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = " + lichTrinh.MATOUR);
+                    DataTable dt = this.Read("select max(MALICHTRINH) as MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = " + lichTrinh.MATOUR);
                     maLichTrinh = int.Parse(dt.Rows[0]["MALICHTRINH"].ToString());
                 }
 
