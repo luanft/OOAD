@@ -221,9 +221,9 @@ namespace QuanLyDuLich.GUI
             }
 
             
-            tour.NhaXe.MaDoiTac = ((DoiTac)cbNhaXe.SelectedItem).MaDoiTac;
-            tour.HuongDanVien.MaDoiTac = ((DoiTac)cbHuongDanVien.SelectedItem).MaDoiTac;
-            tour.TenTour = tour.TenTour;
+            tour.NhaXe.MaDoiTac = ((dtoDoiTac)cbNhaXe.SelectedItem).MADOITAC;
+            tour.HuongDanVien.MaDoiTac = ((dtoDoiTac)cbHuongDanVien.SelectedItem).MADOITAC;
+            tour.TenTour = txtTenTour.Text;
             tour.TenKhachHang = ((dtoKhachHang)cbNguoiDaiDien.SelectedItem).NGUOIDAIDIEN;
             tour.KhachHang.pMaKhachHang = ((dtoKhachHang)cbNguoiDaiDien.SelectedItem).MAKHACHHANG;
 
@@ -233,6 +233,8 @@ namespace QuanLyDuLich.GUI
             tour.TrangThai = "MOI_LAP";
             tour.UuDai = txtUuDai.Text;
             tour.MaNhanVien = nguoiLapTour;
+
+            tour.NgayLapTour = DateTime.Now;
 
             if (tour.Luu())
             {
@@ -246,6 +248,7 @@ namespace QuanLyDuLich.GUI
                 txtUuDai.Text = "";
                 txtThoiGianDi.Text = "";
                 txtGhiChu.Text = "";
+                lichTrinhTour.Nodes.Clear();
             }
             else
             {

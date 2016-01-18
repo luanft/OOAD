@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabQuanLyTour = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDanhSachTour = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabQuanLyKhachHang = new System.Windows.Forms.TabPage();
             this.bt_HuyKH = new System.Windows.Forms.Button();
             this.bt_LuuKH = new System.Windows.Forms.Button();
             this.bt_XoaKH = new System.Windows.Forms.Button();
@@ -69,7 +68,7 @@
             this.Chon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabQuanLyDiemDuLich = new System.Windows.Forms.TabPage();
             this.bt_CapNhatDDL = new System.Windows.Forms.Button();
             this.bt_ThemDiemDL = new System.Windows.Forms.Button();
             this.cb_TinhThanh = new System.Windows.Forms.ComboBox();
@@ -81,7 +80,7 @@
             this.cb_ChonTinhThanh = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabLapTour = new System.Windows.Forms.TabPage();
             this.panelLapTour = new System.Windows.Forms.Panel();
             this.dtNgayDi = new System.Windows.Forms.DateTimePicker();
             this.cbNguoiDaiDien = new System.Windows.Forms.ComboBox();
@@ -112,41 +111,40 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabQuanLyTour.SuspendLayout();
+            this.tabQuanLyKhachHang.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dG_DanhSachKhachHang)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabQuanLyDiemDuLich.SuspendLayout();
+            this.tabLapTour.SuspendLayout();
             this.panelLapTour.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabQuanLyTour);
+            this.tabControl1.Controls.Add(this.tabQuanLyKhachHang);
+            this.tabControl1.Controls.Add(this.tabQuanLyDiemDuLich);
+            this.tabControl1.Controls.Add(this.tabLapTour);
             this.tabControl1.Location = new System.Drawing.Point(3, 48);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1193, 527);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage2
+            // tabQuanLyTour
             // 
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.panelDanhSachTour);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1185, 501);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Quản lý tour";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabQuanLyTour.Controls.Add(this.comboBox1);
+            this.tabQuanLyTour.Controls.Add(this.label2);
+            this.tabQuanLyTour.Controls.Add(this.panelDanhSachTour);
+            this.tabQuanLyTour.Controls.Add(this.label1);
+            this.tabQuanLyTour.Location = new System.Drawing.Point(4, 22);
+            this.tabQuanLyTour.Name = "tabQuanLyTour";
+            this.tabQuanLyTour.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQuanLyTour.Size = new System.Drawing.Size(1185, 501);
+            this.tabQuanLyTour.TabIndex = 1;
+            this.tabQuanLyTour.Text = "Quản lý tour";
+            this.tabQuanLyTour.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -184,31 +182,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách tour đã lập:";
             // 
-            // button3
+            // tabQuanLyKhachHang
             // 
-            this.button3.Location = new System.Drawing.Point(1032, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Thêm tour mới";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.bt_HuyKH);
-            this.tabPage1.Controls.Add(this.bt_LuuKH);
-            this.tabPage1.Controls.Add(this.bt_XoaKH);
-            this.tabPage1.Controls.Add(this.bt_CapNhatKhachHang);
-            this.tabPage1.Controls.Add(this.bt_ThemKH);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.dG_DanhSachKhachHang);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1185, 501);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Quản lý khách hàng";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabQuanLyKhachHang.Controls.Add(this.bt_HuyKH);
+            this.tabQuanLyKhachHang.Controls.Add(this.bt_LuuKH);
+            this.tabQuanLyKhachHang.Controls.Add(this.bt_XoaKH);
+            this.tabQuanLyKhachHang.Controls.Add(this.bt_CapNhatKhachHang);
+            this.tabQuanLyKhachHang.Controls.Add(this.bt_ThemKH);
+            this.tabQuanLyKhachHang.Controls.Add(this.groupBox1);
+            this.tabQuanLyKhachHang.Controls.Add(this.label5);
+            this.tabQuanLyKhachHang.Controls.Add(this.dG_DanhSachKhachHang);
+            this.tabQuanLyKhachHang.Location = new System.Drawing.Point(4, 22);
+            this.tabQuanLyKhachHang.Name = "tabQuanLyKhachHang";
+            this.tabQuanLyKhachHang.Size = new System.Drawing.Size(1185, 501);
+            this.tabQuanLyKhachHang.TabIndex = 2;
+            this.tabQuanLyKhachHang.Text = "Quản lý khách hàng";
+            this.tabQuanLyKhachHang.UseVisualStyleBackColor = true;
             // 
             // bt_HuyKH
             // 
@@ -511,10 +500,10 @@
             // 
             // Chon
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Chon.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Chon.DefaultCellStyle = dataGridViewCellStyle1;
             this.Chon.HeaderText = "Chọn";
             this.Chon.Name = "Chon";
             this.Chon.Width = 50;
@@ -531,25 +520,25 @@
             this.TenKhachHang.HeaderText = "Người đại diện";
             this.TenKhachHang.Name = "TenKhachHang";
             // 
-            // tabPage3
+            // tabQuanLyDiemDuLich
             // 
-            this.tabPage3.Controls.Add(this.bt_CapNhatDDL);
-            this.tabPage3.Controls.Add(this.bt_ThemDiemDL);
-            this.tabPage3.Controls.Add(this.cb_TinhThanh);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.tb_MoTa);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.tb_DiemDL);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.cb_ChonTinhThanh);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.listBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1185, 501);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Quản lý điểm du lịch";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabQuanLyDiemDuLich.Controls.Add(this.bt_CapNhatDDL);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.bt_ThemDiemDL);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.cb_TinhThanh);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.label18);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.tb_MoTa);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.label17);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.tb_DiemDL);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.label16);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.cb_ChonTinhThanh);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.label15);
+            this.tabQuanLyDiemDuLich.Controls.Add(this.listBox1);
+            this.tabQuanLyDiemDuLich.Location = new System.Drawing.Point(4, 22);
+            this.tabQuanLyDiemDuLich.Name = "tabQuanLyDiemDuLich";
+            this.tabQuanLyDiemDuLich.Size = new System.Drawing.Size(1185, 501);
+            this.tabQuanLyDiemDuLich.TabIndex = 3;
+            this.tabQuanLyDiemDuLich.Text = "Quản lý điểm du lịch";
+            this.tabQuanLyDiemDuLich.UseVisualStyleBackColor = true;
             // 
             // bt_CapNhatDDL
             // 
@@ -710,20 +699,20 @@
             this.listBox1.Size = new System.Drawing.Size(309, 433);
             this.listBox1.TabIndex = 0;
             // 
-            // tabPage4
+            // tabLapTour
             // 
-            this.tabPage4.Controls.Add(this.panelLapTour);
-            this.tabPage4.Controls.Add(this.btnHuy);
-            this.tabPage4.Controls.Add(this.btnLuu);
-            this.tabPage4.Controls.Add(this.btnThem);
-            this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1185, 501);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "Lập tour";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabLapTour.Controls.Add(this.panelLapTour);
+            this.tabLapTour.Controls.Add(this.btnHuy);
+            this.tabLapTour.Controls.Add(this.btnLuu);
+            this.tabLapTour.Controls.Add(this.btnThem);
+            this.tabLapTour.Controls.Add(this.label19);
+            this.tabLapTour.Location = new System.Drawing.Point(4, 22);
+            this.tabLapTour.Name = "tabLapTour";
+            this.tabLapTour.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLapTour.Size = new System.Drawing.Size(1185, 501);
+            this.tabLapTour.TabIndex = 4;
+            this.tabLapTour.Text = "Lập tour";
+            this.tabLapTour.UseVisualStyleBackColor = true;
             // 
             // panelLapTour
             // 
@@ -758,7 +747,7 @@
             // 
             this.dtNgayDi.CustomFormat = "dd-mm-yyyy";
             this.dtNgayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayDi.Location = new System.Drawing.Point(984, 11);
             this.dtNgayDi.Name = "dtNgayDi";
             this.dtNgayDi.Size = new System.Drawing.Size(163, 26);
@@ -1036,17 +1025,17 @@
             this.Text = "Nhân viên sale tour";
             this.Load += new System.EventHandler(this.frmNhanVienSaleTour_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabQuanLyTour.ResumeLayout(false);
+            this.tabQuanLyTour.PerformLayout();
+            this.tabQuanLyKhachHang.ResumeLayout(false);
+            this.tabQuanLyKhachHang.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dG_DanhSachKhachHang)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tabQuanLyDiemDuLich.ResumeLayout(false);
+            this.tabQuanLyDiemDuLich.PerformLayout();
+            this.tabLapTour.ResumeLayout(false);
+            this.tabLapTour.PerformLayout();
             this.panelLapTour.ResumeLayout(false);
             this.panelLapTour.PerformLayout();
             this.ResumeLayout(false);
@@ -1057,10 +1046,9 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabPage tabQuanLyTour;
+        private System.Windows.Forms.TabPage tabQuanLyKhachHang;
+        private System.Windows.Forms.TabPage tabQuanLyDiemDuLich;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel panelDanhSachTour;
         private System.Windows.Forms.Label label2;
@@ -1103,7 +1091,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button bt_CapNhatDDL;
         private System.Windows.Forms.Button bt_ThemDiemDL;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabLapTour;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button bt_HuyKH;
