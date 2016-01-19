@@ -83,22 +83,35 @@ namespace DataAccessLayer
             return listTour;
         }
 
+
+        public int GetLastInsert(int maNv)
+        {
+            int ma = -1;
+            if (Connect())
+            {
+                DataRow dr = Read("select max(MATOUR) as MATOUR from TOUR where MANHANVIEN = "+maNv).Rows[0];
+                ma = int.Parse(dr["MATOUR"].ToString());
+                Close();
+            }
+            return ma;
+        }
+
         public Tour LoadTour(int maTour)
         {
             Tour t = new Tour();
             dalLichTrinh dalLt = new dalLichTrinh();
+            dalKhachHang dalKh = new dalKhachHang();
+            dalDoiTac dalDt = new dalDoiTac();
+            
             if(this.Connect())
             {
                 string sql = "select * from [dbo].[TOUR] where [MATOUR] = " + maTour;
                 DataTable data = this.Read(sql);
                 DataRow dr = data.Rows[0];
                 t.MaTour = int.Parse(dr["MATOUR"].ToString());
-                t.HuongDanVien = new DoiTac();
-                t.HuongDanVien.MaDoiTac = int.Parse(dr["HUONGDANVIEN"].ToString());
-                t.KhachHang = new KhachHang();
-                t.KhachHang.pMaKhachHang = int.Parse(dr["MAKHACHHANG"].ToString());
-                t.NhaXe = new DoiTac();
-                t.NhaXe.MaDoiTac = int.Parse(dr["NHAXE"].ToString());
+                t.HuongDanVien = dalDt.LoadDoiTac(int.Parse(dr["HUONGDANVIEN"].ToString()));                
+                t.KhachHang = dalKh.LoadKH(int.Parse(dr["MAKHACHHANG"].ToString()));              
+                t.NhaXe = dalDt.LoadDoiTac(int.Parse(dr["NHAXE"].ToString()));                
                 t.MaNhanVien = int.Parse(dr["MANHANVIEN"].ToString());
                 t.TenTour = dr["TENTOUR"].ToString();
                 t.ThoiGian = dr["THOIGIAN"].ToString();
@@ -112,6 +125,56 @@ namespace DataAccessLayer
                 this.Close();
             }
             return t;
+        }
+
+        public List<int> getYears()
+        {
+            List<int> year = new List<int>();
+            if(this.Connect())
+            {
+                DataTable dt = Read("select distinct YEAR(NGAYLAPTOUR) as NAM from TOUR");
+                foreach(DataRow dr in dt.Rows)
+                {
+                    year.Add( int.Parse( dr["NAM"].ToString()));
+                }
+                Close();
+            }
+            return year;
+            
+        }
+
+        public List<dtoTour> LayDanhSachTour(int maNhanVien,int year)
+        {
+            List<dtoTour> listTour = new List<dtoTour>();
+            if (this.Connect())
+            {
+
+
+                string sql = "select * from [dbo].[TOUR] where [MANHANVIEN] = "+maNhanVien+" and year(NGAYLAPTOUR) = "+year+" order by MATOUR desc";
+                DataTable dtDoiTac = this.Read(sql);
+
+
+                foreach (DataRow dr in dtDoiTac.Rows)
+                {
+                    dtoTour dto = new dtoTour();
+                    dto.MATOUR = int.Parse(dr["MATOUR"].ToString());
+                    dto.HUONGDANVIEN = int.Parse(dr["HUONGDANVIEN"].ToString());
+                    dto.MAKHACHHANG = int.Parse(dr["MAKHACHHANG"].ToString());
+                    dto.NHAXE = int.Parse(dr["NHAXE"].ToString());
+                    dto.MANHANVIEN = int.Parse(dr["MANHANVIEN"].ToString());
+                    dto.TENTOUR = dr["TENTOUR"].ToString();
+                    dto.THOIGIAN = dr["THOIGIAN"].ToString();
+                    dto.NGAYDI = DateTime.Parse(dr["NGAYDI"].ToString());
+                    dto.TRANGTHAI = dr["TRANGTHAI"].ToString();
+                    dto.UUDAI = dr["UUDAI"].ToString();
+                    dto.GHICHU = dr["GHICHU"].ToString();
+                    dto.TONGGIATOUR = int.Parse(dr["TONGGIATOUR"].ToString());
+                    dto.NGAYLAPTOUR = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                    listTour.Add(dto);
+                }
+                this.Close();
+            }
+            return listTour;
         }
 
         public List<dtoTour> LayDanhSachTour(int maNhanVien)
@@ -154,11 +217,14 @@ namespace DataAccessLayer
             if (this.Connect())
             {
                 string sql = "delete from CHITIETLICHTRINH where CHITIETLICHTRINH.MALICHTRINH in (select LICHTRINH.MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = "+maTour+")";
-                sql ="DELETE FROM [dbo].[TOUR] WHERE [MATOUR]='" + maTour + "'";
+                this.Write(sql);
+                sql = "delete from LICHTRINH where MATOUR = "+maTour;
+                this.Write(sql);
+                sql = "delete from TOUR where MATOUR = " + maTour;
                 this.Write(sql);
                 this.Close();
+                rs = true;
             }
-
             return rs;
         }
 

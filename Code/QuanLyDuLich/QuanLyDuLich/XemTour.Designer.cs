@@ -159,6 +159,7 @@
             // llDanhDauBan
             // 
             this.llDanhDauBan.AutoSize = true;
+            this.llDanhDauBan.Enabled = false;
             this.llDanhDauBan.Location = new System.Drawing.Point(218, 219);
             this.llDanhDauBan.Name = "llDanhDauBan";
             this.llDanhDauBan.Size = new System.Drawing.Size(87, 15);

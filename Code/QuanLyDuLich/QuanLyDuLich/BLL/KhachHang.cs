@@ -16,7 +16,13 @@ namespace BLL
 	public class KhachHang
 	{
         private int MaKhachHang;
+        private int MaNhanVien;
 
+        public int pMaNhanVien
+        {
+            get { return MaNhanVien; }
+            set { MaNhanVien = value; }
+        }
         public int pMaKhachHang
         {
             get { return MaKhachHang; }

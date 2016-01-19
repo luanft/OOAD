@@ -3,6 +3,7 @@ using DataAccessLayer;
 using DataTranferObject;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,13 @@ namespace QuanLyDuLich.GUI
     partial class frmNhanVienSaleTour : Form
     {
         private bool capNhatTour = false;
-        int nguoiLapTour = 1;
+        int maNhanVien = 1;
+
+        public int MaNhanVien
+        {
+            get { return maNhanVien; }
+            set { maNhanVien = value; }
+        }
         private Tour tour;
         void cbNguoiDaiDien_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -130,7 +137,8 @@ namespace QuanLyDuLich.GUI
             //this.panelDanhSachTour
 
             dalTour _dalTour = new dalTour();
-            List<dtoTour> ltour = _dalTour.LayDanhSachTour(1);
+            
+            List<dtoTour> ltour = _dalTour.LayDanhSachTour(MaNhanVien);
             foreach (dtoTour i in ltour)
             {
                 XemTour x = new XemTour();
@@ -140,8 +148,12 @@ namespace QuanLyDuLich.GUI
                 x.OnEditing += ChinhSuaTour;
                 x.OnDeleting += xoaTour;
             }
-
-
+            
+            List<int> years = _dalTour.getYears();
+            foreach(int i in years)
+            {
+                cbYear.Items.Add(i);
+            }            
 
 
 
@@ -160,7 +172,7 @@ namespace QuanLyDuLich.GUI
             this.txtNgayLap.Text = DateTime.Now.ToShortDateString();
 
             dalKhachHang dalKH = new dalKhachHang();
-            List<dtoKhachHang> danhSachKhachHang = dalKH.LayDanhSachKhachHang(1);
+            List<dtoKhachHang> danhSachKhachHang = dalKH.LayDanhSachKhachHang(MaNhanVien);
 
             foreach (dtoKhachHang k in danhSachKhachHang)
             {
@@ -305,15 +317,14 @@ namespace QuanLyDuLich.GUI
             tour.TongGiaTour = "0";
             tour.TrangThai = "MOI_LAP";
             tour.UuDai = txtUuDai.Text;
-            tour.MaNhanVien = nguoiLapTour;
+            tour.MaNhanVien = MaNhanVien;
             tour.GhiChu = txtGhiChu.Text;
             tour.NgayLapTour = DateTime.Now;
 
             if (capNhatTour)
             {
                 if (tour.ChinhSuaTour())
-                {
-                    MessageBox.Show("Đã lưu tour!");
+                {                    
                     btnThem.Enabled = true;
                     btnLuu.Enabled = false;
                     btnHuy.Enabled = false;
@@ -324,6 +335,8 @@ namespace QuanLyDuLich.GUI
                     txtGhiChu.Text = "";
                     lichTrinhTour.Nodes.Clear();
                     capNhatTour = false;
+                    frmXemChiTietTour xem = new frmXemChiTietTour(tour);
+                    xem.ShowDialog();
                 }
                 else
                 {
@@ -333,9 +346,7 @@ namespace QuanLyDuLich.GUI
             else
             {
                 if (tour.Luu())
-                {
-
-                    MessageBox.Show("Đã lưu tour!");
+                {                    
                     btnThem.Enabled = true;
                     btnLuu.Enabled = false;
                     btnHuy.Enabled = false;
@@ -345,6 +356,27 @@ namespace QuanLyDuLich.GUI
                     txtThoiGianDi.Text = "";
                     txtGhiChu.Text = "";
                     lichTrinhTour.Nodes.Clear();
+                    dalTour dal = new dalTour();
+                    int ma = dal.GetLastInsert(maNhanVien);
+                    if(ma > 0)
+                    {
+                        frmXemChiTietTour xem = new frmXemChiTietTour(dal.LoadTour(ma));
+                        xem.ShowDialog();
+                    }
+                    dalTour _dalTour = new dalTour();
+
+
+                    panelDanhSachTour.Controls.Clear();
+                    List<dtoTour> ltour = _dalTour.LayDanhSachTour(MaNhanVien);
+                    foreach (dtoTour i in ltour)
+                    {
+                        XemTour x = new XemTour();
+                        x.Size = new Size(370, 249);
+                        this.panelDanhSachTour.Controls.Add(x);
+                        x.init(i);
+                        x.OnEditing += ChinhSuaTour;
+                        x.OnDeleting += xoaTour;
+                    }                    
                 }
                 else
                 {
@@ -369,5 +401,25 @@ namespace QuanLyDuLich.GUI
             txtGhiChu.Text = "";
         }
 
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbYear.SelectedItem != null)
+            {
+                panelDanhSachTour.Controls.Clear();
+                dalTour _dalTour = new dalTour();
+                int dr = (int)cbYear.SelectedItem;
+                List<dtoTour> ltour = _dalTour.LayDanhSachTour(MaNhanVien,dr);
+                foreach (dtoTour i in ltour)
+                {
+                    XemTour x = new XemTour();
+                    x.Size = new Size(370, 249);
+                    this.panelDanhSachTour.Controls.Add(x);
+                    x.init(i);
+                    x.OnEditing += ChinhSuaTour;
+                    x.OnDeleting += xoaTour;
+                }
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace DataAccessLayer
     using DataTranferObject;
     using System.Windows.Forms;
     using System.Data;
+    using BLL;
     public class dalKhachHang : dalObject
     {
         public bool ThemKhachHang(dtoKhachHang khachHang)
@@ -89,7 +90,7 @@ namespace DataAccessLayer
                 MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
                 return null;
             }
-            string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG = " + maKH ;
+            string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG = " + maKH;
             DataTable dtKhachHang = this.Read(sql);
 
             dtoKhachHang dto = new dtoKhachHang();
@@ -108,6 +109,36 @@ namespace DataAccessLayer
             }
             this.Close();
             return dto;
+        }
+
+
+        public KhachHang LoadKH(int maKH)
+        {
+            KhachHang kh = new KhachHang();
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[KHACHHANG] where MAKHACHHANG = " + maKH;
+            DataTable dtKhachHang = this.Read(sql);
+
+
+            DataRow dr = dtKhachHang.Rows[0];
+
+            kh.pMaKhachHang = Int32.Parse(dr[0].ToString());
+            kh.pMaNhanVien = Int32.Parse(dr[1].ToString());
+            kh.pTenDonVi = dr[2].ToString();
+            kh.pNguoiDaiDien = dr[3].ToString();
+            kh.pGioiTinh = dr[4].ToString();
+            kh.pEmail = dr[5].ToString();
+            kh.pSoDT = dr[6].ToString();
+            kh.pSoNguoi = Int32.Parse(dr[7].ToString());
+            kh.pDiaChi = dr[8].ToString();
+            kh.pLoaiKhachHang = dr[9].ToString();
+
+            this.Close();
+            return kh;
         }
 
         public List<dtoKhachHang> LayDanhSachKhachHang(int maNhanVien)

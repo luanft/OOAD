@@ -39,9 +39,19 @@ namespace QuanLyDuLich
             this.tour = tour;
             if (tour.TRANGTHAI != "MOI_LAP")
             {
-                llSubmit.Enabled = false;
-                llDanhDauBan.Enabled = false;
+                llSubmit.Enabled = false;                
             }
+            if (tour.TRANGTHAI == "XEP_DUYET")
+            {
+                llDanhDauBan.Enabled = true;
+            }
+
+            if (tour.TRANGTHAI == "DA_BAN")
+            {
+                llXoa.Enabled = false;
+                llChinhSua.Enabled = false;
+            }
+
         }
         private void XemTour_Load(object sender, EventArgs e)
         {
@@ -63,7 +73,8 @@ namespace QuanLyDuLich
 
         private void lbTenTour_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmXemChiTietTour frm = new frmXemChiTietTour();
+            dalTour dal = new dalTour();
+            frmXemChiTietTour frm = new frmXemChiTietTour(dal.LoadTour(tour.MATOUR));
             frm.ShowDialog();
         }
 
