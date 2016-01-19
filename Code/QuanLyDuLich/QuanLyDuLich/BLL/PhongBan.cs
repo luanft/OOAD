@@ -32,6 +32,10 @@ using System.Text;
         {
             return dalpb.LayDanhSachPhong();
         }
+        public dtoPhongBan LayThongTinPhong(string maphong)
+        {
+            return dalpb.LayThongTinPhong(maphong);
+        }
 		public IEnumerable<NhanVien> NhanVien;
 
 	}

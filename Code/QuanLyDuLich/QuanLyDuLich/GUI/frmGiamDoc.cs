@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DataAccessLayer;
 using DataTranferObject;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,16 @@ namespace QuanLyDuLich.GUI
 
         private void frmGiamDoc_Load(object sender, EventArgs e)
         {
+            #region QuanLyPhongBan
+            dataGridView_DanhSachPhong.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_DanhSachPhong.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_DanhSachPhong.AutoGenerateColumns = false;
+            LockControlValues(tabPage_QuanLyPhongBan);
+            #endregion
+            #region QuanLyNhanVien
+
+            dataGridView_DanhSachNhanVien.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_DanhSachNhanVien.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_DanhSachNhanVien.AutoGenerateColumns = false;
             LockControlValues(tabPage_QuanLyNhanVien);
 
@@ -39,17 +50,23 @@ namespace QuanLyDuLich.GUI
 
             NhanVien nhanvien = new NhanVien();
             dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(1);
+            dataGridView_DanhSachPhong.DataSource = lDTO_phongban;
+            #endregion
+            #region ThongKe
+            
+            dataGridView_ThongKe.AutoGenerateColumns = false;
+            label_NgayThongKe.Text = DateTime.Now.ToString("dd/MM/yyy");
+            #endregion
+            #region DinhGiaTour
+
+            #endregion
         }
 
         public void LockControlValues(System.Windows.Forms.Control Container)
         {
             try
             {
-                button_ThemNhanVien.Enabled = true;
-                button_XoaNhanVien.Enabled = true;
-                button_Sua.Enabled = true;
-                button_Huy.Enabled = false;
-                button_Luu.Enabled = false;
+
                 foreach (Control ctrl in Container.Controls)
                 {
                     if (ctrl.GetType() == typeof(TextBox))
@@ -123,7 +140,7 @@ namespace QuanLyDuLich.GUI
             }
         }
 
-
+        #region QuanLyNhanVien
         private void dataGridView_DanhSachNhanVien_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView_DanhSachNhanVien.SelectedCells.Count > 0)
@@ -131,7 +148,9 @@ namespace QuanLyDuLich.GUI
                 int selectedRowIndex = dataGridView_DanhSachNhanVien.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView_DanhSachNhanVien.Rows[selectedRowIndex];
                 NhanVien nhanvien = new NhanVien();
-                dtoNhanVien dto_nhanvien = nhanvien.LayThongTinNhanVien(Int32.Parse(selectedRow.Cells["MaNhanVien"].Value.ToString()));
+                GiamDoc giamdoc = new GiamDoc();
+                nhanvien = giamdoc.ChonNhanVien(Int32.Parse(selectedRow.Cells["MaNhanVien"].Value.ToString()));
+                dtoNhanVien dto_nhanvien = nhanvien.GetDTONhanVien();
                 textBox_HoTen.Text = dto_nhanvien.HOTEN;
                 if (dto_nhanvien.GIOITINH == "Nam")
                 {
@@ -166,6 +185,11 @@ namespace QuanLyDuLich.GUI
 
         private void comboBox1_PhongBan_SelectedIndexChanged(object sender, EventArgs e)
         {
+            button_ThemNhanVien.Enabled = true;
+            button_XoaNhanVien.Enabled = true;
+            button_Sua.Enabled = true;
+            button_Huy.Enabled = false;
+            button_Luu.Enabled = false;
             int select = comboBox1_PhongBan.SelectedIndex + 1;
             LockControlValues(tabPage_QuanLyNhanVien);
             NhanVien nhanvien = new NhanVien();
@@ -185,8 +209,14 @@ namespace QuanLyDuLich.GUI
             DialogResult dialogResult = MessageBox.Show("Những thông tin vừa được thêm vào sẽ không được lưu lại,bạn có muốn hủy không?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                comboBox2_PhongBan.Enabled = false;
+                button_ThemNhanVien.Enabled = true;
+                button_XoaNhanVien.Enabled = true;
+                button_Sua.Enabled = true;
+                button_Huy.Enabled = false;
+                button_Luu.Enabled = false;
                 LockControlValues(tabPage_QuanLyNhanVien);
-                dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);               
+                dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -201,6 +231,7 @@ namespace QuanLyDuLich.GUI
             UnLockControlValues(tabPage_QuanLyNhanVien);
             button_Sua.Enabled = false;
             button_XoaNhanVien.Enabled = false;
+            radioButton_Nam.Checked = true;
             NhanVien nhanvien = new NhanVien();
             List<dtoNhanVien> lDTO_nhanvien = nhanvien.LayDanhSachNhanVien();
             int MaxMaNV = 0;
@@ -254,19 +285,39 @@ namespace QuanLyDuLich.GUI
             }
             else
             {
+                bool ok = false;
                 if (nhanvien.CoTonTai(nhanvien.pMaNhanVien))
                 {
-                    nhanvien.CapNhat();
-                    MessageBox.Show("Thông tin nhân viên đã được cập nhật");
+                    if (nhanvien.CapNhat())
+                    {
+                        ok = true;
+                        MessageBox.Show("Thông tin nhân viên đã được cập nhật");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể ghi dữ liệu");
+                    }
+
                 }
                 else
                 {
-                    nhanvien.Luu();
-                    MessageBox.Show("Đã thêm nhân viên");
+                    if (nhanvien.Luu())
+                    {
+                        MessageBox.Show("Đã thêm nhân viên");
+                    }
+
+                    else
+                        MessageBox.Show("Có lỗi xảy ra, không thể thêm nhân viên");
                 }
                 comboBox1_PhongBan_SelectedIndexChanged(sender, e);
                 dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);
                 LockControlValues(tabPage_QuanLyNhanVien);
+                button_ThemNhanVien.Enabled = true;
+                button_XoaNhanVien.Enabled = true;
+                button_Sua.Enabled = true;
+                button_Huy.Enabled = false;
+                button_Luu.Enabled = false;
+                comboBox2_PhongBan.Enabled = false;
             }
         }
 
@@ -278,6 +329,11 @@ namespace QuanLyDuLich.GUI
             if (dialogResult == DialogResult.Yes)
             {
                 nhanvien.Xoa();
+                button_ThemNhanVien.Enabled = true;
+                button_XoaNhanVien.Enabled = true;
+                button_Sua.Enabled = true;
+                button_Huy.Enabled = false;
+                button_Luu.Enabled = false;
                 LockControlValues(tabPage_QuanLyNhanVien);
                 comboBox1_PhongBan_SelectedIndexChanged(sender, e);
                 dataGridView_DanhSachNhanVien_SelectionChanged(sender, e);
@@ -287,5 +343,54 @@ namespace QuanLyDuLich.GUI
                 //do something else
             }
         }
+        #endregion
+        #region ThongKe
+        private void button_ThongKe_Click(object sender, EventArgs e)
+        {
+            dalTour dal_tour = new dalTour();         
+            DataTable dt_thongke = dal_tour.LayDanhSachTourThongKe(dateTimePicker_TuNgay.Value, dateTimePicker_DenNgay.Value);
+            if (dt_thongke.Rows.Count < 1)
+            {
+                MessageBox.Show("Không có tour nào được bán trong khoảng thời gian được chọn!");
+            }
+            else
+            {
+                dataGridView_ThongKe.DataSource = dt_thongke;
+
+            }
+
+        }
+        private void dateTimePicker_TuNgay_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker_DenNgay.Value = dateTimePicker_TuNgay.Value;
+            dateTimePicker_DenNgay.MinDate = dateTimePicker_TuNgay.Value;
+        }
+        #endregion
+        #region DinhGiaTour
+
+        #endregion
+        #region QuanLyPhongBan
+        private void dataGridView_DanhSachPhong_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_DanhSachPhong.SelectedCells.Count > 0)
+            {
+                int selectedRowIndex = dataGridView_DanhSachPhong.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView_DanhSachPhong.Rows[selectedRowIndex];
+                PhongBan phongban = new PhongBan();
+                dtoPhongBan dto_phongban = phongban.LayThongTinPhong(selectedRow.Cells["MaPhong"].Value.ToString());
+                textBox_TenPhong.Text = dto_phongban.TENPHONG;
+                NhanVien nhanvien = new NhanVien();
+                List<dtoNhanVien> lDTO_nhanvien = nhanvien.LayDanhSachNhanVien(Int32.Parse(selectedRow.Cells["MaPhong"].Value.ToString()));
+                label_SoLuongNhanVien.Text = lDTO_nhanvien.Count.ToString();
+            }
+        }
+        #endregion
+
+      
+
+
+
+
+
     }
 }

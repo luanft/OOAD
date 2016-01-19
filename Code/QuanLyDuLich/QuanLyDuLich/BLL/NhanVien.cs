@@ -125,9 +125,28 @@ namespace BLL
         }
         public void SetNhanVien(dtoNhanVien dtonv)
         {
+            this.HoTen = dtonv.HOTEN;
             this.CMND = dtonv.CMND;
             this.DiaChi = dtonv.DIACHI ;
             this.Email = dtonv.EMAIL ;
+            this.GioiTinh = dtonv.GIOITINH;
+            this.MaNhanVien = dtonv.MANHANVIEN;
+            this.MaPhong = dtonv.MAPHONG;
+            this.MatKhau = dtonv.MATKHAU;
+            this.NgaySinh = dtonv.NGAYSINH;
+            this.QueQuan = dtonv.QUEQUAN;
+            this.SoDT = dtonv.SODT;
+        }
+        public NhanVien()
+        {
+
+        }
+        public NhanVien(dtoNhanVien dtonv)
+        {
+            this.HoTen = dtonv.HOTEN;
+            this.CMND = dtonv.CMND;
+            this.DiaChi = dtonv.DIACHI;
+            this.Email = dtonv.EMAIL;
             this.GioiTinh = dtonv.GIOITINH;
             this.MaNhanVien = dtonv.MANHANVIEN;
             this.MaPhong = dtonv.MAPHONG;

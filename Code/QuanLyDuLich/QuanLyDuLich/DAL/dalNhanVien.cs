@@ -21,7 +21,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[NHANVIEN] ([MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU]) VALUES ('"
-                + nhanVien.MAPHONG + "','" + nhanVien.HOTEN + "','" + nhanVien.CMND + "','" + nhanVien.DIACHI + "','" + nhanVien.NGAYSINH + "','" + nhanVien.QUEQUAN + "','" + nhanVien.SODT + "','" + nhanVien.EMAIL + "','" + nhanVien.GIOITINH + "','" + nhanVien.MATKHAU + "')";
+                + nhanVien.MAPHONG + "',N'" + nhanVien.HOTEN + "','" + nhanVien.CMND + "',N'" + nhanVien.DIACHI + "','" + nhanVien.NGAYSINH.ToShortDateString() + "',N'" + nhanVien.QUEQUAN + "','" + nhanVien.SODT + "','" + nhanVien.EMAIL + "',N'" + nhanVien.GIOITINH + "','" + nhanVien.MATKHAU + "')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -56,14 +56,14 @@ namespace DataAccessLayer
             }
             string sql = "UPDATE [dbo].[NHANVIEN]" +
               "SET [MAPHONG] = '" + nhanVien.MAPHONG +
-              "' ,[HOTEN] = '" + nhanVien.HOTEN +
+              "',[HOTEN] = N'" + nhanVien.HOTEN +
               "',[CMND] = '" + nhanVien.CMND +
-              "',[DIACHI] = '" + nhanVien.DIACHI +
+              "',[DIACHI] = N'" + nhanVien.DIACHI +
               "',[NGAYSINH] = '" + nhanVien.NGAYSINH +
-              "',[QUEQUAN] = '" + nhanVien.QUEQUAN +
+              "',[QUEQUAN] = N'" + nhanVien.QUEQUAN +
               "',[SODT] = '" + nhanVien.SODT +
               "',[EMAIL] = '" + nhanVien.EMAIL +
-              "',[GIOITINH] = '" + nhanVien.GIOITINH +
+              "',[GIOITINH] = N'" + nhanVien.GIOITINH +
               "',[MATKHAU] = '" + nhanVien.MATKHAU +
               "' WHERE [MANHANVIEN]='" + nhanVien.MANHANVIEN + "'";
             if (this.Write(sql))

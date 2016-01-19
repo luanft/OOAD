@@ -250,7 +250,19 @@ namespace DataAccessLayer
             throw new System.NotImplementedException();
         }
 
-        
+        public DataTable LayDanhSachTourThongKe(DateTime tungay, DateTime denngay)
+        {
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return null;
+            }
+            string sql = "select * from [dbo].[TOUR],[dbo].[NHANVIEN] where NGAYDI >= '" + tungay.Date + "' and NGAYDI<='" + denngay.Date + "' and NHANVIEN.MANHANVIEN = TOUR.MANHANVIEN  order by NGAYDI ASC";
+            DataTable dtTour = this.Read(sql);
+            this.Close();
+
+            return dtTour;
+        }
     }
 }
 

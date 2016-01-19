@@ -21,7 +21,7 @@ namespace DataAccessLayer
             {                
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[PHONGBAN] ([TENPHONG]) VALUES "+phongban.TENPHONG;
+            string sql = "INSERT INTO [dbo].[PHONGBAN] ([TENPHONG],[MAPHONG]) VALUES (N'" + phongban.TENPHONG+"',N'"+phongban.MAPHONG+"')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -52,7 +52,7 @@ namespace DataAccessLayer
             {
                 return false;
             }            
-            string sql = "UPDATE [dbo].[PHONGBAN] SET [TENPHONG] = " +phongban.TENPHONG +" WHERE [MAPHONG] ="+phongban.MAPHONG;
+            string sql = "UPDATE [dbo].[PHONGBAN] SET [TENPHONG] = N'" +phongban.TENPHONG +"' WHERE [MAPHONG] ='"+phongban.MAPHONG+"'";
             bool ok = this.Write(sql);
             if (this.Write(sql))
             {
@@ -84,11 +84,29 @@ namespace DataAccessLayer
                     lDtoPhongBan.Add(dto_PhongBan);
                 }
                 return lDtoPhongBan;
+            }                                
+        }
+        public dtoPhongBan LayThongTinPhong(string maphong)
+        {
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với cơ sở dữ liệu");
+                return null;
             }
-           
-            
+            else
+            {
+                string sql = "SELECT [MAPHONG],[TENPHONG] FROM [dbo].[PHONGBAN] where MAPHONG='"+maphong+"'";
+                DataTable dtPhongBan = this.Read(sql);
+                this.Close();
 
-         
+               
+                    dtoPhongBan dto_PhongBan = new dtoPhongBan();
+                    dto_PhongBan.MAPHONG = Int32.Parse(dtPhongBan.Rows[0][0].ToString());
+                    dto_PhongBan.TENPHONG = dtPhongBan.Rows[0][1].ToString();
+                   
+             
+                return dto_PhongBan;
+            }
         }
 	}
 }

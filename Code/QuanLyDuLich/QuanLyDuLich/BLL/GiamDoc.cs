@@ -21,8 +21,7 @@ namespace BLL
 		{
             dalNhanVien dalnv = new dalNhanVien();
             dtoNhanVien dtonv = dalnv.LayThongTinNhanVien(manv);
-            NhanVien nhanvien = new NhanVien();
-            nhanvien.SetNhanVien(dtonv);
+            NhanVien nhanvien = new NhanVien(dtonv);            
             return nhanvien;
 		}
 
@@ -34,8 +33,7 @@ namespace BLL
 
 		public bool ThemNhanVien(dtoNhanVien data)
 		{
-			NhanVien nhanvien = new NhanVien();
-            SetNhanVien(data);
+            NhanVien nhanvien = new NhanVien(data);            
             return nhanvien.Luu();
 		}
 
