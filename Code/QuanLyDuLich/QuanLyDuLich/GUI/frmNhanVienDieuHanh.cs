@@ -44,7 +44,7 @@ namespace QuanLyDuLich.GUI
             get { return nvDieuHanh; }
             set { nvDieuHanh = value; }
         }
-        
+
         public frmNhanVienDieuHanh()
         {
             InitializeComponent();
@@ -53,7 +53,7 @@ namespace QuanLyDuLich.GUI
 
             nvDieuHanh = new NVDieuHanh();
             dsDoiTac = nvDieuHanh.pDanhSachDoiTac;
-            
+
         }
 
         public frmNhanVienDieuHanh(int manv)
@@ -68,7 +68,7 @@ namespace QuanLyDuLich.GUI
         }
 
         private void frmNhanVienDieuHanh_Load(object sender, EventArgs e)
-        {            
+        {
             List<string> dsLoaiDoiTac = new List<string>();
             foreach (DoiTac dt in dsDoiTac)
             {
@@ -78,7 +78,7 @@ namespace QuanLyDuLich.GUI
             BindingSource bsTenDoiTac = new BindingSource();
             bsTenDoiTac.DataSource = dsLoaiDoiTac;
             combLoaiDoiTac.DataSource = bsTenDoiTac;
-            
+
             //binding list DoiTac to datagridview
             BindingSource bsDanhSachDoiTac = new BindingSource();
             bsDanhSachDoiTac.DataSource = dsDoiTac;
@@ -87,46 +87,56 @@ namespace QuanLyDuLich.GUI
             //binding list tour to datagridview
             dgvDuyetTour.DataSource = nvDieuHanh.pDanhSachTourCanDuyet;
             lbSoTour.Text = "CÓ " + nvDieuHanh.pDanhSachTourCanDuyet.Count + " TOUR CẦN DUYỆT";
-            lbSoTour.Location = new Point((this.Size.Width - lbSoTour.Size.Width)/2, lbSoTour.Location.Y);
+            lbSoTour.Location = new Point((this.Size.Width - lbSoTour.Size.Width) / 2, lbSoTour.Location.Y);
         }
 
         private void btnThemDoiTac_Click(object sender, EventArgs e)
         {
             loaiFormCon = "add";
-            frmThemDoiTac frm = new frmThemDoiTac(this);            
+            frmThemDoiTac frm = new frmThemDoiTac(this);
             frm.Show();
-        }    
+        }
 
         private void btnXoaDoiTac_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa (những) đối tác này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if(rs == System.Windows.Forms.DialogResult.Yes)
-            foreach (DataGridViewRow row in dgvDoiTac.SelectedRows)
+            if (dgvDoiTac.SelectedRows.Count != 0)
             {
-                DoiTac doiTac = nvDieuHanh.ChonDoiTac(int.Parse(row.Cells["col_MaDoiTac"].Value.ToString()));
-                doiTac.Xoa();
-                dgvDoiTac.Rows.Remove(row);
-            }            
+                DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa (những) đối tác này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (rs == System.Windows.Forms.DialogResult.Yes)
+                    foreach (DataGridViewRow row in dgvDoiTac.SelectedRows)
+                    {
+                        DoiTac doiTac = nvDieuHanh.ChonDoiTac(int.Parse(row.Cells["col_MaDoiTac"].Value.ToString()));
+                        doiTac.Xoa();
+                        dgvDoiTac.Rows.Remove(row);
+                    }
+            }
+            else
+                MessageBox.Show("Vui lòng chọn 1 hoặc nhiều dòng để xóa!", "Thông báo");
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
+        public void capNhatForm()
         {
             BindingSource bsDanhSachDoiTac = new BindingSource();
             bsDanhSachDoiTac.DataSource = dsDoiTac;
             dgvDoiTac.DataSource = bsDanhSachDoiTac;
-            dgvDoiTac.Refresh();            
+            dgvDoiTac.Refresh();
         }
 
         private void btnSuaDoiTac_Click(object sender, EventArgs e)
         {
-            dsDoiTacCapNhat = new List<DoiTac>();
-            loaiFormCon = "update";
-            foreach (DataGridViewRow row in dgvDoiTac.SelectedRows)
+            if (dgvDoiTac.SelectedRows.Count != 0)
             {
-                dsDoiTacCapNhat.Add(nvDieuHanh.ChonDoiTac(int.Parse(row.Cells["col_MaDoiTac"].Value.ToString())));
+                dsDoiTacCapNhat = new List<DoiTac>();
+                loaiFormCon = "update";
+                foreach (DataGridViewRow row in dgvDoiTac.SelectedRows)
+                {
+                    dsDoiTacCapNhat.Add(nvDieuHanh.ChonDoiTac(int.Parse(row.Cells["col_MaDoiTac"].Value.ToString())));
+                }
+                frmThemDoiTac frm = new frmThemDoiTac(this);
+                frm.Show();
             }
-            frmThemDoiTac frm = new frmThemDoiTac(this);            
-            frm.Show();
+            else
+                MessageBox.Show("Vui lòng chọn 1 hoặc nhiều dòng để chỉnh sửa!", "Thông báo");
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -136,9 +146,10 @@ namespace QuanLyDuLich.GUI
                 if (nvDieuHanh.ChonTourCanDuyet(int.Parse(row.Cells["col_MaTour"].Value.ToString())).CapNhat())
                 {
                     MessageBox.Show("Cập nhật tour thành công!", "Thông báo");
-                }else
+                }
+                else
                     MessageBox.Show("Cập nhật tour lỗi!", "Thông báo");
-            }            
+            }
         }
 
         private void dgvDuyetTour_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -157,8 +168,9 @@ namespace QuanLyDuLich.GUI
                 this.Hide();
                 frmDN.ShowDialog();
                 this.Close();
-            }            
+            }
         }
+
 
     }
 }

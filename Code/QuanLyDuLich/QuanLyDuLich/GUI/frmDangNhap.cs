@@ -18,17 +18,25 @@ namespace QuanLyDuLich.GUI
         public frmDangNhap()
         {
             InitializeComponent();
+            txtEmail.Text = QuanLyDuLich.Properties.Settings.Default.UserName;
+            txtMatKhau.Text = QuanLyDuLich.Properties.Settings.Default.Password;
+            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            if (cbGhiNho.Checked)
+            {
+                QuanLyDuLich.Properties.Settings.Default.UserName = txtEmail.Text;
+                QuanLyDuLich.Properties.Settings.Default.Password = txtMatKhau.Text;
+            }
             if (txtEmail.Text != "" && txtMatKhau.Text != "")
             {
                 if (kiemTraEmailHopLe(txtEmail.Text))
                 {
                     NhanVien nv = new NhanVien();
                     if (nv.DangNhap(txtEmail.Text, txtMatKhau.Text))
-                    {
+                    {                        
                         this.Hide();
                         switch (nv.LayLoaiNV())
                         {

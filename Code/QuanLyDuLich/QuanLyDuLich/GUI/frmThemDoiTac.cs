@@ -64,7 +64,7 @@ namespace QuanLyDuLich.GUI
                     dt.DANHGIADOITAC = row.Cells["col_DanhGiaDoiTac"].Value.ToString();
                     dt.MANHANVIEN = nvDieuHanh.pMaNhanVien;
                     if (nvDieuHanh.ThemDoiTac(dt))
-                    {
+                    {                        
                         status = true;
                     }
                 }
@@ -74,6 +74,7 @@ namespace QuanLyDuLich.GUI
                 dgvDoiTac.Rows.Clear();
                 dgvDoiTac.Refresh();
                 MessageBox.Show("Thêm thành công", "Thông báo");
+                frmNhanVienDieuHanh.capNhatForm();
             }
             else
                 MessageBox.Show("Thêm không thành công", "Thông báo");
@@ -94,7 +95,7 @@ namespace QuanLyDuLich.GUI
                 dt.DANHGIADOITAC = row.Cells["col_DanhGiaDoiTac"].Value.ToString();
                 dt.MANHANVIEN = 1;
                 if (nvDieuHanh.CapNhat(this.frmNhanVienDieuHanh.DsDoiTacCapNhat[i++], dt))
-                {
+                {                    
                     status = true;
                 }
 
@@ -102,6 +103,7 @@ namespace QuanLyDuLich.GUI
             if (status)
             {
                 MessageBox.Show("Cập nhật thành công", "Thông báo");
+                frmNhanVienDieuHanh.capNhatForm();                
             }
             else
                 MessageBox.Show("Cập nhật không thành công", "Thông báo");

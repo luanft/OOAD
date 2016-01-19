@@ -30,6 +30,7 @@
         {
             this.btnThemDoiTac = new System.Windows.Forms.Button();
             this.dgvDoiTac = new System.Windows.Forms.DataGridView();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.col_TenDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LoaiDoiTac = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col_NguoiLienHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,20 +38,17 @@
             this.col_SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_DanhGiaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCapNhat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoiTac)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThemDoiTac
             // 
-            this.btnThemDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemDoiTac.AutoSize = true;
-            this.btnThemDoiTac.Location = new System.Drawing.Point(827, 331);
+            this.btnThemDoiTac.Location = new System.Drawing.Point(827, 369);
             this.btnThemDoiTac.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemDoiTac.Name = "btnThemDoiTac";
-            this.btnThemDoiTac.Size = new System.Drawing.Size(104, 40);
+            this.btnThemDoiTac.Size = new System.Drawing.Size(104, 46);
             this.btnThemDoiTac.TabIndex = 1;
             this.btnThemDoiTac.Text = "Thêm đối tác";
             this.btnThemDoiTac.UseVisualStyleBackColor = true;
@@ -73,8 +71,21 @@
             this.dgvDoiTac.Location = new System.Drawing.Point(20, 19);
             this.dgvDoiTac.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dgvDoiTac.Name = "dgvDoiTac";
-            this.dgvDoiTac.Size = new System.Drawing.Size(911, 303);
+            this.dgvDoiTac.Size = new System.Drawing.Size(911, 347);
             this.dgvDoiTac.TabIndex = 2;
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhat.AutoSize = true;
+            this.btnCapNhat.Location = new System.Drawing.Point(645, 369);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(174, 46);
+            this.btnCapNhat.TabIndex = 1;
+            this.btnCapNhat.Text = "Cập nhật thông tin đối tác";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // col_TenDoiTac
             // 
@@ -86,7 +97,6 @@
             // 
             // col_LoaiDoiTac
             // 
-            this.col_LoaiDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.col_LoaiDoiTac.DataPropertyName = "LoaiDoiTac";
             this.col_LoaiDoiTac.HeaderText = "Loại đối tác";
             this.col_LoaiDoiTac.Items.AddRange(new object[] {
@@ -94,10 +104,11 @@
             "NHAHANG",
             "HUONGDANVIEN",
             "KHACHSAN"});
+            this.col_LoaiDoiTac.MinimumWidth = 180;
             this.col_LoaiDoiTac.Name = "col_LoaiDoiTac";
             this.col_LoaiDoiTac.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_LoaiDoiTac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_LoaiDoiTac.Width = 106;
+            this.col_LoaiDoiTac.Width = 180;
             // 
             // col_NguoiLienHe
             // 
@@ -135,32 +146,18 @@
             this.col_DanhGiaDoiTac.HeaderText = "Đánh giá đối tác";
             this.col_DanhGiaDoiTac.Name = "col_DanhGiaDoiTac";
             // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCapNhat.AutoSize = true;
-            this.btnCapNhat.Location = new System.Drawing.Point(645, 331);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(174, 40);
-            this.btnCapNhat.TabIndex = 1;
-            this.btnCapNhat.Text = "Cập nhật thông tin đối tác";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
-            // 
             // frmThemDoiTac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 377);
+            this.ClientSize = new System.Drawing.Size(951, 421);
             this.Controls.Add(this.dgvDoiTac);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThemDoiTac);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmThemDoiTac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm đối tác";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoiTac)).EndInit();
             this.ResumeLayout(false);
@@ -172,6 +169,7 @@
 
         private System.Windows.Forms.Button btnThemDoiTac;
         private System.Windows.Forms.DataGridView dgvDoiTac;
+        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenDoiTac;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_LoaiDoiTac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NguoiLienHe;
@@ -179,6 +177,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DanhGiaDoiTac;
-        private System.Windows.Forms.Button btnCapNhat;
     }
 }

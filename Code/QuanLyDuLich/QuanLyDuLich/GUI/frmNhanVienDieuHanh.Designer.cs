@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoaDoiTac = new System.Windows.Forms.Button();
             this.btnSuaDoiTac = new System.Windows.Forms.Button();
-            this.btnReload = new System.Windows.Forms.Button();
             this.btnThemDoiTac = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.combLoaiDoiTac = new System.Windows.Forms.ComboBox();
@@ -49,7 +48,6 @@
             this.col_DanhGiaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabXetDuyetTour = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHuyXetDuyet = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.lbSoTour = new System.Windows.Forms.Label();
             this.dgvDuyetTour = new System.Windows.Forms.DataGridView();
@@ -98,7 +96,6 @@
             // 
             this.panel1.Controls.Add(this.btnXoaDoiTac);
             this.panel1.Controls.Add(this.btnSuaDoiTac);
-            this.panel1.Controls.Add(this.btnReload);
             this.panel1.Controls.Add(this.btnThemDoiTac);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.combLoaiDoiTac);
@@ -136,19 +133,6 @@
             this.btnSuaDoiTac.Text = "Cập nhật thông tin đối tác";
             this.btnSuaDoiTac.UseVisualStyleBackColor = true;
             this.btnSuaDoiTac.Click += new System.EventHandler(this.btnSuaDoiTac_Click);
-            // 
-            // btnReload
-            // 
-            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReload.AutoSize = true;
-            this.btnReload.Location = new System.Drawing.Point(745, 650);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(120, 34);
-            this.btnReload.TabIndex = 4;
-            this.btnReload.Text = "Tải lại danh sách";
-            this.btnReload.UseVisualStyleBackColor = true;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnThemDoiTac
             // 
@@ -234,6 +218,7 @@
             this.col_MaDoiTac.MaxInputLength = 9;
             this.col_MaDoiTac.Name = "col_MaDoiTac";
             this.col_MaDoiTac.ReadOnly = true;
+            this.col_MaDoiTac.Visible = false;
             // 
             // col_LoaiDoiTac
             // 
@@ -311,7 +296,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnHuyXetDuyet);
             this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Controls.Add(this.lbSoTour);
             this.panel2.Controls.Add(this.dgvDuyetTour);
@@ -322,23 +306,11 @@
             this.panel2.Size = new System.Drawing.Size(1338, 693);
             this.panel2.TabIndex = 3;
             // 
-            // btnHuyXetDuyet
-            // 
-            this.btnHuyXetDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuyXetDuyet.AutoSize = true;
-            this.btnHuyXetDuyet.Location = new System.Drawing.Point(1218, 653);
-            this.btnHuyXetDuyet.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHuyXetDuyet.Name = "btnHuyXetDuyet";
-            this.btnHuyXetDuyet.Size = new System.Drawing.Size(112, 34);
-            this.btnHuyXetDuyet.TabIndex = 2;
-            this.btnHuyXetDuyet.Text = "Hủy";
-            this.btnHuyXetDuyet.UseVisualStyleBackColor = true;
-            // 
             // btnLuu
             // 
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.AutoSize = true;
-            this.btnLuu.Location = new System.Drawing.Point(1097, 653);
+            this.btnLuu.Location = new System.Drawing.Point(1226, 651);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(112, 34);
@@ -491,14 +463,14 @@
         private System.Windows.Forms.Label lbSoTour;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnHuyXetDuyet;
         private System.Windows.Forms.DataGridView dgvDoiTac;
-        private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaTour;
         private System.Windows.Forms.DataGridViewTextBoxColumn col1_TenTour;
         private System.Windows.Forms.DataGridViewTextBoxColumn col1_NgayLap;
         private System.Windows.Forms.DataGridViewComboBoxColumn col1_TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn col1_GhiChu;
+        private System.Windows.Forms.Label lbTenNhanVien;
+        private System.Windows.Forms.LinkLabel llbDangXuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaDoiTac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_LoaiDoiTac;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenDoiTac;
@@ -507,7 +479,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DanhGiaDoiTac;
-        private System.Windows.Forms.Label lbTenNhanVien;
-        private System.Windows.Forms.LinkLabel llbDangXuat;
     }
 }
