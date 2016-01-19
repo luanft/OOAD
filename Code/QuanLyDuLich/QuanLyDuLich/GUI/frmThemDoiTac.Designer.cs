@@ -79,7 +79,7 @@
             // col_TenDoiTac
             // 
             this.col_TenDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.col_TenDoiTac.DataPropertyName = "pTenDoiTac";
+            this.col_TenDoiTac.DataPropertyName = "TenDoiTac";
             this.col_TenDoiTac.HeaderText = "Tên đối tác";
             this.col_TenDoiTac.Name = "col_TenDoiTac";
             this.col_TenDoiTac.Width = 102;
@@ -87,7 +87,7 @@
             // col_LoaiDoiTac
             // 
             this.col_LoaiDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.col_LoaiDoiTac.DataPropertyName = "pLoaiDoiTac";
+            this.col_LoaiDoiTac.DataPropertyName = "LoaiDoiTac";
             this.col_LoaiDoiTac.HeaderText = "Loại đối tác";
             this.col_LoaiDoiTac.Items.AddRange(new object[] {
             "NHAXE",
@@ -102,21 +102,21 @@
             // col_NguoiLienHe
             // 
             this.col_NguoiLienHe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_NguoiLienHe.DataPropertyName = "pNguoiLienHe";
+            this.col_NguoiLienHe.DataPropertyName = "NguoiLienHe";
             this.col_NguoiLienHe.HeaderText = "Người liên hệ";
             this.col_NguoiLienHe.Name = "col_NguoiLienHe";
             // 
             // col_DiaChi
             // 
             this.col_DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_DiaChi.DataPropertyName = "pDiaChi";
+            this.col_DiaChi.DataPropertyName = "DiaChi";
             this.col_DiaChi.HeaderText = "Địa chỉ";
             this.col_DiaChi.Name = "col_DiaChi";
             // 
             // col_SDT
             // 
             this.col_SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.col_SDT.DataPropertyName = "pSoDT";
+            this.col_SDT.DataPropertyName = "SoDT";
             this.col_SDT.HeaderText = "Số điện thoại";
             this.col_SDT.Name = "col_SDT";
             this.col_SDT.Width = 113;
@@ -124,14 +124,14 @@
             // col_Email
             // 
             this.col_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Email.DataPropertyName = "pEmail";
+            this.col_Email.DataPropertyName = "Email";
             this.col_Email.HeaderText = "Email";
             this.col_Email.Name = "col_Email";
             // 
             // col_DanhGiaDoiTac
             // 
             this.col_DanhGiaDoiTac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_DanhGiaDoiTac.DataPropertyName = "pDanhGiaDoiTac";
+            this.col_DanhGiaDoiTac.DataPropertyName = "DanhGiaDoiTac";
             this.col_DanhGiaDoiTac.HeaderText = "Đánh giá đối tác";
             this.col_DanhGiaDoiTac.Name = "col_DanhGiaDoiTac";
             // 
