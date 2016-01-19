@@ -150,21 +150,16 @@ namespace DataAccessLayer
 
         public bool XoaTour(int maTour)
         {
-            if (!this.Connect())
+            bool rs = false;
+            if (this.Connect())
             {
-                return false;
-            }
-            string sql = "DELETE FROM [dbo].[TOUR] WHERE [MATOUR]='" + maTour + "'";
-            if (this.Write(sql))
-            {
+                string sql = "delete from CHITIETLICHTRINH where CHITIETLICHTRINH.MALICHTRINH in (select LICHTRINH.MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = "+maTour+")";
+                sql ="DELETE FROM [dbo].[TOUR] WHERE [MATOUR]='" + maTour + "'";
+                this.Write(sql);
                 this.Close();
-                return true;
             }
-            else
-            {
-                this.Close();
-                return false;
-            }
+
+            return rs;
         }
 
 

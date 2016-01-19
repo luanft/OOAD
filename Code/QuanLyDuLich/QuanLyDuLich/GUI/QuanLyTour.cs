@@ -138,7 +138,7 @@ namespace QuanLyDuLich.GUI
                 this.panelDanhSachTour.Controls.Add(x);                
                 x.init(i);
                 x.OnEditing += ChinhSuaTour;
-
+                x.OnDeleting += xoaTour;
             }
 
 
@@ -183,6 +183,11 @@ namespace QuanLyDuLich.GUI
             }
             cbHuongDanVien.DisplayMember = "NGUOILIENHE";
             cbNhaXe.DisplayMember = "TENDOITAC";
+        }
+
+        void xoaTour(XemTour tour)
+        {
+            panelDanhSachTour.Controls.Remove(tour);
         }
 
         private void ChinhSuaTour(int maTour)

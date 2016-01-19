@@ -14,10 +14,12 @@ using QuanLyDuLich.GUI;
 
 namespace QuanLyDuLich
 {
-    public delegate void ChinhSSuaTour(int maTour); 
+    public delegate void ChinhSSuaTour(int maTour);
+    public delegate void XoaTour(XemTour tour);
     public partial class XemTour : UserControl
     {
         public event ChinhSSuaTour OnEditing;
+        public event XoaTour OnDeleting;
         private dtoTour tour;
         private NVSale sale = new NVSale();
         public XemTour()
@@ -35,7 +37,7 @@ namespace QuanLyDuLich
             lbThoiGianDi.Text = tour.THOIGIAN;
             lbTrangThai.Text = tour.TRANGTHAI;
             this.tour = tour;
-            if(tour.TRANGTHAI != "MOI_LAP")
+            if (tour.TRANGTHAI != "MOI_LAP")
             {
                 llSubmit.Enabled = false;
                 llDanhDauBan.Enabled = false;
@@ -78,23 +80,30 @@ namespace QuanLyDuLich
 
         private void llChinhSua_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(OnEditing != null)
+            if (OnEditing != null)
                 this.OnEditing(tour.MATOUR);
         }
 
         private void llXoa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn xóa không?", "Cảnh báo!", MessageBoxButtons.YesNo);
-            if(rs == DialogResult.Yes)
+            if (rs == DialogResult.Yes)
             {
                 dalTour dal = new dalTour();
-                dal.XoaTour(tour.MATOUR);
-                MessageBox.Show("Đã xóa");
+                if (dal.XoaTour(tour.MATOUR))
+                {
+                    OnDeleting(this);
+                    MessageBox.Show("Đã xóa");
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi ở cơ sở dữ liệu");
+                }
             }
         }
 
-        
 
-        
+
+
     }
 }
