@@ -21,7 +21,7 @@ namespace QuanLyDuLich
             //Application.Run(new frmNhanVienDieuHanh());
             //Application.Run(new frmNhanVienSaleTour());
             //Application.Run(new frmNhanVienDieuHanh());
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmNhanVienSaleTour());
         }
     }
 }

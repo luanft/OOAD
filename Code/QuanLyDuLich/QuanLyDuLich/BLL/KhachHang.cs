@@ -16,85 +16,80 @@ namespace BLL
 	public class KhachHang
 	{
         private int MaKhachHang;
+        private string LoaiKhachHang;
+        private bool TrangThai;
         private int MaNhanVien;
-
-        public int pMaNhanVien
-        {
-            get { return MaNhanVien; }
-            set { MaNhanVien = value; }
-        }
+        private string GioiTinh;
+        private string DiaChi;
+        private string TenDonVi;
+        private string Email;
+        private string SoDT;
+        private string NguoiDaiDien;
+        private int SoNguoi;
         public int pMaKhachHang
         {
             get { return MaKhachHang; }
             set { MaKhachHang = value; }
-        }        
-        private string LoaiKhachHang;
-
+        }                
         public string pLoaiKhachHang
         {
             get { return LoaiKhachHang; }
             set { LoaiKhachHang = value; }
-        }
-
-        private int SoNguoi;
-
+        }        
         public int pSoNguoi
         {
             get { return SoNguoi; }
             set { SoNguoi = value; }
-        }
-
-        private string NguoiDaiDien;
-
+        }        
         public string pNguoiDaiDien
         {
             get { return NguoiDaiDien; }
             set { NguoiDaiDien = value; }
-        }
-
-        private string SoDT;
-
+        }        
         public string pSoDT
         {
             get { return SoDT; }
             set { SoDT = value; }
-        }
-
-        private string Email;
-
+        }        
         public string pEmail
         {
             get { return Email; }
             set { Email = value; }
-        }
-
-        private string TenDonVi;
-
+        }        
         public string pTenDonVi
         {
             get { return TenDonVi; }
             set { TenDonVi = value; }
         }
-
-
-        private string DiaChi;
-
+        
         public string pDiaChi
         {
             get { return DiaChi; }
             set { DiaChi = value; }
         }
-        private string GioiTinh;
-
+        
         public string pGioiTinh
         {
             get { return GioiTinh; }
             set { GioiTinh = value; }
         }
-        public KhachHang(int _maKhachHang, string _tenDonVi, string _nguoiDaiDien, string _gioiTinh, 
+        
+        public int pMaNhanVien
+        {
+            get { return MaNhanVien; }
+            set { MaNhanVien = value; }
+        }
+        
+        public bool pTrangThai
+        {
+            get { return TrangThai; }
+            set { TrangThai = value; }
+        }
+        public KhachHang(int _maKhachHang,int _maNhanVien, string _tenDonVi, string _nguoiDaiDien, string _gioiTinh, 
             string _email, string _soDT, int _soNguoi, string _diaChi, string _loaiKhachHang)
         {
             MaKhachHang = _maKhachHang;
+            MaNhanVien = _maNhanVien;
             LoaiKhachHang = _loaiKhachHang;
             SoNguoi = _soNguoi;
             NguoiDaiDien = _nguoiDaiDien;
@@ -110,6 +105,9 @@ namespace BLL
 
         public KhachHang(dtoKhachHang dto)
         {
+            //this.TrangThai=dto.TR
+            this.MaKhachHang = dto.MAKHACHHANG;
+            this.MaNhanVien = dto.MANHANVIEN;
             this.DiaChi = dto.DIACHI;
             this.Email = dto.EMAIL;
             this.LoaiKhachHang = dto.LOAIKHACHHANG;
@@ -131,10 +129,26 @@ namespace BLL
             DiaChi = _khachHang.DIACHI;
             LoaiKhachHang = _khachHang.LOAIKHACHHANG;
         }
+       
+        public List<dtoKhachHang> layDanhSachKhachHang()
+        {
+            dalKhachHang _dalKhachHang = new dalKhachHang();
+            return _dalKhachHang.LayDanhSachKhachHang2();
+        }
+        public List<dtoKhachHang>LayDanhSachKhachHang(int manv)
+        {
+            dalKhachHang _dalKhachHang = new dalKhachHang();
+            return _dalKhachHang.LayDanhSachKhachHang(manv);
+        }
         dtoKhachHang getdtoKhachHang() 
         {
-            dtoKhachHang _khachHang = new dtoKhachHang(MaKhachHang, TenDonVi, NguoiDaiDien, GioiTinh, Email, SoDT, SoNguoi, DiaChi, LoaiKhachHang);
+            dtoKhachHang _khachHang = new dtoKhachHang(MaNhanVien,MaKhachHang, TenDonVi, NguoiDaiDien, GioiTinh, Email, SoDT, SoNguoi, DiaChi, LoaiKhachHang);
             return _khachHang;
+        }
+        public dtoKhachHang layKhachHang(int maKH) 
+        {
+            dalKhachHang dal = new dalKhachHang();
+            return dal.LayKhachHang(maKH);
         }
 		public bool CapNhat()
 		{
@@ -150,10 +164,10 @@ namespace BLL
             return true;
 		}
 
-		public bool Xoa()
+		public bool Xoa(int makh)
 		{
             dalKhachHang _dalKhachHang = new dalKhachHang();
-            _dalKhachHang.XoaKhachHang(MaKhachHang);
+            _dalKhachHang.XoaKhachHang(makh);
             return true;
 		}
 

@@ -22,17 +22,19 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[KHACHHANG]([TENDONVI],[NGUOIDAIDIEN],[GIOITINH],[EMAIL],[DIENTHOAI],[SONGUOI],[DIACHI],[LOAIKHACHHANG])VALUES('" +
-                khachHang.TENDONVI + "','" + khachHang.NGUOIDAIDIEN + "','" + khachHang.GIOITINH + "','" + khachHang.EMAIL + "','" + khachHang.DIENTHOAI +
-                "','" + khachHang.SONGUOI + "','" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG + "')";
+            string sql = "INSERT INTO [dbo].[KHACHHANG]([MANHANVIEN],[TENDONVI],[NGUOIDAIDIEN],[GIOITINH],[EMAIL],[DIENTHOAI],[SONGUOI],[DIACHI],[LOAIKHACHHANG],[TRANGTHAI])VALUES(" + khachHang.MANHANVIEN + ",N'" +
+                khachHang.TENDONVI + "',N'" + khachHang.NGUOIDAIDIEN + "','" + khachHang.GIOITINH + "','" + khachHang.EMAIL + "','" + khachHang.DIENTHOAI +
+                "'," + khachHang.SONGUOI + ",N'" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG +"',"+1+ ")";
             if (this.Write(sql))
             {
                 this.Close();
+                MessageBox.Show("Da them kh");
                 return true;
             }
             else
             {
                 this.Close();
+                MessageBox.Show("loi them kh");
                 return false;
             }
         }
@@ -48,18 +50,20 @@ namespace DataAccessLayer
       "',[GIOITINH] = '" + khachHang.GIOITINH +
       "',[EMAIL] = '" + khachHang.EMAIL +
       "',[DIENTHOAI] = '" + khachHang.DIENTHOAI +
-      "',[SONGUOI] = '" + khachHang.SONGUOI +
-      "',[DIACHI] = '" + khachHang.DIACHI +
+      "',[SONGUOI] = " + khachHang.SONGUOI +
+      ",[DIACHI] = '" + khachHang.DIACHI +
       "',[LOAIKHACHHANG] = '" + khachHang.LOAIKHACHHANG +
-      "'WHERE [MAKHACHHANG] = '" + khachHang.MAKHACHHANG + "'";
+      "'WHERE [MAKHACHHANG] = " + khachHang.MAKHACHHANG ;
             if (this.Write(sql))
             {
                 this.Close();
+                MessageBox.Show("Đã cập nhật");
                 return true;
             }
             else
             {
                 this.Close();
+                MessageBox.Show("Lỗi cập nhật");
                 return false;
             }
         }
@@ -70,15 +74,17 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "DELETE FROM [dbo].[KHACHHANG] WHERE [MAKHACHHANG]='" + maKH + "'";
+            string sql = "UPDATE [dbo].[KHACHHANG]SET[TRANGTHAI] = 0 WHERE [MAKHACHHANG]=" + maKH ;
             if (this.Write(sql))
             {
                 this.Close();
+                MessageBox.Show("Đã xóa khách hàng");
                 return true;
             }
             else
             {
                 this.Close();
+                MessageBox.Show("Chưa xóa được");
                 return false;
             }
         }
@@ -163,6 +169,59 @@ namespace DataAccessLayer
                     dtoKhachHang.SONGUOI = Int32.Parse(dr[7].ToString());
                     dtoKhachHang.DIACHI = dr[8].ToString();
                     dtoKhachHang.LOAIKHACHHANG = dr[9].ToString();
+                    ldtoKhachHang.Add(dtoKhachHang);
+                }
+                this.Close();
+
+            }
+            return ldtoKhachHang;
+
+        }
+        //khi dang nhap duoc se xoa ham nay
+        public List<dtoKhachHang> LayDanhSachKhachHang()
+        {
+            List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
+            if (this.Connect())
+            {
+                string sql = "select * from [dbo].[KHACHHANG]";
+                DataTable dtKhachHang = this.Read(sql);
+
+
+                foreach (DataRow dr in dtKhachHang.Rows)
+                {
+                    dtoKhachHang dtoKhachHang = new dtoKhachHang();
+                    dtoKhachHang.MAKHACHHANG = Int32.Parse(dr[0].ToString());
+                    dtoKhachHang.MANHANVIEN = Int32.Parse(dr[1].ToString());
+                    dtoKhachHang.TENDONVI = dr[2].ToString();
+                    dtoKhachHang.NGUOIDAIDIEN = dr[3].ToString();
+                    dtoKhachHang.GIOITINH = dr[4].ToString();
+                    dtoKhachHang.EMAIL = dr[5].ToString();
+                    dtoKhachHang.DIENTHOAI = dr[6].ToString();
+                    dtoKhachHang.SONGUOI = Int32.Parse(dr[7].ToString());
+                    dtoKhachHang.DIACHI = dr[8].ToString();
+                    dtoKhachHang.LOAIKHACHHANG = dr[9].ToString();
+                    ldtoKhachHang.Add(dtoKhachHang);
+                }
+                this.Close();
+
+            }
+            return ldtoKhachHang;
+
+        }
+        public List<dtoKhachHang> LayDanhSachKhachHang2()
+        {
+            List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
+            if (this.Connect())
+            {
+                string sql = "select MAKHACHHANG,NGUOIDAIDIEN from [dbo].[KHACHHANG]where TRANGTHAI=1";
+                DataTable dtKhachHang = this.Read(sql);
+
+
+                foreach (DataRow dr in dtKhachHang.Rows)
+                {
+                    dtoKhachHang dtoKhachHang = new dtoKhachHang();
+                    dtoKhachHang.MAKHACHHANG = Int32.Parse(dr[0].ToString());                    
+                    dtoKhachHang.NGUOIDAIDIEN = dr[1].ToString();                    
                     ldtoKhachHang.Add(dtoKhachHang);
                 }
                 this.Close();
