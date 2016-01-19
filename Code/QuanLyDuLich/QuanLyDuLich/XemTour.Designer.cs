@@ -175,6 +175,7 @@
             this.llXoa.TabIndex = 4;
             this.llXoa.TabStop = true;
             this.llXoa.Text = "Xóa";
+            this.llXoa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llXoa_LinkClicked);
             // 
             // XemTour
             // 

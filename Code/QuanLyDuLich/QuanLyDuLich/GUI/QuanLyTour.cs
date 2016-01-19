@@ -13,7 +13,8 @@ namespace QuanLyDuLich.GUI
 {
     partial class frmNhanVienSaleTour : Form
     {
-        int nguoiLapTour = 1;        
+        private bool capNhatTour = false;
+        int nguoiLapTour = 1;
         private Tour tour;
         void cbNguoiDaiDien_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -134,13 +135,13 @@ namespace QuanLyDuLich.GUI
             {
                 XemTour x = new XemTour();
                 x.Size = new Size(370, 249);
-                this.panelDanhSachTour.Controls.Add(x);
+                this.panelDanhSachTour.Controls.Add(x);                
                 x.init(i);
-                x.OnEditing+=ChinhSuaTour;
-                
+                x.OnEditing += ChinhSuaTour;
+
             }
 
-            
+
 
 
 
@@ -170,7 +171,7 @@ namespace QuanLyDuLich.GUI
 
 
             dalDoiTac doiTac = new dalDoiTac();
-            List<dtoDoiTac> huongDanVien = doiTac.LayDanhSachDoiTac("HDV");
+            List<dtoDoiTac> huongDanVien = doiTac.LayDanhSachDoiTac("HUONGDANVIEN");
             List<dtoDoiTac> nhaXe = doiTac.LayDanhSachDoiTac("NHAXE");
             foreach (dtoDoiTac h in huongDanVien)
             {
@@ -189,7 +190,7 @@ namespace QuanLyDuLich.GUI
             tabControl.SelectedTab = tabLapTour;
 
             dalTour dal = new dalTour();
-            
+
             //them tour
             tour = dal.LoadTour(maTour);
             btnThem.Enabled = false;
@@ -206,9 +207,9 @@ namespace QuanLyDuLich.GUI
 
 
 
-            
 
-            foreach(LichTrinh l in tour.LichTrinh)
+
+            foreach (LichTrinh l in tour.LichTrinh)
             {
                 TreeNode node = new LichTrinhNode("Ngày " + l.Ngay + ": " + l.TenLichTrinh, l);
                 node.ContextMenu = new ContextMenu();
@@ -219,13 +220,13 @@ namespace QuanLyDuLich.GUI
                 them.Click += themChiTiet;
                 xoa.Click += xoaLichTrinh;
                 this.lichTrinhTour.Nodes.Add(node);
-                foreach(ChiTietLichTrinh c in l.pChiTietLichTrinh)
-                {                                                            
+                foreach (ChiTietLichTrinh c in l.pChiTietLichTrinh)
+                {
                     TreeNode nd = new ChiTietNode(c.ThoiGian, c);
                     string diemDen = c.DoiTac == null ? "" : c.DoiTac.TenDoiTac;
                     TreeNode doiTac = new TreeNode("Điểm đến: " + diemDen);
                     TreeNode hoatDong = new TreeNode("Hoạt động: " + c.NoiDung);
-                    
+
                     nd.Nodes.Add(doiTac);
                     nd.Nodes.Add(hoatDong);
                     nd.ContextMenu = new System.Windows.Forms.ContextMenu();
@@ -235,8 +236,7 @@ namespace QuanLyDuLich.GUI
                     node.Nodes.Add(nd);
                 }
             }
-
-            
+            capNhatTour = true;
         }
 
 
@@ -301,27 +301,52 @@ namespace QuanLyDuLich.GUI
             tour.TrangThai = "MOI_LAP";
             tour.UuDai = txtUuDai.Text;
             tour.MaNhanVien = nguoiLapTour;
-
+            tour.GhiChu = txtGhiChu.Text;
             tour.NgayLapTour = DateTime.Now;
 
-            if (tour.Luu())
+            if (capNhatTour)
             {
-
-                MessageBox.Show("Đã lưu tour!");
-                btnThem.Enabled = true;
-                btnLuu.Enabled = false;
-                btnHuy.Enabled = false;
-                panelLapTour.Enabled = false;
-                txtTenTour.Text = "";
-                txtUuDai.Text = "";
-                txtThoiGianDi.Text = "";
-                txtGhiChu.Text = "";
-                lichTrinhTour.Nodes.Clear();
+                if (tour.ChinhSuaTour())
+                {
+                    MessageBox.Show("Đã lưu tour!");
+                    btnThem.Enabled = true;
+                    btnLuu.Enabled = false;
+                    btnHuy.Enabled = false;
+                    panelLapTour.Enabled = false;
+                    txtTenTour.Text = "";
+                    txtUuDai.Text = "";
+                    txtThoiGianDi.Text = "";
+                    txtGhiChu.Text = "";
+                    lichTrinhTour.Nodes.Clear();
+                    capNhatTour = false;
+                }
+                else
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra với cơ sở dữ liệu!");
+                }
             }
             else
             {
-                MessageBox.Show("Đã có lỗi xảy ra với cơ sở dữ liệu!");
+                if (tour.Luu())
+                {
+
+                    MessageBox.Show("Đã lưu tour!");
+                    btnThem.Enabled = true;
+                    btnLuu.Enabled = false;
+                    btnHuy.Enabled = false;
+                    panelLapTour.Enabled = false;
+                    txtTenTour.Text = "";
+                    txtUuDai.Text = "";
+                    txtThoiGianDi.Text = "";
+                    txtGhiChu.Text = "";
+                    lichTrinhTour.Nodes.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra với cơ sở dữ liệu!");
+                }
             }
+
 
 
 

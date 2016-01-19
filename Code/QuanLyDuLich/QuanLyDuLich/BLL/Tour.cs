@@ -170,8 +170,44 @@ using System.Text;
 		{
             dalTour dal_Tour = new dalTour();
             
-            return dal_Tour.CapNhatTour(this.maTour, this.trangThai, this.ghiChu);
+            return dal_Tour.CapNhatTour(this.maTour, this.trangThai, this.ghiChu);            
 		}
+
+        public bool ChinhSuaTour()
+        {
+            dalTour dal_Tour = new dalTour();
+
+            dtoTour dto = new dtoTour();
+            dto.TENTOUR = tenTour;
+            dto.MATOUR = maTour;
+            dto.MANHANVIEN = MaNhanVien;
+            dto.NGAYDI = ngayDi;
+            dto.NGAYLAPTOUR = NgayLapTour;
+            dto.THOIGIAN = thoiGian;
+            dto.TONGGIATOUR = int.Parse(tongGiaTour);
+            dto.TRANGTHAI = "MOI_LAP";
+            dto.UUDAI = uuDai;
+            dto.GHICHU = ghiChu;
+            dto.HUONGDANVIEN = huongDanVien.MaDoiTac;
+            dto.NHAXE = nhaXe.MaDoiTac;
+            dto.MAKHACHHANG = khachHang.pMaKhachHang;
+            foreach(LichTrinh i in LichTrinh)
+            {
+                i.MaTour = maTour;                
+                if (i.MaLichTrinh <= 0)
+                    i.MaLichTrinh = i.Luu();
+                foreach(ChiTietLichTrinh c in i.pChiTietLichTrinh)
+                {
+
+                    if(c.MaChiTietLichTrinh <= 0)
+                    {
+                        c.MaLichTrinh = i.MaLichTrinh;
+                        c.Luu();
+                    }
+                }
+            }
+            return dal_Tour.CapNhatTour(dto);
+        }
 
 		public bool Luu()
 		{

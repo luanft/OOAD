@@ -38,6 +38,7 @@ namespace QuanLyDuLich
             if(tour.TRANGTHAI != "MOI_LAP")
             {
                 llSubmit.Enabled = false;
+                llDanhDauBan.Enabled = false;
             }
         }
         private void XemTour_Load(object sender, EventArgs e)
@@ -79,6 +80,17 @@ namespace QuanLyDuLich
         {
             if(OnEditing != null)
                 this.OnEditing(tour.MATOUR);
+        }
+
+        private void llXoa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn xóa không?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            if(rs == DialogResult.Yes)
+            {
+                dalTour dal = new dalTour();
+                dal.XoaTour(tour.MATOUR);
+                MessageBox.Show("Đã xóa");
+            }
         }
 
         

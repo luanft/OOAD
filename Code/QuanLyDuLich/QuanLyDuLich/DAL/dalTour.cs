@@ -232,7 +232,7 @@ namespace DataAccessLayer
               "',[TRANGTHAI] = '" + tour.TRANGTHAI +
               "',[UUDAI] = N'" + tour.UUDAI +
               "',[GHICHU] = N'" + tour.GHICHU +
-              "'WHERE [MATOUR]='" + tour.MATOUR + "'";
+              "' WHERE [MATOUR]='" + tour.MATOUR + "'";
             if (this.Write(sql))
             {
                 this.Close();

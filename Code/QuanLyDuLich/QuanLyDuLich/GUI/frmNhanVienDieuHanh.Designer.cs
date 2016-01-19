@@ -77,7 +77,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1362, 741);
+            this.tabControl1.Size = new System.Drawing.Size(1354, 733);
             this.tabControl1.TabIndex = 0;
             // 
             // tabQuanLyDoiTac
@@ -87,7 +87,7 @@
             this.tabQuanLyDoiTac.Margin = new System.Windows.Forms.Padding(4);
             this.tabQuanLyDoiTac.Name = "tabQuanLyDoiTac";
             this.tabQuanLyDoiTac.Padding = new System.Windows.Forms.Padding(4);
-            this.tabQuanLyDoiTac.Size = new System.Drawing.Size(1354, 709);
+            this.tabQuanLyDoiTac.Size = new System.Drawing.Size(1346, 701);
             this.tabQuanLyDoiTac.TabIndex = 0;
             this.tabQuanLyDoiTac.Text = "Quản lý đối tác";
             this.tabQuanLyDoiTac.UseVisualStyleBackColor = true;
@@ -106,14 +106,14 @@
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 701);
+            this.panel1.Size = new System.Drawing.Size(1338, 693);
             this.panel1.TabIndex = 0;
             // 
             // btnXoaDoiTac
             // 
             this.btnXoaDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoaDoiTac.AutoSize = true;
-            this.btnXoaDoiTac.Location = new System.Drawing.Point(1229, 658);
+            this.btnXoaDoiTac.Location = new System.Drawing.Point(1221, 650);
             this.btnXoaDoiTac.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaDoiTac.Name = "btnXoaDoiTac";
             this.btnXoaDoiTac.Size = new System.Drawing.Size(112, 34);
@@ -126,7 +126,7 @@
             // 
             this.btnSuaDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSuaDoiTac.AutoSize = true;
-            this.btnSuaDoiTac.Location = new System.Drawing.Point(1011, 658);
+            this.btnSuaDoiTac.Location = new System.Drawing.Point(1003, 650);
             this.btnSuaDoiTac.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaDoiTac.Name = "btnSuaDoiTac";
             this.btnSuaDoiTac.Size = new System.Drawing.Size(210, 34);
@@ -139,7 +139,7 @@
             // 
             this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReload.AutoSize = true;
-            this.btnReload.Location = new System.Drawing.Point(753, 658);
+            this.btnReload.Location = new System.Drawing.Point(745, 650);
             this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(120, 34);
@@ -152,7 +152,7 @@
             // 
             this.btnThemDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemDoiTac.AutoSize = true;
-            this.btnThemDoiTac.Location = new System.Drawing.Point(881, 658);
+            this.btnThemDoiTac.Location = new System.Drawing.Point(873, 650);
             this.btnThemDoiTac.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemDoiTac.Name = "btnThemDoiTac";
             this.btnThemDoiTac.Size = new System.Drawing.Size(120, 34);
@@ -221,7 +221,7 @@
             this.dgvDoiTac.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDoiTac.Name = "dgvDoiTac";
             this.dgvDoiTac.ReadOnly = true;
-            this.dgvDoiTac.Size = new System.Drawing.Size(1346, 516);
+            this.dgvDoiTac.Size = new System.Drawing.Size(1338, 508);
             this.dgvDoiTac.TabIndex = 0;
             // 
             // col_MaDoiTac
@@ -428,7 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
