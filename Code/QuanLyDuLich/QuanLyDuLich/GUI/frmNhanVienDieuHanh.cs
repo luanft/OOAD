@@ -64,7 +64,7 @@ namespace QuanLyDuLich.GUI
 
             nvDieuHanh = new NVDieuHanh(manv);
             dsDoiTac = nvDieuHanh.pDanhSachDoiTac;
-
+            lbTenNhanVien.Text = "Xin chào: " + nvDieuHanh.pHoTen;
         }
 
         private void frmNhanVienDieuHanh_Load(object sender, EventArgs e)
@@ -146,6 +146,18 @@ namespace QuanLyDuLich.GUI
             tourDaChon = nvDieuHanh.ChonTourCanDuyet(int.Parse(dgvDuyetTour.Rows[e.RowIndex].Cells["col_MaTour"].Value.ToString()));
             frmXemChiTietTour xemChiTietTour = new frmXemChiTietTour(tourDaChon);
             xemChiTietTour.Show();
+        }
+
+        private void llbDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo);
+            if (rs == System.Windows.Forms.DialogResult.Yes)
+            {
+                frmDangNhap frmDN = new frmDangNhap();
+                this.Hide();
+                frmDN.ShowDialog();
+                this.Close();
+            }            
         }
 
     }

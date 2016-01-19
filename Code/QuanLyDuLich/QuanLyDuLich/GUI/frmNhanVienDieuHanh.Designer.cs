@@ -58,6 +58,8 @@
             this.col1_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1_TrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col1_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
+            this.llbDangXuat = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabQuanLyDoiTac.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -302,7 +304,7 @@
             this.tabXetDuyetTour.Margin = new System.Windows.Forms.Padding(4);
             this.tabXetDuyetTour.Name = "tabXetDuyetTour";
             this.tabXetDuyetTour.Padding = new System.Windows.Forms.Padding(4);
-            this.tabXetDuyetTour.Size = new System.Drawing.Size(1354, 709);
+            this.tabXetDuyetTour.Size = new System.Drawing.Size(1346, 701);
             this.tabXetDuyetTour.TabIndex = 1;
             this.tabXetDuyetTour.Text = "Xét duyệt tour";
             this.tabXetDuyetTour.UseVisualStyleBackColor = true;
@@ -317,14 +319,14 @@
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1346, 701);
+            this.panel2.Size = new System.Drawing.Size(1338, 693);
             this.panel2.TabIndex = 3;
             // 
             // btnHuyXetDuyet
             // 
             this.btnHuyXetDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuyXetDuyet.AutoSize = true;
-            this.btnHuyXetDuyet.Location = new System.Drawing.Point(1226, 661);
+            this.btnHuyXetDuyet.Location = new System.Drawing.Point(1218, 653);
             this.btnHuyXetDuyet.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuyXetDuyet.Name = "btnHuyXetDuyet";
             this.btnHuyXetDuyet.Size = new System.Drawing.Size(112, 34);
@@ -336,7 +338,7 @@
             // 
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.AutoSize = true;
-            this.btnLuu.Location = new System.Drawing.Point(1105, 661);
+            this.btnLuu.Location = new System.Drawing.Point(1097, 653);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(112, 34);
@@ -373,7 +375,7 @@
             this.dgvDuyetTour.Location = new System.Drawing.Point(0, 134);
             this.dgvDuyetTour.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDuyetTour.Name = "dgvDuyetTour";
-            this.dgvDuyetTour.Size = new System.Drawing.Size(1346, 517);
+            this.dgvDuyetTour.Size = new System.Drawing.Size(1338, 509);
             this.dgvDuyetTour.TabIndex = 1;
             this.dgvDuyetTour.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDuyetTour_CellDoubleClick);
             // 
@@ -424,11 +426,33 @@
             this.col1_GhiChu.HeaderText = "Ghi chú";
             this.col1_GhiChu.Name = "col1_GhiChu";
             // 
+            // lbTenNhanVien
+            // 
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(995, 4);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(226, 19);
+            this.lbTenNhanVien.TabIndex = 1;
+            this.lbTenNhanVien.Text = "Xin chào: Nguyễn Thanh Anh Tuyên";
+            // 
+            // llbDangXuat
+            // 
+            this.llbDangXuat.AutoSize = true;
+            this.llbDangXuat.Location = new System.Drawing.Point(1265, 4);
+            this.llbDangXuat.Name = "llbDangXuat";
+            this.llbDangXuat.Size = new System.Drawing.Size(70, 19);
+            this.llbDangXuat.TabIndex = 2;
+            this.llbDangXuat.TabStop = true;
+            this.llbDangXuat.Text = "Đăng xuất";
+            this.llbDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbDangXuat_LinkClicked);
+            // 
             // frmNhanVienDieuHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.llbDangXuat);
+            this.Controls.Add(this.lbTenNhanVien);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -447,6 +471,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDuyetTour)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -482,5 +507,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DanhGiaDoiTac;
+        private System.Windows.Forms.Label lbTenNhanVien;
+        private System.Windows.Forms.LinkLabel llbDangXuat;
     }
 }

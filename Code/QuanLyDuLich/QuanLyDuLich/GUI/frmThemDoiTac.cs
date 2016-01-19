@@ -62,7 +62,7 @@ namespace QuanLyDuLich.GUI
                     dt.DIENTHOAI = row.Cells["col_SDT"].Value.ToString();
                     dt.EMAIL = row.Cells["col_Email"].Value.ToString();
                     dt.DANHGIADOITAC = row.Cells["col_DanhGiaDoiTac"].Value.ToString();
-                    dt.MANHANVIEN = 1;
+                    dt.MANHANVIEN = nvDieuHanh.pMaNhanVien;
                     if (nvDieuHanh.ThemDoiTac(dt))
                     {
                         status = true;

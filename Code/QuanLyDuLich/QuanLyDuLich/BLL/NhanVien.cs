@@ -14,51 +14,51 @@ namespace BLL
     using System.Linq;
     using System.Text;
 
-	public class NhanVien
-	{
+    public class NhanVien
+    {
         protected int MaPhong;
         public int pMaPhong
         {
             get { return MaPhong; }
             set { MaPhong = value; }
         }
-		protected string HoTen;
+        protected string HoTen;
         public string pHoTen
         {
             get { return HoTen; }
             set { HoTen = value; }
         }
-		protected int MaNhanVien;
+        protected int MaNhanVien;
         public int pMaNhanVien
         {
             get { return MaNhanVien; }
             set { MaNhanVien = value; }
         }
-		protected string SoDT;
+        protected string SoDT;
         public string pSoDT
         {
             get { return SoDT; }
             set { SoDT = value; }
         }
-		protected string DiaChi;
+        protected string DiaChi;
         public string pDiaChi
         {
             get { return DiaChi; }
             set { DiaChi = value; }
         }
-		protected string QueQuan;
+        protected string QueQuan;
         public string pQueQuan
         {
             get { return QueQuan; }
             set { QueQuan = value; }
         }
-		protected string CMND;
+        protected string CMND;
         public string pCMND
         {
             get { return CMND; }
             set { CMND = value; }
         }
-		protected string Email;
+        protected string Email;
         public string pEmail
         {
             get { return Email; }
@@ -72,42 +72,45 @@ namespace BLL
             set { NgaySinh = value; }
         }
 
-		protected string GioiTinh;
+        protected string GioiTinh;
         public string pGioiTinh
         {
             get { return GioiTinh; }
             set { GioiTinh = value; }
         }
-		protected string MatKhau;
+        protected string MatKhau;
         public string pMatKhau
         {
             get { return MatKhau; }
             set { MatKhau = value; }
         }
         protected dalNhanVien dalnv = new dalNhanVien();
-		public bool DangNhap(string email, string mk)
-		{
-            SetNhanVien(dalnv.LayThongTinNhanVien(email));
-            return dalnv.DangNhap(email, mk);
-		}
+        public bool DangNhap(string email, string mk)
+        {
+            bool thanhCong = dalnv.DangNhap(email, mk);
+            if (thanhCong)
+                SetNhanVien(dalnv.LayThongTinNhanVien(email));
+            return thanhCong;
 
-		public void DangXuat()
-		{
-			throw new System.NotImplementedException();
-		}
+        }
 
-		public LoaiNhanVien LayLoaiNV()
-		{            
-            switch(this.MaPhong)
+        public void DangXuat()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public LoaiNhanVien LayLoaiNV()
+        {
+            switch (this.MaPhong)
             {
                 case 1:
-                    return LoaiNhanVien.GiamDoc;                    
+                    return LoaiNhanVien.GiamDoc;
                 case 2:
                     return LoaiNhanVien.NhanVienDieuHanh;
                 default:
                     return LoaiNhanVien.NhanVienSale;
-            }                            
-		}
+            }
+        }
         public dtoNhanVien GetDTONhanVien()
         {
             dtoNhanVien dtonv = new dtoNhanVien();
@@ -128,8 +131,8 @@ namespace BLL
         {
             this.HoTen = dtonv.HOTEN;
             this.CMND = dtonv.CMND;
-            this.DiaChi = dtonv.DIACHI ;
-            this.Email = dtonv.EMAIL ;
+            this.DiaChi = dtonv.DIACHI;
+            this.Email = dtonv.EMAIL;
             this.GioiTinh = dtonv.GIOITINH;
             this.MaNhanVien = dtonv.MANHANVIEN;
             this.MaPhong = dtonv.MAPHONG;
@@ -156,26 +159,26 @@ namespace BLL
             this.QueQuan = dtonv.QUEQUAN;
             this.SoDT = dtonv.SODT;
         }
-		public bool CapNhat()
-		{         
+        public bool CapNhat()
+        {
             return dalnv.SuaThongTinNhanVien(this.GetDTONhanVien());
-		}
+        }
 
-		public bool Luu()
-		{
-            return dalnv.ThemNhanVien(this.GetDTONhanVien());			
-		}
+        public bool Luu()
+        {
+            return dalnv.ThemNhanVien(this.GetDTONhanVien());
+        }
 
-		public bool Xoa()
-		{
+        public bool Xoa()
+        {
             return dalnv.XoaNhanVien(this.MaNhanVien);
-		}
+        }
 
         public bool CoTonTai(int manv)
         {
             dtoNhanVien dto_nhanvien = new dtoNhanVien();
             dto_nhanvien = LayThongTinNhanVien(manv);
-            if (dto_nhanvien!=null)
+            if (dto_nhanvien != null)
             {
                 return true;
             }
@@ -187,7 +190,7 @@ namespace BLL
         }
         public List<dtoNhanVien> LayDanhSachNhanVien(int maPhongBan)
         {
-            return dalnv.LayDanhSachNhanVien(maPhongBan);            
+            return dalnv.LayDanhSachNhanVien(maPhongBan);
         }
 
         public dtoNhanVien LayThongTinNhanVien(int manv)
@@ -195,16 +198,16 @@ namespace BLL
             return dalnv.LayThongTinNhanVien(manv);
         }
 
-		public Tour ChonTourCanXem(int matour)
-		{
-			throw new System.NotImplementedException();
-		}
+        public Tour ChonTourCanXem(int matour)
+        {
+            throw new System.NotImplementedException();
+        }
 
-		public DoiTac ChonDoiTacCanXem(int madoitac)
-		{
-			throw new System.NotImplementedException();
-		}
+        public DoiTac ChonDoiTacCanXem(int madoitac)
+        {
+            throw new System.NotImplementedException();
+        }
 
-	}
+    }
 }
 
