@@ -13,8 +13,27 @@ namespace DataAccessLayer
     using DataTranferObject;
     using System.Windows.Forms;
     using System.Data;
+    using BLL;
 	public class dalDoiTac : dalObject
 	{
+
+        public DoiTac LoadDoiTac(int ma)
+        {
+            string sql = "SELECT [MADOITAC],[MANHANVIEN],[TENDOITAC],[NGUOILIENHE],[DIENTHOAI],[DANHGIADOITAC],[DIACHI],[EMAIL],[LOAIDOITAC],[TRANGTHAI]  FROM [dbo].[DOITAC] where MADOITAC = "+ma;
+            DoiTac d = new DoiTac();
+            if(this.Connect())
+            {
+                DataTable table = Read(sql);
+                DataRow dr = table.Rows[0];
+                d.MaDoiTac = int.Parse(dr["MADOITAC"].ToString());
+                d.MaNhanVien = int.Parse(dr["MANHANVIEN"].ToString());
+                d.TenDoiTac = dr["TENDOITAC"].ToString();
+                d.NguoiLienHe = dr["NGUOILIENHE"].ToString();                
+                this.Close();
+            }
+            return d;
+        }
+
 		public bool ThemDoiTac(dtoDoiTac doiTac)
 		{			
             if(!this.Connect())

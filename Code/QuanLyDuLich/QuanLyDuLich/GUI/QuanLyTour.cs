@@ -52,6 +52,7 @@ namespace QuanLyDuLich.GUI
             LichTrinhNode node = (LichTrinhNode)lichTrinhTour.SelectedNode;
             if (node == null) return;
             tour.LichTrinh.Remove(node.LichTrinh);
+            node.LichTrinh.Xoa();
             lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
         }
 
@@ -103,6 +104,7 @@ namespace QuanLyDuLich.GUI
                     ChiTietNode ctNode = (ChiTietNode)lichTrinhTour.SelectedNode;
                     LichTrinhNode ltNode = (LichTrinhNode)ctNode.Parent;
                     ltNode.LichTrinh.pChiTietLichTrinh.Remove(ctNode.ChiTiet);
+                    ctNode.ChiTiet.Xoa();
                     lichTrinhTour.Nodes.Remove(lichTrinhTour.SelectedNode);
                 }
 
@@ -194,6 +196,47 @@ namespace QuanLyDuLich.GUI
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
             panelLapTour.Enabled = true;
+
+            txtTenTour.Text = tour.TenTour;
+            txtGhiChu.Text = tour.GhiChu;
+            txtNgayLap.Text = tour.NgayLapTour.ToShortDateString();
+            dtNgayDi.Value = tour.NgayDi;
+            txtThoiGianDi.Text = tour.ThoiGian;
+            txtUuDai.Text = tour.UuDai;
+
+
+
+            
+
+            foreach(LichTrinh l in tour.LichTrinh)
+            {
+                TreeNode node = new LichTrinhNode("Ngày " + l.Ngay + ": " + l.TenLichTrinh, l);
+                node.ContextMenu = new ContextMenu();
+                MenuItem them = new MenuItem("Thêm chi tiết lịch trình");
+                MenuItem xoa = new MenuItem("Xóa");
+                node.ContextMenu.MenuItems.Add(them);
+                node.ContextMenu.MenuItems.Add(xoa);
+                them.Click += themChiTiet;
+                xoa.Click += xoaLichTrinh;
+                this.lichTrinhTour.Nodes.Add(node);
+                foreach(ChiTietLichTrinh c in l.pChiTietLichTrinh)
+                {                                                            
+                    TreeNode nd = new ChiTietNode(c.ThoiGian, c);
+                    string diemDen = c.DoiTac == null ? "" : c.DoiTac.TenDoiTac;
+                    TreeNode doiTac = new TreeNode("Điểm đến: " + diemDen);
+                    TreeNode hoatDong = new TreeNode("Hoạt động: " + c.NoiDung);
+                    
+                    nd.Nodes.Add(doiTac);
+                    nd.Nodes.Add(hoatDong);
+                    nd.ContextMenu = new System.Windows.Forms.ContextMenu();
+                    MenuItem xoaItem = new MenuItem("Xóa");
+                    xoaItem.Click += xoaChiTiet;
+                    nd.ContextMenu.MenuItems.Add(xoaItem);
+                    node.Nodes.Add(nd);
+                }
+            }
+
+            
         }
 
 

@@ -17,6 +17,7 @@ namespace DataAccessLayer
     
 	public class dalChiTietLichTrinh : dalObject
 	{
+
 		public bool ThemCTLT(dtoChiTietLichTrinh ctlt)
 		{
             if (!this.Connect())
@@ -92,6 +93,7 @@ namespace DataAccessLayer
         public List<ChiTietLichTrinh> LayDanhSachChiTiet(int maLichTrinh)
         {
             List<ChiTietLichTrinh> lDtoChiTietLichTrinh = new List<ChiTietLichTrinh>();
+            dalDoiTac dal = new dalDoiTac();
             if (this.Connect())
             {
                 string sql = "select * from [dbo].[CHITIETLICHTRINH] where MALICHTRINH = " + maLichTrinh;
@@ -104,16 +106,14 @@ namespace DataAccessLayer
                     try
                     {
                         int dt = Int32.Parse(dr["MADOITAC"].ToString());
-                        chitietlichtrinh.DoiTac = new DoiTac();
-                        chitietlichtrinh.DoiTac.MaDoiTac = dt;
-                        
+                        chitietlichtrinh.DoiTac = dal.LoadDoiTac(dt);                                                
                     }
                     catch(Exception e)
                     {
                         chitietlichtrinh.DoiTac = null;
                     }
                     chitietlichtrinh.MaLichTrinh = Int32.Parse(dr["MALICHTRINH"].ToString());
-                    chitietlichtrinh.ThoiGian = dr["NOIDUNG"].ToString();
+                    chitietlichtrinh.NoiDung = dr["NOIDUNG"].ToString();
                     chitietlichtrinh.ThoiGian = dr["THOIGIAN"].ToString();
                     lDtoChiTietLichTrinh.Add(chitietlichtrinh);
                 }

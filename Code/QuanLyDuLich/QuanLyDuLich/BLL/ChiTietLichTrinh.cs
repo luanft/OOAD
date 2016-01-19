@@ -15,8 +15,8 @@ namespace BLL
 
 	public class ChiTietLichTrinh
 	{
-        private int maLichTrinh;
-        private int maChiTietLichTrinh;
+        private int maLichTrinh  = -1;
+        private int maChiTietLichTrinh = -1;
 
         public int MaChiTietLichTrinh
         {
@@ -65,6 +65,12 @@ namespace BLL
             this.DoiTac = new DoiTac(dal_DoiTac.LayDoiTac(dto.MADOITAC));
         }
 
+
+        public bool Xoa()
+        {
+            dalChiTietLichTrinh dal = new dalChiTietLichTrinh();
+            return dal.XoaCTLT(this.MaChiTietLichTrinh);
+        }
 
         public void Luu()
         {

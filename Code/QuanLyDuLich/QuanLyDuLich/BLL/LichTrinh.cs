@@ -88,6 +88,16 @@ namespace BLL
                 chiTietLichTrinh.Add(new ChiTietLichTrinh(dtoCTLT));
             }
         }
-	}
+	
+        public bool Xoa()
+        {
+            foreach(ChiTietLichTrinh i in pChiTietLichTrinh)
+            {
+                i.Xoa();
+            }
+            dalLichTrinh dal = new dalLichTrinh();
+            return dal.XoaLichTrinh(this.MaLichTrinh);
+        }
+    }
 }
 

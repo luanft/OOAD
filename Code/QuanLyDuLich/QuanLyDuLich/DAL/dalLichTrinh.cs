@@ -30,6 +30,7 @@ using BLL;
                     l.MaTour = maTour;
                     l.Ngay = dr["NGAY"].ToString();
                     l.MaLichTrinh = int.Parse(dr["MALICHTRINH"].ToString());
+                    l.TenLichTrinh = dr["TENLICHTRINH"].ToString();
                     l.pChiTietLichTrinh = dal.LayDanhSachChiTiet(l.MaLichTrinh);
                 }
                 Close();
