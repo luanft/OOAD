@@ -30,12 +30,13 @@ namespace BLL
             set { DanhSachDoiTac = value; }
         }
 
-        public NVDieuHanh()
+        public NVDieuHanh(int manv)
         {
+            this.SetNhanVien(this.LayThongTinNhanVien(manv));
             dalDoiTac dal_DoiTac = new dalDoiTac();
             List<dtoDoiTac> dsDoiTac;
             DanhSachDoiTac = new List<DoiTac>();
-            dsDoiTac = dal_DoiTac.LayDanhSachDoiTac(1);
+            dsDoiTac = dal_DoiTac.LayDanhSachDoiTac(this.MaNhanVien);
             foreach (dtoDoiTac dt in dsDoiTac)
             {
                 DoiTac doiTac = new DoiTac(dt);
@@ -52,6 +53,8 @@ namespace BLL
                 DanhSachTourCanDuyet.Add(t);
             }
         }
+
+        public NVDieuHanh() { }
 
         public bool CapNhat(DoiTac doiTac, dtoDoiTac data)
         {

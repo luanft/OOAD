@@ -20,6 +20,11 @@ namespace QuanLyDuLich.GUI
             InitializeComponent();
         }
 
+        public frmGiamDoc(int manv)
+        {
+            InitializeComponent();
+        }
+
         private void frmGiamDoc_Load(object sender, EventArgs e)
         {
             #region QuanLyPhongBan

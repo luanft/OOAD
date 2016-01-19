@@ -19,7 +19,9 @@ namespace QuanLyDuLich
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             //Application.Run(new frmNhanVienDieuHanh());
-            Application.Run(new frmNhanVienSaleTour());
+            //Application.Run(new frmNhanVienSaleTour());
+            //Application.Run(new frmNhanVienDieuHanh());
+            Application.Run(new frmDangNhap());
         }
     }
 }

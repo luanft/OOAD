@@ -56,6 +56,17 @@ namespace QuanLyDuLich.GUI
             
         }
 
+        public frmNhanVienDieuHanh(int manv)
+        {
+            InitializeComponent();
+            dgvDoiTac.AutoGenerateColumns = false;
+            dgvDuyetTour.AutoGenerateColumns = false;
+
+            nvDieuHanh = new NVDieuHanh(manv);
+            dsDoiTac = nvDieuHanh.pDanhSachDoiTac;
+
+        }
+
         private void frmNhanVienDieuHanh_Load(object sender, EventArgs e)
         {            
             List<string> dsLoaiDoiTac = new List<string>();

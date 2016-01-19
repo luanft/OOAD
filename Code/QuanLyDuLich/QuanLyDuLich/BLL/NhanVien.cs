@@ -85,9 +85,10 @@ namespace BLL
             set { MatKhau = value; }
         }
         protected dalNhanVien dalnv = new dalNhanVien();
-		public bool DangNhap(string maNv, string mk)
+		public bool DangNhap(string email, string mk)
 		{
-			throw new System.NotImplementedException();
+            SetNhanVien(dalnv.LayThongTinNhanVien(email));
+            return dalnv.DangNhap(email, mk);
 		}
 
 		public void DangXuat()

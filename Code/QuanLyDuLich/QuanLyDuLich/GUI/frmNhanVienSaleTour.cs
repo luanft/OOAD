@@ -20,6 +20,10 @@ namespace QuanLyDuLich.GUI
             InitializeComponent();
         }
 
+        public frmNhanVienSaleTour(int manv)
+        {
+            InitializeComponent();
+        }
 
         private diagThemLichTrinh diagThemLt = new diagThemLichTrinh();
         private diagChiTietLichTrinh diagCTLT = new diagChiTietLichTrinh();

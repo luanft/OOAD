@@ -75,13 +75,13 @@ namespace DataAccessLayer
             return false;
         }
 
-        public bool DangNhap(int maNV, string matKhau)
+        public bool DangNhap(string email, string matKhau)
         {
             if (!this.Connect())
             {
                 return false;
             }
-            string sql = "SELECT * FROM NHANVIEN WHERE MANHANVIEN = '" + maNV + "'and MATKHAU='" + matKhau + "'";
+            string sql = "SELECT * FROM NHANVIEN WHERE EMAIL = '" + email + "'and MATKHAU=N'" + matKhau + "'";
             DataTable dtDangNhap = this.Read(sql);
             this.Close();
             if (dtDangNhap.Rows.Count > 0)
@@ -98,6 +98,34 @@ namespace DataAccessLayer
                 return null;
             }
             string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU] FROM [dbo].[NHANVIEN] WHERE MANHANVIEN = '" + maNhanVien + "'";
+            dtoNhanVien nhanVien = new dtoNhanVien();
+            DataTable dtNhanVien = this.Read(sql);
+            this.Close();
+            if (dtNhanVien.Rows.Count == 0)
+            {
+                return null;
+            }
+            nhanVien.MANHANVIEN = Int32.Parse(dtNhanVien.Rows[0][0].ToString());
+            nhanVien.MAPHONG = Int32.Parse(dtNhanVien.Rows[0][1].ToString());
+            nhanVien.HOTEN = dtNhanVien.Rows[0][2].ToString();
+            nhanVien.CMND = dtNhanVien.Rows[0][3].ToString();
+            nhanVien.DIACHI = dtNhanVien.Rows[0][4].ToString();
+            nhanVien.NGAYSINH = dtNhanVien.Rows[0].Field<DateTime>("NGAYSINH");
+            nhanVien.QUEQUAN = dtNhanVien.Rows[0][6].ToString();
+            nhanVien.SODT = dtNhanVien.Rows[0][7].ToString();
+            nhanVien.EMAIL = dtNhanVien.Rows[0][8].ToString();
+            nhanVien.GIOITINH = dtNhanVien.Rows[0][9].ToString();
+            nhanVien.MATKHAU = dtNhanVien.Rows[0][10].ToString();
+            return nhanVien;
+        }
+
+        public dtoNhanVien LayThongTinNhanVien(string email)
+        {
+            if (!this.Connect())
+            {
+                return null;
+            }
+            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU] FROM [dbo].[NHANVIEN] WHERE EMAIL = '" + email + "'";
             dtoNhanVien nhanVien = new dtoNhanVien();
             DataTable dtNhanVien = this.Read(sql);
             this.Close();

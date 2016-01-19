@@ -51,6 +51,7 @@
             this.txtMatKhau.Location = new System.Drawing.Point(129, 101);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(270, 26);
             this.txtMatKhau.TabIndex = 1;
             // 
@@ -120,8 +121,10 @@
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(482, 232);
             this.Controls.Add(this.cbGhiNho);
             this.Controls.Add(this.label3);
