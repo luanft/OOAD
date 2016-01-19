@@ -182,7 +182,7 @@ namespace DataAccessLayer
             {
                 return null;
             }
-            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN]";
+            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU] FROM [dbo].[NHANVIEN]";
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
             
@@ -200,6 +200,7 @@ namespace DataAccessLayer
                 dto_NhanVien.SODT = dr[7].ToString();
                 dto_NhanVien.EMAIL = dr[8].ToString();
                 dto_NhanVien.GIOITINH = dr[9].ToString();
+                dto_NhanVien.MATKHAU = dr[10].ToString();
                 lDtoNhanVien.Add(dto_NhanVien);
             }
             return lDtoNhanVien;

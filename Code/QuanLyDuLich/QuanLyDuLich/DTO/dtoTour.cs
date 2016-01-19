@@ -13,6 +13,7 @@ namespace DataTranferObject
 
 	public class dtoTour
 	{
+   
 		public int MATOUR
 		{
 			get;

@@ -15,7 +15,7 @@ using System.Text;
 
 	public class Tour
 	{
-
+       
         private int maNhanVien;
 
         public int MaNhanVien
@@ -172,7 +172,12 @@ using System.Text;
             
             return dal_Tour.CapNhatTour(this.maTour, this.trangThai, this.ghiChu);            
 		}
+        public bool CapNhatLanCuoi()
+        {
+            dalTour dal_Tour = new dalTour();
 
+            return dal_Tour.CapNhatTour(this.maTour, this.trangThai, this.tongGiaTour, this.ghiChu);  
+        }
         public bool ChinhSuaTour()
         {
             dalTour dal_Tour = new dalTour();

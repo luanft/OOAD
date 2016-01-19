@@ -15,13 +15,12 @@ namespace QuanLyDuLich.GUI
 {
     public partial class frmGiamDoc : Form
     {
+         
+        GiamDoc giamdoc;
         public frmGiamDoc()
         {
-            InitializeComponent();
-        }
-
-        public frmGiamDoc(int manv)
-        {
+            giamdoc = new GiamDoc();
+            
             InitializeComponent();
         }
 
@@ -58,13 +57,22 @@ namespace QuanLyDuLich.GUI
             dataGridView_DanhSachPhong.DataSource = lDTO_phongban;
             #endregion
             #region ThongKe
-            
+
             dataGridView_ThongKe.AutoGenerateColumns = false;
             label_NgayThongKe.Text = DateTime.Now.ToString("dd/MM/yyy");
             #endregion
             #region DinhGiaTour
-
+            
+            int soTourCanDuyet = 0;
+            foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
+            {
+                soTourCanDuyet++;
+            }
+            label_SoTourCanDuyet.Text = soTourCanDuyet.ToString();
+            dataGridView_DanhSachTourCanDuyet.AutoGenerateColumns = false;
+            dataGridView_DanhSachTourCanDuyet.DataSource = giamdoc.pDanhSachTourCanDuyet;
             #endregion
+
         }
 
         public void LockControlValues(System.Windows.Forms.Control Container)
@@ -153,7 +161,7 @@ namespace QuanLyDuLich.GUI
                 int selectedRowIndex = dataGridView_DanhSachNhanVien.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView_DanhSachNhanVien.Rows[selectedRowIndex];
                 NhanVien nhanvien = new NhanVien();
-                GiamDoc giamdoc = new GiamDoc();
+                
                 nhanvien = giamdoc.ChonNhanVien(Int32.Parse(selectedRow.Cells["MaNhanVien"].Value.ToString()));
                 dtoNhanVien dto_nhanvien = nhanvien.GetDTONhanVien();
                 textBox_HoTen.Text = dto_nhanvien.HOTEN;
@@ -352,7 +360,7 @@ namespace QuanLyDuLich.GUI
         #region ThongKe
         private void button_ThongKe_Click(object sender, EventArgs e)
         {
-            dalTour dal_tour = new dalTour();         
+            dalTour dal_tour = new dalTour();
             DataTable dt_thongke = dal_tour.LayDanhSachTourThongKe(dateTimePicker_TuNgay.Value, dateTimePicker_DenNgay.Value);
             if (dt_thongke.Rows.Count < 1)
             {
@@ -360,8 +368,17 @@ namespace QuanLyDuLich.GUI
             }
             else
             {
+                button_InThongKe.Enabled = true;
                 dataGridView_ThongKe.DataSource = dt_thongke;
-
+                int tongTour = 0;
+                int tongDoanhThu = 0;
+                foreach (DataRow dr in dt_thongke.Rows)
+                {
+                    tongDoanhThu += Int32.Parse(dr["TONGGIATOUR"].ToString());
+                    tongTour++;
+                }
+                label_TongTour.Text = tongTour.ToString() + " tour";
+                label_TongDoanhThu.Text = tongDoanhThu.ToString() + " triệu VND";
             }
 
         }
@@ -370,9 +387,92 @@ namespace QuanLyDuLich.GUI
             dateTimePicker_DenNgay.Value = dateTimePicker_TuNgay.Value;
             dateTimePicker_DenNgay.MinDate = dateTimePicker_TuNgay.Value;
         }
+        Bitmap MemoryImage;
+        public void GetPrintArea(Panel pnl)
+        {
+            MemoryImage = new Bitmap(pnl.Width, pnl.Height);
+            pnl.DrawToBitmap(MemoryImage, new Rectangle(0, 0, pnl.Width, pnl.Height));
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            if (MemoryImage != null)
+            {
+                e.Graphics.DrawImage(MemoryImage, 0, 0);
+                base.OnPaint(e);
+            }
+        }
+       private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Rectangle pagearea = e.PageBounds;
+            e.Graphics.DrawImage(MemoryImage, (pagearea.Width / 2) - (this.panel_ThongKe.Width / 2), this.panel_ThongKe.Location.Y);
+        }
+
+        public void Print(Panel pnl)
+        {
+          
+            GetPrintArea(pnl);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+        private void button_InThongKe_Click(object sender, EventArgs e)
+        {
+            Print(panel_ThongKe);            
+        }
+     
+      
+
         #endregion
         #region DinhGiaTour
+        private void tabPage_XetDuyetTour_Click(object sender, EventArgs e)
+        {
+            giamdoc.LayDanhSachTourCanDuyet();
+            int soTourCanDuyet = 0;
+            foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
+            {
+                soTourCanDuyet++;
+            }
+            label_SoTourCanDuyet.Text = soTourCanDuyet.ToString();
+            dataGridView_DanhSachTourCanDuyet.AutoGenerateColumns = false;
+            dataGridView_DanhSachTourCanDuyet.DataSource = giamdoc.pDanhSachTourCanDuyet;
+        }
+        private void button_BanGiaoTourDaDuyet_Click(object sender, EventArgs e)
+        {
+            bool ok = true;
+            dalTour dal_tour = new dalTour();
+            foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
+            {
+                if (!t.CapNhatLanCuoi())
+                {
+                    ok = false;
+                }
+            }
+            if (!ok)
+            {
+                MessageBox.Show("Có lỗi khi kết nối cơ sở dữ liệu");
+            }
+            else
+            {
+                MessageBox.Show("Đã lưu lại những tour đã duyệt");
+                giamdoc.LayDanhSachTourCanDuyet();
+                int soTourCanDuyet = 0;
+                foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
+                {
+                    soTourCanDuyet++;
+                }
+                label_SoTourCanDuyet.Text = soTourCanDuyet.ToString();
+                dataGridView_DanhSachTourCanDuyet.AutoGenerateColumns = false;
+                dataGridView_DanhSachTourCanDuyet.DataSource = giamdoc.pDanhSachTourCanDuyet;
 
+            }
+        }
+
+        private void dataGridView_DanhSachTourCanDuyet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Tour tourDaChon = new global::BLL.Tour();
+            tourDaChon = giamdoc.ChonTourCanDuyet(int.Parse(dataGridView_DanhSachTourCanDuyet.Rows[e.RowIndex].Cells["MaTour"].Value.ToString()));
+            frmXemChiTietTour xemChiTietTour = new frmXemChiTietTour(tourDaChon);
+            xemChiTietTour.Show();
+        }   
         #endregion
         #region QuanLyPhongBan
         private void dataGridView_DanhSachPhong_SelectionChanged(object sender, EventArgs e)
@@ -391,11 +491,10 @@ namespace QuanLyDuLich.GUI
         }
         #endregion
 
-      
+        
 
-
-
-
+        
+     
 
     }
 }

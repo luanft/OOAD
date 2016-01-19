@@ -16,15 +16,71 @@ namespace BLL
 	public class GiamDoc : NhanVien
 	{
 		//public IEnumerable<NhanVien> NhanVien;
-      
+        private List<NhanVien> DanhSachNhanVien;
+        public List<NhanVien> pDanhSachNhanVien
+        {
+            get { return DanhSachNhanVien; }
+            set { DanhSachNhanVien = value; }
+        }
+
+        private List<Tour> DanhSachTourCanDuyet;
+
+        public List<Tour> pDanhSachTourCanDuyet
+        {
+            get { return DanhSachTourCanDuyet; }
+            set { DanhSachTourCanDuyet = value; }
+        }
+        public GiamDoc()
+        {
+            dalNhanVien dal_NhanVien = new dalNhanVien();
+            List<dtoNhanVien> dsNhanVien;
+            DanhSachNhanVien = new List<NhanVien>();
+            dsNhanVien = dal_NhanVien.LayDanhSachNhanVien();
+            foreach (dtoNhanVien dt in dsNhanVien)
+            {
+                NhanVien nhanVien = new NhanVien(dt);
+                DanhSachNhanVien.Add(nhanVien);
+            }
+
+            dalTour dal_Tour = new dalTour();
+            List<dtoTour> dsTour = new List<dtoTour>();
+            DanhSachTourCanDuyet = new List<Tour>();
+            dsTour = dal_Tour.LayDanhSachTourXepDuyet();
+            foreach (dtoTour tour in dsTour)
+            {
+                Tour t = new Tour(tour);
+                DanhSachTourCanDuyet.Add(t);
+            }
+        }
 		public NhanVien ChonNhanVien(int manv)
 		{
-            dalNhanVien dalnv = new dalNhanVien();
-            dtoNhanVien dtonv = dalnv.LayThongTinNhanVien(manv);
-            NhanVien nhanvien = new NhanVien(dtonv);            
-            return nhanvien;
+            foreach (NhanVien nv in DanhSachNhanVien)
+            {
+                if(nv.pMaNhanVien.Equals(manv))
+                {
+                    return nv;
+                }
+            }
+            return null;
+            //dalNhanVien dalnv = new dalNhanVien();
+            //dtoNhanVien dtonv = dalnv.LayThongTinNhanVien(manv);
+            //NhanVien nhanvien = new NhanVien(dtonv);            
+            //return nhanvien;
 		}
-
+        public List<Tour> LayDanhSachTourCanDuyet()
+        {
+            dalTour dal_Tour = new dalTour();
+            List<dtoTour> dsTour = new List<dtoTour>();
+            DanhSachTourCanDuyet = null;
+            DanhSachTourCanDuyet = new List<Tour>();
+            dsTour = dal_Tour.LayDanhSachTourXepDuyet();
+            foreach (dtoTour tour in dsTour)
+            {
+                Tour t = new Tour(tour);
+                DanhSachTourCanDuyet.Add(t);
+            }
+            return DanhSachTourCanDuyet!=null?DanhSachTourCanDuyet:null;
+        }
 		public bool CapNhatThongTinNhanVien(NhanVien nv, dtoNhanVien data)
 		{
 			nv.SetNhanVien(data);
@@ -39,9 +95,15 @@ namespace BLL
 
 		public Tour ChonTourCanDuyet(int matour)
 		{
-			throw new System.NotImplementedException();
-		}
-
+			foreach (Tour t in DanhSachTourCanDuyet)
+            {
+                if(t.MaTour.Equals(matour))
+                {
+                    return t;
+                }
+            }
+            return null;
+		}        
 		public void NhapGiaTour(Tour tour)
 		{
 			throw new System.NotImplementedException();
