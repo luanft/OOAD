@@ -86,7 +86,8 @@ namespace BLL
 		public bool ThemDiemDuLich(dtoDiemDuLich data)
 		{
             DiemDuLich ddl = new DiemDuLich(data);
-            DanhSachDiemDuLich.Add(ddl);
+            if(DanhSachDiemDuLich!=null)
+                DanhSachDiemDuLich.Add(ddl);
             return ddl.Luu();
 		}
         public bool XoaDiemDuLich(DiemDuLich ddl) 
