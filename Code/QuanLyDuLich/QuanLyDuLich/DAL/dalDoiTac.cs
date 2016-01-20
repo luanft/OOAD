@@ -28,7 +28,14 @@ namespace DataAccessLayer
                 d.MaDoiTac = int.Parse(dr["MADOITAC"].ToString());
                 d.MaNhanVien = int.Parse(dr["MANHANVIEN"].ToString());
                 d.TenDoiTac = dr["TENDOITAC"].ToString();
-                d.NguoiLienHe = dr["NGUOILIENHE"].ToString();                
+                d.NguoiLienHe = dr["NGUOILIENHE"].ToString();
+
+                d.SoDT = dr["DIENTHOAI"].ToString();
+                d.DanhGiaDoiTac = dr["DANHGIADOITAC"].ToString();
+                d.DiaChi = dr["DIACHI"].ToString();
+                d.Email = dr["EMAIL"].ToString();
+                d.LoaiDoiTac = dr["LOAIDOITAC"].ToString();               
+                
                 this.Close();
             }
             return d;

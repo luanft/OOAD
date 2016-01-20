@@ -171,6 +171,7 @@ namespace QuanLyDuLich.GUI
 
             this.txtNgayLap.Text = DateTime.Now.ToShortDateString();
 
+            cbNguoiDaiDien.Items.Clear();
             dalKhachHang dalKH = new dalKhachHang();
             List<dtoKhachHang> danhSachKhachHang = dalKH.LayDanhSachKhachHang(MaNhanVien);
 
