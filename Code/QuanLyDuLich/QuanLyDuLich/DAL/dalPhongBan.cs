@@ -6,22 +6,22 @@
 //------------------------------------------------------------------------------
 namespace DataAccessLayer
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
     using DataTranferObject;
     using System.Windows.Forms;
-    using System.Data;    
-	public class dalPhongBan : dalObject
-	{
+    using System.Data;
+    public class dalPhongBan : dalObject
+    {
         public bool ThemPhong(dtoPhongBan phongban)
         {
-            if(!this.Connect())
-            {                
+            if (!this.Connect())
+            {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[PHONGBAN] ([TENPHONG],[MAPHONG]) VALUES (N'" + phongban.TENPHONG+"',N'"+phongban.MAPHONG+"')";
+            string sql = "INSERT INTO [dbo].[PHONGBAN] ([TENPHONG],[MAPHONG]) VALUES (N'" + phongban.TENPHONG + "',N'" + phongban.MAPHONG + "')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -32,11 +32,11 @@ namespace DataAccessLayer
         }
         public bool XoaPhong(dtoPhongBan phongban)
         {
-          if(!this.Connect())
+            if (!this.Connect())
             {
                 return false;
             }
-            string sql = "DELETE FROM [dbo].[PHONGBAN] WHERE [MAPHONG]='"+phongban.MAPHONG+"'";
+            string sql = "DELETE FROM [dbo].[PHONGBAN] WHERE [MAPHONG]='" + phongban.MAPHONG + "'";
             bool ok = this.Write(sql);
             if (this.Write(sql))
             {
@@ -51,8 +51,8 @@ namespace DataAccessLayer
             if (!this.Connect())
             {
                 return false;
-            }            
-            string sql = "UPDATE [dbo].[PHONGBAN] SET [TENPHONG] = N'" +phongban.TENPHONG +"' WHERE [MAPHONG] ='"+phongban.MAPHONG+"'";
+            }
+            string sql = "UPDATE [dbo].[PHONGBAN] SET [TENPHONG] = N'" + phongban.TENPHONG + "' WHERE [MAPHONG] ='" + phongban.MAPHONG + "'";
             bool ok = this.Write(sql);
             if (this.Write(sql))
             {
@@ -60,7 +60,7 @@ namespace DataAccessLayer
                 return true;
             }
             this.Close();
-            return false;    
+            return false;
         }
         public List<dtoPhongBan> LayDanhSachPhong()
         {
@@ -74,7 +74,7 @@ namespace DataAccessLayer
                 string sql = "SELECT [MAPHONG],[TENPHONG] FROM [dbo].[PHONGBAN]";
                 DataTable dtPhongBan = this.Read(sql);
                 this.Close();
-                
+
                 List<dtoPhongBan> lDtoPhongBan = new List<dtoPhongBan>();
                 foreach (DataRow dr in dtPhongBan.Rows)
                 {
@@ -84,7 +84,7 @@ namespace DataAccessLayer
                     lDtoPhongBan.Add(dto_PhongBan);
                 }
                 return lDtoPhongBan;
-            }                                
+            }
         }
         public dtoPhongBan LayThongTinPhong(string maphong)
         {
@@ -95,19 +95,21 @@ namespace DataAccessLayer
             }
             else
             {
-                string sql = "SELECT [MAPHONG],[TENPHONG] FROM [dbo].[PHONGBAN] where MAPHONG='"+maphong+"'";
+                string sql = "SELECT [MAPHONG],[TENPHONG] FROM [dbo].[PHONGBAN] where MAPHONG='" + maphong + "'";
                 DataTable dtPhongBan = this.Read(sql);
                 this.Close();
+                if (dtPhongBan.Rows.Count < 1)
+                {
+                    return null;
+                }
+                dtoPhongBan dto_PhongBan = new dtoPhongBan();
+                dto_PhongBan.MAPHONG = Int32.Parse(dtPhongBan.Rows[0][0].ToString());
+                dto_PhongBan.TENPHONG = dtPhongBan.Rows[0][1].ToString();
 
-               
-                    dtoPhongBan dto_PhongBan = new dtoPhongBan();
-                    dto_PhongBan.MAPHONG = Int32.Parse(dtPhongBan.Rows[0][0].ToString());
-                    dto_PhongBan.TENPHONG = dtPhongBan.Rows[0][1].ToString();
-                   
-             
+
                 return dto_PhongBan;
             }
         }
-	}
+    }
 }
 

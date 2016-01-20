@@ -36,6 +36,18 @@ using System.Text;
         {
             return dalpb.LayThongTinPhong(maphong);
         }
+        public bool SuaThongTinPhong(dtoPhongBan dtopb)
+        {
+            return dalpb.SuaThongTinPhong(dtopb);
+        }
+        public bool ThemPhong(dtoPhongBan dtopb)
+        {
+            return dalpb.ThemPhong(dtopb);
+        }
+        public bool XoaPhong(dtoPhongBan dtopb)
+        {
+            return XoaPhong(dtopb);
+        }
 		public IEnumerable<NhanVien> NhanVien;
 
 	}

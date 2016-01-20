@@ -15,31 +15,31 @@ namespace QuanLyDuLich.GUI
 {
     public partial class frmGiamDoc : Form
     {
-         
+
         GiamDoc giamdoc;
         public frmGiamDoc()
         {
-            giamdoc = new GiamDoc();            
+            giamdoc = new GiamDoc();
             InitializeComponent();
         }
         public frmGiamDoc(int manv)
         {
-            
+
             giamdoc = new GiamDoc();
             giamdoc.pMaNhanVien = manv;
-            
+
             InitializeComponent();
         }
         private void frmGiamDoc_Load(object sender, EventArgs e)
         {
-            
-            label_TenGiamDoc.Text = "Xin chào " + giamdoc.LayThongTinNhanVien(giamdoc.pMaNhanVien).HOTEN.ToString()+". Have a nice day!";
-            
+
+            label_TenGiamDoc.Text = "Xin chào " + giamdoc.LayThongTinNhanVien(giamdoc.pMaNhanVien).HOTEN.ToString() + ". Have a nice day!";
+
             #region QuanLyPhongBan
             dataGridView_DanhSachPhong.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_DanhSachPhong.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_DanhSachPhong.AutoGenerateColumns = false;
-            LockControlValues(tabPage_QuanLyPhongBan);
+            tabPage_QuanLyPhongBan_Click(sender, e);
             #endregion
             #region QuanLyNhanVien
 
@@ -47,23 +47,7 @@ namespace QuanLyDuLich.GUI
             dataGridView_DanhSachNhanVien.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_DanhSachNhanVien.AutoGenerateColumns = false;
             LockControlValues(tabPage_QuanLyNhanVien);
-
-            PhongBan phongban = new PhongBan();
-            List<dtoPhongBan> lDTO_phongban = phongban.LayDanhSachPhongBan();
-            List<dtoPhongBan> lDTO_phongban2 = phongban.LayDanhSachPhongBan();
-            comboBox1_PhongBan.DataSource = lDTO_phongban;
-            comboBox1_PhongBan.DisplayMember = "TenPhong";
-            comboBox1_PhongBan.ValueMember = "MaPhong";
-            comboBox1_PhongBan.SelectedValue = 1;
-
-            comboBox2_PhongBan.DataSource = lDTO_phongban2;
-            comboBox2_PhongBan.DisplayMember = "TenPhong";
-            comboBox2_PhongBan.ValueMember = "MaPhong";
-            comboBox2_PhongBan.SelectedValue = 1;
-
-            NhanVien nhanvien = new NhanVien();
-            dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(1);
-            dataGridView_DanhSachPhong.DataSource = lDTO_phongban;
+            tabPage_QuanLyNhanVien_Click(sender, e);
             #endregion
             #region ThongKe
 
@@ -71,15 +55,8 @@ namespace QuanLyDuLich.GUI
             label_NgayThongKe.Text = DateTime.Now.ToString("dd/MM/yyy");
             #endregion
             #region DinhGiaTour
-            
-            int soTourCanDuyet = 0;
-            foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
-            {
-                soTourCanDuyet++;
-            }
-            label_SoTourCanDuyet.Text = soTourCanDuyet.ToString();
-            dataGridView_DanhSachTourCanDuyet.AutoGenerateColumns = false;
-            dataGridView_DanhSachTourCanDuyet.DataSource = giamdoc.pDanhSachTourCanDuyet;
+
+            tabPage_XetDuyetTour_Click(sender, e);
             #endregion
 
         }
@@ -163,6 +140,26 @@ namespace QuanLyDuLich.GUI
         }
 
         #region QuanLyNhanVien
+        private void tabPage_QuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            PhongBan phongban = new PhongBan();
+            List<dtoPhongBan> lDTO_phongban = phongban.LayDanhSachPhongBan();
+            List<dtoPhongBan> lDTO_phongban2 = phongban.LayDanhSachPhongBan();
+            comboBox1_PhongBan.DataSource = lDTO_phongban;
+            comboBox1_PhongBan.DisplayMember = "TenPhong";
+            comboBox1_PhongBan.ValueMember = "MaPhong";
+            comboBox1_PhongBan.SelectedValue = 1;
+
+            comboBox2_PhongBan.DataSource = lDTO_phongban2;
+            comboBox2_PhongBan.DisplayMember = "TenPhong";
+            comboBox2_PhongBan.ValueMember = "MaPhong";
+            comboBox2_PhongBan.SelectedValue = 1;
+
+            NhanVien nhanvien = new NhanVien();
+            dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(1);
+            dataGridView_DanhSachPhong.DataSource = lDTO_phongban;
+        }
+
         private void dataGridView_DanhSachNhanVien_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView_DanhSachNhanVien.SelectedCells.Count > 0)
@@ -170,7 +167,7 @@ namespace QuanLyDuLich.GUI
                 int selectedRowIndex = dataGridView_DanhSachNhanVien.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView_DanhSachNhanVien.Rows[selectedRowIndex];
                 NhanVien nhanvien = new NhanVien();
-                
+
                 nhanvien = giamdoc.ChonNhanVien(Int32.Parse(selectedRow.Cells["MaNhanVien"].Value.ToString()));
                 dtoNhanVien dto_nhanvien = nhanvien.GetDTONhanVien();
                 textBox_HoTen.Text = dto_nhanvien.HOTEN;
@@ -189,19 +186,17 @@ namespace QuanLyDuLich.GUI
                 textBox_SoDienThoai.Text = dto_nhanvien.SODT;
                 textBox_QueQuan.Text = dto_nhanvien.QUEQUAN;
                 textBox_MatKhau.Text = dto_nhanvien.MATKHAU;
-                switch (dto_nhanvien.MAPHONG)
-                {
-                    case 1:
-                        comboBox2_PhongBan.SelectedValue = 1;
-                        break;
-                    case 2:
-                        comboBox2_PhongBan.SelectedValue = 2;
-                        break;
-                    case 3:
-                        comboBox2_PhongBan.SelectedValue = 3;
-                        break;
-                }
+                comboBox2_PhongBan.SelectedValue = dto_nhanvien.MAPHONG;
+
                 label_MaNhanVien.Text = dto_nhanvien.MANHANVIEN.ToString();
+                if (giamdoc.pMaNhanVien.Equals(dto_nhanvien.MANHANVIEN))
+                {
+                    button_XoaNhanVien.Enabled = false;
+                }
+                else
+                {
+                    button_XoaNhanVien.Enabled = true;
+                }
             }
         }
 
@@ -211,7 +206,7 @@ namespace QuanLyDuLich.GUI
             button_XoaNhanVien.Enabled = true;
             button_Sua.Enabled = true;
             button_Huy.Enabled = false;
-            button_Luu.Enabled = false;            
+            button_Luu.Enabled = false;
             LockControlValues(tabPage_QuanLyNhanVien);
             dtoPhongBan dto_phongban = new dtoPhongBan();
             dto_phongban = (dtoPhongBan)comboBox1_PhongBan.SelectedItem;
@@ -290,18 +285,7 @@ namespace QuanLyDuLich.GUI
             nhanvien.pEmail = textBox_Email.Text;
             dtoPhongBan dto_phongban = new dtoPhongBan();
             dto_phongban = (dtoPhongBan)comboBox2_PhongBan.SelectedItem;
-            switch (dto_phongban.MAPHONG)
-            {
-                case 1:
-                    nhanvien.pMaPhong = 1;
-                    break;
-                case 2:
-                    nhanvien.pMaPhong = 2;
-                    break;
-                case 3:
-                    nhanvien.pMaPhong = 3;
-                    break;
-            }
+            nhanvien.pMaPhong = dto_phongban.MAPHONG;
 
             if (textBox_CMND.Text == "" || textBox_DiaChi.Text == "" || textBox_Email.Text == "" || textBox_HoTen.Text == ""
                  || textBox_MatKhau.Text == "" || textBox_QueQuan.Text == "" || textBox_SoDienThoai.Text == "")
@@ -413,7 +397,7 @@ namespace QuanLyDuLich.GUI
                 base.OnPaint(e);
             }
         }
-       private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Rectangle pagearea = e.PageBounds;
             e.Graphics.DrawImage(MemoryImage, (pagearea.Width / 2) - (this.panel_ThongKe.Width / 2), this.panel_ThongKe.Location.Y);
@@ -421,17 +405,17 @@ namespace QuanLyDuLich.GUI
 
         public void Print(Panel pnl)
         {
-          
+
             GetPrintArea(pnl);
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
         }
         private void button_InThongKe_Click(object sender, EventArgs e)
         {
-            Print(panel_ThongKe);            
+            Print(panel_ThongKe);
         }
-     
-      
+
+
 
         #endregion
         #region DinhGiaTour
@@ -442,6 +426,14 @@ namespace QuanLyDuLich.GUI
             foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
             {
                 soTourCanDuyet++;
+            }
+            if (soTourCanDuyet != 0)
+            {
+                button_BanGiaoTourDaDuyet.Enabled = true;
+            }
+            else
+            {
+                button_BanGiaoTourDaDuyet.Enabled = false;
             }
             label_SoTourCanDuyet.Text = soTourCanDuyet.ToString();
             dataGridView_DanhSachTourCanDuyet.AutoGenerateColumns = false;
@@ -465,15 +457,7 @@ namespace QuanLyDuLich.GUI
             else
             {
                 MessageBox.Show("Đã lưu lại những tour đã duyệt");
-                giamdoc.LayDanhSachTourCanDuyet();
-                int soTourCanDuyet = 0;
-                foreach (Tour t in giamdoc.pDanhSachTourCanDuyet)
-                {
-                    soTourCanDuyet++;
-                }
-                label_SoTourCanDuyet.Text = soTourCanDuyet.ToString();
-                dataGridView_DanhSachTourCanDuyet.AutoGenerateColumns = false;
-                dataGridView_DanhSachTourCanDuyet.DataSource = giamdoc.pDanhSachTourCanDuyet;
+                tabPage_XetDuyetTour_Click(sender, e);
 
             }
         }
@@ -484,7 +468,7 @@ namespace QuanLyDuLich.GUI
             tourDaChon = giamdoc.ChonTourCanDuyet(int.Parse(dataGridView_DanhSachTourCanDuyet.Rows[e.RowIndex].Cells["MaTour"].Value.ToString()));
             frmXemChiTietTour xemChiTietTour = new frmXemChiTietTour(tourDaChon);
             xemChiTietTour.Show();
-        }   
+        }
         #endregion
         #region QuanLyPhongBan
         private void dataGridView_DanhSachPhong_SelectionChanged(object sender, EventArgs e)
@@ -496,17 +480,142 @@ namespace QuanLyDuLich.GUI
                 PhongBan phongban = new PhongBan();
                 dtoPhongBan dto_phongban = phongban.LayThongTinPhong(selectedRow.Cells["MaPhong"].Value.ToString());
                 textBox_TenPhong.Text = dto_phongban.TENPHONG;
+                label_MaPhong.Text = dto_phongban.MAPHONG.ToString();
                 NhanVien nhanvien = new NhanVien();
                 List<dtoNhanVien> lDTO_nhanvien = nhanvien.LayDanhSachNhanVien(Int32.Parse(selectedRow.Cells["MaPhong"].Value.ToString()));
                 label_SoLuongNhanVien.Text = lDTO_nhanvien.Count.ToString();
             }
         }
+        private void button_LuuLai_Click(object sender, EventArgs e)
+        {
+            PhongBan phongban = new PhongBan();
+            
+            dtoPhongBan dto_phongban = phongban.LayThongTinPhong(label_MaPhong.Text.ToString());
+            if (textBox_TenPhong.Text == "")
+            {
+                MessageBox.Show("Mời nhập tên phòng ban!");
+            }
+            else
+            {
+                if (dto_phongban != null)
+                {
+                    if (phongban.SuaThongTinPhong(dto_phongban))
+                    {
+                        MessageBox.Show("Đã cập nhật tên phòng");
+                        textBox_TenPhong.ReadOnly = true;
+                        button_LuuLai.Enabled = false;
+                        button_HuySuaPhong.Enabled = false;
+                        button_XoaPhong.Enabled = false;
+                        button_ThemPhong.Enabled = true;
+                        button_SuaTenPhong.Enabled = true;
+                        tabPage_QuanLyPhongBan_Click(sender, e);
+                        tabPage_QuanLyNhanVien_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi trong quá trình kết nối cơ sở dữ liệu");
+                    }
+                }
+                else
+                {
+                    dto_phongban = new dtoPhongBan();
+                    dto_phongban.MAPHONG = Int32.Parse(label_MaPhong.Text.ToString());
+                    dto_phongban.TENPHONG = textBox_TenPhong.Text.ToString();
+                    if (phongban.ThemPhong(dto_phongban))
+                    {
+                        MessageBox.Show("Thêm phòng thành công");
+                        textBox_TenPhong.ReadOnly = true;
+                        button_LuuLai.Enabled = false;
+                        button_HuySuaPhong.Enabled = false;
+                        button_XoaPhong.Enabled = false;
+                        button_ThemPhong.Enabled = true;
+                        button_SuaTenPhong.Enabled = true;
+                        tabPage_QuanLyPhongBan_Click(sender, e);
+                        tabPage_QuanLyNhanVien_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi trong quá trình kết nối cơ sở dữ liệu");
+                    }
+                }
+            }
+            dataGridView_DanhSachPhong_SelectionChanged(sender, e);
+
+        }
+
+        private void button_SuaTenPhong_Click(object sender, EventArgs e)
+        {
+            textBox_TenPhong.ReadOnly = false;
+            button_LuuLai.Enabled = true;
+            button_HuySuaPhong.Enabled = true;
+            button_XoaPhong.Enabled = false;
+            button_ThemPhong.Enabled = false;
+        }
+
+        private void button_ThemPhong_Click(object sender, EventArgs e)
+        {
+            button_LuuLai.Enabled = true;
+            button_HuySuaPhong.Enabled = true;
+            button_XoaPhong.Enabled = false;
+            button_SuaTenPhong.Enabled = false;
+            textBox_TenPhong.ReadOnly = false;
+            textBox_TenPhong.Text = "";
+            PhongBan phongban = new PhongBan();
+            List<dtoPhongBan> lDTO_phongban = phongban.LayDanhSachPhongBan();
+            int maxMaPhong = 0;
+            foreach (dtoPhongBan dtopb in lDTO_phongban)
+            {
+                if (dtopb.MAPHONG > maxMaPhong)
+                {
+                    maxMaPhong = dtopb.MAPHONG;
+                }
+            }
+            label_MaPhong.Text = (maxMaPhong + 1).ToString();
+            label_SoLuongNhanVien.Text = "0";
+        }
+
+        private void tabPage_QuanLyPhongBan_Click(object sender, EventArgs e)
+        {
+            textBox_TenPhong.ReadOnly = true;
+            button_LuuLai.Enabled = false;
+            button_HuySuaPhong.Enabled = false;
+            button_XoaPhong.Enabled = false;
+            button_ThemPhong.Enabled = true;
+            button_SuaTenPhong.Enabled = true;
+            
+            
+        }
+
+        private void button_HuySuaPhong_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Những thông tin vừa được thêm vào sẽ không được lưu lại,bạn có muốn hủy không?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tabPage_QuanLyPhongBan_Click(sender, e);
+                dataGridView_DanhSachPhong_SelectionChanged(sender, e);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
         #endregion
 
-        
-
-        
-     
+        private void tabCtrl_ThongKeSaleTour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabCtrl_ThongKeSaleTour.SelectedTab == tabCtrl_ThongKeSaleTour.TabPages["tabPage_QuanLyNhanVien"])
+            {
+                tabPage_QuanLyNhanVien_Click(sender, e);
+            }
+            if (tabCtrl_ThongKeSaleTour.SelectedTab == tabCtrl_ThongKeSaleTour.TabPages["tabPage_QuanLyPhongBan"])
+            {
+                tabPage_QuanLyPhongBan_Click(sender, e);
+            }
+            if (tabCtrl_ThongKeSaleTour.SelectedTab == tabCtrl_ThongKeSaleTour.TabPages["tabPage_XetDuyetTour"])
+            {
+                tabPage_XetDuyetTour_Click(sender, e);
+            }
+        }
 
     }
 }
