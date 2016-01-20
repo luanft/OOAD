@@ -50,6 +50,12 @@ namespace DataTranferObject
 			set;
 		}
 
+        public string THONGTINTOUR
+        {
+            get;
+            set;
+        }
+
 		public string THOIGIAN
 		{
 			get;
