@@ -148,18 +148,17 @@ namespace DataAccessLayer
         {
             Tour t = new Tour();
             dalLichTrinh dalLt = new dalLichTrinh();
+            dalKhachHang dalKh = new dalKhachHang();
+            dalDoiTac dalDt = new dalDoiTac();
             if(this.Connect())
             {
                 string sql = "select * from [dbo].[TOUR] where [MATOUR] = " + maTour;
                 DataTable data = this.Read(sql);
                 DataRow dr = data.Rows[0];
                 t.MaTour = int.Parse(dr["MATOUR"].ToString());
-                t.HuongDanVien = new DoiTac();
-                t.HuongDanVien.MaDoiTac = int.Parse(dr["HUONGDANVIEN"].ToString());
-                t.KhachHang = new KhachHang();
-                t.KhachHang.pMaKhachHang = int.Parse(dr["MAKHACHHANG"].ToString());
-                t.NhaXe = new DoiTac();
-                t.NhaXe.MaDoiTac = int.Parse(dr["NHAXE"].ToString());
+                t.HuongDanVien = dalDt.LoadDoiTac(int.Parse(dr["HUONGDANVIEN"].ToString()));
+                t.KhachHang = dalKh.LoadKH(int.Parse(dr["MAKHACHHANG"].ToString()));
+                t.NhaXe = dalDt.LoadDoiTac(int.Parse(dr["NHAXE"].ToString()));  
                 t.MaNhanVien = int.Parse(dr["MANHANVIEN"].ToString());
                 t.TenTour = dr["TENTOUR"].ToString();
                 t.ThoiGian = dr["THOIGIAN"].ToString();
