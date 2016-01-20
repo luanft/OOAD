@@ -104,6 +104,14 @@ using System.Text;
             set { ngayLapTour = value; }
         }
 
+        private string thongTinTour = "";
+
+        public string ThongTinTour
+        {
+            get { return thongTinTour; }
+            set { thongTinTour = value; }
+        }
+
         private List<LichTrinh> lichTrinh = new List<LichTrinh>();
 
         public List<LichTrinh> LichTrinh
