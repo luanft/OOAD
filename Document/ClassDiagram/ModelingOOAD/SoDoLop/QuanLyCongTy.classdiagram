@@ -4331,6 +4331,18 @@
                     <referencedTypeMoniker Id="c201c4cf-d3db-4b13-8c61-04b32627accb" LastKnownName="String" />
                   </type_NamedElement>
                 </property>
+                <property Id="d9a734cc-ef8c-48fa-ab12-784057654a7f" name="GioiTinh" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="081f3ff5-22d0-48a9-ab06-b955844e5f15" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f9b0f10d-f5af-4a20-a0df-2da3d00e54ba" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="dd9222c7-8cf7-449d-a477-f78fb42045d9" name="MaKhachHang" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="087ee60b-0f39-4fe4-b440-27a784b2c6e7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e4d833b9-463c-4734-b05d-6dc85e741129" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="1184899e-0cdf-411a-9ea7-2ee95a4dfa8f" name="CapNhat" isLeaf="true" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -5938,6 +5950,11 @@
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="e4d833b9-463c-4734-b05d-6dc85e741129" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="00fc40b5-53ee-403a-9a3b-9cbbe51e38fc" name="SoDoLop">
     <elementDefinition Id="56b3b65c-9535-4205-b095-81b31a827b26" />
