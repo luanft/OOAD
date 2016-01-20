@@ -15,7 +15,7 @@ namespace QuanLyDuLich.GUI
     partial class frmNhanVienSaleTour : Form
     {
         private bool capNhatTour = false;
-        int maNhanVien = 1;
+        int maNhanVien;
 
         public int MaNhanVien
         {
@@ -222,7 +222,31 @@ namespace QuanLyDuLich.GUI
             txtThoiGianDi.Text = tour.ThoiGian;
             txtUuDai.Text = tour.UuDai;
             txtThongTinTour.Text = tour.ThongTinTour;
-
+            
+            foreach(dtoDoiTac i in cbNhaXe.Items)
+            {
+                if(i.MADOITAC ==  tour.NhaXe.MaDoiTac)
+                {
+                    cbNhaXe.SelectedItem = i;
+                    break;
+                }
+            }
+            foreach (dtoDoiTac i in cbHuongDanVien.Items)
+            {
+                if (i.MADOITAC == tour.HuongDanVien.MaDoiTac)
+                {
+                    cbHuongDanVien.SelectedItem = i;
+                    break;
+                }
+            }
+            foreach (dtoKhachHang i in cbNguoiDaiDien.Items)
+            {
+                if (i.MAKHACHHANG == tour.KhachHang.pMaKhachHang)
+                {
+                    cbNguoiDaiDien.SelectedItem = i;
+                    break;
+                }
+            }
 
 
 

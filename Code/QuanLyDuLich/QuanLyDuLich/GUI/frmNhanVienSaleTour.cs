@@ -28,6 +28,7 @@ namespace QuanLyDuLich.GUI
             nhanVienSale = new NVSale(manv);
             dG_DanhSachKhachHang.AutoGenerateColumns = false;
             loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);
+            maNhanVien = manv;
         }        
         private diagThemLichTrinh diagThemLt = new diagThemLichTrinh();
         private diagChiTietLichTrinh diagCTLT = new diagChiTietLichTrinh();
