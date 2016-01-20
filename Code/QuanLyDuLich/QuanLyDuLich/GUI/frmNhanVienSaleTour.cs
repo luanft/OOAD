@@ -27,8 +27,7 @@ namespace QuanLyDuLich.GUI
             InitializeComponent();
             nhanVienSale = new NVSale(manv);
             dG_DanhSachKhachHang.AutoGenerateColumns = false;
-            loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);
-            loadDanhSachDiemDuLich();
+            loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);            
             maNhanVien = manv;
         }        
         private diagThemLichTrinh diagThemLt = new diagThemLichTrinh();
@@ -46,9 +45,9 @@ namespace QuanLyDuLich.GUI
             dG_DanhSachKhachHang.DataSource = bll_KhachHang.layDanhSachKhachHang(manv);
 
         }
-        private void loadDanhSachDiemDuLich()
-        {
-            lb_DiemDuLich.DataSource = bll_DiemDuLich.LayDanhSachDiemDuLich();            
+        private void loadDanhSachDiemDuLich(int matinh)
+        {            
+            lb_DiemDuLich.DataSource = bll_DiemDuLich.LayDanhSachDiemDuLich(matinh);            
             lb_DiemDuLich.DisplayMember = "TENDIEMDULICH";            
         }
         private void tb_SoDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -136,31 +135,32 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Lỗi xóa điểm du lịch");
             else
                 MessageBox.Show("Đã xóa điểm du lịch");
-            loadDanhSachDiemDuLich();
+            loadDanhSachDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaTinh);
         }        
         private void bt_ThemDiemDL_Click(object sender, EventArgs e)
         {
             if (!check_data_DDL())
                 return;
-            dtoDiemDuLich dto_DDL = new dtoDiemDuLich(1, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text);
+            int matinh=cb_TinhThanh.SelectedIndex+1;
+            dtoDiemDuLich dto_DDL = new dtoDiemDuLich(1, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text,matinh);
             if (nhanVienSale.ThemDiemDuLich(dto_DDL))
                 MessageBox.Show("Đã thêm điểm du lịch");
             else
                 MessageBox.Show("Lỗi thêm điểm du lịch");
-            loadDanhSachDiemDuLich();
+            loadDanhSachDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaTinh);
         }
 
         private void bt_CapNhatDDL_Click(object sender, EventArgs e)
         {
             if (!check_data_DDL())
-                return;
-            dtoDiemDuLich dto_DDL = new dtoDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaDiemDuLich, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text);
+                return;            
+            dtoDiemDuLich dto_DDL = new dtoDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaDiemDuLich, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text,nhanVienSale.diemDuLichDuocChon.pMaTinh);
 
             if (nhanVienSale.CapNhatDiemDuLich(nhanVienSale.diemDuLichDuocChon, dto_DDL))
                 MessageBox.Show("Đã cập nhật điểm du lịch");
             else
                 MessageBox.Show("Lỗi cập nhật điểm du lịch");
-            loadDanhSachDiemDuLich();
+            loadDanhSachDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaTinh);
         }
         private void disable_Control()
         {
@@ -243,7 +243,11 @@ namespace QuanLyDuLich.GUI
 
         private void lb_DiemDuLich_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int matinh= cb_ChonTinhThanh.SelectedIndex + 1;
+            cb_TinhThanh.SelectedIndex = cb_ChonTinhThanh.SelectedIndex;
             int index = lb_DiemDuLich.SelectedIndex;
+            if (nhanVienSale.DanhSachDiemDuLich == null)
+                nhanVienSale.CapNhatDanhSachDiemDuLich(matinh);
             nhanVienSale.diemDuLichDuocChon = nhanVienSale.DanhSachDiemDuLich[index];
             bindingdata_DDL();
         }
@@ -252,6 +256,12 @@ namespace QuanLyDuLich.GUI
             tb_MoTa.Text = nhanVienSale.diemDuLichDuocChon.pMoTa;
             tb_DiemDL.Text = nhanVienSale.diemDuLichDuocChon.pTenDiemDuLich;
             //cb_TinhThanh.Text=nhanVienSale.diemDuLichDuocChon.T
+        }
+
+        private void cb_ChonTinhThanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cb_ChonTinhThanh.SelectedIndex+1;
+            loadDanhSachDiemDuLich(index);
         }
         
 

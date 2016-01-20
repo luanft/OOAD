@@ -68,6 +68,7 @@
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabQuanLyDiemDuLich = new System.Windows.Forms.TabPage();
+            this.bt_XoaDiemDuLich = new System.Windows.Forms.Button();
             this.bt_CapNhatDDL = new System.Windows.Forms.Button();
             this.bt_ThemDiemDL = new System.Windows.Forms.Button();
             this.cb_TinhThanh = new System.Windows.Forms.ComboBox();
@@ -112,7 +113,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.llDangXuat = new System.Windows.Forms.LinkLabel();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
-            this.bt_XoaDiemDuLich = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabQuanLyTour.SuspendLayout();
             this.tabQuanLyKhachHang.SuspendLayout();
@@ -548,6 +548,16 @@
             this.tabQuanLyDiemDuLich.Text = "Quản lý điểm du lịch";
             this.tabQuanLyDiemDuLich.UseVisualStyleBackColor = true;
             // 
+            // bt_XoaDiemDuLich
+            // 
+            this.bt_XoaDiemDuLich.Location = new System.Drawing.Point(981, 450);
+            this.bt_XoaDiemDuLich.Name = "bt_XoaDiemDuLich";
+            this.bt_XoaDiemDuLich.Size = new System.Drawing.Size(109, 23);
+            this.bt_XoaDiemDuLich.TabIndex = 10;
+            this.bt_XoaDiemDuLich.Text = "Xóa Điểm Du Lịch";
+            this.bt_XoaDiemDuLich.UseVisualStyleBackColor = true;
+            this.bt_XoaDiemDuLich.Click += new System.EventHandler(this.bt_XoaDiemDuLich_Click);
+            // 
             // bt_CapNhatDDL
             // 
             this.bt_CapNhatDDL.Location = new System.Drawing.Point(872, 450);
@@ -755,6 +765,7 @@
             this.cb_ChonTinhThanh.Name = "cb_ChonTinhThanh";
             this.cb_ChonTinhThanh.Size = new System.Drawing.Size(221, 21);
             this.cb_ChonTinhThanh.TabIndex = 2;
+            this.cb_ChonTinhThanh.SelectedIndexChanged += new System.EventHandler(this.cb_ChonTinhThanh_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -1118,16 +1129,6 @@
             this.lbTenNhanVien.Size = new System.Drawing.Size(82, 13);
             this.lbTenNhanVien.TabIndex = 4;
             this.lbTenNhanVien.Text = "Trần Minh Luận";
-            // 
-            // bt_XoaDiemDuLich
-            // 
-            this.bt_XoaDiemDuLich.Location = new System.Drawing.Point(981, 450);
-            this.bt_XoaDiemDuLich.Name = "bt_XoaDiemDuLich";
-            this.bt_XoaDiemDuLich.Size = new System.Drawing.Size(109, 23);
-            this.bt_XoaDiemDuLich.TabIndex = 10;
-            this.bt_XoaDiemDuLich.Text = "Xóa Điểm Du Lịch";
-            this.bt_XoaDiemDuLich.UseVisualStyleBackColor = true;
-            this.bt_XoaDiemDuLich.Click += new System.EventHandler(this.bt_XoaDiemDuLich_Click);
             // 
             // frmNhanVienSaleTour
             // 

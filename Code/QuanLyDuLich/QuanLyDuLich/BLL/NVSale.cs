@@ -37,14 +37,14 @@ namespace BLL
             }
 
 
-            CapNhatDanhSachDiemDuLich();
+            //CapNhatDanhSachDiemDuLich(matinh);
         }
-        public void CapNhatDanhSachDiemDuLich()
+        public void CapNhatDanhSachDiemDuLich(int matinh)
         {
             dalDiemDuLich dal_DDL = new dalDiemDuLich();
             DanhSachDiemDuLich = new List<DiemDuLich>();
             List<dtoDiemDuLich> ds_dtoDiemDuLich = new List<dtoDiemDuLich>();
-            ds_dtoDiemDuLich = dal_DDL.LayDanhSachDiemDuLich();
+            ds_dtoDiemDuLich = dal_DDL.LayDanhSachDiemDuLich(matinh);
             foreach (dtoDiemDuLich i in ds_dtoDiemDuLich)
             {
                 DiemDuLich tmp = new DiemDuLich(i);
@@ -79,7 +79,7 @@ namespace BLL
         public bool CapNhatDiemDuLich(DiemDuLich ddl, dtoDiemDuLich data)
 		{
             ddl.CapNhat(data);
-            CapNhatDanhSachDiemDuLich();
+            CapNhatDanhSachDiemDuLich(ddl.pMaTinh);
             return true;    
 		}
 

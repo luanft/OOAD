@@ -39,12 +39,21 @@ namespace BLL
             get { return MoTa; }
             set { MoTa = value; }
         }
-        public DiemDuLich(int _maDiemDuLich, int _maNhanVien, string _tenDiemDuLich, string _moTa)
+
+        private int MaTinh;
+
+        public int pMaTinh
+        {
+            get { return MaTinh; }
+            set { MaTinh = value; }
+        }
+        public DiemDuLich(int _maDiemDuLich, int _maNhanVien, string _tenDiemDuLich, string _moTa,int _maTinh)
         {
             MaDiemDuLich = _maDiemDuLich;
             MaNhanVien = _maNhanVien;
             TenDiemDuLich = _tenDiemDuLich;
             MoTa = _moTa;
+            MaTinh = _maTinh;
         }
 
         public DiemDuLich(dtoDiemDuLich _dtoDiemDuLich)
@@ -53,6 +62,7 @@ namespace BLL
             this.MaNhanVien = _dtoDiemDuLich.MANHANVIEN;
             this.MoTa = _dtoDiemDuLich.MOTA;
             this.TenDiemDuLich = _dtoDiemDuLich.TENDIEMDULICH;
+            this.MaTinh = _dtoDiemDuLich.MATINH;
         }
         public DiemDuLich() 
         {
@@ -64,14 +74,14 @@ namespace BLL
             TenDiemDuLich = _diemDuLich.TENDIEMDULICH;
             MoTa = _diemDuLich.MOTA;
         }
-        public List<dtoDiemDuLich> LayDanhSachDiemDuLich()
+        public List<dtoDiemDuLich> LayDanhSachDiemDuLich(int matinh)
         {
             dalDiemDuLich dal = new dalDiemDuLich();
-            return dal.LayDanhSachDiemDuLich();
+            return dal.LayDanhSachDiemDuLich(matinh);
         }
         public dtoDiemDuLich getdtoDiemDuLich()
         {
-            dtoDiemDuLich _diemDuLich = new dtoDiemDuLich(MaDiemDuLich, MaNhanVien, TenDiemDuLich, MoTa);
+            dtoDiemDuLich _diemDuLich = new dtoDiemDuLich(MaDiemDuLich, MaNhanVien, TenDiemDuLich, MoTa,MaTinh);
             return _diemDuLich;
         }
 		public bool CapNhat(dtoDiemDuLich ddl)

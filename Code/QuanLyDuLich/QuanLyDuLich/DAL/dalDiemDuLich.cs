@@ -21,8 +21,8 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[DIEMDULICH] ([MANHANVIEN],[TENDIEMDULICH],[MOTA])"
-            + "VALUES('" + diemDuLich.MANHANVIEN + "',N'" + diemDuLich.TENDIEMDULICH + "',N'" + diemDuLich.MOTA + "')";
+            string sql = "INSERT INTO [dbo].[DIEMDULICH] ([MANHANVIEN],[TENDIEMDULICH],[MOTA],[MATINH])"
+            + "VALUES(" + diemDuLich.MANHANVIEN + ",N'" + diemDuLich.TENDIEMDULICH + "',N'" + diemDuLich.MOTA + "',"+diemDuLich.MATINH+")";
             if (this.Write(sql))
             {
                 this.Close();
@@ -47,30 +47,7 @@ namespace DataAccessLayer
             this.Close();
             return false;
         }
-
-        public List<dtoDiemDuLich> LayDanhSachDiemDuLich(int maNV)
-        {
-          if (!this.Connect())
-            {
-                return null;
-            }
-            string sql = "SELECT [MADIEMDULICH],[MANHANVIEN],[TENDIEMDULICH],[MOTA] FROM [dbo].[DIEMDULICH] WHERE [MANHANVIEN]='"+maNV+"'";
-            DataTable dtDiemDuLich = this.Read(sql);
-            this.Close();
-            
-            List<dtoDiemDuLich> lDtoDiemDuLich = new List<dtoDiemDuLich>();
-            foreach (DataRow dr in dtDiemDuLich.Rows)
-            {
-                dtoDiemDuLich dto_DiemDuLich = new dtoDiemDuLich();
-                dto_DiemDuLich.MADIEMDULICH = Int32.Parse(dr[0].ToString());
-                dto_DiemDuLich.MANHANVIEN = Int32.Parse(dr[1].ToString());
-                dto_DiemDuLich.TENDIEMDULICH = dr[2].ToString();
-                dto_DiemDuLich.MOTA = dr[3].ToString();
-                lDtoDiemDuLich.Add(dto_DiemDuLich);
-            }
-            return lDtoDiemDuLich;
-        }
-
+        
         public bool SuaThongTinDiemDuLich(dtoDiemDuLich ddl)
         {
             if (!this.Connect())
@@ -87,13 +64,13 @@ namespace DataAccessLayer
             return false;
         }
 
-        public List<dtoDiemDuLich> LayDanhSachDiemDuLich()
+        public List<dtoDiemDuLich> LayDanhSachDiemDuLich(int matinh)
         {
             if (!this.Connect())
             {
                 return null;
             }
-            string sql = "SELECT [MADIEMDULICH],[MANHANVIEN],[TENDIEMDULICH],[MOTA] FROM [dbo].[DIEMDULICH]";
+            string sql = "SELECT * FROM [dbo].[DIEMDULICH] where MATINH="+matinh;
             DataTable dtDiemDuLich = this.Read(sql);
             this.Close();            
             List<dtoDiemDuLich> lDtoDiemDuLich = new List<dtoDiemDuLich>();

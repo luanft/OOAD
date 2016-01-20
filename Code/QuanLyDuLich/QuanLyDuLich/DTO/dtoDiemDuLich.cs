@@ -24,7 +24,11 @@ namespace DataTranferObject
 			get;
 			set;
 		}
-
+        public int MATINH
+        {
+            get;
+            set;
+        }
 		public string TENDIEMDULICH
 		{
 			get;
@@ -36,13 +40,15 @@ namespace DataTranferObject
 			get;
 			set;
 		}
+
         public dtoDiemDuLich() { }
-        public dtoDiemDuLich(int _maDiemDuLich, int _maNhanVien, string _tenDiemDuLich, string _moTa) 
+        public dtoDiemDuLich(int _maDiemDuLich, int _maNhanVien, string _tenDiemDuLich, string _moTa,int _maTinh) 
         {
             MADIEMDULICH = _maDiemDuLich;
             MANHANVIEN = _maNhanVien;
             TENDIEMDULICH = _tenDiemDuLich;
             MOTA = _moTa;
+            MATINH = _maTinh;
         }
 	}
 }
