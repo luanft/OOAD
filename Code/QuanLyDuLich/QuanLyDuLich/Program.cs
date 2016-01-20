@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyDuLich.GUI;
+using System.IO;
 namespace QuanLyDuLich
 {
     static class Program
@@ -17,8 +18,11 @@ namespace QuanLyDuLich
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDangNhap());            
-            //Application.Run(new frmNhanVienSaleTour());
+            if (!File.Exists("rememberme.txt"))
+            {
+                File.Create("rememberme.txt");
+            }            
+            Application.Run(new frmDangNhap());
         }
     }
 }
