@@ -617,5 +617,13 @@ namespace QuanLyDuLich.GUI
             }
         }
 
+        private void button_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDangNhap formDangNhap = new frmDangNhap();
+            formDangNhap.ShowDialog();
+            this.Close();
+        }
+
     }
 }
