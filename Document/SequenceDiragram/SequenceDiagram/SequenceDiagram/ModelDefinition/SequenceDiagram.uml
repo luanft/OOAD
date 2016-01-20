@@ -8250,30 +8250,6 @@
                 Id="61c6bde2-2952-4457-9529-d61a817adc57"
                 LastKnownName="MessageOccurrenceSpecification2"
                 LastKnownLocation="SequenceDiagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="a799a7bc-b29b-4550-8333-97e523ab3d74"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="SequenceDiagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="1ab7b356-f5d6-46d2-bf05-0e08e637ff86"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="SequenceDiagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="3c6fb719-336a-49db-b899-bdccc3b83d40"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="SequenceDiagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="67152f29-ad84-42f9-bd36-979831899dc4"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="SequenceDiagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="adeed39f-fb6b-4505-aac1-09c7f6e1d4a4"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="SequenceDiagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="78b95dd8-37e4-4c29-bd09-3fe12f15e000"
-                LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="SequenceDiagram.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -8314,264 +8290,6 @@
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a799a7bc-b29b-4550-8333-97e523ab3d74"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="de3fa5a6-99bb-4760-a72d-348e519de43a"
-            name="BehaviorExecutionSpecification4">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="3c6fb719-336a-49db-b899-bdccc3b83d40"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="1ab7b356-f5d6-46d2-bf05-0e08e637ff86"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="49676a34-d696-433f-acd4-337c8a68b938"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="1ab7b356-f5d6-46d2-bf05-0e08e637ff86"
-            name="ExecutionOccurrenceSpecification7">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="c94746ab-499b-4aa2-a936-f89120dcff7e"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="SequenceDiagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="49676a34-d696-433f-acd4-337c8a68b938"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="3c6fb719-336a-49db-b899-bdccc3b83d40"
-            name="ExecutionOccurrenceSpecification8">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="f8b5bb45-e7d2-460d-9798-1cd021a4bbb6"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="SequenceDiagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="51611534-8e6b-4d48-ae1b-e204f4a27333"
-            name="BehaviorExecutionSpecification5">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
-                LastKnownName=": NhanVien"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="a6f25ec2-6312-4390-91aa-4792ca119265"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="5f539e14-7f39-467a-aae6-766c7df36d2e"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="88e3b402-0995-4b93-8a1c-373a7a291cf8"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="SequenceDiagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="bad37dd9-1492-47b7-9749-2722d3e5d76a"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="5f539e14-7f39-467a-aae6-766c7df36d2e"
-            name="ExecutionOccurrenceSpecification9">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="fd67c147-83ec-4155-ae70-3f6cf857062e"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="SequenceDiagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
-                LastKnownName=": NhanVien"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="67152f29-ad84-42f9-bd36-979831899dc4"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="88e3b402-0995-4b93-8a1c-373a7a291cf8"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
-                LastKnownName=": NhanVien"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="adeed39f-fb6b-4505-aac1-09c7f6e1d4a4"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="bad37dd9-1492-47b7-9749-2722d3e5d76a"
-            name="MessageOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
-                LastKnownName=": NhanVien"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="a6f25ec2-6312-4390-91aa-4792ca119265"
-            name="ExecutionOccurrenceSpecification10">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="076ad773-e1b1-4416-a38a-e738959160a4"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="SequenceDiagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
-                LastKnownName=": NhanVien"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="1b9fd174-da02-41a6-8cec-37dff5e33e7d"
-            name="BehaviorExecutionSpecification6">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="647cab22-97f0-4138-b921-074df5701fdd"
-                LastKnownName=": ManHinhDangNhap"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="f855a61c-34c2-4636-95b1-19521a93ef22"
-                LastKnownName="ExecutionOccurrenceSpecification12"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="79b7b6b6-484c-46ff-ba2b-036d0d88a75e"
-                LastKnownName="ExecutionOccurrenceSpecification11"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="893163a3-c828-4784-b61b-25ddd2c14ac4"
-                LastKnownName="MessageOccurrenceSpecification16"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="79b7b6b6-484c-46ff-ba2b-036d0d88a75e"
-            name="ExecutionOccurrenceSpecification11">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="a072a7f7-81c6-45b3-883a-dd50d5636e09"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="SequenceDiagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="647cab22-97f0-4138-b921-074df5701fdd"
-                LastKnownName=": ManHinhDangNhap"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="78b95dd8-37e4-4c29-bd09-3fe12f15e000"
-            name="MessageOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="893163a3-c828-4784-b61b-25ddd2c14ac4"
-            name="MessageOccurrenceSpecification16">
-            <covered>
-              <lifelineMoniker
-                Id="647cab22-97f0-4138-b921-074df5701fdd"
-                LastKnownName=": ManHinhDangNhap"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="0801ba20-70ea-44cd-9f66-95bbf77aef88"
             name="ExecutionOccurrenceSpecification2">
@@ -8590,13 +8308,187 @@
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="348e703d-2ccd-48b4-a578-237348ac4df5"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
+                LastKnownName=": NhanVien"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ab23e790-f311-4c8b-acea-ec3e45d2f028"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ab5150fe-6e77-43f0-be98-eb0bd5038904"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c51bf7c7-3c76-4c45-8b4b-92039084b84a"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="SequenceDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="77ab2e49-bd7e-4a80-82e8-c576be70e9dd"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="f855a61c-34c2-4636-95b1-19521a93ef22"
+            Id="ab5150fe-6e77-43f0-be98-eb0bd5038904"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="03b2028b-3460-434c-b75d-46fd9d6a2823"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SequenceDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
+                LastKnownName=": NhanVien"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c51bf7c7-3c76-4c45-8b4b-92039084b84a"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
+                LastKnownName=": NhanVien"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d640b5b7-3c4b-4eca-9ccd-4979631953a6"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
+                LastKnownName=": ManHinhLamViec"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="77ab2e49-bd7e-4a80-82e8-c576be70e9dd"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
+                LastKnownName=": NhanVien"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f639f757-6040-403f-8161-f697655e9051"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
+                LastKnownName=": ManHinhLamViec"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ab23e790-f311-4c8b-acea-ec3e45d2f028"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f816a5d5-295b-4641-aa19-d8a77c3f96b4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SequenceDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
+                LastKnownName=": NhanVien"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="6587c273-ab79-4200-8a11-3dc89f1984de"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="647cab22-97f0-4138-b921-074df5701fdd"
+                LastKnownName=": ManHinhDangNhap"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="803b06c8-0e46-45ec-b431-92588bf5770a"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="38ab95be-e346-4dc2-a162-a38d52bb5333"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="cd88c0d4-98e8-4abe-b01a-d604bcee0de7"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="38ab95be-e346-4dc2-a162-a38d52bb5333"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3e8042b7-d874-421c-8003-b99d24a3d0d4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SequenceDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="647cab22-97f0-4138-b921-074df5701fdd"
+                LastKnownName=": ManHinhDangNhap"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cd88c0d4-98e8-4abe-b01a-d604bcee0de7"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="647cab22-97f0-4138-b921-074df5701fdd"
+                LastKnownName=": ManHinhDangNhap"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8b60c245-9a76-4b8c-af0f-4ad9516a6801"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="44380b39-74a7-40f7-8183-d22f2168fd74"
+                LastKnownName=": ManHinhLamViec"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="803b06c8-0e46-45ec-b431-92588bf5770a"
             name="ExecutionOccurrenceSpecification12">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="f4bc385a-a719-4213-9755-5aba812bf5bb"
+                  Id="189c13b7-6f7a-47db-ad9b-358d89b5bd42"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="SequenceDiagram.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -8789,12 +8681,12 @@
                 LastKnownName="MessageOccurrenceSpecification1"
                 LastKnownLocation="SequenceDiagram.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="5f539e14-7f39-467a-aae6-766c7df36d2e"
-                LastKnownName="ExecutionOccurrenceSpecification9"
+                Id="ab5150fe-6e77-43f0-be98-eb0bd5038904"
+                LastKnownName="ExecutionOccurrenceSpecification19"
                 LastKnownLocation="SequenceDiagram.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="a6f25ec2-6312-4390-91aa-4792ca119265"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="ab23e790-f311-4c8b-acea-ec3e45d2f028"
+                LastKnownName="ExecutionOccurrenceSpecification20"
                 LastKnownLocation="SequenceDiagram.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -8811,6 +8703,18 @@
               <executionOccurrenceSpecificationMoniker
                 Id="0801ba20-70ea-44cd-9f66-95bbf77aef88"
                 LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="SequenceDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d640b5b7-3c4b-4eca-9ccd-4979631953a6"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="SequenceDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f639f757-6040-403f-8161-f697655e9051"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="SequenceDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8b60c245-9a76-4b8c-af0f-4ad9516a6801"
+                LastKnownName="MessageOccurrenceSpecification15"
                 LastKnownLocation="SequenceDiagram.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="9efc8c3b-8138-4705-ad05-c04608958cb3"
@@ -8837,11 +8741,11 @@
             lifelineDisplayName=": ManHinhDangNhap">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="79b7b6b6-484c-46ff-ba2b-036d0d88a75e"
+                Id="38ab95be-e346-4dc2-a162-a38d52bb5333"
                 LastKnownName="ExecutionOccurrenceSpecification11"
                 LastKnownLocation="SequenceDiagram.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="f855a61c-34c2-4636-95b1-19521a93ef22"
+                Id="803b06c8-0e46-45ec-b431-92588bf5770a"
                 LastKnownName="ExecutionOccurrenceSpecification12"
                 LastKnownLocation="SequenceDiagram.uml" />
               <executionOccurrenceSpecificationMoniker
@@ -8876,77 +8780,58 @@
             </receiveEvent>
           </message>
           <message
-            Id="c11f2e3c-cf4a-418a-bebc-7a992b0090cc"
-            name="Yêu cầu xác nhận"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="true">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="a799a7bc-b29b-4550-8333-97e523ab3d74"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="49676a34-d696-433f-acd4-337c8a68b938"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="d8b30440-fb51-431c-88e7-ee802cd6faec"
-            name="DangXuat()"
+            Id="3a65859d-1bdc-4beb-a0e2-d59c218f9f55"
+            name="Yêu cầu xác nhận"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="67152f29-ad84-42f9-bd36-979831899dc4"
-                LastKnownName="MessageOccurrenceSpecification11"
+                Id="d640b5b7-3c4b-4eca-9ccd-4979631953a6"
+                LastKnownName="MessageOccurrenceSpecification23"
                 LastKnownLocation="SequenceDiagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="88e3b402-0995-4b93-8a1c-373a7a291cf8"
-                LastKnownName="MessageOccurrenceSpecification12"
+                Id="c51bf7c7-3c76-4c45-8b4b-92039084b84a"
+                LastKnownName="MessageOccurrenceSpecification24"
                 LastKnownLocation="SequenceDiagram.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="b543fb27-3d8f-4766-a960-35596e340a19"
-            name="&lt;&lt;return&gt;&gt;"
+            Id="6ee3db72-9f0c-4772-9fe8-5d32e0a0e10f"
+            name="&lt;&lt;Xác nhận&gt;&gt;"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="bad37dd9-1492-47b7-9749-2722d3e5d76a"
-                LastKnownName="MessageOccurrenceSpecification13"
+                Id="77ab2e49-bd7e-4a80-82e8-c576be70e9dd"
+                LastKnownName="MessageOccurrenceSpecification25"
                 LastKnownLocation="SequenceDiagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="adeed39f-fb6b-4505-aac1-09c7f6e1d4a4"
-                LastKnownName="MessageOccurrenceSpecification14"
+                Id="f639f757-6040-403f-8161-f697655e9051"
+                LastKnownName="MessageOccurrenceSpecification26"
                 LastKnownLocation="SequenceDiagram.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="f7c7169f-5190-4582-a2c0-beded43f155b"
+            Id="9bf80184-de3f-4f38-b950-f149fbba0064"
             name="Tạo màn hình đăng nhập"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="78b95dd8-37e4-4c29-bd09-3fe12f15e000"
+                Id="8b60c245-9a76-4b8c-af0f-4ad9516a6801"
                 LastKnownName="MessageOccurrenceSpecification15"
                 LastKnownLocation="SequenceDiagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="893163a3-c828-4784-b61b-25ddd2c14ac4"
+                Id="cd88c0d4-98e8-4abe-b01a-d604bcee0de7"
                 LastKnownName="MessageOccurrenceSpecification16"
                 LastKnownLocation="SequenceDiagram.uml" />
             </receiveEvent>
@@ -11406,36 +11291,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="c94746ab-499b-4aa2-a936-f89120dcff7e"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="f8b5bb45-e7d2-460d-9798-1cd021a4bbb6"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="fd67c147-83ec-4155-ae70-3f6cf857062e"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="076ad773-e1b1-4416-a38a-e738959160a4"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="a072a7f7-81c6-45b3-883a-dd50d5636e09"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="f4bc385a-a719-4213-9755-5aba812bf5bb"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
         Id="56503373-da04-4647-9fc7-ac111df39015"
         name="ExecutionEvent" />
     </packageHasNamedElement>
@@ -12694,6 +12549,26 @@
     <packageHasNamedElement>
       <executionEvent
         Id="13701cb5-ef1b-40d9-a7a1-1d9adf4060db"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3e8042b7-d874-421c-8003-b99d24a3d0d4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="189c13b7-6f7a-47db-ad9b-358d89b5bd42"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="03b2028b-3460-434c-b75d-46fd9d6a2823"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f816a5d5-295b-4641-aa19-d8a77c3f96b4"
         name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
