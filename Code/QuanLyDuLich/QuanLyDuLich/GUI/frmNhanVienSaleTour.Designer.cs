@@ -64,6 +64,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dG_DanhSachKhachHang = new System.Windows.Forms.DataGridView();
+            this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabQuanLyDiemDuLich = new System.Windows.Forms.TabPage();
             this.bt_CapNhatDDL = new System.Windows.Forms.Button();
             this.bt_ThemDiemDL = new System.Windows.Forms.Button();
@@ -109,9 +112,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.llDangXuat = new System.Windows.Forms.LinkLabel();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
-            this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bt_XoaDiemDuLich = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabQuanLyTour.SuspendLayout();
             this.tabQuanLyKhachHang.SuspendLayout();
@@ -506,8 +507,29 @@
             this.dG_DanhSachKhachHang.TabIndex = 100;
             this.dG_DanhSachKhachHang.SelectionChanged += new System.EventHandler(this.dG_DanhSachKhachHang_SelectionChanged);
             // 
+            // MaKhachHang
+            // 
+            this.MaKhachHang.DataPropertyName = "MaKhachHang";
+            this.MaKhachHang.HeaderText = "Mã Khách Hàng";
+            this.MaKhachHang.Name = "MaKhachHang";
+            this.MaKhachHang.Width = 50;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenKhachHang.DataPropertyName = "NguoiDaiDien";
+            this.TenKhachHang.HeaderText = "Người Đại Diện";
+            this.TenKhachHang.Name = "TenKhachHang";
+            // 
+            // TenDonVi
+            // 
+            this.TenDonVi.DataPropertyName = "TENDONVI";
+            this.TenDonVi.HeaderText = "Tên Đơn Vị";
+            this.TenDonVi.Name = "TenDonVi";
+            // 
             // tabQuanLyDiemDuLich
             // 
+            this.tabQuanLyDiemDuLich.Controls.Add(this.bt_XoaDiemDuLich);
             this.tabQuanLyDiemDuLich.Controls.Add(this.bt_CapNhatDDL);
             this.tabQuanLyDiemDuLich.Controls.Add(this.bt_ThemDiemDL);
             this.tabQuanLyDiemDuLich.Controls.Add(this.cb_TinhThanh);
@@ -528,7 +550,7 @@
             // 
             // bt_CapNhatDDL
             // 
-            this.bt_CapNhatDDL.Location = new System.Drawing.Point(926, 450);
+            this.bt_CapNhatDDL.Location = new System.Drawing.Point(872, 450);
             this.bt_CapNhatDDL.Name = "bt_CapNhatDDL";
             this.bt_CapNhatDDL.Size = new System.Drawing.Size(86, 23);
             this.bt_CapNhatDDL.TabIndex = 9;
@@ -538,7 +560,7 @@
             // 
             // bt_ThemDiemDL
             // 
-            this.bt_ThemDiemDL.Location = new System.Drawing.Point(799, 450);
+            this.bt_ThemDiemDL.Location = new System.Drawing.Point(754, 450);
             this.bt_ThemDiemDL.Name = "bt_ThemDiemDL";
             this.bt_ThemDiemDL.Size = new System.Drawing.Size(112, 23);
             this.bt_ThemDiemDL.TabIndex = 9;
@@ -1097,25 +1119,15 @@
             this.lbTenNhanVien.TabIndex = 4;
             this.lbTenNhanVien.Text = "Trần Minh Luận";
             // 
-            // MaKhachHang
+            // bt_XoaDiemDuLich
             // 
-            this.MaKhachHang.DataPropertyName = "MaKhachHang";
-            this.MaKhachHang.HeaderText = "Mã Khách Hàng";
-            this.MaKhachHang.Name = "MaKhachHang";
-            this.MaKhachHang.Width = 50;
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenKhachHang.DataPropertyName = "NguoiDaiDien";
-            this.TenKhachHang.HeaderText = "Người Đại Diện";
-            this.TenKhachHang.Name = "TenKhachHang";
-            // 
-            // TenDonVi
-            // 
-            this.TenDonVi.DataPropertyName = "TENDONVI";
-            this.TenDonVi.HeaderText = "Tên Đơn Vị";
-            this.TenDonVi.Name = "TenDonVi";
+            this.bt_XoaDiemDuLich.Location = new System.Drawing.Point(981, 450);
+            this.bt_XoaDiemDuLich.Name = "bt_XoaDiemDuLich";
+            this.bt_XoaDiemDuLich.Size = new System.Drawing.Size(109, 23);
+            this.bt_XoaDiemDuLich.TabIndex = 10;
+            this.bt_XoaDiemDuLich.Text = "Xóa Điểm Du Lịch";
+            this.bt_XoaDiemDuLich.UseVisualStyleBackColor = true;
+            this.bt_XoaDiemDuLich.Click += new System.EventHandler(this.bt_XoaDiemDuLich_Click);
             // 
             // frmNhanVienSaleTour
             // 
@@ -1235,5 +1247,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDonVi;
+        private System.Windows.Forms.Button bt_XoaDiemDuLich;
     }
 }

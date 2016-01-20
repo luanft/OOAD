@@ -22,7 +22,7 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[DIEMDULICH] ([MANHANVIEN],[TENDIEMDULICH],[MOTA])"
-            + "VALUES('" + diemDuLich.MANHANVIEN + "','" + diemDuLich.TENDIEMDULICH + "','" + diemDuLich.MOTA + "')";
+            + "VALUES('" + diemDuLich.MANHANVIEN + "',N'" + diemDuLich.TENDIEMDULICH + "',N'" + diemDuLich.MOTA + "')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -80,12 +80,10 @@ namespace DataAccessLayer
             string sql = "UPDATE [dbo].[DIEMDULICH] SET [TENDIEMDULICH] = N'" + ddl.TENDIEMDULICH + "',[MOTA]=N'" + ddl.MOTA + "' WHERE [MADIEMDULICH] ='" + ddl.MADIEMDULICH + "'";
             if (this.Write(sql))
             {
-                this.Close();
-                MessageBox.Show("Đã cập nhật");
+                this.Close();                
                 return true;
             }
-            this.Close();
-            MessageBox.Show("Lỗi cập nhật");
+            this.Close();            
             return false;
         }
 

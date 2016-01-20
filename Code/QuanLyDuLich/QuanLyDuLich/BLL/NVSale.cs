@@ -89,19 +89,18 @@ namespace BLL
             DanhSachDiemDuLich.Add(ddl);
             return ddl.Luu();
 		}
-        public void XoaDiemDuLich(DiemDuLich ddl) 
+        public bool XoaDiemDuLich(DiemDuLich ddl) 
         {
             DanhSachDiemDuLich.Remove(ddl);
-            ddl.Xoa(ddl.pMaDiemDuLich);
+            return ddl.Xoa(ddl.pMaDiemDuLich);
         }
 		public bool CapNhatKhachHang(KhachHang kh, dtoKhachHang data)
 		{
-            kh.CapNhat(data);
-            return true;
+            return kh.CapNhat(data);            
 		}
-        public void XoaKhachHang(KhachHang kh)
+        public bool XoaKhachHang(KhachHang kh)
         {
-            kh.Xoa(kh.pMaKhachHang);
+            return kh.Xoa(kh.pMaKhachHang);
         }
 		public KhachHang ChonKhachHang(int kh)
 		{
@@ -114,11 +113,11 @@ namespace BLL
             }
             return null;
 		}
-        public void ThemKhachHang(dtoKhachHang KhachHang)
+        public bool ThemKhachHang(dtoKhachHang KhachHang)
         {
             KhachHang kh = new KhachHang(KhachHang);
             DanhSachKhachHang.Add(kh);
-            kh.Luu();
+            return kh.Luu();
         }
 
 		public bool SubmitTour(Tour tour)

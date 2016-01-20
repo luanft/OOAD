@@ -27,14 +27,12 @@ namespace DataAccessLayer
                 "'," + khachHang.SONGUOI + ",N'" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG +"',"+1+ ")";
             if (this.Write(sql))
             {
-                this.Close();
-                MessageBox.Show("Đã thêm khách hàng");
+                this.Close();                
                 return true;
             }
             else
             {
-                this.Close();
-                MessageBox.Show("Lỗi thêm khách hàng");
+                this.Close();                
                 return false;
             }
         }
@@ -56,14 +54,12 @@ namespace DataAccessLayer
       "'WHERE [MAKHACHHANG] = " + khachHang.MAKHACHHANG ;
             if (this.Write(sql))
             {
-                this.Close();
-                MessageBox.Show("Đã cập nhật");
+                this.Close();                
                 return true;
             }
             else
             {
-                this.Close();
-                MessageBox.Show("Lỗi cập nhật");
+                this.Close();                
                 return false;
             }
         }
@@ -77,14 +73,12 @@ namespace DataAccessLayer
             string sql = "UPDATE [dbo].[KHACHHANG]SET[TRANGTHAI] = 0 WHERE [MAKHACHHANG]=" + maKH ;
             if (this.Write(sql))
             {
-                this.Close();
-                MessageBox.Show("Đã xóa khách hàng");
+                this.Close();                
                 return true;
             }
             else
             {
-                this.Close();
-                MessageBox.Show("Chưa xóa được");
+                this.Close();               
                 return false;
             }
         }

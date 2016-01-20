@@ -153,22 +153,20 @@ namespace BLL
 		public bool CapNhat(dtoKhachHang dtoKhachHang)
 		{
             dalKhachHang _dalKhachHang = new dalKhachHang();
-            _dalKhachHang.SuaThongTinKhachHang(dtoKhachHang);
-            return true;
+            return _dalKhachHang.SuaThongTinKhachHang(dtoKhachHang);
 		}
 
 		public bool Luu()
 		{
             dalKhachHang _dalKhachHang = new dalKhachHang();
-            _dalKhachHang.ThemKhachHang(getdtoKhachHang());
-            return true;
+            return _dalKhachHang.ThemKhachHang(getdtoKhachHang());
+            
 		}
 
 		public bool Xoa(int makh)
 		{
             dalKhachHang _dalKhachHang = new dalKhachHang();
-            _dalKhachHang.XoaKhachHang(makh);
-            return true;
+            return _dalKhachHang.XoaKhachHang(makh);
 		}
 
 	}
