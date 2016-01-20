@@ -81,6 +81,31 @@ namespace DataAccessLayer
                 dto_DiemDuLich.MANHANVIEN = Int32.Parse(dr[1].ToString());
                 dto_DiemDuLich.TENDIEMDULICH = dr[2].ToString();
                 dto_DiemDuLich.MOTA = dr[3].ToString();
+
+                dto_DiemDuLich.MATINH = Int32.Parse(dr[5].ToString());
+                lDtoDiemDuLich.Add(dto_DiemDuLich);
+            }
+            return lDtoDiemDuLich;
+        }
+        public List<dtoDiemDuLich> LayDanhSachDiemDuLich()
+        {
+            if (!this.Connect())
+            {
+                return null;
+            }
+            string sql = "SELECT * FROM [dbo].[DIEMDULICH]" ;
+            DataTable dtDiemDuLich = this.Read(sql);
+            this.Close();
+            List<dtoDiemDuLich> lDtoDiemDuLich = new List<dtoDiemDuLich>();
+            foreach (DataRow dr in dtDiemDuLich.Rows)
+            {
+                dtoDiemDuLich dto_DiemDuLich = new dtoDiemDuLich();
+                dto_DiemDuLich.MADIEMDULICH = Int32.Parse(dr[0].ToString());
+                dto_DiemDuLich.MANHANVIEN = Int32.Parse(dr[1].ToString());
+                dto_DiemDuLich.TENDIEMDULICH = dr[2].ToString();
+                dto_DiemDuLich.MOTA = dr[3].ToString();
+
+                dto_DiemDuLich.MATINH = Int32.Parse(dr[5].ToString());
                 lDtoDiemDuLich.Add(dto_DiemDuLich);
             }
             return lDtoDiemDuLich;

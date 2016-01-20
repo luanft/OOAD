@@ -162,7 +162,11 @@ namespace BLL
             return _dalKhachHang.ThemKhachHang(getdtoKhachHang());
             
 		}
-
+        public int GetMaxMaKhachHang() 
+        {
+            dalKhachHang _dalKH = new dalKhachHang();
+            return _dalKH.GetMaxMaKhachHang();
+        }
 		public bool Xoa(int makh)
 		{
             dalKhachHang _dalKhachHang = new dalKhachHang();

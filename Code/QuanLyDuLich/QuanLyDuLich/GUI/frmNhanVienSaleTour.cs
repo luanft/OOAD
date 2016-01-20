@@ -29,6 +29,7 @@ namespace QuanLyDuLich.GUI
             dG_DanhSachKhachHang.AutoGenerateColumns = false;
             loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);            
             maNhanVien = manv;
+            loadDanhSachDiemDuLich();        
         }        
         private diagThemLichTrinh diagThemLt = new diagThemLichTrinh();
         private diagChiTietLichTrinh diagCTLT = new diagChiTietLichTrinh();
@@ -45,10 +46,12 @@ namespace QuanLyDuLich.GUI
             dG_DanhSachKhachHang.DataSource = bll_KhachHang.layDanhSachKhachHang(manv);
 
         }
-        private void loadDanhSachDiemDuLich(int matinh)
-        {            
-            lb_DiemDuLich.DataSource = bll_DiemDuLich.LayDanhSachDiemDuLich(matinh);            
-            lb_DiemDuLich.DisplayMember = "TENDIEMDULICH";            
+        private void loadDanhSachDiemDuLich()
+        {
+            int matinh = cb_ChonTinhThanh.SelectedIndex + 1;
+            nhanVienSale.CapNhatDanhSachDiemDuLich(matinh);
+            lb_DiemDuLich.DataSource = nhanVienSale.DanhSachDiemDuLich;
+            lb_DiemDuLich.DisplayMember = "pTenDiemDuLich";            
         }
         private void tb_SoDT_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -63,17 +66,16 @@ namespace QuanLyDuLich.GUI
             bt_XoaKH.Enabled = false;
             bt_ThemKH.Enabled = false;
             bt_CapNhatKhachHang.Enabled = false;
-            bt_LuuKH.Enabled = true;
-            tb_MaKhachHang.Text = "";
+            bt_LuuKH.Enabled = true;            
             enable_Control();
-            
+            tb_MaKhachHang.Text = (bll_KhachHang.GetMaxMaKhachHang() + 1).ToString();
         }
 
         private void bt_CapNhatKhachHang_Click(object sender, EventArgs e)
         {
             int makh = int.Parse(tb_MaKhachHang.Text.ToString());
             int songuoi = int.Parse(tb_SoNguoi.Text.ToString());
-            dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien,nhanVienSale.khachHangDuocChon.pMaKhachHang, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
+            dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien,makh, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
             if (nhanVienSale.CapNhatKhachHang(nhanVienSale.khachHangDuocChon, dto_KhachHang))
                 MessageBox.Show("Đã cập nhật khách hàng");
             else
@@ -96,7 +98,8 @@ namespace QuanLyDuLich.GUI
             if (!check_data_KH())
                 return;                       
             int songuoi = int.Parse(tb_SoNguoi.Text.ToString());
-            dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien, 1, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
+            int makh = int.Parse(tb_MaKhachHang.Text.ToString());
+            dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien, makh, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
             if (nhanVienSale.ThemKhachHang(dto_KhachHang))
                 MessageBox.Show("Đã thêm khách hàng");
             else
@@ -135,7 +138,7 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Lỗi xóa điểm du lịch");
             else
                 MessageBox.Show("Đã xóa điểm du lịch");
-            loadDanhSachDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaTinh);
+            loadDanhSachDiemDuLich();            
         }        
         private void bt_ThemDiemDL_Click(object sender, EventArgs e)
         {
@@ -147,7 +150,8 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Đã thêm điểm du lịch");
             else
                 MessageBox.Show("Lỗi thêm điểm du lịch");
-            loadDanhSachDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaTinh);
+            loadDanhSachDiemDuLich();
+            bindingdata_DDL();
         }
 
         private void bt_CapNhatDDL_Click(object sender, EventArgs e)
@@ -160,7 +164,7 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Đã cập nhật điểm du lịch");
             else
                 MessageBox.Show("Lỗi cập nhật điểm du lịch");
-            loadDanhSachDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaTinh);
+            loadDanhSachDiemDuLich();            
         }
         private void disable_Control()
         {
@@ -242,26 +246,38 @@ namespace QuanLyDuLich.GUI
         }
 
         private void lb_DiemDuLich_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int matinh= cb_ChonTinhThanh.SelectedIndex + 1;
-            cb_TinhThanh.SelectedIndex = cb_ChonTinhThanh.SelectedIndex;
+        {            
             int index = lb_DiemDuLich.SelectedIndex;
-            if (nhanVienSale.DanhSachDiemDuLich == null)
-                nhanVienSale.CapNhatDanhSachDiemDuLich(matinh);
-            nhanVienSale.diemDuLichDuocChon = nhanVienSale.DanhSachDiemDuLich[index];
+            if ((nhanVienSale.DanhSachDiemDuLich != null) && (nhanVienSale.DanhSachDiemDuLich.Count >0))
+            {                
+                //nhanVienSale.CapNhatDanhSachDiemDuLich(matinh);
+                nhanVienSale.diemDuLichDuocChon = nhanVienSale.DanhSachDiemDuLich[index];
+            }            
+            if (cb_ChonTinhThanh.SelectedIndex!=-1)
+            {
+                cb_TinhThanh.SelectedIndex = cb_ChonTinhThanh.SelectedIndex;
+            }
+            else
+            {
+                cb_TinhThanh.SelectedIndex = nhanVienSale.diemDuLichDuocChon.pMaTinh-1;
+            }    
             bindingdata_DDL();
         }
         private void bindingdata_DDL()
         {
             tb_MoTa.Text = nhanVienSale.diemDuLichDuocChon.pMoTa;
             tb_DiemDL.Text = nhanVienSale.diemDuLichDuocChon.pTenDiemDuLich;
-            //cb_TinhThanh.Text=nhanVienSale.diemDuLichDuocChon.T
+            //cb_TinhThanh.Text=nhanVienSale.diemDuLichDuocChon.p
         }
 
         private void cb_ChonTinhThanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cb_ChonTinhThanh.SelectedIndex+1;
-            loadDanhSachDiemDuLich(index);
+            tb_DiemDL.Text = "";
+            tb_MoTa.Text = "";
+            cb_TinhThanh.SelectedIndex = -1;
+            int matinh = cb_ChonTinhThanh.SelectedIndex + 1;
+            nhanVienSale.CapNhatDanhSachDiemDuLich(matinh);
+            loadDanhSachDiemDuLich();
         }
         
 

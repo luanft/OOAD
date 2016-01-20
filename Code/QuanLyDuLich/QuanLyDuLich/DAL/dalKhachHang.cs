@@ -82,7 +82,20 @@ namespace DataAccessLayer
                 return false;
             }
         }
-
+        public int GetMaxMaKhachHang() 
+        {
+            if (!this.Connect())
+            {
+                MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
+                return 0;
+            }
+            int max=0;
+            string sql = "select max(MAKHACHHANG) from [dbo].[KHACHHANG]";
+            DataTable dtMaKhachHang = this.Read(sql);
+            max = Int32.Parse(dtMaKhachHang.Rows[0][0].ToString());
+            this.Close();
+            return max;
+        }
         public dtoKhachHang LayKhachHang(int maKH)
         {
             if (!this.Connect())

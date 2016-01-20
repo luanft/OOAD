@@ -79,6 +79,11 @@ namespace BLL
             dalDiemDuLich dal = new dalDiemDuLich();
             return dal.LayDanhSachDiemDuLich(matinh);
         }
+        public List<dtoDiemDuLich> LayDanhSachDiemDuLich()
+        {
+            dalDiemDuLich dal = new dalDiemDuLich();
+            return dal.LayDanhSachDiemDuLich();
+        }
         public dtoDiemDuLich getdtoDiemDuLich()
         {
             dtoDiemDuLich _diemDuLich = new dtoDiemDuLich(MaDiemDuLich, MaNhanVien, TenDiemDuLich, MoTa,MaTinh);

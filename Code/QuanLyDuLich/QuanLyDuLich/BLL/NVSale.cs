@@ -37,14 +37,17 @@ namespace BLL
             }
 
 
-            //CapNhatDanhSachDiemDuLich(matinh);
-        }
+            CapNhatDanhSachDiemDuLich(0);
+        }        
         public void CapNhatDanhSachDiemDuLich(int matinh)
         {
             dalDiemDuLich dal_DDL = new dalDiemDuLich();
             DanhSachDiemDuLich = new List<DiemDuLich>();
             List<dtoDiemDuLich> ds_dtoDiemDuLich = new List<dtoDiemDuLich>();
-            ds_dtoDiemDuLich = dal_DDL.LayDanhSachDiemDuLich(matinh);
+            if(matinh==0)
+                ds_dtoDiemDuLich = dal_DDL.LayDanhSachDiemDuLich();
+            else
+                ds_dtoDiemDuLich = dal_DDL.LayDanhSachDiemDuLich(matinh);
             foreach (dtoDiemDuLich i in ds_dtoDiemDuLich)
             {
                 DiemDuLich tmp = new DiemDuLich(i);
