@@ -94,6 +94,9 @@
     <Compile Include="GUI\diagChiTietLichTrinh.Designer.cs">
       <DependentUpon>diagChiTietLichTrinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DoiTacLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>

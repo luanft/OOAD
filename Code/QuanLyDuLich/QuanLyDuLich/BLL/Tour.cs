@@ -142,7 +142,7 @@ using System.Text;
         {
             get { return huongDanVien; }
             set { huongDanVien = value; }
-        }
+        }        
 
         public Tour() { }
 
@@ -158,6 +158,7 @@ using System.Text;
             this.UuDai = dto.UUDAI;
             this.GhiChu = dto.GHICHU;
             this.MaNhanVien = dto.MANHANVIEN;
+            this.ThongTinTour = dto.THONGTINTOUR;
 
             dalDoiTac dal_DoiTac = new dalDoiTac();
             this.NhaXe = new DoiTac(dal_DoiTac.LayDoiTac(dto.NHAXE));

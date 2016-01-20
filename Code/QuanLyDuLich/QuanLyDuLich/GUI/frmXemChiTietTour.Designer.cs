@@ -36,7 +36,11 @@
             this.lbTenDonVi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbKetThuc = new System.Windows.Forms.Label();
             this.btnIn = new System.Windows.Forms.Button();
+            this.lbChaoMung = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,7 +64,7 @@
             this.lbTenTour.Location = new System.Drawing.Point(133, 299);
             this.lbTenTour.MaximumSize = new System.Drawing.Size(550, 0);
             this.lbTenTour.Name = "lbTenTour";
-            this.lbTenTour.Size = new System.Drawing.Size(518, 50);
+            this.lbTenTour.Size = new System.Drawing.Size(519, 50);
             this.lbTenTour.TabIndex = 3;
             this.lbTenTour.Text = "TOUR LONG THÀNH - DẦU DÂY - HÀ NỘI - LÀO CAI - MÓNG CÁI - HẢI PHÒNG";
             this.lbTenTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,10 +101,10 @@
             this.lbNguoiGui.Location = new System.Drawing.Point(468, 76);
             this.lbNguoiGui.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbNguoiGui.Name = "lbNguoiGui";
-            this.lbNguoiGui.Size = new System.Drawing.Size(300, 19);
+            this.lbNguoiGui.Size = new System.Drawing.Size(301, 19);
             this.lbNguoiGui.TabIndex = 3;
             this.lbNguoiGui.Text = "NGƯỜI GỬI: ANH TUYÊN - 01657990105";
-            this.lbNguoiGui.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbNguoiGui.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTenDonVi
             // 
@@ -111,7 +115,7 @@
             this.lbTenDonVi.Location = new System.Drawing.Point(121, 24);
             this.lbTenDonVi.MaximumSize = new System.Drawing.Size(560, 0);
             this.lbTenDonVi.Name = "lbTenDonVi";
-            this.lbTenDonVi.Size = new System.Drawing.Size(559, 44);
+            this.lbTenDonVi.Size = new System.Drawing.Size(560, 44);
             this.lbTenDonVi.TabIndex = 1;
             this.lbTenDonVi.Text = "QUÝ THẦY CÔ TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN ĐẠI HỌC QUỐC GIA THÀNH P" +
     "HỐ HỒ CHÍ MINH";
@@ -133,7 +137,13 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lbChaoMung);
+            this.panel1.Controls.Add(this.fPanel2);
+            this.panel1.Controls.Add(this.fPanel1);
+            this.panel1.Controls.Add(this.lbKetThuc);
             this.panel1.Controls.Add(this.btnIn);
             this.panel1.Controls.Add(this.lbThoiGianDi);
             this.panel1.Controls.Add(this.lbTenTour);
@@ -147,6 +157,30 @@
             this.panel1.Size = new System.Drawing.Size(801, 661);
             this.panel1.TabIndex = 1;
             // 
+            // fPanel2
+            // 
+            this.fPanel2.Location = new System.Drawing.Point(13, 499);
+            this.fPanel2.Name = "fPanel2";
+            this.fPanel2.Size = new System.Drawing.Size(775, 48);
+            this.fPanel2.TabIndex = 8;
+            // 
+            // fPanel1
+            // 
+            this.fPanel1.Location = new System.Drawing.Point(13, 381);
+            this.fPanel1.Name = "fPanel1";
+            this.fPanel1.Size = new System.Drawing.Size(775, 48);
+            this.fPanel1.TabIndex = 7;
+            // 
+            // lbKetThuc
+            // 
+            this.lbKetThuc.AutoSize = true;
+            this.lbKetThuc.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKetThuc.Location = new System.Drawing.Point(214, 453);
+            this.lbKetThuc.Name = "lbKetThuc";
+            this.lbKetThuc.Size = new System.Drawing.Size(475, 22);
+            this.lbKetThuc.TabIndex = 6;
+            this.lbKetThuc.Text = "KẾT THÚC CHƯƠNG TRÌNH THAM QUAN DU LỊCH";
+            // 
             // btnIn
             // 
             this.btnIn.Location = new System.Drawing.Point(706, 12);
@@ -155,6 +189,16 @@
             this.btnIn.TabIndex = 5;
             this.btnIn.Text = "In Tour";
             this.btnIn.UseVisualStyleBackColor = true;
+            // 
+            // lbChaoMung
+            // 
+            this.lbChaoMung.AutoSize = true;
+            this.lbChaoMung.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChaoMung.Location = new System.Drawing.Point(119, 583);
+            this.lbChaoMung.Name = "lbChaoMung";
+            this.lbChaoMung.Size = new System.Drawing.Size(593, 26);
+            this.lbChaoMung.TabIndex = 9;
+            this.lbChaoMung.Text = "C.U TOURIST HÂN HOAN CHÀO ĐÓN QUÝ KHÁCH";
             // 
             // frmXemChiTietTour
             // 
@@ -176,6 +220,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,5 +235,9 @@
         private System.Windows.Forms.Label lbTenTour;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Label lbKetThuc;
+        private System.Windows.Forms.FlowLayoutPanel fPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fPanel2;
+        private System.Windows.Forms.Label lbChaoMung;
     }
 }
