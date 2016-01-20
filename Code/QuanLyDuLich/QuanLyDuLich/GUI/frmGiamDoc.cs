@@ -376,7 +376,7 @@ namespace QuanLyDuLich.GUI
             DataTable dt_thongke = dal_tour.LayDanhSachTourThongKe(dateTimePicker_TuNgay.Value, dateTimePicker_DenNgay.Value);
             if (dt_thongke.Rows.Count < 1)
             {
-                MessageBox.Show("Không có tour nào được bán trong khoảng thời gian được chọn!");
+                MessageBox.Show("Không có tour nào được bán trong khoảng thời gian đã chọn!");
             }
             else
             {
