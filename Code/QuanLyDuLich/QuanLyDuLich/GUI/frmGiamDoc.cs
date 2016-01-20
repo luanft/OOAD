@@ -54,12 +54,12 @@ namespace QuanLyDuLich.GUI
             comboBox1_PhongBan.DataSource = lDTO_phongban;
             comboBox1_PhongBan.DisplayMember = "TenPhong";
             comboBox1_PhongBan.ValueMember = "MaPhong";
-            comboBox1_PhongBan.SelectedIndex = 0;
+            comboBox1_PhongBan.SelectedValue = 1;
 
             comboBox2_PhongBan.DataSource = lDTO_phongban2;
             comboBox2_PhongBan.DisplayMember = "TenPhong";
             comboBox2_PhongBan.ValueMember = "MaPhong";
-            comboBox2_PhongBan.SelectedIndex = 0;
+            comboBox2_PhongBan.SelectedValue = 1;
 
             NhanVien nhanvien = new NhanVien();
             dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(1);
@@ -211,11 +211,12 @@ namespace QuanLyDuLich.GUI
             button_XoaNhanVien.Enabled = true;
             button_Sua.Enabled = true;
             button_Huy.Enabled = false;
-            button_Luu.Enabled = false;
-            int select = comboBox1_PhongBan.SelectedIndex + 1;
+            button_Luu.Enabled = false;            
             LockControlValues(tabPage_QuanLyNhanVien);
+            dtoPhongBan dto_phongban = new dtoPhongBan();
+            dto_phongban = (dtoPhongBan)comboBox1_PhongBan.SelectedItem;
             NhanVien nhanvien = new NhanVien();
-            dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(select);
+            dataGridView_DanhSachNhanVien.DataSource = nhanvien.LayDanhSachNhanVien(dto_phongban.MAPHONG);
         }
 
         private void button_Sua_Click(object sender, EventArgs e)

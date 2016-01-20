@@ -54,6 +54,7 @@ namespace BLL
         }
 		public NhanVien ChonNhanVien(int manv)
 		{
+            LayDanhSachNhanVien();
             foreach (NhanVien nv in DanhSachNhanVien)
             {
                 if(nv.pMaNhanVien.Equals(manv))
@@ -67,6 +68,20 @@ namespace BLL
             //NhanVien nhanvien = new NhanVien(dtonv);            
             //return nhanvien;
 		}
+        public List<NhanVien> LayDanhSachNhanVien()
+        {
+            dalNhanVien dal_NhanVien = new dalNhanVien();
+            List<dtoNhanVien> dsNhanVien;
+            DanhSachNhanVien = null;
+            DanhSachNhanVien = new List<NhanVien>();
+            dsNhanVien = dal_NhanVien.LayDanhSachNhanVien();
+            foreach (dtoNhanVien dt in dsNhanVien)
+            {
+                NhanVien nhanVien = new NhanVien(dt);
+                DanhSachNhanVien.Add(nhanVien);
+            }
+            return DanhSachNhanVien;
+        }
         public List<Tour> LayDanhSachTourCanDuyet()
         {
             dalTour dal_Tour = new dalTour();
