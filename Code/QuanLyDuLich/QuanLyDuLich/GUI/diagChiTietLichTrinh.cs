@@ -53,7 +53,7 @@ namespace QuanLyDuLich.GUI
             this.doiTac = null;
             this.thoiGian = this.hoatDong = "";
             this.daThem = false;
-            this.cbThoiGian.SelectedIndex = 0;
+            txtThoiGian.Text = "";
             this.txtHoatDong.Text = "";
         }
 
@@ -74,7 +74,7 @@ namespace QuanLyDuLich.GUI
                 this.doiTac = (dtoDoiTac)cbDoiTac.SelectedItem;
             }
             this.hoatDong = this.txtHoatDong.Text;
-            this.thoiGian = this.cbThoiGian.Text;
+            this.thoiGian = this.txtThoiGian.Text;
             this.daThem = true;
             this.Close();
         }
@@ -97,5 +97,9 @@ namespace QuanLyDuLich.GUI
             txtDiaChi.Text = d.DIACHI;
             txtDanhGia.Text = d.DANHGIADOITAC;
         }
+
+        
+
+        
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cbThoiGian = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbDoiTac = new System.Windows.Forms.ComboBox();
@@ -38,11 +37,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtDanhGia = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtThoiGian = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,40 +54,6 @@
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thời gian:";
-            // 
-            // cbThoiGian
-            // 
-            this.cbThoiGian.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbThoiGian.FormattingEnabled = true;
-            this.cbThoiGian.Items.AddRange(new object[] {
-            "0h",
-            "1h",
-            "2h",
-            "3h",
-            "4h",
-            "5h",
-            "6h",
-            "7h",
-            "8h",
-            "9h",
-            "10h",
-            "11h",
-            "12h",
-            "13h",
-            "14h",
-            "15h",
-            "16h",
-            "17h",
-            "18h",
-            "19h",
-            "20h",
-            "21h",
-            "22h",
-            "23h"});
-            this.cbThoiGian.Location = new System.Drawing.Point(84, 26);
-            this.cbThoiGian.Name = "cbThoiGian";
-            this.cbThoiGian.Size = new System.Drawing.Size(146, 21);
-            this.cbThoiGian.TabIndex = 1;
             // 
             // label2
             // 
@@ -167,14 +133,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đối tác";
             // 
-            // label4
+            // txtDanhGia
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Địa chỉ:";
+            this.txtDanhGia.Location = new System.Drawing.Point(78, 76);
+            this.txtDanhGia.Name = "txtDanhGia";
+            this.txtDanhGia.Size = new System.Drawing.Size(184, 20);
+            this.txtDanhGia.TabIndex = 7;
             // 
             // label5
             // 
@@ -185,12 +149,12 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Đánh giá:";
             // 
-            // txtDanhGia
+            // txtMa
             // 
-            this.txtDanhGia.Location = new System.Drawing.Point(78, 76);
-            this.txtDanhGia.Name = "txtDanhGia";
-            this.txtDanhGia.Size = new System.Drawing.Size(184, 20);
-            this.txtDanhGia.TabIndex = 7;
+            this.txtMa.Location = new System.Drawing.Point(78, 24);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(184, 20);
+            this.txtMa.TabIndex = 7;
             // 
             // label6
             // 
@@ -201,25 +165,34 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Mã:";
             // 
-            // txtMa
+            // label4
             // 
-            this.txtMa.Location = new System.Drawing.Point(78, 24);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(184, 20);
-            this.txtMa.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Địa chỉ:";
+            // 
+            // txtThoiGian
+            // 
+            this.txtThoiGian.Location = new System.Drawing.Point(86, 26);
+            this.txtThoiGian.Name = "txtThoiGian";
+            this.txtThoiGian.Size = new System.Drawing.Size(138, 20);
+            this.txtThoiGian.TabIndex = 1;
             // 
             // diagChiTietLichTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 193);
+            this.Controls.Add(this.txtThoiGian);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtHoatDong);
             this.Controls.Add(this.cbDoiTac);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbThoiGian);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "diagChiTietLichTrinh";
@@ -236,7 +209,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbThoiGian;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbDoiTac;
@@ -250,5 +222,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtThoiGian;
     }
 }
