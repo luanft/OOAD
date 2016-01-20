@@ -379,8 +379,7 @@ namespace QuanLyDuLich.GUI
 
         }
         private void dateTimePicker_TuNgay_ValueChanged(object sender, EventArgs e)
-        {
-            dateTimePicker_DenNgay.Value = dateTimePicker_TuNgay.Value;
+        {            
             dateTimePicker_DenNgay.MinDate = dateTimePicker_TuNgay.Value;
         }
         Bitmap MemoryImage;
@@ -497,8 +496,10 @@ namespace QuanLyDuLich.GUI
             }
             else
             {
+                
                 if (dto_phongban != null)
                 {
+                    dto_phongban.TENPHONG = textBox_TenPhong.Text;
                     if (phongban.SuaThongTinPhong(dto_phongban))
                     {
                         MessageBox.Show("Đã cập nhật tên phòng");
