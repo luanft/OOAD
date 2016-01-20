@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabQuanLyTour = new System.Windows.Forms.TabPage();
             this.cbYear = new System.Windows.Forms.ComboBox();
@@ -111,8 +111,8 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.llDangXuat = new System.Windows.Forms.LinkLabel();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabQuanLyTour.SuspendLayout();
             this.tabQuanLyKhachHang.SuspendLayout();
@@ -508,10 +508,10 @@
             // 
             // Chon
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Chon.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = false;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Chon.DefaultCellStyle = dataGridViewCellStyle2;
             this.Chon.HeaderText = "Chọn";
             this.Chon.Name = "Chon";
             this.Chon.Width = 50;
@@ -1101,32 +1101,33 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Xin chào: ";
             // 
-            // linkLabel2
+            // llDangXuat
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(1140, 9);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(56, 13);
-            this.linkLabel2.TabIndex = 3;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Đăng xuất";
+            this.llDangXuat.AutoSize = true;
+            this.llDangXuat.Location = new System.Drawing.Point(1140, 9);
+            this.llDangXuat.Name = "llDangXuat";
+            this.llDangXuat.Size = new System.Drawing.Size(56, 13);
+            this.llDangXuat.TabIndex = 3;
+            this.llDangXuat.TabStop = true;
+            this.llDangXuat.Text = "Đăng xuất";
+            this.llDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llDangXuat_LinkClicked);
             // 
-            // label4
+            // lbTenNhanVien
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1006, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Trần Minh Luận";
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(1006, 9);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(82, 13);
+            this.lbTenNhanVien.TabIndex = 4;
+            this.lbTenNhanVien.Text = "Trần Minh Luận";
             // 
             // frmNhanVienSaleTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1208, 587);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.lbTenNhanVien);
+            this.Controls.Add(this.llDangXuat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl);
             this.Name = "frmNhanVienSaleTour";
@@ -1163,8 +1164,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel llDangXuat;
+        private System.Windows.Forms.Label lbTenNhanVien;
         private System.Windows.Forms.DataGridView dG_DanhSachKhachHang;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox gb_KH;

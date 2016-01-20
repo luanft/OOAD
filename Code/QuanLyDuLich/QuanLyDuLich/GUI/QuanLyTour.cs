@@ -135,9 +135,8 @@ namespace QuanLyDuLich.GUI
         {
 
             //this.panelDanhSachTour
-
-            dalTour _dalTour = new dalTour();
-            
+            this.lbTenNhanVien.Text = nhanVienSale.pHoTen;
+            dalTour _dalTour = new dalTour();            
             List<dtoTour> ltour = _dalTour.LayDanhSachTour(MaNhanVien);
             foreach (dtoTour i in ltour)
             {
@@ -168,6 +167,7 @@ namespace QuanLyDuLich.GUI
             themRoot.Click += themLichTrinh;
             #endregion
 
+            #region LOADFORM
 
             this.txtNgayLap.Text = DateTime.Now.ToShortDateString();
 
@@ -194,7 +194,8 @@ namespace QuanLyDuLich.GUI
                 cbNhaXe.Items.Add(nx);
             }
             cbHuongDanVien.DisplayMember = "NGUOILIENHE";
-            cbNhaXe.DisplayMember = "TENDOITAC";
+            cbNhaXe.DisplayMember = "TENDOITAC"; 
+            #endregion
         }
 
         void xoaTour(XemTour tour)
@@ -455,6 +456,15 @@ namespace QuanLyDuLich.GUI
                     x.OnDeleting += xoaTour;
                 }
             }
+        }
+
+        private void llDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            Hide();
+            frmDangNhap dangNhap = new frmDangNhap();
+            dangNhap.ShowDialog();
+            Close();
         }
     }
 }

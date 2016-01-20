@@ -213,6 +213,8 @@ namespace QuanLyDuLich.GUI
             tb_DiemDL.Text = nhanVienSale.diemDuLichDuocChon.pTenDiemDuLich;
             //cb_TinhThanh.Text=nhanVienSale.diemDuLichDuocChon.T
         }
+
+        
         
         
 
