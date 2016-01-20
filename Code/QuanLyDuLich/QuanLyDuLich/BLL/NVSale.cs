@@ -18,8 +18,22 @@ namespace BLL
 		public IEnumerable<Tour> Tour;
 
 		public IEnumerable<DiemDuLich> DiemDuLich;
-		
-
+        public List<KhachHang> DanhSachKhachHang;
+        public NVSale()
+        { }
+        public NVSale(int manv) 
+        {
+            this.SetNhanVien(this.LayThongTinNhanVien(manv));
+            dalKhachHang dal_Khachhang = new dalKhachHang();
+            DanhSachKhachHang = new List<KhachHang>();
+            List<dtoKhachHang> ds_dtoKhachHang = new List<dtoKhachHang>();
+            ds_dtoKhachHang= dal_Khachhang.LayDanhSachKhachHang(manv);            
+            foreach (dtoKhachHang i in ds_dtoKhachHang) 
+            {
+                KhachHang tmp = new KhachHang(i);
+                DanhSachKhachHang.Add(tmp);
+            }
+        }
 		public bool CapNhatTour(Tour tour)
 		{
             return tour.ChinhSuaTour();
@@ -52,13 +66,30 @@ namespace BLL
 
 		public bool CapNhatKhachHang(KhachHang kh, dtoKhachHang data)
 		{
-			throw new System.NotImplementedException();
+            kh.CapNhat(data);
+            return true;
 		}
-
+        public void XoaKhachHang(KhachHang kh)
+        {
+            kh.Xoa(kh.pMaKhachHang);
+        }
 		public KhachHang ChonKhachHang(int kh)
 		{
-			throw new System.NotImplementedException();
+            foreach (KhachHang i in DanhSachKhachHang)
+            {
+                if(i.pMaKhachHang==kh)
+                {
+                    return i;
+                }                
+            }
+            return null;
 		}
+        public void ThemKhachHang(dtoKhachHang KhachHang)
+        {
+            KhachHang kh = new KhachHang(KhachHang);
+            DanhSachKhachHang.Add(kh);
+            kh.Luu();
+        }
 
 		public bool SubmitTour(Tour tour)
 		{

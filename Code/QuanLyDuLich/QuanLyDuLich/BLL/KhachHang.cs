@@ -130,19 +130,19 @@ namespace BLL
             LoaiKhachHang = _khachHang.LOAIKHACHHANG;
         }
        
-        public List<dtoKhachHang> layDanhSachKhachHang()
-        {
-            dalKhachHang _dalKhachHang = new dalKhachHang();
-            return _dalKhachHang.LayDanhSachKhachHang2();
-        }
-        public List<dtoKhachHang>LayDanhSachKhachHang(int manv)
+        //public List<dtoKhachHang> layDanhSachKhachHang()
+        //{
+        //    dalKhachHang _dalKhachHang = new dalKhachHang();
+        //    return _dalKhachHang.LayDanhSachKhachHang2();
+        //}
+        public List<dtoKhachHang>layDanhSachKhachHang(int manv)
         {
             dalKhachHang _dalKhachHang = new dalKhachHang();
             return _dalKhachHang.LayDanhSachKhachHang(manv);
         }
         dtoKhachHang getdtoKhachHang() 
         {
-            dtoKhachHang _khachHang = new dtoKhachHang(MaNhanVien,MaKhachHang, TenDonVi, NguoiDaiDien, GioiTinh, Email, SoDT, SoNguoi, DiaChi, LoaiKhachHang);
+            dtoKhachHang _khachHang = new dtoKhachHang(MaNhanVien,MaKhachHang, TenDonVi, NguoiDaiDien, GioiTinh, Email, SoDT, SoNguoi, DiaChi, LoaiKhachHang,1);
             return _khachHang;
         }
         public dtoKhachHang layKhachHang(int maKH) 
@@ -150,10 +150,10 @@ namespace BLL
             dalKhachHang dal = new dalKhachHang();
             return dal.LayKhachHang(maKH);
         }
-		public bool CapNhat()
+		public bool CapNhat(dtoKhachHang dtoKhachHang)
 		{
             dalKhachHang _dalKhachHang = new dalKhachHang();
-            _dalKhachHang.SuaThongTinKhachHang(getdtoKhachHang());
+            _dalKhachHang.SuaThongTinKhachHang(dtoKhachHang);
             return true;
 		}
 

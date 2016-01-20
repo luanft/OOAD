@@ -15,34 +15,40 @@ namespace QuanLyDuLich.GUI
 {
     public partial class frmNhanVienSaleTour : Form
     {
-
-        private NVSale nhanVienSale = new NVSale();
+        private NVSale nhanVienSale;
         public frmNhanVienSaleTour()
         {
             InitializeComponent();
         }
 
         public frmNhanVienSaleTour(int manv)
-        {
-            this.maNhanVien = manv;
+        {            
+            
             InitializeComponent();
-        }
-
+            nhanVienSale = new NVSale(manv);
+            dG_DanhSachKhachHang.AutoGenerateColumns = false;
+            loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);
+        }        
         private diagThemLichTrinh diagThemLt = new diagThemLichTrinh();
         private diagChiTietLichTrinh diagCTLT = new diagChiTietLichTrinh();
         private KhachHang bll_KhachHang = new KhachHang();
+        private KhachHang khachHangDuocChon=new KhachHang();
+        private DiemDuLich bll_DiemDuLich = new DiemDuLich();
         private void frmNhanVienSaleTour_Load(object sender, EventArgs e)
         {
             this.ThietLapForm();            
             //khi dang nhap duoc se doi ham nay lai
-            dG_DanhSachKhachHang.AutoGenerateColumns = false;
-            dG_DanhSachKhachHang.DataSource = bll_KhachHang.layDanhSachKhachHang();
-            loadDanhSachKhachHang();
+            
         }
 
-        private void loadDanhSachKhachHang() 
+        private void loadDanhSachKhachHang(int manv) 
         {            
-            dG_DanhSachKhachHang.DataSource = bll_KhachHang.layDanhSachKhachHang();
+            dG_DanhSachKhachHang.DataSource = bll_KhachHang.layDanhSachKhachHang(manv);
+
+        }
+        private void loadDanhSachDiemDuLich()
+        {
+            //lb_DiemDuLich.DataSource=bll_DiemDuLich.
         }
         private void tb_SoDT_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -59,33 +65,33 @@ namespace QuanLyDuLich.GUI
             bt_CapNhatKhachHang.Enabled = false;
             bt_LuuKH.Enabled = true;
             enable_Control();
-            tb_MaKhachHang.Text = dG_DanhSachKhachHang.RowCount.ToString();            
+            
         }
 
         private void bt_CapNhatKhachHang_Click(object sender, EventArgs e)
         {
             int makh = int.Parse(tb_MaKhachHang.Text.ToString());
-            int songuoi = int.Parse(tb_SoNguoi.Text.ToString());            
-            bll_KhachHang = new KhachHang(makh, 1, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text);            
-            bll_KhachHang.CapNhat();
-            loadDanhSachKhachHang();
+            int songuoi = int.Parse(tb_SoNguoi.Text.ToString());
+            dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien, khachHangDuocChon.pMaKhachHang, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
+            nhanVienSale.CapNhatKhachHang(khachHangDuocChon, dto_KhachHang);
+            loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);
         }
 
         private void bt_XoaKH_Click(object sender, EventArgs e)
         {
-            int makh = int.Parse(tb_MaKhachHang.Text.ToString());
-            bll_KhachHang.Xoa(makh);
-            loadDanhSachKhachHang();
+            int makh = int.Parse(tb_MaKhachHang.Text.ToString());            
+            nhanVienSale.XoaKhachHang(khachHangDuocChon);
+            loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);
         }
 
         private void bt_LuuKH_Click(object sender, EventArgs e)
         {
             if (!check_data_KH())
                 return;                       
-            int songuoi = int.Parse(tb_SoNguoi.Text.ToString());            
-            bll_KhachHang = new KhachHang(1, 1,tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text);
-            bll_KhachHang.Luu();
-            loadDanhSachKhachHang();
+            int songuoi = int.Parse(tb_SoNguoi.Text.ToString());
+            dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien, 1, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
+            nhanVienSale.ThemKhachHang(dto_KhachHang);
+            loadDanhSachKhachHang(nhanVienSale.pMaNhanVien);
             disable_Control();
             bt_XoaKH.Enabled = true;
             bt_ThemKH.Enabled = true;
@@ -149,7 +155,7 @@ namespace QuanLyDuLich.GUI
             int index = dG_DanhSachKhachHang.CurrentCell.RowIndex;
             int makh = int.Parse(dG_DanhSachKhachHang.Rows[index].Cells[1].Value.ToString());
             bindingdata(makh);
-
+            khachHangDuocChon = nhanVienSale.ChonKhachHang(makh);
         }
         private void bindingdata(int makh) 
         {

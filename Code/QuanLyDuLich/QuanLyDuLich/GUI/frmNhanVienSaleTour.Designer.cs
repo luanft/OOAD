@@ -708,6 +708,7 @@
             // 
             // cb_ChonTinhThanh
             // 
+            this.cb_ChonTinhThanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ChonTinhThanh.FormattingEnabled = true;
             this.cb_ChonTinhThanh.Items.AddRange(new object[] {
             "An Giang",

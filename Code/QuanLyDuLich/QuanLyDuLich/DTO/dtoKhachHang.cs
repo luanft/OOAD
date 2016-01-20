@@ -64,8 +64,12 @@ namespace DataTranferObject
 			get;
 			set;
 		}
-        //public bool ;
-        public dtoKhachHang(int _maNhanVien,int _maKhachHang, string _tenDonVi, string _nguoiDaiDien, string _gioiTinh,string _email, string _dienThoai,int _soNguoi,string _diaChi,string _loaiKhachHang)
+        public int TRANGTHAI
+        {
+            get;
+            set;
+        }
+        public dtoKhachHang(int _maNhanVien,int _maKhachHang, string _tenDonVi, string _nguoiDaiDien, string _gioiTinh,string _email, string _dienThoai,int _soNguoi,string _diaChi,string _loaiKhachHang,int _trangthai)
         {
             MANHANVIEN = _maNhanVien;
             MAKHACHHANG = _maKhachHang;
@@ -77,6 +81,7 @@ namespace DataTranferObject
             SONGUOI = _soNguoi;
             DIACHI = _diaChi;
             LOAIKHACHHANG = _loaiKhachHang;
+            TRANGTHAI = _trangthai;
         }
         public dtoKhachHang() { }        
 	}

@@ -152,7 +152,7 @@ namespace DataAccessLayer
             List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
             if (this.Connect())
             {
-                string sql = "select * from [dbo].[KHACHHANG] where MANHANVIEN=" + maNhanVien;
+                string sql = "select * from [dbo].[KHACHHANG] where MANHANVIEN=" + maNhanVien + "AND TRANGTHAI=1";
                 DataTable dtKhachHang = this.Read(sql);
 
 
@@ -208,12 +208,12 @@ namespace DataAccessLayer
             return ldtoKhachHang;
 
         }
-        public List<dtoKhachHang> LayDanhSachKhachHang2()
+        public List<dtoKhachHang> LayDanhSachKhachHang2(int manv)
         {
             List<dtoKhachHang> ldtoKhachHang = new List<dtoKhachHang>();
             if (this.Connect())
             {
-                string sql = "select MAKHACHHANG,NGUOIDAIDIEN from [dbo].[KHACHHANG]where TRANGTHAI=1";
+                string sql = "select MAKHACHHANG,NGUOIDAIDIEN from [dbo].[KHACHHANG]where MANHAVVIEN="+manv+"AND TRANGTHAI=1";
                 DataTable dtKhachHang = this.Read(sql);
 
 
