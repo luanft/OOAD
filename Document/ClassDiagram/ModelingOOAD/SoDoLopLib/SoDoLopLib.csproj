@@ -50,17 +50,6 @@
     <Compile Include="GeneratedCode\BLL\NVSale.cs" />
     <Compile Include="GeneratedCode\BLL\PhongBan.cs" />
     <Compile Include="GeneratedCode\BLL\Tour.cs" />
-    <Compile Include="GeneratedCode\ChiTietLichTrinh.cs" />
-    <Compile Include="GeneratedCode\DiemDuLich.cs" />
-    <Compile Include="GeneratedCode\DoiTac.cs" />
-    <Compile Include="GeneratedCode\GiamDoc.cs" />
-    <Compile Include="GeneratedCode\KhachHang.cs" />
-    <Compile Include="GeneratedCode\LichTrinh.cs" />
-    <Compile Include="GeneratedCode\NhanVien.cs" />
-    <Compile Include="GeneratedCode\NVDieuHanh.cs" />
-    <Compile Include="GeneratedCode\NVSale.cs" />
-    <Compile Include="GeneratedCode\PhongBan.cs" />
-    <Compile Include="GeneratedCode\Tour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
