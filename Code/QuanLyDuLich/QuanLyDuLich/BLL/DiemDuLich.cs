@@ -74,10 +74,10 @@ namespace BLL
             dtoDiemDuLich _diemDuLich = new dtoDiemDuLich(MaDiemDuLich, MaNhanVien, TenDiemDuLich, MoTa);
             return _diemDuLich;
         }
-		public bool CapNhat()
+		public bool CapNhat(dtoDiemDuLich ddl)
 		{
             dalDiemDuLich _dalDiemDuLich = new dalDiemDuLich();
-            _dalDiemDuLich.SuaThongTinDiemDuLich(getdtoDiemDuLich());
+            _dalDiemDuLich.SuaThongTinDiemDuLich(ddl);
             return true;
 		}
 
@@ -88,10 +88,10 @@ namespace BLL
             return true;
 		}
 
-		public bool Xoa()
+		public bool Xoa(int maddl)
 		{
             dalDiemDuLich _dalDiemDuLich = new dalDiemDuLich();
-            _dalDiemDuLich.XoaDiemDuLich(MaDiemDuLich);
+            _dalDiemDuLich.XoaDiemDuLich(maddl);
             return true;
 		}
 

@@ -65,6 +65,7 @@ namespace QuanLyDuLich.GUI
             bt_ThemKH.Enabled = false;
             bt_CapNhatKhachHang.Enabled = false;
             bt_LuuKH.Enabled = true;
+            tb_MaKhachHang.Text = "";
             enable_Control();
             
         }
@@ -98,6 +99,16 @@ namespace QuanLyDuLich.GUI
             bt_ThemKH.Enabled = true;
             bt_CapNhatKhachHang.Enabled = true;
             bt_LuuKH.Enabled = false;
+            cbNguoiDaiDien.Items.Clear();
+            dalKhachHang dalKH = new dalKhachHang();
+            List<dtoKhachHang> danhSachKhachHang = dalKH.LayDanhSachKhachHang(MaNhanVien);
+
+            foreach (dtoKhachHang k in danhSachKhachHang)
+            {
+                cbNguoiDaiDien.Items.Add(k);
+            }
+            cbNguoiDaiDien.DisplayMember = "NGUOIDAIDIEN";
+
         }
 
         private void bt_HuyKH_Click(object sender, EventArgs e)
@@ -106,7 +117,11 @@ namespace QuanLyDuLich.GUI
             bt_LuuKH.Enabled = false;
             bt_ThemKH.Enabled = true;            
         }
-
+        private void bt_XoaDiemDuLich_Click(object sender, EventArgs e)
+        {
+            nhanVienSale.XoaDiemDuLich(nhanVienSale.diemDuLichDuocChon);
+            loadDanhSachDiemDuLich();
+        }
         private void bt_ThemDiemDL_Click(object sender, EventArgs e)
         {
             if (!check_data_DDL())
@@ -143,12 +158,13 @@ namespace QuanLyDuLich.GUI
         {
             foreach (Control i in gb_KH.Controls)
             {
-                if (i.Name != "tb_MaKhachHang" && (i.GetType() == typeof(TextBox) || i.GetType() == typeof(ComboBox)))
+                if  (i.GetType() == typeof(TextBox) || i.GetType() == typeof(ComboBox))
                 {
                     i.Text = "";
                     i.Enabled = true;
                 }
             }
+            tb_MaKhachHang.Enabled = false;
         }
         private bool check_data_KH()
         {
@@ -173,7 +189,7 @@ namespace QuanLyDuLich.GUI
         private void dG_DanhSachKhachHang_SelectionChanged(object sender, EventArgs e)
         {
             int index = dG_DanhSachKhachHang.CurrentCell.RowIndex;
-            int makh = int.Parse(dG_DanhSachKhachHang.Rows[index].Cells[1].Value.ToString());
+            int makh = int.Parse(dG_DanhSachKhachHang.Rows[index].Cells[0].Value.ToString());
             bindingdata_KH(makh);
             nhanVienSale.khachHangDuocChon = nhanVienSale.ChonKhachHang(makh);
             bt_HuyKH.Enabled = true;

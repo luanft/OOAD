@@ -23,18 +23,18 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[KHACHHANG]([MANHANVIEN],[TENDONVI],[NGUOIDAIDIEN],[GIOITINH],[EMAIL],[DIENTHOAI],[SONGUOI],[DIACHI],[LOAIKHACHHANG],[TRANGTHAI])VALUES(" + khachHang.MANHANVIEN + ",N'" +
-                khachHang.TENDONVI + "',N'" + khachHang.NGUOIDAIDIEN + "','" + khachHang.GIOITINH + "','" + khachHang.EMAIL + "','" + khachHang.DIENTHOAI +
+                khachHang.TENDONVI + "',N'" + khachHang.NGUOIDAIDIEN + "',N'" + khachHang.GIOITINH + "','" + khachHang.EMAIL + "','" + khachHang.DIENTHOAI +
                 "'," + khachHang.SONGUOI + ",N'" + khachHang.DIACHI + "','" + khachHang.LOAIKHACHHANG +"',"+1+ ")";
             if (this.Write(sql))
             {
                 this.Close();
-                MessageBox.Show("Da them kh");
+                MessageBox.Show("Đã thêm khách hàng");
                 return true;
             }
             else
             {
                 this.Close();
-                MessageBox.Show("loi them kh");
+                MessageBox.Show("Lỗi thêm khách hàng");
                 return false;
             }
         }
@@ -45,14 +45,14 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "UPDATE [dbo].[KHACHHANG]SET[TENDONVI] = '" + khachHang.TENDONVI +
-      "',[NGUOIDAIDIEN] = '" + khachHang.NGUOIDAIDIEN +
-      "',[GIOITINH] = '" + khachHang.GIOITINH +
+            string sql = "UPDATE [dbo].[KHACHHANG]SET[TENDONVI] = N'" + khachHang.TENDONVI +
+      "',[NGUOIDAIDIEN] = N'" + khachHang.NGUOIDAIDIEN +
+      "',[GIOITINH] = N'" + khachHang.GIOITINH +
       "',[EMAIL] = '" + khachHang.EMAIL +
       "',[DIENTHOAI] = '" + khachHang.DIENTHOAI +
       "',[SONGUOI] = " + khachHang.SONGUOI +
-      ",[DIACHI] = '" + khachHang.DIACHI +
-      "',[LOAIKHACHHANG] = '" + khachHang.LOAIKHACHHANG +
+      ",[DIACHI] = N'" + khachHang.DIACHI +
+      "',[LOAIKHACHHANG] = N'" + khachHang.LOAIKHACHHANG +
       "'WHERE [MAKHACHHANG] = " + khachHang.MAKHACHHANG ;
             if (this.Write(sql))
             {

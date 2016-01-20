@@ -36,6 +36,11 @@ namespace BLL
                 DanhSachKhachHang.Add(tmp);
             }
 
+
+            CapNhatDanhSachDiemDuLich();
+        }
+        public void CapNhatDanhSachDiemDuLich()
+        {
             dalDiemDuLich dal_DDL = new dalDiemDuLich();
             DanhSachDiemDuLich = new List<DiemDuLich>();
             List<dtoDiemDuLich> ds_dtoDiemDuLich = new List<dtoDiemDuLich>();
@@ -45,7 +50,6 @@ namespace BLL
                 DiemDuLich tmp = new DiemDuLich(i);
                 DanhSachDiemDuLich.Add(tmp);
             }
-
         }
 		public bool CapNhatTour(Tour tour)
 		{
@@ -74,7 +78,9 @@ namespace BLL
 
         public bool CapNhatDiemDuLich(DiemDuLich ddl, dtoDiemDuLich data)
 		{
-			throw new System.NotImplementedException();
+            ddl.CapNhat(data);
+            CapNhatDanhSachDiemDuLich();
+            return true;    
 		}
 
 		public bool ThemDiemDuLich(dtoDiemDuLich data)
@@ -83,7 +89,11 @@ namespace BLL
             DanhSachDiemDuLich.Add(ddl);
             return ddl.Luu();
 		}
-
+        public void XoaDiemDuLich(DiemDuLich ddl) 
+        {
+            DanhSachDiemDuLich.Remove(ddl);
+            ddl.Xoa(ddl.pMaDiemDuLich);
+        }
 		public bool CapNhatKhachHang(KhachHang kh, dtoKhachHang data)
 		{
             kh.CapNhat(data);

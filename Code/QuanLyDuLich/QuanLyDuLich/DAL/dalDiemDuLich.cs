@@ -12,6 +12,7 @@ namespace DataAccessLayer
     using System.Text;
     using DataTranferObject;
     using System.Data;
+    using System.Windows.Forms;
     public class dalDiemDuLich : dalObject
     {
         public bool ThemDiemDuLich(dtoDiemDuLich diemDuLich)
@@ -76,13 +77,15 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "UPDATE [dbo].[DIEMDULICH] SET [TENDIEMDULICH] = '" + ddl.TENDIEMDULICH + "',[MOTA]='" + ddl.MOTA + "' WHERE [MADIEMDULICH] ='" + ddl.MADIEMDULICH + "'";
+            string sql = "UPDATE [dbo].[DIEMDULICH] SET [TENDIEMDULICH] = N'" + ddl.TENDIEMDULICH + "',[MOTA]=N'" + ddl.MOTA + "' WHERE [MADIEMDULICH] ='" + ddl.MADIEMDULICH + "'";
             if (this.Write(sql))
             {
                 this.Close();
+                MessageBox.Show("Đã cập nhật");
                 return true;
             }
             this.Close();
+            MessageBox.Show("Lỗi cập nhật");
             return false;
         }
 
