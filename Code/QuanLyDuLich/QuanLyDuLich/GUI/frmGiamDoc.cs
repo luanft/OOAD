@@ -19,11 +19,14 @@ namespace QuanLyDuLich.GUI
         GiamDoc giamdoc;
         public frmGiamDoc()
         {
-            giamdoc = new GiamDoc();
-            
+            giamdoc = new GiamDoc();            
             InitializeComponent();
         }
-
+        public frmGiamDoc(int manv)
+        {
+            giamdoc = new GiamDoc();
+            InitializeComponent();
+        }
         private void frmGiamDoc_Load(object sender, EventArgs e)
         {
             #region QuanLyPhongBan
