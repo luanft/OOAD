@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabQuanLyTour = new System.Windows.Forms.TabPage();
             this.cbYear = new System.Windows.Forms.ComboBox();
@@ -42,8 +42,6 @@
             this.bt_CapNhatKhachHang = new System.Windows.Forms.Button();
             this.bt_ThemKH = new System.Windows.Forms.Button();
             this.gb_KH = new System.Windows.Forms.GroupBox();
-            this.tb_MaNhanVien = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -84,6 +82,9 @@
             this.lb_DiemDuLich = new System.Windows.Forms.ListBox();
             this.tabLapTour = new System.Windows.Forms.TabPage();
             this.panelLapTour = new System.Windows.Forms.Panel();
+            this.txtThongTinTour = new System.Windows.Forms.RichTextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.dtNgayDi = new System.Windows.Forms.DateTimePicker();
             this.cbNguoiDaiDien = new System.Windows.Forms.ComboBox();
             this.lichTrinhTour = new System.Windows.Forms.TreeView();
@@ -112,9 +113,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txtThongTinTour = new System.Windows.Forms.RichTextBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabQuanLyTour.SuspendLayout();
             this.tabQuanLyKhachHang.SuspendLayout();
@@ -257,8 +255,6 @@
             // 
             // gb_KH
             // 
-            this.gb_KH.Controls.Add(this.tb_MaNhanVien);
-            this.gb_KH.Controls.Add(this.label22);
             this.gb_KH.Controls.Add(this.button4);
             this.gb_KH.Controls.Add(this.button2);
             this.gb_KH.Controls.Add(this.button1);
@@ -286,23 +282,6 @@
             this.gb_KH.TabIndex = 2;
             this.gb_KH.TabStop = false;
             this.gb_KH.Text = "Khách hàng";
-            // 
-            // tb_MaNhanVien
-            // 
-            this.tb_MaNhanVien.Location = new System.Drawing.Point(515, 29);
-            this.tb_MaNhanVien.Name = "tb_MaNhanVien";
-            this.tb_MaNhanVien.Size = new System.Drawing.Size(118, 20);
-            this.tb_MaNhanVien.TabIndex = 2;
-            this.tb_MaNhanVien.Text = "1";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(413, 33);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 13);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "Mã Nhân Viên";
             // 
             // button4
             // 
@@ -529,10 +508,10 @@
             // 
             // Chon
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Chon.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Chon.DefaultCellStyle = dataGridViewCellStyle1;
             this.Chon.HeaderText = "Chọn";
             this.Chon.Name = "Chon";
             this.Chon.Width = 50;
@@ -795,6 +774,7 @@
             this.lb_DiemDuLich.Name = "lb_DiemDuLich";
             this.lb_DiemDuLich.Size = new System.Drawing.Size(309, 433);
             this.lb_DiemDuLich.TabIndex = 0;
+            this.lb_DiemDuLich.SelectedIndexChanged += new System.EventHandler(this.lb_DiemDuLich_SelectedIndexChanged);
             // 
             // tabLapTour
             // 
@@ -842,6 +822,35 @@
             this.panelLapTour.Name = "panelLapTour";
             this.panelLapTour.Size = new System.Drawing.Size(1173, 438);
             this.panelLapTour.TabIndex = 6;
+            // 
+            // txtThongTinTour
+            // 
+            this.txtThongTinTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThongTinTour.Location = new System.Drawing.Point(3, 142);
+            this.txtThongTinTour.Name = "txtThongTinTour";
+            this.txtThongTinTour.Size = new System.Drawing.Size(446, 285);
+            this.txtThongTinTour.TabIndex = 34;
+            this.txtThongTinTour.Text = "";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(451, 119);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(109, 20);
+            this.label32.TabIndex = 33;
+            this.label32.Text = "Lịch trình tour:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(14, 118);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(111, 20);
+            this.label31.TabIndex = 33;
+            this.label31.Text = "Thông tin tour:";
             // 
             // dtNgayDi
             // 
@@ -1111,35 +1120,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Trần Minh Luận";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(14, 118);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(111, 20);
-            this.label31.TabIndex = 33;
-            this.label31.Text = "Thông tin tour:";
-            // 
-            // txtThongTinTour
-            // 
-            this.txtThongTinTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThongTinTour.Location = new System.Drawing.Point(3, 142);
-            this.txtThongTinTour.Name = "txtThongTinTour";
-            this.txtThongTinTour.Size = new System.Drawing.Size(446, 285);
-            this.txtThongTinTour.TabIndex = 34;
-            this.txtThongTinTour.Text = "";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(451, 119);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(109, 20);
-            this.label32.TabIndex = 33;
-            this.label32.Text = "Lịch trình tour:";
-            // 
             // frmNhanVienSaleTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1255,8 +1235,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Chon;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
-        private System.Windows.Forms.TextBox tb_MaNhanVien;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.RichTextBox txtThongTinTour;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;

@@ -47,6 +47,13 @@ namespace BLL
             MoTa = _moTa;
         }
 
+        public DiemDuLich(dtoDiemDuLich _dtoDiemDuLich)
+        {
+            this.MaDiemDuLich = _dtoDiemDuLich.MADIEMDULICH;
+            this.MaNhanVien = _dtoDiemDuLich.MANHANVIEN;
+            this.MoTa = _dtoDiemDuLich.MOTA;
+            this.TenDiemDuLich = _dtoDiemDuLich.TENDIEMDULICH;
+        }
         public DiemDuLich() 
         {
         }
@@ -56,6 +63,11 @@ namespace BLL
             MaDiemDuLich = _diemDuLich.MADIEMDULICH;
             TenDiemDuLich = _diemDuLich.TENDIEMDULICH;
             MoTa = _diemDuLich.MOTA;
+        }
+        public List<dtoDiemDuLich> LayDanhSachDiemDuLich()
+        {
+            dalDiemDuLich dal = new dalDiemDuLich();
+            return dal.LayDanhSachDiemDuLich();
         }
         public dtoDiemDuLich getdtoDiemDuLich()
         {

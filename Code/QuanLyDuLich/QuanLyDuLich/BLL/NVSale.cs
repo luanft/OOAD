@@ -17,8 +17,10 @@ namespace BLL
 	{
 		public IEnumerable<Tour> Tour;
 
-		public IEnumerable<DiemDuLich> DiemDuLich;
+		public List<DiemDuLich> DanhSachDiemDuLich;
         public List<KhachHang> DanhSachKhachHang;
+        public KhachHang khachHangDuocChon = new KhachHang();
+        public DiemDuLich diemDuLichDuocChon = new DiemDuLich();
         public NVSale()
         { }
         public NVSale(int manv) 
@@ -33,6 +35,17 @@ namespace BLL
                 KhachHang tmp = new KhachHang(i);
                 DanhSachKhachHang.Add(tmp);
             }
+
+            dalDiemDuLich dal_DDL = new dalDiemDuLich();
+            DanhSachDiemDuLich = new List<DiemDuLich>();
+            List<dtoDiemDuLich> ds_dtoDiemDuLich = new List<dtoDiemDuLich>();
+            ds_dtoDiemDuLich = dal_DDL.LayDanhSachDiemDuLich();
+            foreach (dtoDiemDuLich i in ds_dtoDiemDuLich)
+            {
+                DiemDuLich tmp = new DiemDuLich(i);
+                DanhSachDiemDuLich.Add(tmp);
+            }
+
         }
 		public bool CapNhatTour(Tour tour)
 		{
@@ -51,7 +64,12 @@ namespace BLL
 
 		public DiemDuLich ChonDiemDL(int ma)
 		{
-			throw new System.NotImplementedException();
+            foreach (DiemDuLich i in DanhSachDiemDuLich)
+            {
+                if (i.pMaDiemDuLich == ma)
+                    return i;
+            }
+            return null;
 		}
 
         public bool CapNhatDiemDuLich(DiemDuLich ddl, dtoDiemDuLich data)
@@ -61,7 +79,9 @@ namespace BLL
 
 		public bool ThemDiemDuLich(dtoDiemDuLich data)
 		{
-			throw new System.NotImplementedException();
+            DiemDuLich ddl = new DiemDuLich(data);
+            DanhSachDiemDuLich.Add(ddl);
+            return ddl.Luu();
 		}
 
 		public bool CapNhatKhachHang(KhachHang kh, dtoKhachHang data)
