@@ -49,6 +49,7 @@ namespace QuanLyDuLich.GUI
             lbThoiGianDi.Location = new Point((panel1.Size.Width - lbThoiGianDi.Size.Width) / 2, lbTenTour.Size.Height + lbTenTour.Location.Y + 10);
 
             lbUuDai.MaximumSize = new System.Drawing.Size(groupBox2.Size.Width, 0);
+            groupBox2.Location = new Point(12, lbThoiGianDi.Location.Y + 20);
             groupBox2.AutoSize = true;
             groupBox2.MaximumSize = new Size(350, 0);
             if (tour.UuDai != "")
@@ -58,8 +59,8 @@ namespace QuanLyDuLich.GUI
 
             lbGiaTour.MaximumSize = new System.Drawing.Size(groupBox3.Size.Width, 0);
             lbGiaTour.Text = "Tổng giá tour " + tour.TongGiaTour;
-            groupBox3.Location = new Point(panel1.Size.Width - groupBox3.Size.Width - 28, groupBox3.Location.Y);
-            
+            groupBox3.Location = new Point(panel1.Size.Width - groupBox3.Size.Width - 28, lbThoiGianDi.Location.Y + 20);            
+
             init_ChiTietTour();
 
             lbKetThuc.Text = "KẾT THÚC CHƯƠNG TRÌNH THAM QUAN DU LỊCH";

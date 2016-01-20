@@ -177,11 +177,11 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(674, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 20);
+            this.label1.Size = new System.Drawing.Size(208, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "DANH SÁCH ĐỐI TÁC";
             // 
@@ -322,11 +322,11 @@
             // lbSoTour
             // 
             this.lbSoTour.AutoSize = true;
-            this.lbSoTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoTour.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoTour.Location = new System.Drawing.Point(484, 27);
             this.lbSoTour.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSoTour.Name = "lbSoTour";
-            this.lbSoTour.Size = new System.Drawing.Size(316, 20);
+            this.lbSoTour.Size = new System.Drawing.Size(348, 22);
             this.lbSoTour.TabIndex = 0;
             this.lbSoTour.Text = "CÓ 10 TOUR ĐANG CHỜ XÉT DUYỆT";
             // 
@@ -403,7 +403,7 @@
             this.lbTenNhanVien.AutoSize = true;
             this.lbTenNhanVien.Location = new System.Drawing.Point(995, 4);
             this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(226, 19);
+            this.lbTenNhanVien.Size = new System.Drawing.Size(228, 19);
             this.lbTenNhanVien.TabIndex = 1;
             this.lbTenNhanVien.Text = "Xin chào: Nguyễn Thanh Anh Tuyên";
             // 
