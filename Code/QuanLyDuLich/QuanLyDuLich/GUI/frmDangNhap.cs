@@ -45,8 +45,8 @@ namespace QuanLyDuLich.GUI
                         switch (nv.LayLoaiNV())
                         {
                             case LoaiNhanVien.GiamDoc:
-                                //frmGiamDoc frmGD = new frmGiamDoc(nv.pMaNhanVien);
-                                //frmGD.ShowDialog();
+                                frmGiamDoc frmGD = new frmGiamDoc(nv.pMaNhanVien);
+                                frmGD.ShowDialog();
                                 break;
                             case LoaiNhanVien.NhanVienDieuHanh:
                                 frmNhanVienDieuHanh frmDH = new frmNhanVienDieuHanh(nv.pMaNhanVien);

@@ -73,6 +73,9 @@ namespace QuanLyDuLich.GUI
 
         private void bt_CapNhatKhachHang_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có muốn cập nhật khách hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+                return;
             int makh = int.Parse(tb_MaKhachHang.Text.ToString());
             int songuoi = int.Parse(tb_SoNguoi.Text.ToString());
             dtoKhachHang dto_KhachHang = new dtoKhachHang(nhanVienSale.pMaNhanVien,makh, tb_TenDonVi.Text, tb_NguoiDaiDien.Text, cb_GioiTinh.Text, tb_Email.Text, tb_SoDT.Text, songuoi, tb_DiaChi.Text, cb_LoaiKhachHang.Text, 1);
@@ -85,6 +88,9 @@ namespace QuanLyDuLich.GUI
 
         private void bt_XoaKH_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa khách hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+                return;
             int makh = int.Parse(tb_MaKhachHang.Text.ToString());
             if (nhanVienSale.XoaKhachHang(nhanVienSale.khachHangDuocChon))
                 MessageBox.Show("Đã xóa khách hàng");
@@ -134,6 +140,9 @@ namespace QuanLyDuLich.GUI
         }
         private void bt_XoaDiemDuLich_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa điểm du lịch?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+                return;
             if (!nhanVienSale.XoaDiemDuLich(nhanVienSale.diemDuLichDuocChon))
                 MessageBox.Show("Lỗi xóa điểm du lịch");
             else
@@ -143,6 +152,9 @@ namespace QuanLyDuLich.GUI
         private void bt_ThemDiemDL_Click(object sender, EventArgs e)
         {
             if (!check_data_DDL())
+                return;
+            DialogResult result = MessageBox.Show("Bạn có muốn thêm điểm du lịch?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
                 return;
             int matinh=cb_TinhThanh.SelectedIndex+1;
             dtoDiemDuLich dto_DDL = new dtoDiemDuLich(1, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text,matinh);
@@ -157,7 +169,10 @@ namespace QuanLyDuLich.GUI
         private void bt_CapNhatDDL_Click(object sender, EventArgs e)
         {
             if (!check_data_DDL())
-                return;            
+                return;
+            DialogResult result = MessageBox.Show("Bạn có muốn cập nhật điểm du lịch?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+                return;
             dtoDiemDuLich dto_DDL = new dtoDiemDuLich(nhanVienSale.diemDuLichDuocChon.pMaDiemDuLich, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text,nhanVienSale.diemDuLichDuocChon.pMaTinh);
 
             if (nhanVienSale.CapNhatDiemDuLich(nhanVienSale.diemDuLichDuocChon, dto_DDL))
@@ -221,7 +236,8 @@ namespace QuanLyDuLich.GUI
             bindingdata_KH(makh);
             nhanVienSale.khachHangDuocChon = nhanVienSale.ChonKhachHang(makh);
             bt_CapNhatKhachHang.Enabled = true;
-            bt_XoaKH.Enabled = true;            
+            bt_XoaKH.Enabled = true;
+            bt_ThemKH.Enabled = true;
         }
         private void bindingdata_KH(int makh) 
         {
