@@ -22,9 +22,9 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[TOUR]([MANHANVIEN],[MAKHACHHANG],[NHAXE],[HUONGDANVIEN],[TENTOUR],[THOIGIAN],[NGAYDI],[TONGGIATOUR],[TRANGTHAI],[UUDAI],[GHICHU],[NgayLapTour])VALUES('" +
+            string sql = "INSERT INTO [dbo].[TOUR]([MANHANVIEN],[MAKHACHHANG],[NHAXE],[HUONGDANVIEN],[TENTOUR],[THOIGIAN],[NGAYDI],[TONGGIATOUR],[TRANGTHAI],[UUDAI],[GHICHU],[NgayLapTour],[THONGTINTOUR])VALUES('" +
                 tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "',N'" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
-                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NGAYLAPTOUR.ToShortDateString() + "')";
+                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NGAYLAPTOUR.ToShortDateString() + "','"+tour.THONGTINTOUR+"')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -221,8 +221,6 @@ namespace DataAccessLayer
 
             return rs;
         }
-
-
 
         public bool CapNhatTour(int maTour, string trangThai, string giaTour, string ghiChu)
         {
