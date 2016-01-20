@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiamDoc));
             this.tabCtrl_ThongKeSaleTour = new System.Windows.Forms.TabControl();
             this.tabPage_ThongKeSaleTour = new System.Windows.Forms.TabPage();
@@ -118,6 +118,8 @@
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button_DangXuat = new System.Windows.Forms.Button();
+            this.label_TenGiamDoc = new System.Windows.Forms.Label();
             this.tabCtrl_ThongKeSaleTour.SuspendLayout();
             this.tabPage_ThongKeSaleTour.SuspendLayout();
             this.panel_ThongKe.SuspendLayout();
@@ -144,11 +146,11 @@
             this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage_QuanLyNhanVien);
             this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage_QuanLyPhongBan);
             this.tabCtrl_ThongKeSaleTour.Controls.Add(this.tabPage_XetDuyetTour);
-            this.tabCtrl_ThongKeSaleTour.Location = new System.Drawing.Point(3, 6);
+            this.tabCtrl_ThongKeSaleTour.Location = new System.Drawing.Point(3, 23);
             this.tabCtrl_ThongKeSaleTour.Name = "tabCtrl_ThongKeSaleTour";
             this.tabCtrl_ThongKeSaleTour.Padding = new System.Drawing.Point(0, 0);
             this.tabCtrl_ThongKeSaleTour.SelectedIndex = 0;
-            this.tabCtrl_ThongKeSaleTour.Size = new System.Drawing.Size(750, 522);
+            this.tabCtrl_ThongKeSaleTour.Size = new System.Drawing.Size(750, 506);
             this.tabCtrl_ThongKeSaleTour.TabIndex = 0;
             // 
             // tabPage_ThongKeSaleTour
@@ -164,7 +166,7 @@
             this.tabPage_ThongKeSaleTour.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ThongKeSaleTour.Name = "tabPage_ThongKeSaleTour";
             this.tabPage_ThongKeSaleTour.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ThongKeSaleTour.Size = new System.Drawing.Size(742, 496);
+            this.tabPage_ThongKeSaleTour.Size = new System.Drawing.Size(742, 480);
             this.tabPage_ThongKeSaleTour.TabIndex = 0;
             this.tabPage_ThongKeSaleTour.Text = "Thống kê sale tour";
             // 
@@ -216,11 +218,11 @@
             this.dataGridView_ThongKe.Location = new System.Drawing.Point(20, 147);
             this.dataGridView_ThongKe.Name = "dataGridView_ThongKe";
             this.dataGridView_ThongKe.ReadOnly = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView_ThongKe.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_ThongKe.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -387,7 +389,7 @@
             this.tabPage_QuanLyNhanVien.Location = new System.Drawing.Point(4, 22);
             this.tabPage_QuanLyNhanVien.Name = "tabPage_QuanLyNhanVien";
             this.tabPage_QuanLyNhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_QuanLyNhanVien.Size = new System.Drawing.Size(742, 496);
+            this.tabPage_QuanLyNhanVien.Size = new System.Drawing.Size(742, 480);
             this.tabPage_QuanLyNhanVien.TabIndex = 1;
             this.tabPage_QuanLyNhanVien.Text = "Quản lý nhân viên";
             // 
@@ -436,7 +438,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.label11);
             this.splitContainer1.Panel2.Controls.Add(this.label10);
             this.splitContainer1.Panel2.Controls.Add(this.label8);
-            this.splitContainer1.Size = new System.Drawing.Size(736, 490);
+            this.splitContainer1.Size = new System.Drawing.Size(736, 474);
             this.splitContainer1.SplitterDistance = 245;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -774,7 +776,7 @@
             this.tabPage_QuanLyPhongBan.Location = new System.Drawing.Point(4, 22);
             this.tabPage_QuanLyPhongBan.Name = "tabPage_QuanLyPhongBan";
             this.tabPage_QuanLyPhongBan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_QuanLyPhongBan.Size = new System.Drawing.Size(742, 496);
+            this.tabPage_QuanLyPhongBan.Size = new System.Drawing.Size(742, 480);
             this.tabPage_QuanLyPhongBan.TabIndex = 2;
             this.tabPage_QuanLyPhongBan.Text = "Quản lý phòng ban";
             // 
@@ -801,7 +803,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.label23);
             this.splitContainer2.Panel2.Controls.Add(this.label21);
             this.splitContainer2.Panel2.Controls.Add(this.label20);
-            this.splitContainer2.Size = new System.Drawing.Size(736, 490);
+            this.splitContainer2.Size = new System.Drawing.Size(736, 474);
             this.splitContainer2.SplitterDistance = 245;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -949,7 +951,7 @@
             this.tabPage_XetDuyetTour.Location = new System.Drawing.Point(4, 22);
             this.tabPage_XetDuyetTour.Name = "tabPage_XetDuyetTour";
             this.tabPage_XetDuyetTour.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_XetDuyetTour.Size = new System.Drawing.Size(742, 496);
+            this.tabPage_XetDuyetTour.Size = new System.Drawing.Size(742, 480);
             this.tabPage_XetDuyetTour.TabIndex = 3;
             this.tabPage_XetDuyetTour.Text = "Xét duyệt tour";
             this.tabPage_XetDuyetTour.Click += new System.EventHandler(this.tabPage_XetDuyetTour_Click);
@@ -1098,12 +1100,34 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button_DangXuat
+            // 
+            this.button_DangXuat.Location = new System.Drawing.Point(673, 8);
+            this.button_DangXuat.Name = "button_DangXuat";
+            this.button_DangXuat.Size = new System.Drawing.Size(75, 23);
+            this.button_DangXuat.TabIndex = 1;
+            this.button_DangXuat.Text = "Đăng xuất";
+            this.button_DangXuat.UseVisualStyleBackColor = true;
+            // 
+            // label_TenGiamDoc
+            // 
+            this.label_TenGiamDoc.AutoSize = true;
+            this.label_TenGiamDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_TenGiamDoc.Location = new System.Drawing.Point(3, 4);
+            this.label_TenGiamDoc.Name = "label_TenGiamDoc";
+            this.label_TenGiamDoc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_TenGiamDoc.Size = new System.Drawing.Size(39, 13);
+            this.label_TenGiamDoc.TabIndex = 2;
+            this.label_TenGiamDoc.Text = "Họ tên";
+            // 
             // frmGiamDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 526);
+            this.Controls.Add(this.button_DangXuat);
             this.Controls.Add(this.tabCtrl_ThongKeSaleTour);
+            this.Controls.Add(this.label_TenGiamDoc);
             this.MaximizeBox = false;
             this.Name = "frmGiamDoc";
             this.Text = "frmGiamDoc";
@@ -1134,6 +1158,7 @@
             this.tabPage_XetDuyetTour.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachTourCanDuyet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1227,5 +1252,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TongGiaTour;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button_DangXuat;
+        private System.Windows.Forms.Label label_TenGiamDoc;
     }
 }

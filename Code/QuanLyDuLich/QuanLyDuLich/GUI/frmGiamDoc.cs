@@ -24,11 +24,17 @@ namespace QuanLyDuLich.GUI
         }
         public frmGiamDoc(int manv)
         {
+            
             giamdoc = new GiamDoc();
+            giamdoc.pMaNhanVien = manv;
+            
             InitializeComponent();
         }
         private void frmGiamDoc_Load(object sender, EventArgs e)
         {
+            
+            label_TenGiamDoc.Text = "Xin chào " + giamdoc.LayThongTinNhanVien(giamdoc.pMaNhanVien).HOTEN.ToString()+". Have a nice day!";
+            
             #region QuanLyPhongBan
             dataGridView_DanhSachPhong.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_DanhSachPhong.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
