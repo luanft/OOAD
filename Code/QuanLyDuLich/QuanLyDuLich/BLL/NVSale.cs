@@ -22,7 +22,7 @@ namespace BLL
 
 		public bool CapNhatTour(Tour tour)
 		{
-			throw new System.NotImplementedException();
+            return tour.ChinhSuaTour();
 		}
 
 		public Tour ChonTour(int maTour)
@@ -32,7 +32,7 @@ namespace BLL
 
 		public bool LapTour(Tour data)
 		{
-			throw new System.NotImplementedException();
+            return data.Luu();
 		}
 
 		public DiemDuLich ChonDiemDL(int ma)
