@@ -112,6 +112,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtThongTinTour = new System.Windows.Forms.RichTextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabQuanLyTour.SuspendLayout();
             this.tabQuanLyKhachHang.SuspendLayout();
@@ -809,6 +812,9 @@
             // 
             // panelLapTour
             // 
+            this.panelLapTour.Controls.Add(this.txtThongTinTour);
+            this.panelLapTour.Controls.Add(this.label32);
+            this.panelLapTour.Controls.Add(this.label31);
             this.panelLapTour.Controls.Add(this.dtNgayDi);
             this.panelLapTour.Controls.Add(this.cbNguoiDaiDien);
             this.panelLapTour.Controls.Add(this.lichTrinhTour);
@@ -859,9 +865,9 @@
             // lichTrinhTour
             // 
             this.lichTrinhTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lichTrinhTour.Location = new System.Drawing.Point(18, 142);
+            this.lichTrinhTour.Location = new System.Drawing.Point(455, 142);
             this.lichTrinhTour.Name = "lichTrinhTour";
-            this.lichTrinhTour.Size = new System.Drawing.Size(1141, 285);
+            this.lichTrinhTour.Size = new System.Drawing.Size(704, 285);
             this.lichTrinhTour.TabIndex = 26;
             // 
             // cbNhaXe
@@ -1104,6 +1110,34 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Trần Minh Luận";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(14, 118);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(111, 20);
+            this.label31.TabIndex = 33;
+            this.label31.Text = "Thông tin tour:";
+            // 
+            // txtThongTinTour
+            // 
+            this.txtThongTinTour.Location = new System.Drawing.Point(3, 142);
+            this.txtThongTinTour.Name = "txtThongTinTour";
+            this.txtThongTinTour.Size = new System.Drawing.Size(446, 285);
+            this.txtThongTinTour.TabIndex = 34;
+            this.txtThongTinTour.Text = "";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(451, 119);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(109, 20);
+            this.label32.TabIndex = 33;
+            this.label32.Text = "Lịch trình tour:";
+            // 
             // frmNhanVienSaleTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1221,5 +1255,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
         private System.Windows.Forms.TextBox tb_MaNhanVien;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.RichTextBox txtThongTinTour;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
     }
 }

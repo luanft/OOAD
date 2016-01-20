@@ -299,6 +299,11 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Bạn chưa nhập thời gian đi!");
                 return;
             }
+            if (txtThongTinTour.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập thời gian đi!");
+                return;
+            }
             if (lichTrinhTour.Nodes.Count == 0)
             {
                 MessageBox.Show("Bạn chưa soạn lịch trình tour!");

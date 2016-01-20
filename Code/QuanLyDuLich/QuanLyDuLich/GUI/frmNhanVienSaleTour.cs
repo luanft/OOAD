@@ -15,6 +15,7 @@ namespace QuanLyDuLich.GUI
 {
     public partial class frmNhanVienSaleTour : Form
     {
+        private NVSale nhanVienSale = new NVSale();
         public frmNhanVienSaleTour()
         {
             InitializeComponent();
