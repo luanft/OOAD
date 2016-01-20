@@ -205,7 +205,7 @@ namespace QuanLyDuLich.GUI
         private void ChinhSuaTour(int maTour)
         {
             tabControl.SelectedTab = tabLapTour;
-
+            this.lichTrinhTour.Nodes.Clear();
             dalTour dal = new dalTour();
 
             //them tour
@@ -288,6 +288,7 @@ namespace QuanLyDuLich.GUI
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
             panelLapTour.Enabled = true;
+            this.lichTrinhTour.Nodes.Clear();
         }
 
 
@@ -432,6 +433,7 @@ namespace QuanLyDuLich.GUI
             txtThoiGianDi.Text = "";
             txtGhiChu.Text = "";
             txtThongTinTour.Text = "";
+            this.lichTrinhTour.Nodes.Clear();
         }
 
 
