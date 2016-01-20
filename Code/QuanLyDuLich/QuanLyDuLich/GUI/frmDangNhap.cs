@@ -15,12 +15,15 @@ namespace QuanLyDuLich.GUI
 {
     public partial class frmDangNhap : Form
     {
+        RememberMe rememberme;
         public frmDangNhap()
         {
             InitializeComponent();
             txtEmail.Text = QuanLyDuLich.Properties.Settings.Default.UserName;
             txtMatKhau.Text = QuanLyDuLich.Properties.Settings.Default.Password;
-            
+            rememberme = new RememberMe();
+            txtEmail.Text = rememberme.UserName;
+            txtMatKhau.Text = rememberme.Password;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -29,6 +32,7 @@ namespace QuanLyDuLich.GUI
             {
                 QuanLyDuLich.Properties.Settings.Default.UserName = txtEmail.Text;
                 QuanLyDuLich.Properties.Settings.Default.Password = txtMatKhau.Text;
+                rememberme.remember(txtEmail.Text, txtMatKhau.Text);
             }
             if (txtEmail.Text != "" && txtMatKhau.Text != "")
             {

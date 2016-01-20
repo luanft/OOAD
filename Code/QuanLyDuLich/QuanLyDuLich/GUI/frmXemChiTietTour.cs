@@ -49,7 +49,7 @@ namespace QuanLyDuLich.GUI
 
         private void initElement()
         {            
-            int i = 0;
+            int i = 0;            
             foreach(LichTrinh lt in tour.LichTrinh)
             {
                 Label lbNgay = new Label();
@@ -82,7 +82,46 @@ namespace QuanLyDuLich.GUI
                 fPanel.Size = new Size(770, height);
                 panel1.Controls.Add(fPanel);
                 i++;
+            }            
+        }
+
+
+        private void initElement1()
+        {
+            int i = 0;
+            foreach (LichTrinh lt in tour.LichTrinh)
+            {
+                Label lbNgay = new Label();
+                lbNgay.Name = "lbNgay" + i;
+                lbNgay.Visible = true;
+                lbNgay.AutoSize = true;
+                int height = 0;
+                lbNgay.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbNgay.Text = "Ngày " + lt.Ngay + ": " + lt.TenLichTrinh;
+                FlowLayoutPanel fPanel = new FlowLayoutPanel();
+                fPanel.FlowDirection = FlowDirection.TopDown;
+                fPanel.Name = "panelNgay" + i;
+                height += lbNgay.Size.Height;
+                if (i == 0)
+                    fPanel.Location = new Point(12, 372);
+                else
+                    fPanel.Location = new Point(12, panel1.Controls["panelNgay" + (i - 1)].Location.Y + panel1.Controls["panelNgay" + (i - 1)].Size.Height);
+                fPanel.Controls.Add(lbNgay);
+
+                foreach (ChiTietLichTrinh ctlt in lt.pChiTietLichTrinh)
+                {
+                    Label lbGio = new Label();
+                    lbGio.Name = "lbGio" + i;
+                    lbGio.Visible = true;
+                    lbGio.AutoSize = true;
+                    lbGio.Text = ctlt.ThoiGian + ": " + ctlt.NoiDung;
+                    height += lbGio.Height;
+                    fPanel.Controls.Add(lbGio);
+                }
+                fPanel.Size = new Size(770, height);
+                panel1.Controls.Add(fPanel);
+                i++;
             }
-        }      
+        }
     }
 }
