@@ -14,7 +14,7 @@ namespace QuanLyDuLich.GUI
 {
     public partial class frmXemChiTietTour : Form
     {
-        private Tour tour;        
+        private Tour tour;
         private string nguoiGui;
         private string sdtNguoiGui;
         private DoiTac doiTac;
@@ -38,21 +38,33 @@ namespace QuanLyDuLich.GUI
             this.Text = tour.TenTour;
             lbTenDonVi.Text = "KÍNH GỬI: " + tour.KhachHang.pTenDonVi.ToUpper();
             lbTenDonVi.Location = new Point((panel1.Size.Width - lbTenDonVi.Size.Width) / 2, lbTenDonVi.Location.Y);
-            
+
             lbNguoiGui.Text = "NGƯỜI GỬI: " + nguoiGui.ToUpper() + " - " + sdtNguoiGui;
-            lbNguoiGui.Location = new Point((groupBox1.Size.Width - lbNguoiGui.Size.Width - 10), lbNguoiGui.Location.Y);            
-            
+            lbNguoiGui.Location = new Point((groupBox1.Size.Width - lbNguoiGui.Size.Width - 10), lbNguoiGui.Location.Y);
+
             lbTenTour.Text = tour.TenTour.ToUpper();
-            lbTenTour.Location = new Point((panel1.Size.Width - lbTenTour.Size.Width)/2, lbTenTour.Location.Y);
-            
+            lbTenTour.Location = new Point((panel1.Size.Width - lbTenTour.Size.Width) / 2, lbTenTour.Location.Y);
+
             lbThoiGianDi.Text = "(Thời gian: " + tour.ThoiGian + ")";
             lbThoiGianDi.Location = new Point((panel1.Size.Width - lbThoiGianDi.Size.Width) / 2, lbTenTour.Size.Height + lbTenTour.Location.Y + 10);
+
+            lbUuDai.MaximumSize = new System.Drawing.Size(groupBox2.Size.Width, 0);
+            groupBox2.AutoSize = true;
+            groupBox2.MaximumSize = new Size(350, 0);
+            if (tour.UuDai != "")
+                lbUuDai.Text = "Ưu đãi: " + tour.UuDai;
+            else
+                groupBox2.Visible = false;
+
+            lbGiaTour.MaximumSize = new System.Drawing.Size(groupBox3.Size.Width, 0);
+            lbGiaTour.Text = "Tổng giá tour " + tour.TongGiaTour;
+            groupBox3.Location = new Point(panel1.Size.Width - groupBox3.Size.Width - 28, groupBox3.Location.Y);
             
-            initElement1();
+            init_ChiTietTour();
 
             lbKetThuc.Text = "KẾT THÚC CHƯƠNG TRÌNH THAM QUAN DU LỊCH";
-            lbKetThuc.Location = new Point((panel1.Size.Width - lbKetThuc.Size.Width) / 2, fPanel1.Location.Y + fPanel1.Size.Height + 20);
-            
+            lbKetThuc.Location = new Point((panel1.Size.Width - lbKetThuc.Size.Width) / 2, fPanel1.Location.Y + fPanel1.Size.Height + 20);            
+
             fPanel2.Location = new Point(fPanel1.Location.X, lbKetThuc.Location.Y + 40);
             Label lbMore = new Label();
             lbMore.Name = "lbMore";
@@ -62,49 +74,10 @@ namespace QuanLyDuLich.GUI
             lbMore.Text = tour.ThongTinTour;
             fPanel2.Controls.Add(lbMore);
 
-            lbChaoMung.Location = new Point((panel1.Size.Width - lbChaoMung.Size.Width) / 2, fPanel2.Location.Y + fPanel2.Size.Height + 20);
+            lbChaoMung.Location = new Point((panel1.Size.Width - lbChaoMung.Size.Width) / 2, fPanel2.Location.Y + fPanel2.Size.Height + 20);            
         }
 
-        private void initElement()
-        {            
-            int i = 0;            
-            foreach(LichTrinh lt in tour.LichTrinh)
-            {
-                Label lbNgay = new Label();
-                lbNgay.Name = "lbNgay" + i;
-                lbNgay.Visible = true;
-                lbNgay.AutoSize = true;
-                int height = 0;
-                lbNgay.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                lbNgay.Text = "Ngày "+lt.Ngay + ": " + lt.TenLichTrinh;
-                FlowLayoutPanel fPanel = new FlowLayoutPanel();
-                fPanel.FlowDirection = FlowDirection.TopDown;
-                fPanel.Name = "panelNgay" + i;
-                height += lbNgay.Size.Height;
-                if (i == 0)
-                    fPanel.Location = new Point(12, 372);
-                else
-                    fPanel.Location = new Point(12, panel1.Controls["panelNgay" + (i - 1)].Location.Y + panel1.Controls["panelNgay" + (i - 1)].Size.Height);
-                fPanel.Controls.Add(lbNgay);
-                
-                foreach(ChiTietLichTrinh ctlt in lt.pChiTietLichTrinh)
-                {
-                    Label lbGio = new Label();
-                    lbGio.Name = "lbGio" + i;
-                    lbGio.Visible = true;
-                    lbGio.AutoSize = true;
-                    lbGio.Text = ctlt.ThoiGian + ": " + ctlt.NoiDung;
-                    height += lbGio.Height;
-                    fPanel.Controls.Add(lbGio);
-                }
-                fPanel.Size = new Size(770, height);
-                panel1.Controls.Add(fPanel);
-                i++;
-            }            
-        }
-
-
-        private void initElement1()
+        private void init_ChiTietTour()
         {
             int i = 0;
             fPanel1.FlowDirection = FlowDirection.TopDown;
@@ -118,11 +91,12 @@ namespace QuanLyDuLich.GUI
                 Label lbNgay = new Label();
                 lbNgay.Name = "lbNgay" + i;
                 lbNgay.Visible = true;
-                lbNgay.AutoSize = true;                
+                lbNgay.AutoSize = true;
                 lbNgay.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                lbNgay.Text = "Ngày " + lt.Ngay + ": " + lt.TenLichTrinh;
+                lbNgay.Text = "Ngày " + lt.Ngay + ": " + lt.TenLichTrinh;                
                 lbNgay.MaximumSize = new Size(760, 0);
-                fPanel1.Location = new Point(12, 372);                
+                lbNgay.Margin = new System.Windows.Forms.Padding(0, 10, 10, 10);
+                fPanel1.Location = new Point(12, groupBox2.Location.Y + groupBox2.Size.Height + 20);
                 fPanel1.Controls.Add(lbNgay);
 
                 foreach (ChiTietLichTrinh ctlt in lt.pChiTietLichTrinh)
@@ -131,9 +105,19 @@ namespace QuanLyDuLich.GUI
                     lbGio.Name = "lbGio" + i;
                     lbGio.Visible = true;
                     lbGio.AutoSize = true;
-                    lbGio.MaximumSize = new Size(760, 0);                    
-                    lbGio.Text = ctlt.ThoiGian + ": \n\t" + ctlt.NoiDung;                    
+                    lbGio.MaximumSize = new Size(760, 0);
+                    lbGio.Text = ctlt.ThoiGian + ":";
                     fPanel1.Controls.Add(lbGio);
+
+                    Label lbGio1 = new Label();
+                    lbGio1.Name = "lbGio1" + i;
+                    lbGio1.Visible = true;
+                    lbGio1.AutoSize = true;
+                    lbGio1.MaximumSize = new Size(760, 0);
+                    lbGio1.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+                    lbGio1.Text = ctlt.NoiDung;
+                    fPanel1.Controls.Add(lbGio1);
+
                     if (ctlt.DoiTac != null)
                     {
                         DoiTacLinkLabel lbDoiTac = new DoiTacLinkLabel();
@@ -141,23 +125,21 @@ namespace QuanLyDuLich.GUI
                         lbDoiTac.Visible = true;
                         lbDoiTac.AutoSize = true;
                         lbDoiTac.DoiTac = ctlt.DoiTac;
-                        if(ctlt.DoiTac.LoaiDoiTac.Equals("NHAHANG"))
-                        lbDoiTac.Text = "Nhà hàng: " + ctlt.DoiTac.TenDoiTac;
-                        else
-                            lbDoiTac.Text = "Khách sạn: " + ctlt.DoiTac.TenDoiTac;
+                        lbDoiTac.Text = ctlt.DoiTac.TenDoiTac;
+                        lbDoiTac.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
                         lbDoiTac.LinkClicked += new LinkLabelLinkClickedEventHandler(this.linkClick_DoiTac);
                         fPanel1.Controls.Add(lbDoiTac);
                     }
                 }
                 i++;
             }
-            
+
         }
 
         private void linkClick_DoiTac(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DoiTacLinkLabel dt = (DoiTacLinkLabel)sender;
-            MessageBox.Show("Người liên hệ: " + dt.DoiTac.NguoiLienHe + "\n Địa chỉ: " + dt.DoiTac.DiaChi + "\n Số điện thoại: " + dt.DoiTac.SoDT +"\n Email: "+ dt.DoiTac.Email + "\n Đánh giá đối tác: "+ dt.DoiTac.DanhGiaDoiTac, dt.DoiTac.TenDoiTac);
+            MessageBox.Show("Người liên hệ: " + dt.DoiTac.NguoiLienHe + "\nĐịa chỉ: " + dt.DoiTac.DiaChi + "\nSố điện thoại: " + dt.DoiTac.SoDT + "\nEmail: " + dt.DoiTac.Email + "\nĐánh giá đối tác: " + dt.DoiTac.DanhGiaDoiTac, dt.DoiTac.TenDoiTac);
         }
     }
 }
