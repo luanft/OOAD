@@ -288,15 +288,17 @@ namespace QuanLyDuLich.GUI
             nhanvien.pCMND = textBox_CMND.Text;
             nhanvien.pDiaChi = textBox_DiaChi.Text;
             nhanvien.pEmail = textBox_Email.Text;
-            switch (comboBox2_PhongBan.SelectedIndex)
+            dtoPhongBan dto_phongban = new dtoPhongBan();
+            dto_phongban = (dtoPhongBan)comboBox2_PhongBan.SelectedItem;
+            switch (dto_phongban.MAPHONG)
             {
-                case 0:
+                case 1:
                     nhanvien.pMaPhong = 1;
                     break;
-                case 1:
+                case 2:
                     nhanvien.pMaPhong = 2;
                     break;
-                case 2:
+                case 3:
                     nhanvien.pMaPhong = 3;
                     break;
             }
