@@ -204,6 +204,7 @@ using System.Text;
             dto.HUONGDANVIEN = huongDanVien.MaDoiTac;
             dto.NHAXE = nhaXe.MaDoiTac;
             dto.MAKHACHHANG = khachHang.pMaKhachHang;
+            dto.THONGTINTOUR = thongTinTour;
             foreach(LichTrinh i in LichTrinh)
             {
                 i.MaTour = maTour;                
@@ -240,6 +241,7 @@ using System.Text;
             dto.NHAXE = nhaXe.MaDoiTac;
             dto.TONGGIATOUR = 0;
             dto.THOIGIAN = thoiGian;
+            dto.THONGTINTOUR = thongTinTour;
             bool rs = dal.ThemTour(dto);
             if (rs)
             {

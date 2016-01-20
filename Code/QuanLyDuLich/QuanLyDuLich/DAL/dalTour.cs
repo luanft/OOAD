@@ -24,7 +24,7 @@ namespace DataAccessLayer
             }
             string sql = "INSERT INTO [dbo].[TOUR]([MANHANVIEN],[MAKHACHHANG],[NHAXE],[HUONGDANVIEN],[TENTOUR],[THOIGIAN],[NGAYDI],[TONGGIATOUR],[TRANGTHAI],[UUDAI],[GHICHU],[NgayLapTour],[THONGTINTOUR])VALUES('" +
                 tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "',N'" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
-                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NGAYLAPTOUR.ToShortDateString() + "','"+tour.THONGTINTOUR+"')";
+                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NGAYLAPTOUR.ToShortDateString() + "',N'"+tour.THONGTINTOUR+"')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -168,6 +168,7 @@ namespace DataAccessLayer
                 t.GhiChu = dr["GHICHU"].ToString();
                 t.TongGiaTour = dr["TONGGIATOUR"].ToString();
                 t.NgayLapTour = DateTime.Parse(dr["NGAYLAPTOUR"].ToString());
+                t.ThongTinTour = dr["THONGTINTOUR"].ToString();
                 t.LichTrinh = dalLt.LoadLichTrinh(t.MaTour);
                 this.Close();
             }
@@ -213,12 +214,15 @@ namespace DataAccessLayer
             bool rs = false;
             if (this.Connect())
             {
-                string sql = "delete from CHITIETLICHTRINH where CHITIETLICHTRINH.MALICHTRINH in (select LICHTRINH.MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = "+maTour+")";
-                sql ="DELETE FROM [dbo].[TOUR] WHERE [MATOUR]='" + maTour + "'";
+                string sql = "delete from CHITIETLICHTRINH where CHITIETLICHTRINH.MALICHTRINH in (select LICHTRINH.MALICHTRINH from LICHTRINH where LICHTRINH.MATOUR = " + maTour + ")";                
                 this.Write(sql);
+                sql = "delete from LICHTRINH where MATOUR = " + maTour;
+                this.Write(sql);
+                sql = "delete from TOUR where MATOUR = " + maTour;
+                this.Write(sql);                
+                rs = true;
                 this.Close();
             }
-
             return rs;
         }
 
@@ -284,8 +288,9 @@ namespace DataAccessLayer
               "',[TONGGIATOUR] = '" + tour.TONGGIATOUR +
               "',[TRANGTHAI] = '" + tour.TRANGTHAI +
               "',[UUDAI] = N'" + tour.UUDAI +
-              "',[GHICHU] = N'" + tour.GHICHU +
-              "' WHERE [MATOUR]='" + tour.MATOUR + "'";
+              "',[GHICHU] = N'" + tour.GHICHU +              
+              "',[THONGTINTOUR] = N'" + tour.THONGTINTOUR
+              +"' WHERE [MATOUR]='" + tour.MATOUR + "'";
             if (this.Write(sql))
             {
                 this.Close();
