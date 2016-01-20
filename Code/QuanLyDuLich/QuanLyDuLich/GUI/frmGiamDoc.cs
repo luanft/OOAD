@@ -192,13 +192,13 @@ namespace QuanLyDuLich.GUI
                 switch (dto_nhanvien.MAPHONG)
                 {
                     case 1:
-                        comboBox2_PhongBan.SelectedIndex = 0;
+                        comboBox2_PhongBan.SelectedValue = 1;
                         break;
                     case 2:
-                        comboBox2_PhongBan.SelectedIndex = 1;
+                        comboBox2_PhongBan.SelectedValue = 2;
                         break;
                     case 3:
-                        comboBox2_PhongBan.SelectedIndex = 2;
+                        comboBox2_PhongBan.SelectedValue = 3;
                         break;
                 }
                 label_MaNhanVien.Text = dto_nhanvien.MANHANVIEN.ToString();
