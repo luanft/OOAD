@@ -20,7 +20,7 @@ namespace BLL
 		public IEnumerable<DiemDuLich> DiemDuLich;
 		
 
-		public bool CapNhatTour(Tour tour, dtoTour data)
+		public bool CapNhatTour(Tour tour)
 		{
 			throw new System.NotImplementedException();
 		}
@@ -30,7 +30,7 @@ namespace BLL
 			throw new System.NotImplementedException();
 		}
 
-		public bool LapTour(dtoTour data)
+		public bool LapTour(Tour data)
 		{
 			throw new System.NotImplementedException();
 		}
