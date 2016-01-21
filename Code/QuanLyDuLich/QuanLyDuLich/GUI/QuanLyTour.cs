@@ -394,7 +394,7 @@ namespace QuanLyDuLich.GUI
                         x.OnEditing += ChinhSuaTour;
                         x.OnDeleting += xoaTour;
                     }
-                    frmXemChiTietTour xem = new frmXemChiTietTour(tour);
+                    frmXemChiTietTour xem = new frmXemChiTietTour(dal.LoadTour(tour.MaTour));
                     xem.ShowDialog();
                 }
                 else
