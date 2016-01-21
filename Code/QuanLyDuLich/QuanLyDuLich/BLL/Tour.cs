@@ -7,11 +7,12 @@
 namespace BLL
 {
     using DataAccessLayer;
-using DataTranferObject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+    using DataTranferObject;
+    using QuanLyDuLich.GUI;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
 	public class Tour
 	{

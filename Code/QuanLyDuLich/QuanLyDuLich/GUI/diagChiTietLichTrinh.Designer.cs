@@ -177,6 +177,7 @@
             // txtThoiGian
             // 
             this.txtThoiGian.Location = new System.Drawing.Point(86, 26);
+            this.txtThoiGian.MaxLength = 5;
             this.txtThoiGian.Name = "txtThoiGian";
             this.txtThoiGian.Size = new System.Drawing.Size(138, 20);
             this.txtThoiGian.TabIndex = 1;

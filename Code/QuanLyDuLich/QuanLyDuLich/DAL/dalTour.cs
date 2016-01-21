@@ -14,6 +14,7 @@ namespace DataAccessLayer
     using System.Data;
     using System.Windows.Forms;
     using BLL;
+    using QuanLyDuLich.GUI;
     public class dalTour : dalObject
     {
         public bool ThemTour(dtoTour tour)
@@ -23,8 +24,8 @@ namespace DataAccessLayer
                 return false;
             }
             string sql = "INSERT INTO [dbo].[TOUR]([MANHANVIEN],[MAKHACHHANG],[NHAXE],[HUONGDANVIEN],[TENTOUR],[THOIGIAN],[NGAYDI],[TONGGIATOUR],[TRANGTHAI],[UUDAI],[GHICHU],[NgayLapTour],[THONGTINTOUR])VALUES('" +
-                tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "',N'" + tour.THOIGIAN + "','" + tour.NGAYDI.ToShortDateString() + "','" +
-                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + tour.NGAYLAPTOUR.ToShortDateString() + "',N'"+tour.THONGTINTOUR+"')";
+                tour.MANHANVIEN + "','" + tour.MAKHACHHANG + "','" + tour.NHAXE + "','" + tour.HUONGDANVIEN + "',N'" + tour.TENTOUR + "',N'" + tour.THOIGIAN + "','" + SQLDateTime.Convert(tour.NGAYDI) + "','" +
+                tour.TONGGIATOUR + "','" + tour.TRANGTHAI + "',N'" + tour.UUDAI + "',N'" + tour.GHICHU + "','" + SQLDateTime.Convert(tour.NGAYLAPTOUR) + "',N'"+tour.THONGTINTOUR+"')";
             if (this.Write(sql))
             {
                 this.Close();
@@ -284,7 +285,7 @@ namespace DataAccessLayer
               "',[HUONGDANVIEN] = '" + tour.HUONGDANVIEN +
               "',[TENTOUR] = N'" + tour.TENTOUR +
               "',[THOIGIAN] = N'" + tour.THOIGIAN +
-              "',[NGAYDI] = '" + tour.NGAYDI +
+              "',[NGAYDI] = '" + SQLDateTime.Convert(tour.NGAYDI) +
               "',[TONGGIATOUR] = '" + tour.TONGGIATOUR +
               "',[TRANGTHAI] = '" + tour.TRANGTHAI +
               "',[UUDAI] = N'" + tour.UUDAI +
