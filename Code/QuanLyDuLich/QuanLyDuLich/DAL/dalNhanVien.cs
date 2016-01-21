@@ -20,7 +20,7 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "INSERT INTO [dbo].[NHANVIEN] ([MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU]) VALUES ('"
+            string sql = "INSERT INTO [dbo].[NHANVIEN] ([TRANGTHAI],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU]) VALUES (1,'"
                 + nhanVien.MAPHONG + "',N'" + nhanVien.HOTEN + "','" + nhanVien.CMND + "',N'" + nhanVien.DIACHI + "','" + nhanVien.NGAYSINH.ToShortDateString() + "',N'" + nhanVien.QUEQUAN + "','" + nhanVien.SODT + "','" + nhanVien.EMAIL + "',N'" + nhanVien.GIOITINH + "','" + nhanVien.MATKHAU + "')";
             if (this.Write(sql))
             {
@@ -38,7 +38,7 @@ namespace DataAccessLayer
             {
                 return false;
             }
-            string sql = "DELETE FROM [dbo].[NHANVIEN] WHERE [MANHANVIEN]='" + maNhanVien + "'";
+            string sql = "UPDATE [dbo].[NHANVIEN] SET TRANGTHAI='false' WHERE [MANHANVIEN]='" + maNhanVien + "'";
             if (this.Write(sql))
             {
                 this.Close();
@@ -47,6 +47,7 @@ namespace DataAccessLayer
             this.Close();
             return false;
         }
+
 
         public bool SuaThongTinNhanVien(dtoNhanVien nhanVien)
         {
@@ -153,10 +154,13 @@ namespace DataAccessLayer
             {
                 return null;
             }
-            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN] WHERE MAPHONG = '" + maPhongBan + "'";
+            string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH] FROM [dbo].[NHANVIEN] WHERE MAPHONG = '" + maPhongBan + "' and TRANGTHAI <> 'false'";
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
-           
+            if (dtNhanVien.Rows.Count < 1)
+            {
+                return null;
+            }
             List<dtoNhanVien> lDtoNhanVien = new List<dtoNhanVien>();
             foreach (DataRow dr in dtNhanVien.Rows)
             {
@@ -185,7 +189,10 @@ namespace DataAccessLayer
             string sql = "SELECT [MANHANVIEN],[MAPHONG],[HOTEN],[CMND],[DIACHI],[NGAYSINH],[QUEQUAN],[SODT],[EMAIL],[GIOITINH],[MATKHAU] FROM [dbo].[NHANVIEN]";
             DataTable dtNhanVien = this.Read(sql);
             this.Close();
-            
+            if (dtNhanVien.Rows.Count < 1)
+            {
+                return null;
+            }
             List<dtoNhanVien> lDtoNhanVien = new List<dtoNhanVien>();
             foreach (DataRow dr in dtNhanVien.Rows)
             {

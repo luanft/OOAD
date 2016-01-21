@@ -337,7 +337,7 @@ namespace DataAccessLayer
                 MessageBox.Show("Có lỗi trong quá trình kết nối với CSDL");
                 return null;
             }
-            string sql = "select * from [dbo].[TOUR],[dbo].[NHANVIEN] where NGAYDI >= '" + tungay.Date + "' and NGAYDI<='" + denngay.Date + "' and NHANVIEN.MANHANVIEN = TOUR.MANHANVIEN  order by NGAYDI ASC";
+            string sql = "select * from [dbo].[TOUR],[dbo].[NHANVIEN] where NGAYDI >= '" + tungay.Date + "' and NGAYDI<='" + denngay.Date + "' and NHANVIEN.MANHANVIEN = TOUR.MANHANVIEN and TOUR.TRANGTHAI='DA_BAN' order by NGAYDI ASC";
             DataTable dtTour = this.Read(sql);
             this.Close();
 

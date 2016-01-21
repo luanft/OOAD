@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiamDoc));
             this.tabCtrl_ThongKeSaleTour = new System.Windows.Forms.TabControl();
             this.tabPage_ThongKeSaleTour = new System.Windows.Forms.TabPage();
@@ -41,6 +41,8 @@
             this.GiaTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_TongDoanhThu = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label_ThoiGianThongKe = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.label_TongTour = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -100,7 +102,6 @@
             this.button_HuySuaPhong = new System.Windows.Forms.Button();
             this.button_LuuLai = new System.Windows.Forms.Button();
             this.button_SuaTenPhong = new System.Windows.Forms.Button();
-            this.button_XoaPhong = new System.Windows.Forms.Button();
             this.textBox_TenPhong = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -123,8 +124,6 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.button_DangXuat = new System.Windows.Forms.Button();
             this.label_TenGiamDoc = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label_ThoiGianThongKe = new System.Windows.Forms.Label();
             this.tabCtrl_ThongKeSaleTour.SuspendLayout();
             this.tabPage_ThongKeSaleTour.SuspendLayout();
             this.panel_ThongKe.SuspendLayout();
@@ -226,11 +225,11 @@
             this.dataGridView_ThongKe.Location = new System.Drawing.Point(20, 147);
             this.dataGridView_ThongKe.Name = "dataGridView_ThongKe";
             this.dataGridView_ThongKe.ReadOnly = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView_ThongKe.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_ThongKe.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -294,6 +293,26 @@
             this.label6.Size = new System.Drawing.Size(105, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tổng doanh thu: ";
+            // 
+            // label_ThoiGianThongKe
+            // 
+            this.label_ThoiGianThongKe.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ThoiGianThongKe.Location = new System.Drawing.Point(272, 67);
+            this.label_ThoiGianThongKe.Name = "label_ThoiGianThongKe";
+            this.label_ThoiGianThongKe.Size = new System.Drawing.Size(160, 16);
+            this.label_ThoiGianThongKe.TabIndex = 0;
+            this.label_ThoiGianThongKe.Text = "Từ ngày";
+            this.label_ThoiGianThongKe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(176, 102);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 16);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "0 tour";
             // 
             // label_TongTour
             // 
@@ -812,7 +831,6 @@
             this.splitContainer2.Panel2.Controls.Add(this.button_HuySuaPhong);
             this.splitContainer2.Panel2.Controls.Add(this.button_LuuLai);
             this.splitContainer2.Panel2.Controls.Add(this.button_SuaTenPhong);
-            this.splitContainer2.Panel2.Controls.Add(this.button_XoaPhong);
             this.splitContainer2.Panel2.Controls.Add(this.textBox_TenPhong);
             this.splitContainer2.Panel2.Controls.Add(this.label27);
             this.splitContainer2.Panel2.Controls.Add(this.label23);
@@ -885,9 +903,9 @@
             // 
             this.button_ThemPhong.AutoSize = true;
             this.button_ThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ThemPhong.Location = new System.Drawing.Point(13, 211);
+            this.button_ThemPhong.Location = new System.Drawing.Point(51, 214);
             this.button_ThemPhong.Name = "button_ThemPhong";
-            this.button_ThemPhong.Size = new System.Drawing.Size(99, 48);
+            this.button_ThemPhong.Size = new System.Drawing.Size(99, 45);
             this.button_ThemPhong.TabIndex = 2;
             this.button_ThemPhong.Text = "Thêm phòng";
             this.button_ThemPhong.UseVisualStyleBackColor = true;
@@ -909,7 +927,7 @@
             // 
             this.button_LuuLai.AutoSize = true;
             this.button_LuuLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_LuuLai.Location = new System.Drawing.Point(318, 214);
+            this.button_LuuLai.Location = new System.Drawing.Point(295, 214);
             this.button_LuuLai.Name = "button_LuuLai";
             this.button_LuuLai.Size = new System.Drawing.Size(75, 45);
             this.button_LuuLai.TabIndex = 5;
@@ -921,24 +939,13 @@
             // 
             this.button_SuaTenPhong.AutoSize = true;
             this.button_SuaTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SuaTenPhong.Location = new System.Drawing.Point(233, 214);
+            this.button_SuaTenPhong.Location = new System.Drawing.Point(185, 214);
             this.button_SuaTenPhong.Name = "button_SuaTenPhong";
             this.button_SuaTenPhong.Size = new System.Drawing.Size(75, 45);
             this.button_SuaTenPhong.TabIndex = 4;
             this.button_SuaTenPhong.Text = "Sửa";
             this.button_SuaTenPhong.UseVisualStyleBackColor = true;
             this.button_SuaTenPhong.Click += new System.EventHandler(this.button_SuaTenPhong_Click);
-            // 
-            // button_XoaPhong
-            // 
-            this.button_XoaPhong.AutoSize = true;
-            this.button_XoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_XoaPhong.Location = new System.Drawing.Point(120, 214);
-            this.button_XoaPhong.Name = "button_XoaPhong";
-            this.button_XoaPhong.Size = new System.Drawing.Size(104, 45);
-            this.button_XoaPhong.TabIndex = 3;
-            this.button_XoaPhong.Text = "Xóa phòng";
-            this.button_XoaPhong.UseVisualStyleBackColor = true;
             // 
             // textBox_TenPhong
             // 
@@ -1117,7 +1124,7 @@
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TrangThai.Width = 80;
+            this.TrangThai.Width = 74;
             // 
             // TongGiaTour
             // 
@@ -1125,7 +1132,7 @@
             this.TongGiaTour.DataPropertyName = "TongGiaTour";
             this.TongGiaTour.HeaderText = "Tổng giá tour";
             this.TongGiaTour.Name = "TongGiaTour";
-            this.TongGiaTour.Width = 95;
+            this.TongGiaTour.Width = 71;
             // 
             // GhiChu
             // 
@@ -1134,7 +1141,7 @@
             this.GhiChu.FillWeight = 24.50981F;
             this.GhiChu.HeaderText = "Ghi chú";
             this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Width = 69;
+            this.GhiChu.Width = 64;
             // 
             // printDocument1
             // 
@@ -1170,26 +1177,6 @@
             this.label_TenGiamDoc.Size = new System.Drawing.Size(39, 13);
             this.label_TenGiamDoc.TabIndex = 2;
             this.label_TenGiamDoc.Text = "Họ tên";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(176, 102);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(42, 16);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "0 tour";
-            // 
-            // label_ThoiGianThongKe
-            // 
-            this.label_ThoiGianThongKe.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ThoiGianThongKe.Location = new System.Drawing.Point(272, 67);
-            this.label_ThoiGianThongKe.Name = "label_ThoiGianThongKe";
-            this.label_ThoiGianThongKe.Size = new System.Drawing.Size(160, 16);
-            this.label_ThoiGianThongKe.TabIndex = 0;
-            this.label_ThoiGianThongKe.Text = "Từ ngày";
-            this.label_ThoiGianThongKe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmGiamDoc
             // 
@@ -1284,7 +1271,6 @@
         private System.Windows.Forms.Button button_ThemPhong;
         private System.Windows.Forms.Button button_LuuLai;
         private System.Windows.Forms.Button button_SuaTenPhong;
-        private System.Windows.Forms.Button button_XoaPhong;
         private System.Windows.Forms.TextBox textBox_TenPhong;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
