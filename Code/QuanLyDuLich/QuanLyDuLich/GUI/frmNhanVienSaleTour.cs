@@ -152,10 +152,7 @@ namespace QuanLyDuLich.GUI
         private void bt_ThemDiemDL_Click(object sender, EventArgs e)
         {
             if (!check_data_DDL())
-                return;
-            DialogResult result = MessageBox.Show("Bạn có muốn thêm điểm du lịch?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
-                return;
+                return;            
             int matinh=cb_TinhThanh.SelectedIndex+1;
             dtoDiemDuLich dto_DDL = new dtoDiemDuLich(1, nhanVienSale.pMaNhanVien, tb_DiemDL.Text, tb_MoTa.Text,matinh);
             if (nhanVienSale.ThemDiemDuLich(dto_DDL))
