@@ -162,7 +162,10 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Đã thêm điểm du lịch");
             else
                 MessageBox.Show("Lỗi thêm điểm du lịch");
-            loadDanhSachDiemDuLich();            
+            loadDanhSachDiemDuLich();
+            tb_DiemDL.Text = "";
+            cb_TinhThanh.SelectedIndex = -1;
+            tb_MoTa.Text = "";
         }
 
         private void bt_CapNhatDDL_Click(object sender, EventArgs e)
