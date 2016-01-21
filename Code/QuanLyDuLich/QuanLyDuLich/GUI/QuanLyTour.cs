@@ -382,6 +382,18 @@ namespace QuanLyDuLich.GUI
                     lichTrinhTour.Nodes.Clear();
                     txtThongTinTour.Text = "";
                     capNhatTour = false;
+                    panelDanhSachTour.Controls.Clear();
+                    dalTour dal = new dalTour();
+                    List<dtoTour> ltour = dal.LayDanhSachTour(MaNhanVien);
+                    foreach (dtoTour i in ltour)
+                    {
+                        XemTour x = new XemTour();
+                        x.Size = new Size(370, 249);
+                        this.panelDanhSachTour.Controls.Add(x);
+                        x.init(i);
+                        x.OnEditing += ChinhSuaTour;
+                        x.OnDeleting += xoaTour;
+                    }
                     frmXemChiTietTour xem = new frmXemChiTietTour(tour);
                     xem.ShowDialog();
                 }
