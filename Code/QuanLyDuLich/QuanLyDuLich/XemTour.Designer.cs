@@ -144,6 +144,7 @@
             this.llSubmit.TabIndex = 4;
             this.llSubmit.TabStop = true;
             this.llSubmit.Text = "Submit tour";
+            
             // 
             // llChinhSua
             // 

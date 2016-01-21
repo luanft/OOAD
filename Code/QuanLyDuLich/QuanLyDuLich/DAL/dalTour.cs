@@ -250,6 +250,27 @@ namespace DataAccessLayer
             }
         }
 
+        public bool CapNhatTour(int maTour, string trangThai)
+        {
+            if (!this.Connect())
+            {
+                return false;
+            }
+            string sql = "UPDATE [dbo].[TOUR]" +
+              "SET [TRANGTHAI] = '" + trangThai +              
+              "' WHERE [MATOUR]='" + maTour + "'";
+            if (this.Write(sql))
+            {
+                this.Close();
+                return true;
+            }
+            else
+            {
+                this.Close();
+                return false;
+            }
+        }
+
         public bool CapNhatTour(int maTour, string trangThai, string ghiChu)
         {
             if (!this.Connect())

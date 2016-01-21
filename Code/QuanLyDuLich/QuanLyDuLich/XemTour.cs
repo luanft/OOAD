@@ -62,9 +62,10 @@ namespace QuanLyDuLich
         {
 
             dalTour dal = new dalTour();
+            
             tour.TRANGTHAI = "CHO_DIEU_HANH_DUYET";
             lbTrangThai.Text = "CHO_DIEU_HANH_DUYET";
-            if (dal.CapNhatTour(tour))
+            if (dal.CapNhatTour(tour.MATOUR,tour.TRANGTHAI))
             {
                 llSubmit.Enabled = false;
             }
@@ -114,6 +115,8 @@ namespace QuanLyDuLich
                 }
             }
         }
+
+        
 
 
 
