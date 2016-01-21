@@ -82,6 +82,12 @@
     <Compile Include="DTO\dtoPhongBan.cs" />
     <Compile Include="DTO\dtoTour.cs" />
     <Compile Include="GUI\ChiTietNode.cs" />
+    <Compile Include="GUI\Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\diagThemLichTrinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="DiaDiemDuLich.resx">
       <DependentUpon>DiaDiemDuLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\diagChiTietLichTrinh.resx">
       <DependentUpon>diagChiTietLichTrinh.cs</DependentUpon>

@@ -162,8 +162,7 @@ namespace QuanLyDuLich.GUI
                 MessageBox.Show("Đã thêm điểm du lịch");
             else
                 MessageBox.Show("Lỗi thêm điểm du lịch");
-            loadDanhSachDiemDuLich();
-            bindingdata_DDL();
+            loadDanhSachDiemDuLich();            
         }
 
         private void bt_CapNhatDDL_Click(object sender, EventArgs e)
@@ -282,8 +281,7 @@ namespace QuanLyDuLich.GUI
         private void bindingdata_DDL()
         {
             tb_MoTa.Text = nhanVienSale.diemDuLichDuocChon.pMoTa;
-            tb_DiemDL.Text = nhanVienSale.diemDuLichDuocChon.pTenDiemDuLich;
-            //cb_TinhThanh.Text=nhanVienSale.diemDuLichDuocChon.p
+            tb_DiemDL.Text = nhanVienSale.diemDuLichDuocChon.pTenDiemDuLich;            
         }
 
         private void cb_ChonTinhThanh_SelectedIndexChanged(object sender, EventArgs e)
