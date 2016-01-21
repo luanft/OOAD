@@ -83,6 +83,8 @@ namespace QuanLyDuLich
             dalTour dal = new dalTour();
             tour.TRANGTHAI = "DA_BAN";
             lbTrangThai.Text = "DA_BAN";
+            llChinhSua.Enabled = false;
+            llXoa.Enabled = false;
             if (dal.CapNhatTour(tour))
             {
                 llDanhDauBan.Enabled = false;

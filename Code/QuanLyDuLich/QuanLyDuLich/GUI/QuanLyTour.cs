@@ -300,40 +300,53 @@ namespace QuanLyDuLich.GUI
 
             if (cbHuongDanVien.SelectedItem == null)
             {
+                cbNguoiDaiDien.Focus();
                 MessageBox.Show("Bạn chưa chọn hướng dẫn viên!");
                 return;
             }
 
             if (cbNguoiDaiDien.SelectedItem == null)
             {
+                cbNguoiDaiDien.Focus();
                 MessageBox.Show("Bạn chưa chọn khách hàng!");
                 return;
             }
 
             if (cbNhaXe.SelectedItem == null)
             {
+                cbNhaXe.Focus();
                 MessageBox.Show("Bạn chưa chọn nhà xe!");
                 return;
             }
             if (txtTenTour.Text == "")
             {
+                txtTenTour.Focus();
                 MessageBox.Show("Bạn chưa nhập tên tour!");
                 return;
             }
 
             if (txtThoiGianDi.Text == "")
             {
+                txtThoiGianDi.Focus();
                 MessageBox.Show("Bạn chưa nhập thời gian đi!");
                 return;
             }
             if (txtThongTinTour.Text == "")
             {
+                txtThongTinTour.Focus();
                 MessageBox.Show("Bạn chưa nhập thông tin tour!");
                 return;
             }
             if (lichTrinhTour.Nodes.Count == 0)
             {
                 MessageBox.Show("Bạn chưa soạn lịch trình tour!");
+                return;
+            }
+
+            if (dtNgayDi.Value <= DateTime.Now)            
+            {
+                MessageBox.Show("Ngày đi phải lớn hơn ngày hiện tại!");
+                dtNgayDi.Focus();
                 return;
             }
 
