@@ -661,6 +661,7 @@
             this.textBox_CMND.Name = "textBox_CMND";
             this.textBox_CMND.Size = new System.Drawing.Size(284, 20);
             this.textBox_CMND.TabIndex = 6;
+            this.textBox_CMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CMND_KeyPress);
             // 
             // textBox_DiaChi
             // 
@@ -682,6 +683,7 @@
             this.textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             this.textBox_SoDienThoai.Size = new System.Drawing.Size(284, 20);
             this.textBox_SoDienThoai.TabIndex = 9;
+            this.textBox_SoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_SoDienThoai_KeyPress);
             // 
             // textBox_HoTen
             // 
@@ -1111,7 +1113,7 @@
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TrangThai.Width = 80;
+            this.TrangThai.Width = 74;
             // 
             // TongGiaTour
             // 

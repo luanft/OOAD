@@ -379,7 +379,7 @@ namespace QuanLyDuLich.GUI
 
         }
         private void dateTimePicker_TuNgay_ValueChanged(object sender, EventArgs e)
-        {            
+        {
             dateTimePicker_DenNgay.MinDate = dateTimePicker_TuNgay.Value;
         }
         Bitmap MemoryImage;
@@ -488,7 +488,7 @@ namespace QuanLyDuLich.GUI
         private void button_LuuLai_Click(object sender, EventArgs e)
         {
             PhongBan phongban = new PhongBan();
-            
+
             dtoPhongBan dto_phongban = phongban.LayThongTinPhong(label_MaPhong.Text.ToString());
             if (textBox_TenPhong.Text == "")
             {
@@ -496,7 +496,7 @@ namespace QuanLyDuLich.GUI
             }
             else
             {
-                
+
                 if (dto_phongban != null)
                 {
                     dto_phongban.TENPHONG = textBox_TenPhong.Text;
@@ -583,8 +583,8 @@ namespace QuanLyDuLich.GUI
             button_XoaPhong.Enabled = false;
             button_ThemPhong.Enabled = true;
             button_SuaTenPhong.Enabled = true;
-            
-            
+
+
         }
 
         private void button_HuySuaPhong_Click(object sender, EventArgs e)
@@ -624,6 +624,22 @@ namespace QuanLyDuLich.GUI
             frmDangNhap formDangNhap = new frmDangNhap();
             formDangNhap.ShowDialog();
             this.Close();
+        }
+
+        private void textBox_CMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_SoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
     }
