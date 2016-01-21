@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiamDoc));
             this.tabCtrl_ThongKeSaleTour = new System.Windows.Forms.TabControl();
             this.tabPage_ThongKeSaleTour = new System.Windows.Forms.TabPage();
@@ -123,6 +123,8 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.button_DangXuat = new System.Windows.Forms.Button();
             this.label_TenGiamDoc = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label_ThoiGianThongKe = new System.Windows.Forms.Label();
             this.tabCtrl_ThongKeSaleTour.SuspendLayout();
             this.tabPage_ThongKeSaleTour.SuspendLayout();
             this.panel_ThongKe.SuspendLayout();
@@ -182,6 +184,8 @@
             this.panel_ThongKe.Controls.Add(this.dataGridView_ThongKe);
             this.panel_ThongKe.Controls.Add(this.label_TongDoanhThu);
             this.panel_ThongKe.Controls.Add(this.label6);
+            this.panel_ThongKe.Controls.Add(this.label_ThoiGianThongKe);
+            this.panel_ThongKe.Controls.Add(this.label28);
             this.panel_ThongKe.Controls.Add(this.label_TongTour);
             this.panel_ThongKe.Controls.Add(this.label5);
             this.panel_ThongKe.Controls.Add(this.label3);
@@ -222,11 +226,11 @@
             this.dataGridView_ThongKe.Location = new System.Drawing.Point(20, 147);
             this.dataGridView_ThongKe.Name = "dataGridView_ThongKe";
             this.dataGridView_ThongKe.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView_ThongKe.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_ThongKe.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ThongKe.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -1113,7 +1117,7 @@
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TrangThai.Width = 74;
+            this.TrangThai.Width = 80;
             // 
             // TongGiaTour
             // 
@@ -1121,7 +1125,7 @@
             this.TongGiaTour.DataPropertyName = "TongGiaTour";
             this.TongGiaTour.HeaderText = "Tổng giá tour";
             this.TongGiaTour.Name = "TongGiaTour";
-            this.TongGiaTour.Width = 71;
+            this.TongGiaTour.Width = 95;
             // 
             // GhiChu
             // 
@@ -1130,7 +1134,7 @@
             this.GhiChu.FillWeight = 24.50981F;
             this.GhiChu.HeaderText = "Ghi chú";
             this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Width = 64;
+            this.GhiChu.Width = 69;
             // 
             // printDocument1
             // 
@@ -1166,6 +1170,26 @@
             this.label_TenGiamDoc.Size = new System.Drawing.Size(39, 13);
             this.label_TenGiamDoc.TabIndex = 2;
             this.label_TenGiamDoc.Text = "Họ tên";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(176, 102);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 16);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "0 tour";
+            // 
+            // label_ThoiGianThongKe
+            // 
+            this.label_ThoiGianThongKe.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ThoiGianThongKe.Location = new System.Drawing.Point(272, 67);
+            this.label_ThoiGianThongKe.Name = "label_ThoiGianThongKe";
+            this.label_ThoiGianThongKe.Size = new System.Drawing.Size(160, 16);
+            this.label_ThoiGianThongKe.TabIndex = 0;
+            this.label_ThoiGianThongKe.Text = "Từ ngày";
+            this.label_ThoiGianThongKe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmGiamDoc
             // 
@@ -1304,5 +1328,7 @@
         private System.Windows.Forms.Button button_HuySuaPhong;
         private System.Windows.Forms.Label label_MaPhong;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label_ThoiGianThongKe;
+        private System.Windows.Forms.Label label28;
     }
 }

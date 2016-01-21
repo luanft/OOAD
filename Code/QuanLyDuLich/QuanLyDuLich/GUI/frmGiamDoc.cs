@@ -357,6 +357,7 @@ namespace QuanLyDuLich.GUI
         private void button_ThongKe_Click(object sender, EventArgs e)
         {
             dalTour dal_tour = new dalTour();
+            label_ThoiGianThongKe.Text = dateTimePicker_TuNgay.Value.Date.ToShortDateString() + " - " + dateTimePicker_DenNgay.Value.Date.ToShortDateString();
             DataTable dt_thongke = dal_tour.LayDanhSachTourThongKe(dateTimePicker_TuNgay.Value, dateTimePicker_DenNgay.Value);
             if (dt_thongke.Rows.Count < 1)
             {
