@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbTenUngDung = new System.Windows.Forms.Label();
             this.cbGhiNho = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -88,6 +88,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(287, 181);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
@@ -97,26 +98,26 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // label3
+            // lbTenUngDung
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 19);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(449, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "ỨNG DỤNG QUẢN LÝ CÔNG TY DU LỊCH";
+            this.lbTenUngDung.AutoSize = true;
+            this.lbTenUngDung.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenUngDung.Location = new System.Drawing.Point(20, 19);
+            this.lbTenUngDung.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTenUngDung.Name = "lbTenUngDung";
+            this.lbTenUngDung.Size = new System.Drawing.Size(450, 25);
+            this.lbTenUngDung.TabIndex = 3;
+            this.lbTenUngDung.Text = "ỨNG DỤNG QUẢN LÝ CÔNG TY DU LỊCH";
             // 
             // cbGhiNho
             // 
             this.cbGhiNho.AutoSize = true;
-            this.cbGhiNho.Location = new System.Drawing.Point(192, 135);
+            this.cbGhiNho.Location = new System.Drawing.Point(232, 135);
             this.cbGhiNho.Margin = new System.Windows.Forms.Padding(4);
             this.cbGhiNho.Name = "cbGhiNho";
-            this.cbGhiNho.Size = new System.Drawing.Size(207, 23);
+            this.cbGhiNho.Size = new System.Drawing.Size(167, 23);
             this.cbGhiNho.TabIndex = 2;
-            this.cbGhiNho.Text = "Nhớ tên truy cập và mật khẩu";
+            this.cbGhiNho.Text = "Nhớ email và mật khẩu";
             this.cbGhiNho.UseVisualStyleBackColor = true;
             // 
             // frmDangNhap
@@ -127,7 +128,7 @@
             this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(482, 232);
             this.Controls.Add(this.cbGhiNho);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbTenUngDung);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.label2);
@@ -154,7 +155,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbTenUngDung;
         private System.Windows.Forms.CheckBox cbGhiNho;
     }
 }

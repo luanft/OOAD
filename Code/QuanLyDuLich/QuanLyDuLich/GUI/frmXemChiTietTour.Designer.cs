@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemChiTietTour));
             this.lbThoiGianDi = new System.Windows.Forms.Label();
             this.lbTenTour = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbChuongTrinh = new System.Windows.Forms.Label();
+            this.grbTieuDe = new System.Windows.Forms.GroupBox();
             this.lbNguoiGui = new System.Windows.Forms.Label();
             this.lbTenDonVi = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.grbGiaTour = new System.Windows.Forms.GroupBox();
+            this.lbGiaTour = new System.Windows.Forms.Label();
+            this.grbUuDai = new System.Windows.Forms.GroupBox();
+            this.lbUuDai = new System.Windows.Forms.Label();
+            this.lbChaoMung = new System.Windows.Forms.Label();
+            this.fPanelThongTinPhu = new System.Windows.Forms.FlowLayoutPanel();
+            this.fPanelLichTrinh = new System.Windows.Forms.FlowLayoutPanel();
             this.lbKetThuc = new System.Windows.Forms.Label();
             this.btnIn = new System.Windows.Forms.Button();
-            this.lbChaoMung = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbUuDai = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbGiaTour = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.grbTieuDe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grbGiaTour.SuspendLayout();
+            this.grbUuDai.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbThoiGianDi
@@ -75,29 +78,29 @@
             this.lbTenTour.Text = "TOUR LONG THÀNH - DẦU DÂY - HÀ NỘI - LÀO CAI - MÓNG CÁI - HẢI PHÒNG";
             this.lbTenTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lbChuongTrinh
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(214, 259);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(371, 22);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "CHƯƠNG TRÌNH THAM QUAN DU LỊCH";
+            this.lbChuongTrinh.AutoSize = true;
+            this.lbChuongTrinh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChuongTrinh.Location = new System.Drawing.Point(214, 259);
+            this.lbChuongTrinh.Name = "lbChuongTrinh";
+            this.lbChuongTrinh.Size = new System.Drawing.Size(371, 22);
+            this.lbChuongTrinh.TabIndex = 2;
+            this.lbChuongTrinh.Text = "CHƯƠNG TRÌNH THAM QUAN DU LỊCH";
             // 
-            // groupBox1
+            // grbTieuDe
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbTieuDe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.lbNguoiGui);
-            this.groupBox1.Controls.Add(this.lbTenDonVi);
-            this.groupBox1.Location = new System.Drawing.Point(12, 148);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(777, 106);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
+            this.grbTieuDe.Controls.Add(this.lbNguoiGui);
+            this.grbTieuDe.Controls.Add(this.lbTenDonVi);
+            this.grbTieuDe.Location = new System.Drawing.Point(12, 148);
+            this.grbTieuDe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbTieuDe.Name = "grbTieuDe";
+            this.grbTieuDe.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbTieuDe.Size = new System.Drawing.Size(777, 106);
+            this.grbTieuDe.TabIndex = 1;
+            this.grbTieuDe.TabStop = false;
             // 
             // lbNguoiGui
             // 
@@ -127,18 +130,18 @@
     "HỐ HỒ CHÍ MINH";
             this.lbTenDonVi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // picBoxLogo
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.picBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::QuanLyDuLich.Properties.Resources.cu;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(777, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBoxLogo.Image = global::QuanLyDuLich.Properties.Resources.cu;
+            this.picBoxLogo.Location = new System.Drawing.Point(12, 5);
+            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picBoxLogo.Name = "picBoxLogo";
+            this.picBoxLogo.Size = new System.Drawing.Size(777, 133);
+            this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxLogo.TabIndex = 0;
+            this.picBoxLogo.TabStop = false;
             // 
             // panel1
             // 
@@ -146,18 +149,18 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.grbGiaTour);
+            this.panel1.Controls.Add(this.grbUuDai);
             this.panel1.Controls.Add(this.lbChaoMung);
-            this.panel1.Controls.Add(this.fPanel2);
-            this.panel1.Controls.Add(this.fPanel1);
+            this.panel1.Controls.Add(this.fPanelThongTinPhu);
+            this.panel1.Controls.Add(this.fPanelLichTrinh);
             this.panel1.Controls.Add(this.lbKetThuc);
             this.panel1.Controls.Add(this.btnIn);
             this.panel1.Controls.Add(this.lbThoiGianDi);
             this.panel1.Controls.Add(this.lbTenTour);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lbChuongTrinh);
+            this.panel1.Controls.Add(this.grbTieuDe);
+            this.panel1.Controls.Add(this.picBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -165,19 +168,67 @@
             this.panel1.Size = new System.Drawing.Size(801, 661);
             this.panel1.TabIndex = 1;
             // 
-            // fPanel2
+            // grbGiaTour
             // 
-            this.fPanel2.Location = new System.Drawing.Point(12, 550);
-            this.fPanel2.Name = "fPanel2";
-            this.fPanel2.Size = new System.Drawing.Size(775, 16);
-            this.fPanel2.TabIndex = 8;
+            this.grbGiaTour.Controls.Add(this.lbGiaTour);
+            this.grbGiaTour.Location = new System.Drawing.Point(494, 371);
+            this.grbGiaTour.Name = "grbGiaTour";
+            this.grbGiaTour.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbGiaTour.Size = new System.Drawing.Size(291, 76);
+            this.grbGiaTour.TabIndex = 11;
+            this.grbGiaTour.TabStop = false;
             // 
-            // fPanel1
+            // lbGiaTour
             // 
-            this.fPanel1.Location = new System.Drawing.Point(12, 498);
-            this.fPanel1.Name = "fPanel1";
-            this.fPanel1.Size = new System.Drawing.Size(775, 15);
-            this.fPanel1.TabIndex = 7;
+            this.lbGiaTour.AutoSize = true;
+            this.lbGiaTour.Location = new System.Drawing.Point(7, 24);
+            this.lbGiaTour.Name = "lbGiaTour";
+            this.lbGiaTour.Size = new System.Drawing.Size(259, 19);
+            this.lbGiaTour.TabIndex = 0;
+            this.lbGiaTour.Text = "Giá tour trọn gói: 1.300.000 đồng / người";
+            // 
+            // grbUuDai
+            // 
+            this.grbUuDai.Controls.Add(this.lbUuDai);
+            this.grbUuDai.Location = new System.Drawing.Point(12, 371);
+            this.grbUuDai.Name = "grbUuDai";
+            this.grbUuDai.Size = new System.Drawing.Size(313, 76);
+            this.grbUuDai.TabIndex = 10;
+            this.grbUuDai.TabStop = false;
+            // 
+            // lbUuDai
+            // 
+            this.lbUuDai.AutoSize = true;
+            this.lbUuDai.Location = new System.Drawing.Point(6, 22);
+            this.lbUuDai.Name = "lbUuDai";
+            this.lbUuDai.Size = new System.Drawing.Size(839, 19);
+            this.lbUuDai.TabIndex = 0;
+            this.lbUuDai.Text = "Ưu đãi: quà tặng trò chơi gồm có: Điện thoại, máy tính bảng, iphone, l" +
+    "aptop, honda SH, và nhiều phần quà hấp dẫn không có thực khác :D";
+            // 
+            // lbChaoMung
+            // 
+            this.lbChaoMung.AutoSize = true;
+            this.lbChaoMung.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChaoMung.Location = new System.Drawing.Point(119, 583);
+            this.lbChaoMung.Name = "lbChaoMung";
+            this.lbChaoMung.Size = new System.Drawing.Size(593, 26);
+            this.lbChaoMung.TabIndex = 9;
+            this.lbChaoMung.Text = "C.U TOURIST HÂN HOAN CHÀO ĐÓN QUÝ KHÁCH";
+            // 
+            // fPanelThongTinPhu
+            // 
+            this.fPanelThongTinPhu.Location = new System.Drawing.Point(12, 550);
+            this.fPanelThongTinPhu.Name = "fPanelThongTinPhu";
+            this.fPanelThongTinPhu.Size = new System.Drawing.Size(775, 16);
+            this.fPanelThongTinPhu.TabIndex = 8;
+            // 
+            // fPanelLichTrinh
+            // 
+            this.fPanelLichTrinh.Location = new System.Drawing.Point(12, 498);
+            this.fPanelLichTrinh.Name = "fPanelLichTrinh";
+            this.fPanelLichTrinh.Size = new System.Drawing.Size(775, 15);
+            this.fPanelLichTrinh.TabIndex = 7;
             // 
             // lbKetThuc
             // 
@@ -197,54 +248,21 @@
             this.btnIn.TabIndex = 5;
             this.btnIn.Text = "In Tour";
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
-            // lbChaoMung
+            // printPreviewDialog1
             // 
-            this.lbChaoMung.AutoSize = true;
-            this.lbChaoMung.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChaoMung.Location = new System.Drawing.Point(119, 583);
-            this.lbChaoMung.Name = "lbChaoMung";
-            this.lbChaoMung.Size = new System.Drawing.Size(593, 26);
-            this.lbChaoMung.TabIndex = 9;
-            this.lbChaoMung.Text = "C.U TOURIST HÂN HOAN CHÀO ĐÓN QUÝ KHÁCH";
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // groupBox2
+            // printDocument1
             // 
-            this.groupBox2.Controls.Add(this.lbUuDai);
-            this.groupBox2.Location = new System.Drawing.Point(12, 371);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 76);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            // 
-            // lbUuDai
-            // 
-            this.lbUuDai.AutoSize = true;
-            this.lbUuDai.Location = new System.Drawing.Point(6, 22);
-            this.lbUuDai.Name = "lbUuDai";
-            this.lbUuDai.Size = new System.Drawing.Size(839, 19);
-            this.lbUuDai.TabIndex = 0;
-            this.lbUuDai.Text = "Ưu đãi: quà tặng trò chơi gồm có: Điện thoại, máy tính bảng, iphone, l" +
-    "aptop, honda SH, và nhiều phần quà hấp dẫn không có thực khác :D";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.lbGiaTour);
-            this.groupBox3.Location = new System.Drawing.Point(494, 371);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(291, 76);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            // 
-            // lbGiaTour
-            // 
-            this.lbGiaTour.AutoSize = true;
-            this.lbGiaTour.Location = new System.Drawing.Point(7, 24);
-            this.lbGiaTour.Name = "lbGiaTour";
-            this.lbGiaTour.Size = new System.Drawing.Size(259, 19);
-            this.lbGiaTour.TabIndex = 0;
-            this.lbGiaTour.Text = "Giá tour trọn gói: 1.300.000 đồng / người";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // frmXemChiTietTour
             // 
@@ -260,15 +278,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tour Long Thành Dầu Dây 10 ngày 10 đêm";
             this.Load += new System.EventHandler(this.frmXemChiTietTour_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grbTieuDe.ResumeLayout(false);
+            this.grbTieuDe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grbGiaTour.ResumeLayout(false);
+            this.grbGiaTour.PerformLayout();
+            this.grbUuDai.ResumeLayout(false);
+            this.grbUuDai.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,22 +294,24 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox picBoxLogo;
+        private System.Windows.Forms.GroupBox grbTieuDe;
         private System.Windows.Forms.Label lbNguoiGui;
         private System.Windows.Forms.Label lbTenDonVi;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbChuongTrinh;
         private System.Windows.Forms.Label lbThoiGianDi;
         private System.Windows.Forms.Label lbTenTour;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Label lbKetThuc;
-        private System.Windows.Forms.FlowLayoutPanel fPanel1;
-        private System.Windows.Forms.FlowLayoutPanel fPanel2;
+        private System.Windows.Forms.FlowLayoutPanel fPanelLichTrinh;
+        private System.Windows.Forms.FlowLayoutPanel fPanelThongTinPhu;
         private System.Windows.Forms.Label lbChaoMung;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grbGiaTour;
         private System.Windows.Forms.Label lbGiaTour;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grbUuDai;
         private System.Windows.Forms.Label lbUuDai;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

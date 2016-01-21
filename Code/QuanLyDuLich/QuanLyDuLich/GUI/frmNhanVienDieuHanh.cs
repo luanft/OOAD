@@ -73,11 +73,7 @@ namespace QuanLyDuLich.GUI
             foreach (DoiTac dt in dsDoiTac)
             {
                 dsLoaiDoiTac.Add(dt.LoaiDoiTac);
-            }
-            //binding list DoiTac's name to combobox
-            BindingSource bsTenDoiTac = new BindingSource();
-            bsTenDoiTac.DataSource = dsLoaiDoiTac;
-            combLoaiDoiTac.DataSource = bsTenDoiTac;
+            }            
 
             //binding list DoiTac to datagridview
             BindingSource bsDanhSachDoiTac = new BindingSource();

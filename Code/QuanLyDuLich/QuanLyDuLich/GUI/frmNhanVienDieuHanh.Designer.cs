@@ -34,8 +34,6 @@
             this.btnXoaDoiTac = new System.Windows.Forms.Button();
             this.btnSuaDoiTac = new System.Windows.Forms.Button();
             this.btnThemDoiTac = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.combLoaiDoiTac = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDoiTac = new System.Windows.Forms.DataGridView();
             this.col_MaDoiTac = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,13 +49,13 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.lbSoTour = new System.Windows.Forms.Label();
             this.dgvDuyetTour = new System.Windows.Forms.DataGridView();
-            this.lbTenNhanVien = new System.Windows.Forms.Label();
-            this.llbDangXuat = new System.Windows.Forms.LinkLabel();
             this.col_MaTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1_TenTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1_TrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col1_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbTenNhanVien = new System.Windows.Forms.Label();
+            this.llbDangXuat = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabQuanLyDoiTac.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,8 +95,6 @@
             this.panel1.Controls.Add(this.btnXoaDoiTac);
             this.panel1.Controls.Add(this.btnSuaDoiTac);
             this.panel1.Controls.Add(this.btnThemDoiTac);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.combLoaiDoiTac);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvDoiTac);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -146,31 +142,6 @@
             this.btnThemDoiTac.Text = "Thêm đối tác";
             this.btnThemDoiTac.UseVisualStyleBackColor = true;
             this.btnThemDoiTac.Click += new System.EventHandler(this.btnThemDoiTac_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 99);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Chọn loại đối tác";
-            // 
-            // combLoaiDoiTac
-            // 
-            this.combLoaiDoiTac.FormattingEnabled = true;
-            this.combLoaiDoiTac.Items.AddRange(new object[] {
-            "Nhà hàng",
-            "Nhà xe",
-            "Khách sạn",
-            "Hướng dẫn viên"});
-            this.combLoaiDoiTac.Location = new System.Drawing.Point(147, 95);
-            this.combLoaiDoiTac.Margin = new System.Windows.Forms.Padding(4);
-            this.combLoaiDoiTac.Name = "combLoaiDoiTac";
-            this.combLoaiDoiTac.Size = new System.Drawing.Size(180, 27);
-            this.combLoaiDoiTac.TabIndex = 2;
-            this.combLoaiDoiTac.Text = "Tất cả";
             // 
             // label1
             // 
@@ -351,26 +322,6 @@
             this.dgvDuyetTour.TabIndex = 1;
             this.dgvDuyetTour.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDuyetTour_CellDoubleClick);
             // 
-            // lbTenNhanVien
-            // 
-            this.lbTenNhanVien.AutoSize = true;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(995, 4);
-            this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(228, 19);
-            this.lbTenNhanVien.TabIndex = 1;
-            this.lbTenNhanVien.Text = "Xin chào: Nguyễn Thanh Anh Tuyên";
-            // 
-            // llbDangXuat
-            // 
-            this.llbDangXuat.AutoSize = true;
-            this.llbDangXuat.Location = new System.Drawing.Point(1265, 4);
-            this.llbDangXuat.Name = "llbDangXuat";
-            this.llbDangXuat.Size = new System.Drawing.Size(70, 19);
-            this.llbDangXuat.TabIndex = 2;
-            this.llbDangXuat.TabStop = true;
-            this.llbDangXuat.Text = "Đăng xuất";
-            this.llbDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbDangXuat_LinkClicked);
-            // 
             // col_MaTour
             // 
             this.col_MaTour.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -415,6 +366,26 @@
             this.col1_GhiChu.HeaderText = "Ghi chú";
             this.col1_GhiChu.Name = "col1_GhiChu";
             // 
+            // lbTenNhanVien
+            // 
+            this.lbTenNhanVien.AutoSize = true;
+            this.lbTenNhanVien.Location = new System.Drawing.Point(995, 4);
+            this.lbTenNhanVien.Name = "lbTenNhanVien";
+            this.lbTenNhanVien.Size = new System.Drawing.Size(228, 19);
+            this.lbTenNhanVien.TabIndex = 1;
+            this.lbTenNhanVien.Text = "Xin chào: Nguyễn Thanh Anh Tuyên";
+            // 
+            // llbDangXuat
+            // 
+            this.llbDangXuat.AutoSize = true;
+            this.llbDangXuat.Location = new System.Drawing.Point(1265, 4);
+            this.llbDangXuat.Name = "llbDangXuat";
+            this.llbDangXuat.Size = new System.Drawing.Size(70, 19);
+            this.llbDangXuat.TabIndex = 2;
+            this.llbDangXuat.TabStop = true;
+            this.llbDangXuat.Text = "Đăng xuất";
+            this.llbDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbDangXuat_LinkClicked);
+            // 
             // frmNhanVienDieuHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -451,8 +422,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tabXetDuyetTour;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox combLoaiDoiTac;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnXoaDoiTac;
         private System.Windows.Forms.Button btnSuaDoiTac;
         private System.Windows.Forms.Button btnThemDoiTac;
