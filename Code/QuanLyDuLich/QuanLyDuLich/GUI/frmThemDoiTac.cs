@@ -29,7 +29,7 @@ namespace QuanLyDuLich.GUI
             {
                 btnThemDoiTac.Enabled = false;
                 btnCapNhat.Enabled = true;
-                dgvDoiTac.AllowUserToAddRows = false;
+                dgvDoiTac.AllowUserToAddRows = false;                
                 dgvDoiTac.AutoGenerateColumns = false;
                 dgvDoiTac.DataSource = this.frmNhanVienDieuHanh.DsDoiTacCapNhat;
                 this.Text = "Cập nhật thông tin đối tác";
@@ -44,7 +44,7 @@ namespace QuanLyDuLich.GUI
             nvDieuHanh = frmNhanVienDieuHanh.NvDieuHanh;
         }
 
-        
+
         private void btnThemDoiTac_Click(object sender, EventArgs e)
         {
             bool status = false;
@@ -52,7 +52,7 @@ namespace QuanLyDuLich.GUI
             foreach (DataGridViewRow row in dgvDoiTac.Rows)
             {
                 if (!row.IsNewRow)
-                {                    
+                {
                     dtoDoiTac dt = new dtoDoiTac();
                     try
                     {
@@ -80,9 +80,9 @@ namespace QuanLyDuLich.GUI
                 }
             }
             if (status)
-            {                
+            {
                 MessageBox.Show("Thêm thành công " + count + " đối tác", "Thông báo");
-                
+
                 frmNhanVienDieuHanh.capNhatForm();
             }
             else
@@ -107,21 +107,23 @@ namespace QuanLyDuLich.GUI
                     dt.EMAIL = row.Cells["col_Email"].Value.ToString();
                     dt.DANHGIADOITAC = row.Cells["col_DanhGiaDoiTac"].Value.ToString();
                     dt.MANHANVIEN = nvDieuHanh.pMaNhanVien;
-                    if (nvDieuHanh.CapNhat(this.frmNhanVienDieuHanh.DsDoiTacCapNhat[i++], dt))
-                    {
-                        status = true;
-                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin đối tác!", "Thông báo");
                     break;
+                } 
+                if (nvDieuHanh.CapNhat(this.frmNhanVienDieuHanh.DsDoiTacCapNhat[i++], dt))
+                {
+                    status = true;
+                    count++;                    
                 }
+
             }
             if (status)
             {
                 MessageBox.Show("Cập nhật thành công " + count + " đối tác", "Thông báo");
-                frmNhanVienDieuHanh.capNhatForm();                
+                frmNhanVienDieuHanh.capNhatForm();
             }
             else
                 MessageBox.Show("Cập nhật không thành công", "Thông báo");
