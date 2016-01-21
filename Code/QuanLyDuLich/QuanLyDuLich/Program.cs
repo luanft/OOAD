@@ -21,20 +21,21 @@ namespace QuanLyDuLich
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             dalObject dalobject=new dalObject();
-            if (File.Exists("config.txt")) 
+            if (File.Exists("config.txt"))
             {
-                using (StreamReader sr = new StreamReader("config.txt")) 
+                using (StreamReader sr = new StreamReader("config.txt"))
                 {
                     QuanLyDuLich.DAL.Config.server = sr.ReadLine();
-                    QuanLyDuLich.DAL.Config.database = sr.ReadLine();                    
+                    QuanLyDuLich.DAL.Config.database = sr.ReadLine();
                 }
             }
-            if (!dalobject.Connect())
+            else
             {
-                //QuanLyDuLich.GUI.Config form_Config = new GUI.Config();
-                //form_Config.Show();
                 Application.Run(new QuanLyDuLich.GUI.Config());
+                MessageBox.Show("Đã thiết lập tạo kết nối đến cơ sở dữ liệu!");
+                Application.Exit();
             }
+            
             if (dalobject.Connect())
             {
                 dalobject.Close();
