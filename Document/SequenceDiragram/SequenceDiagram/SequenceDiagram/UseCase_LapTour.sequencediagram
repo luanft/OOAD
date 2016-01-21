@@ -82,16 +82,16 @@
               <lifelineMoniker Id="5750d198-bba7-44f4-871e-775e2925d7f2" LastKnownName=": Nhan Vien Sale Tour" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b2c01d6b-fe25-406e-94f0-6be140f82f1f" name="MessageOccurrenceSpecification3">
-            <elementDefinition Id="be6b3c80-76f8-41ca-b2c6-d14d17a262a7" />
-            <covered>
-              <lifelineMoniker Id="540ecae1-3c89-4865-bfff-348831a262dd" LastKnownName=": Tour" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="f4df89c5-782f-4a63-961d-ebc11e7526b2" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="20030a9a-1fa2-47bd-8ab2-2f27f791572b" />
             <covered>
               <lifelineMoniker Id="5750d198-bba7-44f4-871e-775e2925d7f2" LastKnownName=": Nhan Vien Sale Tour" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b2c01d6b-fe25-406e-94f0-6be140f82f1f" name="MessageOccurrenceSpecification3">
+            <elementDefinition Id="be6b3c80-76f8-41ca-b2c6-d14d17a262a7" />
+            <covered>
+              <lifelineMoniker Id="540ecae1-3c89-4865-bfff-348831a262dd" LastKnownName=": Tour" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="5a141b95-67ad-4cd5-b076-4339ac013393" name="BehaviorExecutionSpecification4">

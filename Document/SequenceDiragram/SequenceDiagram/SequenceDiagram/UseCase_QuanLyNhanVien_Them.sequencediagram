@@ -80,16 +80,16 @@
               <lifelineMoniker Id="a2585e89-cbaa-40e1-9ee9-6fac9700c94c" LastKnownName=": GiamDoc" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="ec09ed85-7f1a-4e5d-82af-d9598faab905" name="MessageOccurrenceSpecification3">
-            <elementDefinition Id="4dd9889d-34c5-4dd1-bb21-d29bcd2c0e39" />
-            <covered>
-              <lifelineMoniker Id="0bc47eac-4d16-414a-99b7-545db2eea3c6" LastKnownName=": NhanVien" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="714fde45-3cee-40e8-b15e-3e54ee519c23" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="6e099557-72de-4de4-a844-abec219c1c8b" />
             <covered>
               <lifelineMoniker Id="a2585e89-cbaa-40e1-9ee9-6fac9700c94c" LastKnownName=": GiamDoc" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ec09ed85-7f1a-4e5d-82af-d9598faab905" name="MessageOccurrenceSpecification3">
+            <elementDefinition Id="4dd9889d-34c5-4dd1-bb21-d29bcd2c0e39" />
+            <covered>
+              <lifelineMoniker Id="0bc47eac-4d16-414a-99b7-545db2eea3c6" LastKnownName=": NhanVien" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="c1e2c58a-7cb4-407a-96ff-e373d0f1a92c" name="ExecutionOccurrenceSpecification4">
@@ -142,16 +142,16 @@
               <lifelineMoniker Id="0bc47eac-4d16-414a-99b7-545db2eea3c6" LastKnownName=": NhanVien" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="623f8e97-e01c-4c20-adcd-92b0b4647afb" name="MessageOccurrenceSpecification8">
-            <elementDefinition Id="880483da-0689-4001-bb99-863d0fa22899" />
-            <covered>
-              <lifelineMoniker Id="a2585e89-cbaa-40e1-9ee9-6fac9700c94c" LastKnownName=": GiamDoc" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="60702638-68e9-4359-a6d0-94e4280f5bca" name="MessageOccurrenceSpecification7">
             <elementDefinition Id="1c7b6408-bcfa-4a90-b179-f065b8f8c335" />
             <covered>
               <lifelineMoniker Id="0bc47eac-4d16-414a-99b7-545db2eea3c6" LastKnownName=": NhanVien" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="623f8e97-e01c-4c20-adcd-92b0b4647afb" name="MessageOccurrenceSpecification8">
+            <elementDefinition Id="880483da-0689-4001-bb99-863d0fa22899" />
+            <covered>
+              <lifelineMoniker Id="a2585e89-cbaa-40e1-9ee9-6fac9700c94c" LastKnownName=": GiamDoc" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="a9f42a18-7123-4f2f-aafc-ab97a605cd93" name="ExecutionOccurrenceSpecification6">

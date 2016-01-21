@@ -2,14 +2,14 @@
 <sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UseCase_LapTour">
   <SequenceDesignerModelMoniker Id="de328480-c236-496f-b09d-16d1a7034ab6" />
   <nestedChildShapes>
-    <lifelineShape Id="10246f3c-17ed-483a-8554-a289d5faf2b1" absoluteBounds="1.6562500000000002, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+    <lifelineShape Id="10246f3c-17ed-483a-8554-a289d5faf2b1" absoluteBounds="1.6562500000000002, 1, 0.15, 2.8687499999999995" visible="true" visualStyleMode="Modified">
       <lifelineMoniker Id="5750d198-bba7-44f4-871e-775e2925d7f2" LastKnownName=": Nhan Vien Sale Tour" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="ed615ab0-b41d-444b-816d-51b87c9ae031" absoluteBounds="0.98829248666763325, 0.6, 1.4859150266647339, 0.4" customColor="White" visualStyleMode="Modified">
           <lifelineMoniker Id="5750d198-bba7-44f4-871e-775e2925d7f2" LastKnownName=": Nhan Vien Sale Tour" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
-        <lifelineHoverShape Id="f9876f37-6633-40a3-a0c3-b4f0e5562188" absoluteBounds="1.6562500000000002, 1, 0, 7">
+        <lifelineHoverShape Id="f9876f37-6633-40a3-a0c3-b4f0e5562188" absoluteBounds="1.6562500000000002, 1, 0, 2.875">
           <lifelineMoniker Id="5750d198-bba7-44f4-871e-775e2925d7f2" LastKnownName=": Nhan Vien Sale Tour" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="cf60e4ff-9df5-4d3b-8207-07aa83465ef7" absoluteBounds="1.6562500000000002, 2.31875, 0.15, 1.2499999999999996" customColor="184, 204, 215" visualStyleMode="Modified">
@@ -17,14 +17,14 @@
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
-    <lifelineShape Id="759ce8c8-e0f6-4972-a823-d72d584cee95" absoluteBounds="5.0416666666666661, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+    <lifelineShape Id="759ce8c8-e0f6-4972-a823-d72d584cee95" absoluteBounds="5.0416666666666661, 1, 0.15, 2.989583333333333" visible="true" visualStyleMode="Modified">
       <lifelineMoniker Id="540ecae1-3c89-4865-bfff-348831a262dd" LastKnownName=": Tour" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="bc85fcbe-8e89-4b9e-957d-1da06ff7f6a8" absoluteBounds="4.6166666666666663, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
           <lifelineMoniker Id="540ecae1-3c89-4865-bfff-348831a262dd" LastKnownName=": Tour" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
-        <lifelineHoverShape Id="83799c53-a554-41f6-b2c9-f7e9c7fa72a4" absoluteBounds="5.0416666666666661, 1, 0, 7">
+        <lifelineHoverShape Id="83799c53-a554-41f6-b2c9-f7e9c7fa72a4" absoluteBounds="5.0416666666666661, 1, 0, 3">
           <lifelineMoniker Id="540ecae1-3c89-4865-bfff-348831a262dd" LastKnownName=": Tour" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="ad4f39a2-aef7-4242-87d6-4b28adb7fb2c" absoluteBounds="5.0416666666666661, 1.46875, 0.15, 0.55000000000000027" customColor="184, 204, 215" visualStyleMode="Modified">

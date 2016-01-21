@@ -265,7 +265,7 @@
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="a641ae91-f96a-465b-b210-82aab369f7a6" name=": NhanVien" isActor="false" lifelineDisplayName=": NhanVien">
+          <lifeline Id="a641ae91-f96a-465b-b210-82aab369f7a6" name=": NhanVien" isActor="true" lifelineDisplayName=": NhanVien">
             <elementDefinition Id="a89f5abd-1bdf-4581-ad93-d85481026ae2" />
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="e3a8df1e-bb29-44ae-87f2-167670556082" LastKnownName="MessageOccurrenceSpecification1" />

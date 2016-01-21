@@ -183,22 +183,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="84fd7ee8-c5fa-4ff2-9d6a-9a38d49f55b1"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="8a0be2ad-ad64-4d95-8bfe-f8d1d43daf0b"
-                LastKnownName=": ManHinhLamViec"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="621332aa-6872-4a52-857a-9a4ba4430062"
             name="MessageOccurrenceSpecification11">
             <covered>
               <lifelineMoniker
                 Id="d82b8f69-9161-48b1-a890-2519b0f374ab"
                 LastKnownName=": NhanVienDieuHanh"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="84fd7ee8-c5fa-4ff2-9d6a-9a38d49f55b1"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="8a0be2ad-ad64-4d95-8bfe-f8d1d43daf0b"
+                LastKnownName=": ManHinhLamViec"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7684,22 +7684,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="283be39f-ef90-4103-b8d4-c61a542e3a8b"
-            name="MessageOccurrenceSpecification25">
-            <covered>
-              <lifelineMoniker
-                Id="149c7227-5c2c-4c97-9d20-f99b924ee592"
-                LastKnownName=": ManHinhDangNhap"
-                LastKnownLocation="SequenceDiagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="edaaf436-0809-4402-86f2-7e58069369cc"
             name="MessageOccurrenceSpecification26">
             <covered>
               <lifelineMoniker
                 Id="459308ce-44a5-4c5c-8899-2d4be5e11acc"
                 LastKnownName=": ManHinhLamViec"
+                LastKnownLocation="SequenceDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="283be39f-ef90-4103-b8d4-c61a542e3a8b"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="149c7227-5c2c-4c97-9d20-f99b924ee592"
+                LastKnownName=": ManHinhDangNhap"
                 LastKnownLocation="SequenceDiagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8673,7 +8673,7 @@
           <lifeline
             Id="a89f5abd-1bdf-4581-ad93-d85481026ae2"
             name=": NhanVien"
-            isActor="false"
+            isActor="true"
             lifelineDisplayName=": NhanVien">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker

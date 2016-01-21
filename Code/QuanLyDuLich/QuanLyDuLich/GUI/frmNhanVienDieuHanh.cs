@@ -60,8 +60,7 @@ namespace QuanLyDuLich.GUI
         {
             InitializeComponent();
             dgvDoiTac.AutoGenerateColumns = false;
-            dgvDuyetTour.AutoGenerateColumns = false;
-            tabControl1.SelectedTab = tabXetDuyetTour;
+            dgvDuyetTour.AutoGenerateColumns = false;            
 
             nvDieuHanh = new NVDieuHanh(manv);
             dsDoiTac = nvDieuHanh.pDanhSachDoiTac;

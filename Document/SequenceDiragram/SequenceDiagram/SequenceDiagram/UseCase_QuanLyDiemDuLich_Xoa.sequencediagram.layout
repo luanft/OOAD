@@ -2,10 +2,10 @@
 <sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UseCase_QuanLyDiemDuLich_Xoa">
   <SequenceDesignerModelMoniker Id="4406841d-932a-48fa-98b3-1cfcb5b9c6eb" />
   <nestedChildShapes>
-    <lifelineShape Id="c6d76af9-e64e-4e82-9aee-4d53700e1693" absoluteBounds="1.025, 1, 0.15, 5.7499999999999982" visible="true" visualStyleMode="Modified">
+    <lifelineShape Id="c6d76af9-e64e-4e82-9aee-4d53700e1693" absoluteBounds="1.025, 1, 0.15, 4.0520833333333313" visible="true" visualStyleMode="Modified">
       <lifelineMoniker Id="9f7deac4-344a-493d-94ae-e2d49fd02a3d" LastKnownName=": NhanVienSale" />
       <relativeChildShapes>
-        <lifelineHoverShape Id="512b7d63-b56a-4805-994b-56c9965f21aa" absoluteBounds="1.025, 1, 0, 5.75">
+        <lifelineHoverShape Id="512b7d63-b56a-4805-994b-56c9965f21aa" absoluteBounds="1.025, 1, 0, 4">
           <lifelineMoniker Id="9f7deac4-344a-493d-94ae-e2d49fd02a3d" LastKnownName=": NhanVienSale" />
         </lifelineHoverShape>
         <umlLifelineHeadShape Id="19dbe4b8-f569-4115-bbfa-1386e5ff0ed5" absoluteBounds="0.53914427280426014, 0.6, 1.1217114543914795, 0.4" customColor="White" visualStyleMode="Modified">
@@ -17,10 +17,10 @@
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
-    <lifelineShape Id="24007397-3c92-4a92-9f93-47b390d4073c" absoluteBounds="6.2791666666666659, 1, 0.15, 5.7499999999999982" visible="true" visualStyleMode="Modified">
+    <lifelineShape Id="24007397-3c92-4a92-9f93-47b390d4073c" absoluteBounds="6.2791666666666659, 1, 0.15, 4.1145833333333321" visible="true" visualStyleMode="Modified">
       <lifelineMoniker Id="d922449a-978c-441a-8bc4-4d326a961dc9" LastKnownName=": DiemDuLich" />
       <relativeChildShapes>
-        <lifelineHoverShape Id="61e93c28-3457-4f79-bf30-21f38a91d66c" absoluteBounds="6.2791666666666659, 1, 0, 5.75">
+        <lifelineHoverShape Id="61e93c28-3457-4f79-bf30-21f38a91d66c" absoluteBounds="6.2791666666666659, 1, 0, 4.125">
           <lifelineMoniker Id="d922449a-978c-441a-8bc4-4d326a961dc9" LastKnownName=": DiemDuLich" />
         </lifelineHoverShape>
         <umlLifelineHeadShape Id="8df85a0c-056f-4fba-92d2-16afeea5d3c6" absoluteBounds="5.8471575073401123, 0.6, 1.0140183186531067, 0.4" customColor="White" visualStyleMode="Modified">
@@ -32,14 +32,14 @@
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
-    <lifelineShape Id="2e9bba67-e18e-4497-86bc-1a388a2acb3a" absoluteBounds="3.7291665871938067, 1, 0.15, 5.4499999999999984" visible="true" visualStyleMode="Modified">
+    <lifelineShape Id="2e9bba67-e18e-4497-86bc-1a388a2acb3a" absoluteBounds="3.7291665871938067, 1, 0.15, 4.0229166666666645" visible="true" visualStyleMode="Modified">
       <lifelineMoniker Id="8a9c9093-b7dc-4674-8212-c50b94223bb1" LastKnownName=": ManHinhQuanLyDiemDuLich" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="22d03dca-f8cd-437b-a2e4-ad43272f08bb" absoluteBounds="2.8236873658498123, 0.6, 1.9609584426879883, 0.4" customColor="White" visualStyleMode="Modified">
           <lifelineMoniker Id="8a9c9093-b7dc-4674-8212-c50b94223bb1" LastKnownName=": ManHinhQuanLyDiemDuLich" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
-        <lifelineHoverShape Id="cd4b1107-1a38-45b3-bf8c-8b253a829ec2" absoluteBounds="3.7291665871938067, 1, 0, 5.5">
+        <lifelineHoverShape Id="cd4b1107-1a38-45b3-bf8c-8b253a829ec2" absoluteBounds="3.7291665871938067, 1, 0, 4">
           <lifelineMoniker Id="8a9c9093-b7dc-4674-8212-c50b94223bb1" LastKnownName=": ManHinhQuanLyDiemDuLich" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="27ad56d4-2b19-4968-83e6-59694cdb4c60" absoluteBounds="3.7291665871938067, 1.3, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">

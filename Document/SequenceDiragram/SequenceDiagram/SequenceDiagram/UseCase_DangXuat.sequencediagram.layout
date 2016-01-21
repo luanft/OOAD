@@ -52,11 +52,11 @@
         <lifelineHoverShape Id="1a64e14d-b345-4424-a408-e82923d4dfa4" absoluteBounds="5.28125015894572, 1, 0, 4.625">
           <lifelineMoniker Id="e29f8203-2425-43b3-a4fa-dded6c658330" LastKnownName=": ManHinhDangNhap" />
         </lifelineHoverShape>
-        <umlExecutionSpecificationShape Id="f61830e7-0df0-457d-9ef2-f932aca3e083" absoluteBounds="5.28125015894572, 3.9958333333333327, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
-          <behaviorExecutionSpecificationMoniker Id="43ce1b66-dbba-46ec-b528-bca56d6b111e" LastKnownName="BehaviorExecutionSpecification7" />
-        </umlExecutionSpecificationShape>
         <umlExecutionSpecificationShape Id="cf88191b-f674-4075-93c2-e23412c1c8e2" absoluteBounds="5.28125015894572, 3.145833333333333, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="ff1846be-0213-4fbc-bbec-f62d91ef8391" LastKnownName="BehaviorExecutionSpecification6" />
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="f61830e7-0df0-457d-9ef2-f932aca3e083" absoluteBounds="5.28125015894572, 3.9958333333333327, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="43ce1b66-dbba-46ec-b528-bca56d6b111e" LastKnownName="BehaviorExecutionSpecification7" />
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
